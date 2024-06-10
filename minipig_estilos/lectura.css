@@ -24,6 +24,9 @@ div.btnOjo {
 	div.btnOjo {
 		top: 140px; right: 0px;
 	}
+	.controles {
+		top: 140px;
+	}
 }
 
 div.btnOjo img {display: block;}
@@ -38,7 +41,7 @@ img.imgBtn {
 .controles {
 	display: flex; /*FLEX*/
 	position: fixed;
-	top: -10;
+	top: 10;/*-10*/
 	width: 100%;
 	height: 0px; /*60*/
 	overflow-y: hidden;
@@ -92,6 +95,8 @@ img.imgBtn {
 		display: none;
 	}
 }
+
+
 
 button.boton_en_linea {
 	height: 35px;

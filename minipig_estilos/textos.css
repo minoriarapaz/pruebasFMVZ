@@ -360,6 +360,11 @@ table.tipoAncha {
 	margin-bottom: 1em;
 }
 
+img.fotografia {
+	display: block;
+	position: relative;
+	width: 100%;
+}
 
 @media (min-width: 1200px) {
 	.textos {

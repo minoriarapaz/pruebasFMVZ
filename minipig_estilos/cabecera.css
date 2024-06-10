@@ -149,7 +149,8 @@ button.boton_legal2 {
 	border-radius: 5px;
 	border-style: none;
 	width: auto;
-	background-image: linear-gradient(slateblue, darkslateblue);
+	background-color: transparent;
+	/*background-image: linear-gradient(slateblue, darkslateblue);*/
 	color: ghostwhite;
 }
 

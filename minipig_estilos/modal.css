@@ -141,7 +141,7 @@
   	width: 100%; /* Full width */
   	height: 100%; /* Full height ANTES ERA 100%*/
   	overflow:scroll; /* Enable scroll if needed  ANTES ERA AUTO*/
-  	background-color: rgba(0, 0, 0, .5);  /*Black w/ opacity */
+  	background-color: rgba(0, 0, 0, .7);  /*Black w/ opacity */
 	transition: opacity 0.3s;
 }
 
@@ -342,21 +342,21 @@ iframe {
 /************ AJUSTE DE ALTURA DEL IFRAME MICANVAS (MIN- = ARRIBA DE**************/
 @media (min-width:900px) {
 	.misCanvas {width: 80%;}
-	.esquema {width: 80%;}
+	
 }
 
 
 @media (min-width: 1100px) {
 	.misCanvas {width: 70%;}
-	.esquema {width: 70%;}
+	
 }
 @media (min-width: 1400px) {
 	.misCanvas {width: 60%; height: 530px;}
-	.esquema {width: 50%; height: auto;}
+	
 }
 @media (min-width: 1600px) {
 	.misCanvas {width: 50%;}
-	.esquema {width: 50%; height: auto;}
+	
 }
 /*****MAX height o literalmente " ABAJO DE... "
 AQUI ESTÁN LAS ALTURAS VARIABLES, LA MAYORIA*/
@@ -381,22 +381,25 @@ AQUI ESTÁN LAS ALTURAS VARIABLES, LA MAYORIA*/
 @media (max-width: 400px) {
 	.misCanvas {height: 350px;}
 	
-	.inferior {
-		flex-direction: column;
-	}
 	
 	.modal-content > section {
 		margin: 50px 10px 50px 10px;
 	}
 	button.boton_legal {
-		background-image: linear-gradient(transparent, transparent);
-		background-color: transparent;
-		color: darkslateblue;
+		/*background-image: linear-gradient(transparent, transparent);
+		background-color: transparent;*/
 		border-radius: 0px;
-		padding: 6px 10px 6px 10px;
 		margin-left: 0px;
 		margin-right: 0px;
+	}
+	#btnlegal1, #btnlegal3 {
+		width: 27%;
+	}
 	
+	#btnlegal2 {
+		width: 44%;
+		border-left: 1px solid ghostwhite;
+		border-right: 1px solid ghostwhite;
 	}
 }
 
