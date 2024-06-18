@@ -3,10 +3,11 @@
 
 
 
-header {
-	background-image: url("../"), linear-gradient(slateblue, darkslateblue);
+header {	
+	background-image: url("../minipig_imagenes/interfaz/pielyperfil_med.png"), linear-gradient(slateblue, darkslateblue);
 	background-repeat: no-repeat;
 	background-position: right bottom;
+	background-size: auto 100%;
 	padding-top: 10px;
 	position: fixed;
 	display: block;
@@ -92,6 +93,10 @@ header .mininavegador a {color: ghostwhite;}
 }
 .mininavegador ul li {
 	display: block;
+}
+#btnUltimo {
+	margin-top: 2em;
+	opacity: .8;
 }
 .mininavegador ul li > a {
 	display: block;
@@ -208,7 +213,7 @@ span.equis:after {
 
 @media (max-width: 800px) {
 	header {
-		background-image: url(""), linear-gradient(slateblue 30%, darkslateblue 99%);
+		background-image: url("../minipig_imagenes/interfaz/pielyperfil_small.png"), linear-gradient(slateblue 30%, darkslateblue 99%);
 	}
 	
 	header > section {
@@ -278,7 +283,7 @@ span.equis:after {
 		height: 140px;
 	}
 	div.contenedor {
-		margin-top: 100px;
+		margin-top: 200px; /*100px*/
 		display: flex;
 	}
 	header > section {

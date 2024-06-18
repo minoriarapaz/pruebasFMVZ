@@ -126,6 +126,13 @@ function irAnatomia() {
 	
 }
 
+function irTablas() {
+	window.scroll(
+		{top: (document.getElementById("finSistemas").offsetTop - compensacion), left: 0, }
+	);
+	document.getElementById("anatomia_temas").style.height = "0px";	
+}
+
 function irSistema1() {
 	window.scroll(
 		{top: (document.getElementById("sistema1").offsetTop - compensacion), left: 0, }
@@ -296,6 +303,13 @@ function irSistema11M() {
 	show_indice();
 }
 
+function irTablasM() {
+	window.scroll(
+		{top: (document.getElementById("finSistemas").offsetTop - compensacion), left: 0, }
+	);
+	show_indice();
+}
+
 
 
 
@@ -383,7 +397,7 @@ $(document).ready(function(){
 	});*/
 });
 
-window.onscroll = function() {escrol_prologo(); escrol_introduccion(); escrol_material();  escrol_anatomia(); escrol_sistema1(); escrol_sistema2(); escrol_sistema3(); escrol_sistema4(); escrol_sistema5(); escrol_sistema6(); escrol_sistema7(); escrol_sistema8(); escrol_sistema9(); escrol_sistema10(); escrol_sistema11();};
+window.onscroll = function() {escrol_prologo(); escrol_introduccion(); escrol_material();  escrol_anatomia(); escrol_sistema1(); escrol_sistema2(); escrol_sistema3(); escrol_sistema4(); escrol_sistema5(); escrol_sistema6(); escrol_sistema7(); escrol_sistema8(); escrol_sistema9(); escrol_sistema10(); escrol_sistema11(); escrol_indexTablas()};
 	
 function escrol_prologo() {
 	var tituloI = document.getElementById("aPrologo");
@@ -394,6 +408,7 @@ function escrol_prologo() {
 				document.getElementById("boton2").classList.remove("activo");
 				document.getElementById("boton3").classList.remove("activo");
 				document.getElementById("boton4").classList.remove("activo");
+				document.getElementById("boton7").classList.remove("activo");
 			}
 }
 function escrol_introduccion() {
@@ -405,6 +420,8 @@ function escrol_introduccion() {
 				document.getElementById("boton1").classList.remove("activo");
 				document.getElementById("boton3").classList.remove("activo");
 				document.getElementById("boton4").classList.remove("activo");
+				
+				document.getElementById("boton7").classList.remove("activo");
 			}
 		}	
 
@@ -417,6 +434,8 @@ function escrol_material() {
 				document.getElementById("boton1").classList.remove("activo");
 				document.getElementById("boton2").classList.remove("activo");
 				document.getElementById("boton4").classList.remove("activo");
+				
+				document.getElementById("boton7").classList.remove("activo");
 			
 			
 			} else {
@@ -434,11 +453,29 @@ function escrol_anatomia() {
 				document.getElementById("boton2").classList.remove("activo");
 				document.getElementById("boton3").classList.remove("activo");
 				
+				document.getElementById("boton7").classList.remove("activo");
+				
 				document.getElementById("anatomia_temas").style.height = "340px";
 			} else {
 				document.getElementById("anatomia_temas").style.height = "0px";
 			}
-		}	
+		}
+
+function escrol_indexTablas() {
+			var titulo = document.getElementById("finSistemas");
+			var progreso = titulo.offsetTop;
+			
+			if (window.scrollY > progreso) {
+				document.getElementById("boton7").classList.add("activo");
+				document.getElementById("boton1").classList.remove("activo");
+				document.getElementById("boton2").classList.remove("activo");
+				document.getElementById("boton3").classList.remove("activo");
+				
+				document.getElementById("boton4").classList.remove("activo");
+				
+				document.getElementById("anatomia_temas").style.height = "0px";
+			}
+		}
 
 
 function escrol_sistema1() {
@@ -546,8 +583,166 @@ function escrol_sistema11() {
 			} else {document.getElementById("btnSub11").classList.remove("activoSub");}
 		}
 
+/*Navegacion de indice de tablas*/
 
+function irCuadro1() {
+	window.scroll(
+		{top: (document.getElementById("cuadro1").offsetTop), left: 0, }
+	);
+	console.log("cuadro 1");
+}
+function irCuadro2() {
+	window.scroll(
+		{top: (document.getElementById("cuadro2").offsetTop), left: 0, }
+	);
+	console.log("cuadro 2");
+}
 
+function irCuadro3() {
+	window.scroll(
+		{top: (document.getElementById("cuadro3").offsetTop), left: 0, }
+	);
+	console.log("cuadro 3");
+}
+function irCuadro4() {
+	window.scroll(
+		{top: (document.getElementById("cuadro4").offsetTop), left: 0, }
+	);
+	console.log("cuadro 4");
+}
+
+function irCuadro5() {
+	window.scroll(
+		{top: (document.getElementById("cuadro5").offsetTop), left: 0, }
+	);
+	console.log("cuadro 5");
+}
+
+function irCuadro6() {
+	window.scroll(
+		{top: (document.getElementById("cuadro6").offsetTop), left: 0, }
+	);
+	console.log("cuadro 6");
+}
+
+function irCuadro7() {
+	window.scroll(
+		{top: (document.getElementById("cuadro7").offsetTop), left: 0, }
+	);
+	console.log("cuadro 7");
+}
+function irCuadro8() {
+	window.scroll(
+		{top: (document.getElementById("cuadro8").offsetTop), left: 0, }
+	);
+	console.log("cuadro 8");
+}
+function irCuadro9() {
+	window.scroll(
+		{top: (document.getElementById("cuadro9").offsetTop), left: 0, }
+	);
+}
+function irCuadro10() {
+	window.scroll(
+		{top: (document.getElementById("cuadro10").offsetTop), left: 0, }
+	);
+}
+
+function irCuadro11() {
+	window.scroll(
+		{top: (document.getElementById("cuadro11").offsetTop), left: 0, }
+	);
+}
+function irCuadro12() {
+	window.scroll(
+		{top: (document.getElementById("cuadro12").offsetTop), left: 0, }
+	);
+}
+function irCuadro13() {
+	window.scroll(
+		{top: (document.getElementById("cuadro13").offsetTop), left: 0, }
+	);
+}
+function irCuadro14() {
+	window.scroll(
+		{top: (document.getElementById("cuadro14").offsetTop), left: 0, }
+	);
+}
+function irCuadro15() {
+	window.scroll(
+		{top: (document.getElementById("cuadro15").offsetTop), left: 0, }
+	);
+}
+function irCuadro16() {
+	window.scroll(
+		{top: (document.getElementById("cuadro16").offsetTop), left: 0, }
+	);
+}
+function irCuadro17() {
+	window.scroll(
+		{top: (document.getElementById("cuadro17").offsetTop), left: 0, }
+	);
+}
+function irCuadro18() {
+	window.scroll(
+		{top: (document.getElementById("cuadro18").offsetTop), left: 0, }
+	);
+}
+function irCuadro19() {
+	window.scroll(
+		{top: (document.getElementById("cuadro19").offsetTop), left: 0, }
+	);
+}
+function irCuadro20() {
+	window.scroll(
+		{top: (document.getElementById("cuadro20").offsetTop), left: 0, }
+	);
+}
+function irCuadro21() {
+	window.scroll(
+		{top: (document.getElementById("cuadro21").offsetTop), left: 0, }
+	);
+}
+function irCuadro22() {
+	window.scroll(
+		{top: (document.getElementById("cuadro22").offsetTop), left: 0, }
+	);
+}
+function irCuadro23() {
+	window.scroll(
+		{top: (document.getElementById("cuadro23").offsetTop), left: 0, }
+	);
+}
+function irCuadro24() {
+	window.scroll(
+		{top: (document.getElementById("cuadro24").offsetTop), left: 0, }
+	);
+}
+function irCuadro25() {
+	window.scroll(
+		{top: (document.getElementById("cuadro25").offsetTop), left: 0, }
+	);
+}
+function irCuadro26() {
+	window.scroll(
+		{top: (document.getElementById("cuadro26").offsetTop), left: 0, }
+	);
+}
+function irCuadro27() {
+	window.scroll(
+		{top: (document.getElementById("cuadro27").offsetTop), left: 0, }
+	);
+}
+function irCuadro28() {
+	window.scroll(
+		{top: (document.getElementById("cuadro28").offsetTop), left: 0, }
+	);
+}
+function irCuadro29() {
+	window.scroll(
+		{top: (document.getElementById("cuadro29").offsetTop), left: 0, }
+	);
+}
 /*==============********************* CARGA DE I F R A M E S ************************=======*/
 
 
@@ -556,48 +751,3 @@ var beatles = ["George", "Paul", "Ringo", "John"];
 
 
 
-	
-/*function cargarAll(e) {
-	const Dias = document.querySelectorAll("#Dia0, #Dia0ex, #Dia1, #Dia1ex, #Dia2, #Dia2ex, #Dia3, #Dia3ex, #Dia4, #Dia4ex, #Dia5, #Dia5ex, #Dia6, #Dia6ex, #Dia7, #Dia7ex, #Dia8, #Dia8ex, #Dia9, #Dia9ex, #Dia10, #Dia10ex, #Dia11, #Dia11ex, #Dia12ex, #Dia13, #Dia13ex, #Dia14, #Dia14ex, #Dia15, #Dia15ex, #Dia16, #Dia16ex, #Dia17ex");
-	///Dias[e].style.backgroundColor = "blue";
-	
-	/*for (let i = 0; i < Dias.length; i++) {
-  		Dias[i].style.backgroundColor = "Red";
-	}
-	console.log(frutas);
-	console.log(Dias.length);
-}*/
-
-
-/*FUNCIONES OCULTAR*/
-
-/*BORRASTE ESTO*/
-
-/*FUNCIONES OCULTAR TERMINAN*/
-/*+++++++++
-	-----
-	----
----*/
-
-
-
-
-/*==============FIN BOTONES BOLAS =======*/
-
-/*PROGRAMACION DE SCROLL + BOLAS ACTIVAS ======*/
-
-/*function Mostrar() {
-	var revelado = document.querySelectorAll(".revela");
-	for (var R = 0; R < revelado.length; R++) {
-		var windowHeight = window.innerHeight;
-  		var elementTop = revelado[R].getBoundingClientRect().top;
-  		var elementVisible = 150;
-		if (elementTop < windowHeight - elementVisible) {
-			revelado[i].classList.add("Si");}
-		else {revelado[i].classList.remove("Si");
-			 }
-	}
-}
-
-window.addEventListener("scroll", Mostrar);
-Mostrar();*/

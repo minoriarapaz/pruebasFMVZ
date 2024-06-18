@@ -19,7 +19,7 @@
 
 	
 	
-	<script src="minipig_estilos/textos.js"></script>
+	<!--<script src="minipig_estilos/textos.js"></script>-->
 	<script src="minipig_estilos/navegacion.js"></script>
 	<script src="minipig_estilos/lectura.js"></script>
 	
@@ -62,6 +62,7 @@
 							<li><a onClick="irSistema11M()">11. Ojo</a></li>
 						</ol>
 					</li>
+					<li id="btnUltimo"><i><a onClick="irTablasM()">Índice de tablas</a></i></li>
 				</ul>
 			</nav>
 		</div><!--clase container-->
@@ -128,6 +129,7 @@
 				</li>
 				<li id="boton5" onClick="verBiblio()">Bibliografía</li>
 				<li id="boton6" onClick="verLegales()">Legal</li>
+				<li id="boton7" onClick="irTablas()">Índice de tablas</li>
 			</ul>
 		</div><!--BARRA FIN-->
 		
@@ -267,7 +269,7 @@
 			
 			<!--MODAL fin-->
 			
-			
+			<!--INICIAN LOS TEXTOS Y TODO LO CONTENIDO EN CLASE TEXTOS-->
 			
 			
 			<h2 id="aPrologo">Prólogo</h2>
@@ -283,7 +285,7 @@
 			
 			
 			<table class="tipo1" id="cuadro1">
-			<caption><small>Cuadro 1.</small> Origen de algunas razas de cerdos miniatura.</caption>
+			<caption id="cuadro1T"><small>Cuadro 1.</small>Origen de algunas razas de cerdos miniatura.</caption>
 				<thead>
 				<tr class="primeraFila">
 					<th style="width:35%">Raza</th>
@@ -434,7 +436,7 @@
 			<p>El cerebelo está unido a la superficie dorsal y caudal del tallo del encéfalo. Se incluye en un estuche osteofibroso formado por una pared inferior y otra superior. El cerebelo participa en la coordinación de movimientos, de funciones cognitivas como la atención, el aprendizaje y otros estímulos sensoriales temporales. De la morfometría de cerebro y el cerebelo de los cerdos miniatura, se anotan las medidas en centímetros y el peso en gramos promedio, en el <small>Cuadro 2:</small></p>
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro2">
 		<caption><small>Cuadro 2.</small> Peso del cerebro y el cerebelo juntos, además del largo y el ancho</caption>
 				<tbody><tr class="primeraFila">
 					<th class="esquina">Órgano / edad (semanas)</th>
@@ -553,7 +555,7 @@
 			<p>A continuación, se presenta la morfometría del corazón del cerdo miniatura a diferentes edades <small>(Cuadro 3)</small>.</p>
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro3">
 			<caption><small>Cuadro 3.</small> Morfometría del corazón del cerdo miniatura a diferentes edades</caption>
 				<tbody><tr class="primeraFila">
 					<th class="esquina">Variable / semanas</th>
@@ -634,7 +636,7 @@
 			<p>Por debajo de la mucosa o superficie de la lengua está el músculo, es la mayor parte del tejido y se caracteriza por su fuerza, se aprecian cuatro grandes haces de fibras que le dan la forma y movimiento, también hay otras ramas musculares en diferentes direcciones. Su tamaño y peso se va incrementando según el crecimiento del cerdo <small>(Cuadro 4)</small>.</p>
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro4">
 			<caption><small>Cuadro 4.</small> Morfometría de la lengua del cerdo miniatura a diferentes edades</caption>
 				<tbody><tr class="primeraFila">
 					<th class="esquina">Variable / semanas</th>
@@ -715,7 +717,7 @@
 			<p>En el <small>Cuadro 5</small> se muestra la morfometría por ancho y largo en centímetros del esófago.</p>
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro5">
 			<caption><small>Cuadro 5.</small> Morfometría de la esófago del cerdo miniatura a diferentes edades</caption>
 				<tbody><tr class="primeraFila">
 					<th class="esquina">Variable / semanas</th>
@@ -778,7 +780,7 @@
 			
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro6">
 			<caption><small>Cuadro 6.</small> Morfometría del estómago del cerdo miniatura.</caption>
 				<tbody><tr class="primeraFila">
 					<th class="esquina">Variable / semanas</th>
@@ -837,7 +839,7 @@
 			<p>Después de salir del duodeno, ingresa a la parte media del intestino delgado, el yeyuno. Es la segunda parte del intestino delgado y se encuentra en  la mitad derecha del abdomen. No existe un límite claro entre el yeyuno y el íleon, pero la pared del yeyuno es más gruesa y su luz es más ancha que en el íleon. En el yeyuno se observan pliegues circulares más prominentes y abundancia de linfonódulos agregados. Mientras que el íleon es la última porción del intestino delgado. Se encuentra en el abdomen, cuadrante del lado derecho del abdomen, termina en el orificio ileal (unión ileocecal), donde comienza el ciego del intestino grueso, en este punto se observa acumulación de tejido linfoide. En la unión ileocecal, hacia la luz del ciego se forma el pliegue ileocecal. En el <small>Cuadro 7</small>, se observa el largo en centímetros, del inestino delgado a las siguientes edades: 0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 y 21 semanas.</p>
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro7">
 			<caption><small>Cuadro 7.</small> Morfometría de intestino delgado del cerdo miniatura</caption>
 				<tbody><tr class="primeraFila">
 					<th class="esquina">Variable / semanas</th>
@@ -879,7 +881,7 @@
 			<p>El intestino grueso comprende cuatro secciones: ciego, colon, recto y canal anal. El ciego tiene dos secciones, la primera tiene un final ciego, y la segunda se conecta con el colon. El ciego es relativamente corto y está formado por una base, cuerpo y ápice. El ciego es un saco cilíndrico sin salida que se continua con la porción proximal del colon. El colon es largo, tiene tres trayectos: ascendente, transverso y descendente. La porción ascendente del colon se acomoda en una serie de asas espirales con orientación centrípeta y centrífuga. La siguiente porción del intestino grueso es el recto y finalmente el ano. El ciego y la parte proximal de la espiral del colon presentan bandas de tejido muscular que producen pequeños sacos laterales (haustras). En los animales de más de ocho semanas, el recto está embebido en grasa y se dilata para formar el ámpula rectal justo antes de que termine en el canal anal. Como se puede apreciar en el <small>Cuadro 7</small>, el crecimiento del intestino grueso, se incrementa drásticamente después de la tercera semana de edad: la edad del destete. En el <small>Cuadro 8</small> se observa el largo en centímetros del intestino grueso a las siguientes edades (semanas): 0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 y 21.</p>
 		
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro8">
 			<caption><small>Cuadro 8.</small> Morfométria de intestino grueso del cerdo miniatura</caption>
 				<tbody><tr class="primeraFila">
 					<th class="esquina">Variable / semanas</th>
@@ -919,7 +921,7 @@
 			
 
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro9">
 			<caption><small>Cuadro 9.</small> Morfometría del hígado del cerdo miniatura a diferentes edades.</caption>
 				<tbody><tr class="primeraFila">
 					<th class="esquina">Variable / semanas</th>
@@ -1003,7 +1005,7 @@
 			<p>Los riñones son aplanados dorsalmente, bilaterales, en forma de frijol localizados en el retroperitoneo en el abdomen entre las vértebras lumbares i y iv. Están cubiertos por una cápsula fibrosa. El parénquima del riñón consta del corteza (exterior) y zona medular (interior), cuya unidad funcional es la nefrona. La corteza está constituida principalmente por los glomérulos, los túbulos contorneados proximal y distal de la nefrona, y los túbulos colectores que ocupan principalmente la región medular. En el <small>Cuadro 10</small>, se muestra la morfometría del riñón a diferentes edades (largo o eje longitudinal, ancho o eje transversal).</p>
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro10">
 			<caption><small>Cuadro 10.</small> Morfometría del riñón del cerdo miniatura.</caption>
 				<tbody><tr class="primeraFila">
 					<th class="esquina">Variable / semanas</th>
@@ -1087,7 +1089,7 @@
 			<p>A continuación de la vulva, se encuentra el vestíbulo vaginal, en cuya parte caudoventral está el meato urinario. Si se quiere introducir un cateter de inseminación por esta última estructura, debe inclinarse de 30° a 45° hacia arriba, para evitar introducirlo en el aparato urinario.</p>
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro11">
 			<caption><small>Cuadro 11.</small> Morfometría de la vulva de la cerda miniatura.</caption>
 				<tbody>
 				<tr class="primeraFila">
@@ -1144,7 +1146,7 @@
 			<p>La vagina es el órgano tubular localizado en el canal pélvico, en un extremo conecta con el vestíbulo vaginal y, en el otro, con el cérvix. En el <small>Cuadro 12</small>, se observa el largo y ancho de la vagina en cerdas miniatura de las siguientes edades (semanas): 0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 y 21.</p>
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro12">
 			<caption><small>Cuadro 12.</small> Morfometría de la vagina de la cerda miniatura.</caption>
 				<tbody>
 				<tr class="primeraFila">
@@ -1201,7 +1203,7 @@
 			<p>El útero tiene su origen embrionario de los conductos paramesonéfricos, que se fusionan para dar lugar al cuerpo, que a su vez se une al seno urogenital que da lugar al cérvix. El útero se localiza en la cavidad abdominal. Se clasifica como bicornual de fusión baja (cuerpo corto) por sus dos tubas uterinas grandes. Su tamaño centímetro varía con la edad y la gestación, y los partos. Los cuernos uterinos son proyecciones del útero de gran longitud que varían con la edad y la etapa fisiológica. Una de sus características son sus pliegues que le dan apariencia similar a los intestinos. En el <small>Cuadro 13</small>, se observa el largo y ancho de  las tubas uterinas en cerdas miniatura de las siguientes edades (semanas): 0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 y 21.</p>
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro13">
 			<caption><small>Cuadro 13.</small> Morfometría de los cuernos uterinos de la cerda miniatura.</caption>
 				<tbody>
 				<tr class="primeraFila">
@@ -1258,7 +1260,7 @@
 			<p>También conocido como cuello del útero, es la conexión entre la vagina y el cuerpo del útero, es la estructura que permite el acoplamiento con el pene del macho. Las paredes del cérvix presentan cojinetes cervicales, que le dan la forma característica. En el <small>Cuadro 14</small>, se observa el largo y ancho del cérvix en cerdas miniatura de las siguientes edades (semanas): 0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 y 21.</p>
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro14">
 			<caption><small>Cuadro 14.</small> Morfometría del cérvix de la cerda miniatura.</caption>
 				<tbody>
 				<tr class="primeraFila">
@@ -1315,7 +1317,7 @@
 			<p>Son un par de tubos pequeños en su longitud y diámetro, sin embargo, son sumamente importantes y se subdividen en tres partes: infundíbulo, ampolla e  istmo. Las tubas uterinas están formadas por tres porciones, infundíbulo, ampolla e istmo. El infundíbulo se localiza relacionado con el ovario, presenta en su borde libre prolongaciones (fimbrias) que lo fijan al ovario. El infundíbulo recibe al ovocito después de la ovulación, y la ampolla es el sitio donde se lleva a cabo la fecundación. Este órgano reduce su calibre para formar el istmo que desemboca en el útero. En el <small>Cuadro 15</small>, se observa el largo y ancho de las tubas uterinas en cerdas miniatura de las siguientes edades (semanas): 0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 y 21.</p>
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro15">
 			<caption><small>Cuadro 15.</small> Morfometría de las tubas uterinas de la cerda miniatura.</caption>
 				<tbody>
 				<tr class="primeraFila">
@@ -1372,7 +1374,7 @@
 			<p>Las células priomordiales del ovario se originan fuera de la gónada para migrar posteriormente hacia las crestas germinales, pasando a través del mesenterio del saco vitelino. Los dos ovarios tienen forma elipsoidal con bordes irregulares que le dan su forma característica de racimo de uva, debido a la formación de múltiples folículos y cuerpos lúteos, se encuentran localizados en la cavidad abdominal, en su parte dorsal, caudal a los riñones. En su estructura se presentan dos zonas: la medular al interior (zona vascular) y la cortical al exterior (zona parenquimatosa), en esta última, sucede el desarrollo folicular y la presencia de estructuras no foliculares. En el <small>Cuadro 16</small>, se observa el peso y ancho de los ovarios a diferentes edades de la cerda miniatura (semanas de vida).</p>
 
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro16">
 			<caption><small>Cuadro 16.</small> Morfometría de los ovarios de la cerda miniatura.</caption>
 				<tbody>
 				<tr class="primeraFila">
@@ -1436,7 +1438,7 @@
 			<p>Los testículos son órganos pares, ubicados en la región perineal, su tamaño y peso varía con la edad y talla del animal. Se considera que a mayor tamaño testicular, la calidad y cantidad del semen del eyaculado será mejor. El origen embrionario de los testículos es partir de la cresta gonadal, de donde los gonocitos se desplazan a la región retroperitoneal. Al testículo lo envuelven varias capas, la más externa es la túnica albugínea, cuya función es mantener junto el parénquima testicular, con cierta presión, además de tener proyecciones hacia el interior del testículo que forman los septos testiculares, y estos a su vez, los lobulillos que convergen hacia el eje testicular formando el mediastino del testículo que da sostén a los túbulos seminíferos. En el <small>Cuadro 17</small>, se presenta el peso, largo y ancho del testículo a diferentes edades.</p>
 			
 		
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro17">
 			<caption><small>Cuadro 17.</small> Morfometría del testículo del verraco miniatura.</caption>
 				<tbody>
 				<tr class="primeraFila">
@@ -1509,7 +1511,7 @@
 			<p>El epidídimo proviene de los conductos mesonéfricos, que a su vez, originan el conducto deferente y las glándulas accesorias. Está conformado por tres secciones: cabeza <i>(caput epididymidis)</i>, cuerpo <i>(corpus epididymidis)</i> y cola <i>(cauda epididymidis)</i>. La cabeza está unida al testículo, ambas partes se comunican a través del conducto epididimario que va a los conductos eferentes del testículo. El cuerpo está ligado también al testículo, pero por el lígamento mesoepididimario, que genera la bolsa testicular. En el <small>Cuadro 18</small>, se presenta el peso del epidídimo en diferentes semanas de edad.</p>
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro18">
 			<caption><small>Cuadro 18.</small> Morfometría del epidídimo del verraco miniatura.</caption>
 				<tbody>
 				<tr class="primeraFila">
@@ -1555,7 +1557,7 @@
 			<p>Las vesículas seminales son glándulas pares tuboalveolares lobulares unidas al conducto deferente para formar el conducto eyaculador, son voluminosas y de forma triangular. En el verraco, cada conducto desemboca de forma independiente en la uretra, secretan un moco con sustancias nutritivas, además de prostaglándinas. En el <small>Cuadro 19</small>, se presenta la morfometría de la vesícula seminal de cerdos miniatura en diferentes semanas de edad.</p>
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro19">
 			<caption><small>Cuadro 19.</small> Morfometría de las vesículas seminales del verraco miniatura.</caption>
 				<tbody>
 				<tr class="primeraFila">
@@ -1629,7 +1631,7 @@
 			
 
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro20">
 			<caption><small>Cuadro 20.</small> Morfometría de las glándulas bulbouretrales del verraco miniatura.</caption>
 				<tbody>
 				<tr class="primeraFila">
@@ -1702,7 +1704,7 @@
 			<p>El pene consta de dos cuerpos cavernosos y uno esponjoso que rodean la uretra. Los cuerpos cavernosos se extienden hasta la punta del pene para formar el glande, conteniendo en el vértice el orificio uretral. En el cerdo, el pene tiene una flexura sigmoidea en la porción preescrotal, que es un doblez, debido a los músculos retractores que permiten la flacidez y se relajan durante la eyección, y de esta forma se da el desenvainamiento del mismo. En la parte final o vértice, en el verraco el pene rota, de manera que el glande exige una forma característica: de tirabuzón. En el <small>Cuadro 21</small>, se presenta el ancho y largo del pene de los cerdos miniatura en diferentes semanas de edad.</p>
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro21">
 			<caption><small>Cuadro 21.</small> Morfometría del pene del verraco miniatura.</caption>
 				<tbody>
 				<tr class="primeraFila">
@@ -1760,7 +1762,7 @@
 			
 		
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro22">
 			<caption><small>Cuadro 22.</small> Morfometría de la próstata del verraco miniatura.</caption>
 				<tbody>
 				<tr class="primeraFila">
@@ -1841,7 +1843,7 @@
 			
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro23">
 			<caption><small>Cuadro 23.</small> Morfometría de la tiroides del cerdo miniatura.</caption>
 				<tbody>
 				<tr class="primeraFila">
@@ -1917,7 +1919,7 @@
 			<p>Las glándulas adenales son un par de glándulas localizadas en la parte craneal y medial de cada riñón. Constan de dos partes: la corteza cuyo originen embrionario es el mesodermo, y la médula, que se origina de la cresta neural (ectodermo). La corteza se divide en tres zonas: glomerular (externa), fascicular (intermedia) y reticular (interna). El peso, acho y largo a diferentes semanas de edad se presentan en el <small>Cuadro 24</small>.</p>
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro24">
 			<caption><small>Cuadro 24.</small> Morfometría de las adrenales del cerdo miniatura.</caption>
 				<tbody>
 				<tr class="primeraFila">
@@ -1995,7 +1997,7 @@
 			
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro25">
 				<caption>
 					<small>Cuadro 25.</small> Morfometría del bazo del cerdo miniatura.
 				</caption>
@@ -2070,7 +2072,7 @@
 			<p>El timo se sitúa entre el músculo digástrico y la entrada al tórax, ventrolateralmente a la tráquea y la laringe. El extremo craneal es bulboso, y en su superficie, contiene a la glándula paratiroides. El <small>Cuadro 26</small> presenta el peso, ancho y largo del timo de los cerdos miniatura hasta la quinta semana de vida; después de esa edad, ya no se encontró.</p>
 			
 
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro26">
 				<caption><small>Cuadro 26.</small> Morfometría del timo del cerdo miniatura.
 				</caption>
 				<tbody>
@@ -2129,7 +2131,7 @@
 			<p>La tráquea es un tubo membranoso, flexible, de anillos de cartílago, que se extiende desde la laringe, a nivel de las vértebras C4 y C5, hasta el nivel de la T5, donde se ramifican los bronquios, dorsalmente al corazón. A diferencia de otras especies, presenta un bronquio derecho impar, que forma el lóbulo craneal del cerdo (bronquio traqueal) y, posteriormente, la tráquea se bifurca para formar los bronquios principales izquierdo y derecho. En el <small>Cuadro 27</small>, se observa el ancho y largo de  la tráquea a diferentes edades.</p>
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro27">
 				<caption><small>Cuadro 27.</small> Morfometría de la tráquea del cerdo miniatura.</caption>
 				<tbody>
 				<tr class="primeraFila">
@@ -2185,7 +2187,7 @@
 			<p>Los pulmones son órganos pares, derecho e izquierdo, y ocupan la mayor parte de la cavidad torácica. El pulmón derecho se subdividide en cuatro lóbulos: craneal, medio, caudal y accesorio. El izquierdo, en dos lóbulos: craneal —dividido en craneal y caudal—, y caudal. Los pulmones están envueltos por la pleura viceral. En el <small>Cuadro 28</small>, se expresa el peso, la altura y el ancho de los pulmones en diferentes semanas de edad.</p>
 			
 			
-			<table class="tipo2 tipoAncha">
+			<table class="tipo2 tipoAncha" id="cuadro28">
 			<caption><small>Cuadro 28.</small> Morfometría de los pulmones del cerdo miniatura.</caption>
 				<tbody>
 				<tr class="primeraFila">
@@ -2261,8 +2263,8 @@
 			<p>El ojo es un globo casi esférico hueco, ubicado en la cabeza (cara). A la capa externa se le conoce como esclerótica y es fibrosa. La capa media se compone de coroides, cuerpo ciliar e iris. Y la interna o retina es tejido nervioso o sensorial. En el <small>Cuadro 29</small>, se observa el peso y la altura del ojo del cerdo miniatura a diferentes semanas de edad.</p>
 			
 			
-			<table class="tipo2 tipoAncha">
-				<caption><small>Cuadro 29.</small> Morfometría de los pulmones del cerdo miniatura.</caption>
+			<table class="tipo2 tipoAncha" id="cuadro29">
+				<caption><small>Cuadro 29.</small> Morfometría del ojo del cerdo miniatura.</caption>
 				<tbody>
 				<tr class="primeraFila">
 					<th class="esquina">Variable / semanas</th>
@@ -2317,6 +2319,45 @@
 			
 			
 			<div class="raya-separado-sub" id="finSistemas"></div>
+			
+
+			
+			<p>Índice de tablas</p>
+			
+			<ol>
+				<li><a onClick="irCuadro1()">Origen de algunas razas de cerdos miniatura</a></li>
+				<li><a onClick="irCuadro2()">Peso del cerebro y el cerebelo juntos, además del largo y el ancho</a></li>
+				<li><a onClick="irCuadro3()">Morfometría del corazón</a></li>
+				<li><a onClick="irCuadro4()">Morfometría de la lengua</a></li>
+				<li><a onClick="irCuadro5()">Morfometría de la esófago</a></li>
+				<li><a onClick="irCuadro6()">Morfometría del  estómago</a></li>
+				<li><a onClick="irCuadro7()">Morfometría de intestino delgado</a></li>
+				<li><a onClick="irCuadro8()">Morfometría de intestino grueso</a></li>
+				<li><a onClick="irCuadro9()">Morfometría del hígado</a></li>
+				<li><a onClick="irCuadro10()">Morfometría del riñón</a></li>
+				<li><a onClick="irCuadro11()">Morfometría de la vulva</a></li>
+				<li><a onClick="irCuadro12()">Morfometría de la vagina</a></li>
+				<li><a onClick="irCuadro13()">Morfometría de los cuernos uterinos</a></li>
+				<li><a onClick="irCuadro14()">Morfometría del cérvix</a></li>
+				<li><a onClick="irCuadro15()">Morfometría de las tubas uterinas</a></li>
+				<li><a onClick="irCuadro16()">Morfometría de los ovarios</a></li>
+				<li><a onClick="irCuadro17()">Morfometría de testículo</a></li>
+				<li><a onClick="irCuadro18()">Morfometría del epidídimo</a></li>
+				<li><a onClick="irCuadro19()">Morfometría de las vesículas seminales</a></li>
+				<li><a onClick="irCuadro20()">Morfometría de las glándulas bulbouretrales</a></li>
+				<li><a onClick="irCuadro21()">Morfometría del pene</a></li>
+				<li><a onClick="irCuadro22()">Morfometría de la próstata</a></li>
+				<li><a onClick="irCuadro23()">Morfometría de la tiroides</a></li>
+				<li><a onClick="irCuadro24()">Morfometría de las adrenales</a></li>
+				<li><a onClick="irCuadro25()">Morfometría del bazo</a></li>
+				<li><a onClick="irCuadro26()">Morfometría del timo</a></li>
+				<li><a onClick="irCuadro27()">Morfometría de la tráquea</a></li>
+				<li><a onClick="irCuadro28()">Morfometría de los pulmones</a></li>
+				<li><a onClick="irCuadro29()">Morfometría del ojo</a></li>
+			
+			</ol>
+			
+
 			
 			
 			

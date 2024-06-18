@@ -14,7 +14,7 @@ body {
 }
 /*AGREGADO ENERO 2024*/
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;/*smooth*/
 }
 
 /*#barranavegacion img.img-full {
@@ -90,8 +90,8 @@ div.contenedor_sinheader {
 #boton1, #boton2, #boton3, #boton4 {
 	background-color: ghostwhite;
 }
-#boton5 {opacity: .8;}
-#boton6 {
+#boton5, #boton6 {opacity: .8;}
+#boton7 {
 	border-bottom: none;
 	opacity: .8;
 }
