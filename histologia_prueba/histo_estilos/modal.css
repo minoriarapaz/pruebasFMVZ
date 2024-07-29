@@ -1,0 +1,444 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+.myImg {
+	position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+	display: block;
+	
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 3em;
+	width: 60%;
+}
+
+.myImg:hover {opacity: 0.5;}
+
+
+
+/* The Modal (background) */
+
+.modalO {
+	  display: block; /* Hidden by default */
+	  position: fixed; /* Stay in place */
+	  z-index: 2; /* Sit on top */
+	  padding-top: 30px; /* Location of the box */
+	  left: 0;
+	  top: 0;
+	  width: 100%; /* Full width */
+	  height: 100%; /* Full height ANTES ERA 100%*/
+	  overflow:hidden; /* ANTES ERA SCROLL (mayo 2024)*/
+	
+  		background-color: rgba(0, 0, 0, .9); 
+		transition: opacity 1s;
+}
+
+/* Modal Content (BIBLIOGRAFIA) */
+.modal-content {
+  margin: auto;
+	margin-top: 30px;
+  display: block;
+  width: 80%;
+  /*max-width: 700px;*/
+	height:auto;
+	border-radius: 30px;
+	/*mi aportacion:*/
+	overflow: auto;
+	position: relative;
+	box-shadow: 2px 2px 10px BLACK;
+	transition: scale 0.3s;
+	-webkit-animation-name: zoom;
+  	-webkit-animation-duration: 0.5s;
+  	animation-name: zoom;
+  	animation-duration: 0.5s;
+}
+.fondoClaro {
+	background-color: ghostwhite;
+}
+
+
+.modal-content-obj {
+  margin: auto;
+  display: block;
+  width: 60%;
+	min-height: 300px;
+	height:auto;
+	top: 80px;
+	overflow: auto;
+	position: relative;
+	clear: both; /*antes left*/
+	font-size: 1em;
+	word-wrap: normal;
+	text-indent: 0em;
+	line-height: 1.6;
+	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
+	color: gainsboro;
+	transition: scale 1s;
+	transition-timing-function: ease-in-out;
+	
+	-webkit-animation-name: zoom;
+  -webkit-animation-duration: 2s;
+  animation-name: zoom;
+  animation-duration: 2s;
+}
+.modal-content-obj p {
+	margin-bottom: .3em;
+	hyphens: auto;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	text-align: center;
+}
+.modal-content-obj strong {
+	color: ghostwhite;
+}
+
+
+.periquito {
+	display: block;
+	width: 117px;
+	height: 200px;
+	position: relative;
+	overflow: visible;
+	margin-left: 10%;
+	top: 80px;
+	background-repeat: no-repeat;
+	transition: scale .5s;
+	-webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.8s;
+  animation-name: zoom;
+  animation-duration: 0.8s;
+}
+
+.modal-content img {
+	display: block;
+	/*position: relative;*/
+}
+
+/* Caption of Modal Image */
+
+
+
+
+
+
+
+
+
+/*Estilos para el MODAL que contiene la bibliografía--------- */
+.modal {
+  	display: none; /* Hidden by default */
+	opacity: 0;
+  	position: fixed; /* Stay in place */
+  	z-index: 2; /* Sit on top */
+  	padding-top: 30px; /* Location of the box */
+	padding-bottom: 20px;
+  	left: 0;
+  	top: 0;
+  	width: 100%; /* Full width */
+  	height: 100%; /* Full height ANTES ERA 100%*/
+  	overflow:scroll; /* Enable scroll if needed  ANTES ERA AUTO*/
+  	background-color: rgba(0, 0, 0, .7);  /*Black w/ opacity */
+	transition: opacity 0.3s;
+}
+
+.bibliotextos {
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 50px;
+	font-family: Open Sans, "Trebuchet MS", Arial, serif;
+	color: darkslategray;
+}
+.bibliotextos p {
+	margin-bottom: 1em;
+	max-width: 700px;
+	text-indent: -1em;
+}
+
+/*MODAL DE LAS LEGALES */
+
+.modal-content > section {
+	border-left: 1px dashed grey;
+	border-right: 1px dashed grey;
+	display: flex;
+	flex-direction: column;
+	
+	min-height: 500px;
+	margin: 50px 50px 50px 50px;
+	overflow: hidden;
+}
+
+.inferior, .marquesina {
+	width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.superior {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	font-family: Open Sans, "Trebuchet MS", Arial, serif;
+	width: 400%;
+	
+	left: 0;
+}
+.superior .page {
+	display: block; /*era block hasta6junio*/
+	width: 25%;
+	padding: 1em;
+}
+.superior p {
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: center;
+}
+.inferior {
+	display: flex;
+	justify-content: center;
+}
+.marquesina > img {
+	margin: auto;
+}
+
+button.boton_legal {
+	display: inline-block;
+	padding: 6px 10px 6px 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	font-family: Open Sans, "Trebuchet MS", Arial, serif;
+	border-radius: 5px;
+	border-style: none;
+	width: auto;
+	background-image: linear-gradient(slateblue, darkslateblue);
+	color: ghostwhite;
+}
+.boton_legal_mark {
+	font-weight: bold;
+}
+img.logo-licencia {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1em;
+	margin-bottom: 2em;
+	display: block;
+}
+.page-segmento {
+	border-top: 1px solid darkslategray;
+	padding-bottom: 1em;
+}
+.page-segmento p {
+	margin-bottom: .6em;
+}
+p.titulillo /*el titulo de los directorios*/ {
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+/*MODAL DE LAS LEGALES fiiiiiiiinnnnnnn */
+
+
+iframe {
+	border: none;
+	background-color: black;
+}
+
+
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+@keyframes zoomOut {
+  from {transform:scale(1)} 
+  to {transform:scale(.5)}
+}
+
+/* el boton cerrar X */
+.cruz {
+	z-index: 3;
+  position: absolute; /*absolute*/
+  top: 30px;
+  right: 50px; /*35*/
+  color: white;
+  font-size: 25px; /*40px*/
+  font-weight: bold;
+  transition: 0.3s;
+	padding: 10px 40px 10px 40px; /*  ÁREA DE CLICADO */
+	background-color: slateblue; /*rgba(47, 79, 79, .5);*/
+	border-radius: 10px;
+	
+}
+
+.cruz:hover, .cruz:focus {
+	
+  color: ghostwhite;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btnContinuar {
+	display: block;
+	clear: both;
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 5em;
+  position: relative; /*absolute*/
+	width: 100px;
+  color: ghostwhite;
+  font-size: 1em; /*40px*/
+  font-weight: bold;
+	padding: 8px 50px 8px 50px; /*  ÁREA DE CLICADO */
+	background-image: linear-gradient(slateblue, darkslateblue);
+	border-radius: 10px;
+	text-align: center;
+	transition: 0.3s;
+}
+
+.btnContinuar:hover, .btnContinuar:focus {
+	
+  color: ghostwhite;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 99%;
+  }
+	.cruz {
+		right: 0px; top: 20px; /*35*/
+	}
+	
+}
+/*@media (max-width: 1000px) {
+	.modal-content img {width: 100%;}
+}*/
+
+@media (min-width: 900px) {
+	.ficha {
+		height: 350px;
+		float: left;
+		width: 48%;
+	}
+	.flotaD {float: right;}
+	.radiografia {width: 80%;}
+	.modal-content-obj {
+		width: 550px;
+	}
+}
+@media (max-width: 900px) {
+	.ficha {max-height: 500px;}
+}
+/************ AJUSTE DE ALTURA DEL IFRAME MICANVAS (MIN- = ARRIBA DE**************/
+@media (min-width:900px) {
+	.misCanvas {width: 80%;}
+	
+}
+
+
+@media (min-width: 1100px) {
+	.misCanvas {width: 70%;}
+	
+}
+@media (min-width: 1400px) {
+	.misCanvas {width: 60%; height: 530px;}
+	
+}
+@media (min-width: 1600px) {
+	.misCanvas {width: 50%;}
+	
+}
+/*****MAX height o literalmente " ABAJO DE... "
+AQUI ESTÁN LAS ALTURAS VARIABLES, LA MAYORIA*/
+@media (min-width: 1001px) {
+	.misCanvas {height: 530px; }
+}
+
+@media (max-width: 1000px) {
+	.misCanvas {height: 500px;}
+	
+}
+@media (max-width: 900px) {
+	.misCanvas {height: 500px;}
+}
+@media (max-width: 500px) {
+	.misCanvas {height: 400px; border-radius: 0px;}
+	.modalO {
+		padding-top: 10px;
+	}
+}
+
+@media (max-width: 400px) {
+	.misCanvas {height: 350px;}
+	
+	
+	.modal-content > section {
+		margin: 50px 10px 50px 10px;
+	}
+	button.boton_legal {
+		/*background-image: linear-gradient(transparent, transparent);
+		background-color: transparent;*/
+		border-radius: 0px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	#btnlegal1, #btnlegal3 {
+		width: 27%;
+	}
+	
+	#btnlegal2 {
+		width: 44%;
+		border-left: 1px solid ghostwhite;
+		border-right: 1px solid ghostwhite;
+	}
+}
+
+
+
+@media (max-width: 700px) {
+	.modal-content img {width: 85%;}
+}
+@media (max-width: 500px) {
+	.caption {width: 100%; padding-bottom: 1em; padding-top: 1em; border-radius: 0 0 0 0;}
+	.cruz {top: 20px; font-size: 20px;}
+	.caption p {line-height: 1.2;}
+	.info_modal {margin-right: .5em; padding: 2px 2px 2px 5px; border-radius: 6px; font-size: .7em;}
+	.modal-content img {width: 99%;}
+	.ficha {max-height: 400px;}
+}
+@media (max-width: 550px) {
+	.modal-content-obj {
+
+  	width: 90%;
+	height:auto;
+	top: 70px;
+	font-size: 1em;
+	line-height: 1.7;
+	}
+	.periquito {
+		top: 70px;
+	}
+}
+
+
+/*
+@media (max-width: 450px) {
+	iframe.misCanvas {
+		height: 450px;
+	}
+}
+@media (max-width: 400px) {
+	iframe.misCanvas {
+		height: 400px;
+	}
+} @media (max-width: 350px) {iframe.misCanvas {height: 350px;} } @media (max-width: 325px) {iframe.misCanvas {height: 325px;} }*/
