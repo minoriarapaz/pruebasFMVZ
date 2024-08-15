@@ -4,7 +4,7 @@
 
 
 header {	
-	background-image: url("../minipig_imagenes/interfaz/textura_pielazul_med.png"), linear-gradient(slateblue, darkslateblue);
+	background-image: url("../histologia_img/interfaz/pleca.png"), linear-gradient(rgb(102, 102, 153), rgb(102, 102, 153), rgb(89, 89, 140));
 	background-repeat: no-repeat;
 	background-position: right bottom;
 	background-size: auto 100%;
@@ -213,7 +213,7 @@ span.equis:after {
 
 @media (max-width: 800px) {
 	header {
-		background-image: url("../minipig_imagenes/interfaz/textura_pielazul_small.png"), linear-gradient(slateblue 30%, darkslateblue 99%);
+		background-image: url("../histologia_img/interfaz/pleca.png"), linear-gradient(rgb(102, 102, 153), rgb(102, 102, 153), rgb(89, 89, 140));
 	}
 	
 	header > section {

@@ -14,14 +14,14 @@ function achicar() {
 
 function colorOscuro() {
 	document.getElementById("Contenido").style.backgroundColor ="black";
-	document.getElementById("botonOjo").src="minipig_imagenes/interfaz/icon_ojoblanco.png";
+	document.getElementById("botonOjo").src="histologia_img/interfaz/icon_ojoblanco.png";
 	/*document.getElementById("Contenido").style.color="gainsboro";*/
 	document.getElementById("fondoBiblio").style.backgroundColor="rgba(0, 0, 0, .8)";
 	document.getElementById("fondoLegal").style.backgroundColor="rgba(0, 0, 0, .8)";
 }
 function colorMedio() {
 	document.getElementById("Contenido").style.backgroundColor ="bisque";
-	document.getElementById("botonOjo").src="minipig_imagenes/interfaz/icon_ojoazul.png";
+	document.getElementById("botonOjo").src="histologia_img/interfaz/icon_ojoazul.png";
 	
 	document.getElementById("fondoBiblio").style.backgroundColor="bisque";
 	document.getElementById("fondoLegal").style.backgroundColor="bisque";
@@ -29,7 +29,7 @@ function colorMedio() {
 }
 function colorClaro() {
 	document.getElementById("Contenido").style.backgroundColor ="ghostwhite";
-	document.getElementById("botonOjo").src="minipig_imagenes/interfaz/icon_ojoazul.png";
+	document.getElementById("botonOjo").src="histologia_img/interfaz/icon_ojoazul.png";
 	
 	document.getElementById("fondoBiblio").style.backgroundColor="ghostwhite";
 	document.getElementById("fondoLegal").style.backgroundColor="ghostwhite";
