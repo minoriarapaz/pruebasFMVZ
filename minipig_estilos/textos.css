@@ -64,6 +64,7 @@ h4 {
 	/*width: 100%; era 100, antes de que pusieras DISPLAY FLEX al contenedor*/
 	color: darkslategray;
 /*	margin: auto;*/
+	scroll-snap-type: y mandatory;
 }
 
 @media (max-width: 800px) {
