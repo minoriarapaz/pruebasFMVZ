@@ -227,6 +227,8 @@ td strong {
 	background-color: darkslategray;
 	margin-top: 2em;
 	margin-bottom: 3em;
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
 }
 .raya-separado-sub {
 	position: relative;

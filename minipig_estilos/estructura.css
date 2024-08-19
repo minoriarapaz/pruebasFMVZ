@@ -11,6 +11,7 @@
 overflow debe ser HIDDEN */
 body {
 	overflow: hidden;
+	scroll-snap-type: y mandatory;
 }
 /*AGREGADO ENERO 2024*/
 html {
@@ -92,6 +93,7 @@ div.contenedor_sinheader {
 }
 #boton5, #boton6 {opacity: .8;}
 #boton7 {
+	border-radius: 0 0 0 15px;
 	border-bottom: none;
 	opacity: .8;
 }
