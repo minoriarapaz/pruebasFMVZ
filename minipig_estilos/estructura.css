@@ -15,6 +15,7 @@ body {
 /*AGREGADO ENERO 2024*/
 html {
   scroll-behavior: auto;/*smooth*/
+	scroll-snap-type: y proximity;
 }
 
 /*#barranavegacion img.img-full {
