@@ -5,6 +5,7 @@
 
 header {	
 	background-image: url("../minipig_imagenes/interfaz/textura_pielazul_med.png"), linear-gradient(slateblue, darkslateblue);
+	background-blend-mode: luminosity;
 	background-repeat: no-repeat;
 	background-position: right bottom;
 	background-size: auto 100%;

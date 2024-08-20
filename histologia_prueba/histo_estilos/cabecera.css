@@ -4,7 +4,10 @@
 
 
 header {	
-	background-image: url("../histologia_img/interfaz/pleca.png"), linear-gradient(rgb(102, 102, 153), rgb(102, 102, 153), rgb(89, 89, 140));
+	background-image: url("../histologia_img/interfaz/pleca.png"), 
+		linear-gradient(lightseagreen, rgb(0, 102, 102));
+		/*linear-gradient(rgb(102, 102, 153), rgb(102, 102, 153), rgb(89, 89, 140));*/
+	background-blend-mode: luminosity;
 	background-repeat: no-repeat;
 	background-position: right bottom;
 	background-size: auto 100%;
@@ -213,7 +216,8 @@ span.equis:after {
 
 @media (max-width: 800px) {
 	header {
-		background-image: url("../histologia_img/interfaz/pleca.png"), linear-gradient(rgb(102, 102, 153), rgb(102, 102, 153), rgb(89, 89, 140));
+		background-image: url("../histologia_img/interfaz/pleca.png"), 
+		linear-gradient(lightseagreen, rgb(0, 102, 102));
 	}
 	
 	header > section {

@@ -300,7 +300,7 @@ video {
 	}
 	body {
 		background-attachment: fixed;
-		background-image: linear-gradient(lavenderblush, antiquewhite);
+		background-image: linear-gradient(	rgb(191, 255, 234), aquamarine);
 	}
 	#btnindice {display: none;}
 	
