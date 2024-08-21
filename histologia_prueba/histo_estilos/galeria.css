@@ -5,6 +5,8 @@
 	box-sizing: border-box;
 	position: relative;
 	width: 100%;
+	margin-bottom: 2em;
+	margin-top: 2em;
 }
 
 .mySlides {
@@ -14,6 +16,7 @@
 .mySlides img, .slideFalsa img, 	.galeria div:first-child img /*la primera imagen -falsa- de galería*/ {
 	display:block;
 	max-width: 100%;
+	border-radius: 0 0 10px 10px;
 }
 
 .cursorgaleria {
@@ -63,12 +66,14 @@
 	display: block;
 	width: auto;
 	text-align: center;
-	background-color: darkslategray;
+	background-image: linear-gradient(slateblue, darkslateblue);
 	padding: 5px 16px;
-	color: white;
+	
+	border-radius: 10px 10px 0 0;
 	font-family: Open Sans, "Trebuchet MS", Arial, serif;
 	font-size: .9em;
-	border-radius: 10px 10px 0 0;
+	font-weight: bold;
+	color: ghostwhite;
 }
 .row {
 	border: 2px solid blue;
@@ -91,4 +96,23 @@
 
 .active, .demo:hover {
 	opacity: 1;
+}
+
+/*CLASES PARA LECTURA.JS */
+.txtGris {
+	color: darkslategray;
+}
+
+/*comportamiento del titulo de galeria*/
+.captionClaro {
+	background-image: linear-gradient(slateblue, darkslateblue);
+	color: ghostwhite;
+}
+.captionMedio {
+	background-image: linear-gradient(rgba(102, 51, 51, .5), rgb(102, 51, 51));
+	color: ghostwhite;
+}
+.captionOscuro {
+	background-image: linear-gradient(rgb(248, 248, 255), rgb(248, 248, 255));
+	color: darkslategray;
 }

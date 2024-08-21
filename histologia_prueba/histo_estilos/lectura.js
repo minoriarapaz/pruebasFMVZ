@@ -40,34 +40,32 @@ function colorClaro() {
 
 $(document).ready(function(){
   $("#bOscuro").click(function(){
-   	$(this).addClass("defaul");
+	$(this).addClass("defaul");
 	$(this).siblings().removeClass("defaul");
-	  
 	$("p").addClass("textoColorClaro");
 	$("p").removeClass("textoColorMedio textoColorDefaul")
-	  
 	$("ol").removeClass("textoColorMedio");
 	$("ul").removeClass("textoColorMedio");
 
 	$("h2").addClass("textoColorClaro");
 	$("h3").addClass("textoColorClaro");
 	$("h4").addClass("textoColorClaro");
-	 
 	$("ol").addClass("textoColorClaro");
 	
 	$("ul").addClass("textoColorClaro");
-	  
 	$("caption").addClass("textoColorClaro");
 	$("caption").removeClass("textoColorMedio");
-	  
-	  
-	  /*aparte de los parrafos*/
+  
+	$(".captiongaleria").addClass("captionOscuro");
+	$(".captiongaleria").removeClass("captionClaro captionMedio");
+	$(".numbertext").addClass("txtGris");
   });
 	
 	$("#bMedio").click(function(){
     $(this).addClass("defaul");
 	$(this).siblings().removeClass("defaul");
-	$("p").addClass("textoColorMedio");
+	$(".textos p").addClass("textoColorMedio");
+	$(".captiongaleria p").addClass("textoColorClaro");
 	$("ol").addClass("textoColorMedio");
 	$("ul").addClass("textoColorMedio");
 		
@@ -82,6 +80,9 @@ $(document).ready(function(){
 	$("caption").addClass("textoColorMedio");
 	$("caption").removeClass("textoColorClaro");
 	
+	$(".captiongaleria").addClass("captionMedio");
+	$(".captiongaleria").removeClass("captionClaro captionOscuro");
+	$(".numbertext").removeClass("txtGris");
 	
   });
 	
@@ -101,7 +102,10 @@ $(document).ready(function(){
 	$("ul").removeClass("textoColorClaro textoColorMedio");
 		
 	$("caption").removeClass("textoColorClaro");
-		
+	
+	$(".captiongaleria").addClass("captionClaro");
+	$(".captiongaleria").removeClass("captionMedio captionOscuro");
+	$(".numbertext").removeClass("txtGris");
   });
 });
 

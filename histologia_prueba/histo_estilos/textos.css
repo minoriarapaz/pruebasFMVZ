@@ -111,8 +111,8 @@ spam.versalita {
 	margin-right: 20%;*/
 }
 /*para el control de lectura*/
-.textoColorClaro {color: gainsboro;}
-.textoColorMedio {color: #663333; /*#663333;*/}
+.textoColorClaro {color: gainsboro; /*gainsboro*/}
+.textoColorMedio {color: #663333 /*#663333;*/}
 .textoColorDefaul {color: inherit;}
 /*para el control de lectura FFFIIINNN*/
 .textos ol {
