@@ -65,10 +65,10 @@ header .mininavegador a {color: ghostwhite;}
 	position: relative;
 	height: auto;	/*borralo*/
 	width: 99%;
-	margin-top: 0px;/*era 10*/
+	margin-top: 0px;/*era 0*/
 	padding-top: 0em;
 	padding-left: 10%;
-	background-color: slateblue;/*slateblue*/ /*rgba(255,102,102,.8);*/
+	background-color: rgb(0, 102, 102);/*slateblue*/ /*rgba(255,102,102,.8);*/
 	border-radius: 0 0 18px 18px;
 	font-family: Open Sans, "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
 	-webkit-transition: all .7s;
@@ -244,7 +244,7 @@ span.equis:after {
 	width: 100%;}
 	
 	.mininavegador {
-		margin-top: -2px;
+		margin-top: 110px; /*era -2px. esto alinea el navegador bajo la cabecera*/
 		padding-top: 1em;
 		padding-left: .5em;
 		padding-right: .5em;
@@ -296,12 +296,20 @@ span.equis:after {
 		opacity: .8;
 	}
 	
+	.mininavegador {
+		margin-top: 50px; /*era -2px. esto alinea el navegador bajo la cabecera*/
+	}
+	
 
 }
 
 @media (max-width: 300px) {
 	.img-mobile {
-		height: 70px;
+		height: 80px;
+	}
+	
+	.boton_indice {
+		margin-right: 10px;
 	}
 }
 
