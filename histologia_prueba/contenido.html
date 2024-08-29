@@ -14,7 +14,6 @@
 <link href="histo_estilos/cabecera.css" rel="stylesheet" type="text/css">
 <link href="histo_estilos/modal.css" rel="stylesheet" type="text/css">
 <link href="histo_estilos/textos.css" rel="stylesheet" type="text/css">
-<link href="histo_estilos/navegacion.css" rel="stylesheet" type="text/css">
 <link href="histo_estilos/lectura.css" rel="stylesheet" type="text/css">
 <link href="histo_estilos/galeria.css" rel="stylesheet" type="text/css">
 	
@@ -40,9 +39,7 @@
 			
 			<a class="logo-click" href="index.html"><img src="histologia_img/interfaz/logoh.png" alt="logo-header" class="img-full"><img src="histologia_img/interfaz/logo.png" alt="logochico-header" class="img-mobile"></a>
 			
-			<div id="btnindice" class="boton_indice" onClick="show_indice()"><span class="equis" id="laX"></span>
-				<div id="rayas"><span class="pan"></span><span class="pan"></span><span class="pan"></span></div>
-			</div>
+		
 			
 			<nav class="mininavegador" id="nav-indice">
 				<ul id="ul_menu_mobile">
@@ -61,11 +58,11 @@
 							<li><a onClick="irSistema8M()">8. Órganos linfoides</a></li>
 							<li><a onClick="irSistema9M()">9. Sistema tegumentario</a></li>
 							<li><a onClick="irSistema10M()">10. Sistema locomotor</a></li>
-							<li><a onClick="irSistema11M()">11. respiratorio</a></li>
+							<li><a onClick="irSistema11M()">11. Sistema respiratorio</a></li>
 							<li><a onClick="irSistema12M()">12. Ojo</a></li>
 						</ol>
 					</li>
-					<li id="btnUltimo"><i><a onClick="irTablasM()">Índice de imágenes</a></i></li>
+					<li id="btnUltimo"><a onClick="irTablasM()"><i>Índice de imágenes</i></a></li>
 				</ul>
 			</nav>
 		</div><!--clase container-->
@@ -74,12 +71,63 @@
 		
 		<!--BOTON DE LEGALES y biblio EN MODO MOBILE-->
 		<section>
-			<button class="boton_legal2" onMouseUp="verBiblio()">Bibliografía</button><button class="boton_legal2" onMouseUp="verLegales()">Legal</button>
+			<button class="boton_legal2" onMouseUp="verIndice2()">Contenido</button><button class="boton_legal2" onMouseUp="verBiblio()">Bibliografía</button><button class="boton_legal2" onMouseUp="verLegales()">Legal</button>
 		</section>
 		<!--BOTON DE LEGALES y biblio EN MODO MOBILE  FIIIIIIN-->
 	</header>
 	
 	<section class="contenedor">
+		
+		<section id="modalIndice" class="modaltransparente" >
+				
+				<div id="tablaIndice" class="modal-indice fondoClaro">
+						<ul> <!--en modal.css-->
+							<li id="B1" class="activo" onClick="irPrologoM()">Prólogo</li>
+							<li id="B2" onClick="irIntroM()">Introducción</li>
+							<li id="B3" onClick="irMaterialM()" >Material y métodos</li>
+							<li id="B4" ><a onClick="irAnatomiaM()">Histología</a>
+							<ol>
+								<li id="b1" onClick="irSistema1M()">Sistema nervioso</li>
+								<li id="b2" onClick="irSistema2M()">Sistema cardiovascular</li>
+								<li id="b3" onClick="irSistema3M()">Sistema digestivo</li>
+								<li id="b4" onClick="irSistema4M()">Sistema renal</li>
+								<li id="b5" onClick="irSistema5M()">Órganos genitales - hembra</li>
+								<li id="b6" onClick="irSistema6M()">Órganos genitales - macho</li>
+								<li id="b7" onClick="irSistema7M()">Sistema endócrino</li>
+								<li id="b8" onClick="irSistema8M()">Órganos linfoides</li>
+								<li id="b9" onClick="irSistema9M()">Sistema tegumentario </li>
+								<li id="b10" onClick="irSistema10M()">Sistema locomotor (músculo)</li>
+								<li id="b11" onClick="irSistema11M()">Sistema respiratorio</li>
+								<li id="b12" onClick="irSistema12M()">Ojo</li>
+							</ol>
+							</li>
+							<li id="B5" onClick="irTablasM()">Índice de galerías</li>
+						</ul>
+						<!--<ul>
+							<li><a  onClick="irPrologoM()">Prólogo</a></li>
+							<li><a  onClick="irIntroM()">Introducción</a></li>
+							<li><a  onClick="irMaterialM()">Material y métodos</a></li>
+							<li><a  onClick="irAnatomiaM()">Histología</a>
+								<ol>
+									<li><a onClick="irSistema1M()">1. Sistema nervioso</a></li>
+									<li><a onClick="irSistema2M()">2. Sistema cardiovascular</a></li>
+									<li><a onClick="irSistema3M()">3. Sistema digestivo</a></li>
+									<li><a onClick="irSistema4M()">4. Sistema renal</a></li>
+									<li><a onClick="irSistema5M()">5. Sistema reproductor de la hembra</a></li>
+									<li><a onClick="irSistema6M()">6. Sistema reproductor del macho</a></li>
+									<li><a onClick="irSistema7M()">7. Sistema endócrino</a></li>
+									<li><a onClick="irSistema8M()">8. Órganos linfoides</a></li>
+									<li><a onClick="irSistema9M()">9. Sistema tegumentario</a></li>
+									<li><a onClick="irSistema10M()">10. Sistema locomotor</a></li>
+									<li><a onClick="irSistema11M()">11. Sistema respiratorio</a></li>
+									<li><a onClick="irSistema12M()">12. Ojo</a></li>
+								</ol>
+							</li>
+							<li><a onClick="irTablasM()"><i>Índice de galerías</i></a></li>
+						</ul>-->
+				</div>
+			</section>
+		
 		
 		
 		<!--CONTROLES DE LECTURA-->
@@ -131,7 +179,7 @@
 				</li>
 				<li id="boton5" onClick="verBiblio()">Bibliografía</li>
 				<li id="boton6" onClick="verLegales()">Legal</li>
-				<li id="boton7" onClick="irTablas()">Índice de imágenes</li>
+				<li id="boton7" onClick="irTablas()">Índice de galerías</li>
 			</ul>
 		</div><!--BARRA FIN-->
 		
@@ -142,6 +190,7 @@
 			
 			
 		<!--	MODAL DE INICIO (ADVERTENCIA)-->
+			
 			<div class="modalO" id="modalObjetivo">
 			  	
 				<div class="modal-content-obj" id="textoObjetivo">
@@ -152,6 +201,7 @@
 					<a class="btnContinuar" onClick="modalObj()">Continuar</a>
 				</div>
 			</div>
+			
 			<!--	MODAL DE INICIO (ADVERTENCIA)-->
 			
 			
@@ -181,93 +231,89 @@
 				</div>
 			</div>
 			<!--inicia modal legales-->
-			<div class="modal" id="Legales">
-				<span class="cruz" id="tachelegal" onClick="verLegales()">&times;</span>
+			<div class="modal" id="modalLegales">
+			  	<span class="cruz" id="tache2" onClick="verLegales()">&times;</span>
 				
 				<div id="fondoLegal" class="modal-content fondoClaro">
 					<section>
 						<div class="marquesina">
 							<img style="width:100px;" src="histologia_img/interfaz/pig.png" alt="logopig" class="logosmall">
 						</div>
-						
 						<div class="inferior">
 							<button class="boton_legal" onMouseUp="irCreditos()" id="btnlegal1">Créditos</button>
 							<button class="boton_legal" onMouseUp="irAgradecimientos()" id="btnlegal2">Agradecimientos</button>
 							<button class="boton_legal" onMouseUp="irDirectorios()" id="btnlegal3">Directorio</button>
 						</div>
-						
+												
 						<div class="superior" id="pagLegales">
 							<div class="page" id="page1">
-							<p>Primera edición (html), xx de xxxxx de 2024</p>
-							<p>DR® 2023 UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO</p>
-							<p>Ciudad Universitaria, Coyoacán, 04510, Ciudad de México.</p>
-							
-							<p>ISBN: ----------- (HTML)</p>
-							<p><i>Esta edición y sus características son propiedad de la UNAM.</i></p>
+								<p>Primera edición (html), xx de xxxxx de 2024</p>
+								<p>DR® 2023 UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO</p>
+								<p>Ciudad Universitaria, Coyoacán, 04510, Ciudad de México.</p>
+								<p>ISBN: ----------- (HTML)</p>
+								<p><i>Esta edición y sus características son propiedad de la UNAM.</i></p>
 								<p><br><b>Hecho en México</b></p>
 								<img class="logo-licencia" src="histologia_img/interfaz/licencia_cc2.jpg" alt="logo licencia" style="width:200px;">
-							
 							</div>
 							
 							<div class="page" id="page2">
 								<p><b>Diseño y programación:<br></b>Carlos Iván Sánchez-Sánchez</p>
 							</div>
-							<div class="page" id="page3">Agradecimientos
 							
+							<div class="page" id="page3">
+								Agradecimientos
 								<p>El Comité Editorial de la FMVZ de la UNAM reconoce el trabajo que realizó ------------ por la revisión técnica de esta obra.</p>
-							
 							</div>
+							
 							<div class="page" id="page4">
 								<section class="page-segmento">
-								<p class="titulillo">UNAM</p>
-								<p>Dr. Leonardo Lomelí Vanegas<br><small>Rector</small></p>
+									<p class="titulillo">UNAM</p>
+									<p>Dr. Leonardo Lomelí Vanegas<br><small>Rector</small></p>
 
-								<p>Dra. Patricia Dolores Dávila Aranda
-								<br><small>Secretaria General</small></p>
+									<p>Dra. Patricia Dolores Dávila Aranda
+									<br><small>Secretaria General</small></p>
 
-								<p>Mtro. Hugo Alejandro Concha Cantú
-								<br><small>Abogado General</small></p>
+									<p>Mtro. Hugo Alejandro Concha Cantú
+									<br><small>Abogado General</small></p>
 
-								<p>Mtro. Tomás Humberto Rubio Pérez
-								<br><small>Secretario Administrativo</small></p>
+									<p>Mtro. Tomás Humberto Rubio Pérez
+									<br><small>Secretario Administrativo</small></p>
 
-								<p>Dra. Diana Tamara Martínez Ruíz
-								<br><small>Secretaria de Desarrollo Institucional</small></p>
+									<p>Dra. Diana Tamara Martínez Ruíz
+									<br><small>Secretaria de Desarrollo Institucional</small></p>
 
-								<p>Lic. Raúl Arcenio Aguilar Tamayo
-								<br><small>Secretario de Prevención, Atención
+									<p>Lic. Raúl Arcenio Aguilar Tamayo
+									<br><small>Secretario de Prevención, Atención
 								y Seguridad Universitaria</small></p>
-								
 								</section>
-								
 								<section class="page-segmento">
-								<p class="titulillo">FMVZ</p>
-								<p>Dr. Carlos Guillermo Gutiérrez Aguilar
-								<br><small>Director</small></p>
+									<p class="titulillo">FMVZ</p>
+									
+									<p>Dr. Carlos Guillermo Gutiérrez Aguilar
+									<br><small>Director</small></p>
+									<p>Dr. Jorge Hernández Espinosa
+									<br><small>Secretario General</small></p>
 
-								<p>Dr. Jorge Hernández Espinosa
-								<br><small>Secretario General</small></p>
+									<p>L.C. Enrique López Martínez
+									<br><small>Secretario Administrativo</small></p>
 
-								<p>L.C. Enrique López Martínez
-								<br><small>Secretario Administrativo</small></p>
-
-								<p>Dr. José Ángel G. Gutiérrez Pabello
+									<p>Dr. José Ángel G. Gutiérrez Pabello
 									<br><small>Secretario de Vinculación y Proyectos Especiales</small></p>
 
 
-								<p>Dr. Enrique Jesús Delgado Suárez
-								<br><small>Jefe del Departamento de Publicaciones</small></p>
+									<p>Dr. Enrique Jesús Delgado Suárez
+									<br><small>Jefe del Departamento de Publicaciones</small></p>
 
-								<p>MVZ Enrique Basurto Argueta
-								<br><small>Jefe del Departamento de Diseño Gráfico y Editorial</small></p>
+									<p>MVZ Enrique Basurto Argueta
+									<br><small>Jefe del Departamento de Diseño Gráfico y Editorial</small></p>
 								</section>
 							</div>
-						</div>
+							
+						</div><!--AQUI DENTRO VAN LAS 3 PAGINAS LEGALES-->
+
 					</section>
 				</div>
 			</div>
-			
-			
 			
 			<!--MODAL fin-->
 			
@@ -1434,7 +1480,7 @@
 			
 			<section id="galeria8" class="galeria">
 				<div class="captiongaleria">
-					Glándula bulbouretral</p>
+					Glándula bulbouretral
 				</div>
 				<div class="slideFalsa" id="bulbo-falsa">
 					  <img class="slideFalsa" onClick="openGaleria8(1)" src="histologia_img/organos/bulbouretral/bulbouretral00_1.jpg" alt="falsa">
@@ -1565,7 +1611,6 @@
 				<div class="mySlides">
 					<div class="numbertext">Imagen 9</div>
 					  <img onClick="openGaleria9(9)" src="histologia_img/organos/prostata/prostata05_4.jpg" alt="imgprostata">
->
 				  </div>
 				<div class="mySlides">
 					<div class="numbertext">Imagen 10</div>

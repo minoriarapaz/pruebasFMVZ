@@ -2,94 +2,18 @@
 
 
 
-/*FUNCION DEL MENU DESPLEGABLE PARA MOBIL*/
+/*FUNCION DEL MENU DESPLEGABLE PARA MOBIL
+FUERON PASADAS A MODAL.JS*/
 
 console.log("variable i es "+i);
 
-		function show_indice() {
-			if (i==1) {
-				document.getElementById("nav-indice").style.display="block";
-				i=2;
-				document.getElementById("btnindice").style.backgroundColor="ghostwhite";
-				document.getElementById("rayas").style.display="none";
-				document.getElementById("laX").style.display="block";
-				/*CIERRA EL CONTROL DE LECTURA si está ABIERTO*/
-				document.getElementById("Control").style.height="0px";
-				document.getElementById("ojo").style.display="none";
-				console.log("cerraste control");
-				/*CONTROL LECTURA*/
-			}
-			else {
-				i=1;
-				document.getElementById("nav-indice").style.display="none";/*(antes null)*/
-				document.getElementById("btnindice").style.backgroundColor="transparent";/*(antes null)*/
-				/*document.getElementById("nav-indice").style.height="500px";*/
-				document.getElementById("rayas").style.display="block";
-				document.getElementById("laX").style.display="none";
-				/*muestra el ojo*/
-				document.getElementById("ojo").style.display="block";
-				
-			}
-		} /*FIN  SHOW_INDICE*/
-
-function cerrarIndice() {
-	i=1;
-	document.getElementById("nav-indice").style.display="none";/*(antes null)*/
-	document.getElementById("btnindice").style.backgroundColor="transparent";/*(antes null)*/
-				
-	document.getElementById("rayas").style.display="block";
-	document.getElementById("laX").style.display="none";
-}
-
-/*FUNCION DEL MENU DESPLEGABLE PARA MOBIL  acaba*/
-
-
-/***********ABRIR PDFs**************/
-
-function abrir1() {
-	window.open("pdf/anatomia_cerebro.pdf", "_blank");
-}
-function abrir2() {
-	window.open("pdf/anatomia_corazon.pdf", "_blank");
-}
-function abrir3() {
-	window.open("pdf/anatomia_lengua.pdf", "_blank");
-}
-function abrir4() {
-	window.open("pdf/anatomia_rinon.pdf", "_blank");
-}
-function abrir5() {
-	window.open("pdf/anatomia_ovario.pdf", "_blank");
-}
-
-function abrir6() {
-	window.open("pdf/anatomia_testiculo.pdf", "_blank");
-}
-function abrir7() {
-	window.open("pdf/anatomia_tiroides.pdf", "_blank");
-}
-function abrir7a() {
-	window.open("pdf/anatomia_adrenal.pdf", "_blank");
-}
-function abrir8() {
-	window.open("pdf/anatomia_timo.pdf", "_blank");
-}
-function abrir9() {
-	window.open("pdf/anatomia_piel.pdf", "_blank");
-}
-function abrir10() {
-	window.open("pdf/anatomia_pierna.pdf", "_blank");
-}
-function abrir11() {
-	window.open("pdf/anatomia_pulmon.pdf", "_blank");
-}
-function abrir12() {
-	window.open("pdf/anatomia_ojo.pdf", "_blank");
-}
+		/*funcion show_indice borrada (ver en "reservas2")*/
 
 
 
-/* -------------------FUNCIONES PARA bolas (botones) de NAVEGACION-------------------*/
+
+/***********SCROLLING Y ETC**************/
+
 
 var compensacion = -1;
 
@@ -186,17 +110,24 @@ function irSistema9() {
 	window.scroll(
 		{top: (document.getElementById("sistema9").offsetTop - compensacion), left: 0, }
 	);
-	console.log("sistema tegumentario y locomotor");
+	console.log("sistema tegumentario");
 }
 function irSistema10() {
 	window.scroll(
 		{top: (document.getElementById("sistema10").offsetTop - compensacion), left: 0, }
 	);
-	console.log("sistema respiratorio");
+	console.log("sistema locomotor");
 }
 function irSistema11() {
 	window.scroll(
 		{top: (document.getElementById("sistema11").offsetTop - compensacion), left: 0, }
+	);
+	console.log("sistema respiratorio");
+}
+
+function irSistema12() {
+	window.scroll(
+		{top: (document.getElementById("sistema12").offsetTop - compensacion), left: 0, }
 	);
 	console.log("ojo");
 }
@@ -209,28 +140,28 @@ function irBiblio() {
 
 function irPrologoM() {
 	window.scrollTo(0, 0);
-	show_indice();
+	verIndice2();
 }
 
 function irIntroM() {
 	window.scroll({top: (document.getElementById("aIntro").offsetTop - compensacion), left: 0, });
-	show_indice();
+	verIndice2();
 }
 function irMaterialM() {
 	window.scroll(
 		{top: (document.getElementById("aMaterial").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 
 function irAnatomiaM() {
 	window.scroll(
 		{top: (document.getElementById("aAnatomia").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 		}
 function irBiblioM() {
-	show_indice();
+	verIndice2();
 }
 
 
@@ -239,75 +170,81 @@ function irSistema1M() {
 	window.scroll(
 		{top: (document.getElementById("sistema1").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 
 function irSistema2M() {
 	window.scroll(
 		{top: (document.getElementById("sistema2").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema3M() {
 	window.scroll(
 		{top: (document.getElementById("sistema3").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema4M() {
 	window.scroll(
 		{top: (document.getElementById("sistema4").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema5M() {
 	window.scroll(
 		{top: (document.getElementById("sistema5").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema6M() {
 	window.scroll(
 		{top: (document.getElementById("sistema6").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema7M() {
 	window.scroll(
 		{top: (document.getElementById("sistema7").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema8M() {
 	window.scroll(
 		{top: (document.getElementById("sistema8").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema9M() {
 	window.scroll(
 		{top: (document.getElementById("sistema9").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema10M() {
 	window.scroll(
 		{top: (document.getElementById("sistema10").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema11M() {
 	window.scroll(
 		{top: (document.getElementById("sistema11").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
+}
+function irSistema12M() {
+	window.scroll(
+		{top: (document.getElementById("sistema12").offsetTop - compensacion), left: 0, }
+	);
+	verIndice2();
 }
 
 function irTablasM() {
 	window.scroll(
 		{top: (document.getElementById("finSistemas").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 
 
@@ -397,7 +334,7 @@ $(document).ready(function(){
 	});*/
 });
 
-window.onscroll = function() {escrol_prologo(); escrol_introduccion(); escrol_material();  escrol_anatomia(); escrol_sistema1(); escrol_sistema2(); escrol_sistema3(); escrol_sistema4(); escrol_sistema5(); escrol_sistema6(); escrol_sistema7(); escrol_sistema8(); escrol_sistema9(); escrol_sistema10(); escrol_sistema11(); escrol_indexTablas()};
+window.onscroll = function() {escrol_prologo(); escrol_introduccion(); escrol_material();  escrol_anatomia(); escrol_sistema1(); escrol_sistema2(); escrol_sistema3(); escrol_sistema4(); escrol_sistema5(); escrol_sistema6(); escrol_sistema7(); escrol_sistema8(); escrol_sistema9(); escrol_sistema10(); escrol_sistema11(); escrol_sistema12(); escrol_indexTablas()};
 	
 function escrol_prologo() {
 	var tituloI = document.getElementById("aPrologo");
@@ -409,6 +346,12 @@ function escrol_prologo() {
 				document.getElementById("boton3").classList.remove("activo");
 				document.getElementById("boton4").classList.remove("activo");
 				document.getElementById("boton7").classList.remove("activo");
+				
+				document.getElementById("B1").classList.add("activo");
+				document.getElementById("B2").classList.remove("activo");
+				document.getElementById("B3").classList.remove("activo");
+				document.getElementById("B4").classList.remove("activo");
+				document.getElementById("B5").classList.remove("activo");
 			}
 }
 function escrol_introduccion() {
@@ -422,6 +365,12 @@ function escrol_introduccion() {
 				document.getElementById("boton4").classList.remove("activo");
 				
 				document.getElementById("boton7").classList.remove("activo");
+				
+				document.getElementById("B2").classList.add("activo");
+				document.getElementById("B1").classList.remove("activo");
+				document.getElementById("B3").classList.remove("activo");
+				document.getElementById("B4").classList.remove("activo");
+				document.getElementById("B5").classList.remove("activo");
 			}
 		}	
 
@@ -436,6 +385,13 @@ function escrol_material() {
 				document.getElementById("boton4").classList.remove("activo");
 				
 				document.getElementById("boton7").classList.remove("activo");
+				
+				document.getElementById("B3").classList.add("activo");
+				document.getElementById("B1").classList.remove("activo");
+				document.getElementById("B2").classList.remove("activo");
+				document.getElementById("B4").classList.remove("activo");
+				
+				document.getElementById("B5").classList.remove("activo");
 			
 			
 			} else {
@@ -452,10 +408,15 @@ function escrol_anatomia() {
 				document.getElementById("boton1").classList.remove("activo");
 				document.getElementById("boton2").classList.remove("activo");
 				document.getElementById("boton3").classList.remove("activo");
-				
 				document.getElementById("boton7").classList.remove("activo");
 				
 				document.getElementById("anatomia_temas").style.height = "340px";
+				
+				document.getElementById("B4").classList.add("activo");
+				document.getElementById("B1").classList.remove("activo");
+				document.getElementById("B2").classList.remove("activo");
+				document.getElementById("B3").classList.remove("activo");
+				document.getElementById("B5").classList.remove("activo");
 			} else {
 				document.getElementById("anatomia_temas").style.height = "0px";
 			}
@@ -474,6 +435,12 @@ function escrol_indexTablas() {
 				document.getElementById("boton4").classList.remove("activo");
 				
 				document.getElementById("anatomia_temas").style.height = "0px";
+				
+				document.getElementById("B5").classList.add("activo");
+				document.getElementById("B1").classList.remove("activo");
+				document.getElementById("B2").classList.remove("activo");
+				document.getElementById("B3").classList.remove("activo");
+				document.getElementById("B4").classList.remove("activo");
 			}
 		}
 
@@ -486,7 +453,8 @@ function escrol_sistema1() {
 			
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub1").classList.add("activoSub");
-			} else {document.getElementById("btnSub1").classList.remove("activoSub");}
+				document.getElementById("b1").classList.add("activoSub");
+			} else {document.getElementById("btnSub1").classList.remove("activoSub"); document.getElementById("b1").classList.remove("activoSub");}
 		}
 
 function escrol_sistema2() {
@@ -497,7 +465,8 @@ function escrol_sistema2() {
 	
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub2").classList.add("activoSub");
-			} else {document.getElementById("btnSub2").classList.remove("activoSub");}
+				document.getElementById("b2").classList.add("activoSub");
+			} else {document.getElementById("btnSub2").classList.remove("activoSub"); document.getElementById("b2").classList.remove("activoSub");}
 		}
 
 function escrol_sistema3() {
@@ -507,7 +476,8 @@ function escrol_sistema3() {
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub3").classList.add("activoSub");
-			} else {document.getElementById("btnSub3").classList.remove("activoSub");}
+				document.getElementById("b3").classList.add("activoSub");
+			} else {document.getElementById("btnSub3").classList.remove("activoSub"); document.getElementById("b3").classList.remove("activoSub");}
 		}
 function escrol_sistema4() {
 			var titulo = document.getElementById("sistema4");
@@ -516,7 +486,8 @@ function escrol_sistema4() {
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub4").classList.add("activoSub");
-			} else {document.getElementById("btnSub4").classList.remove("activoSub");}
+				document.getElementById("b4").classList.add("activoSub");
+			} else {document.getElementById("btnSub4").classList.remove("activoSub"); document.getElementById("b4").classList.remove("activoSub");}
 		}
 function escrol_sistema5() {
 			var titulo = document.getElementById("sistema5");
@@ -525,7 +496,8 @@ function escrol_sistema5() {
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub5").classList.add("activoSub");
-			} else {document.getElementById("btnSub5").classList.remove("activoSub");}
+				document.getElementById("b5").classList.add("activoSub");
+			} else {document.getElementById("btnSub5").classList.remove("activoSub"); document.getElementById("b5").classList.remove("activoSub");}
 		}
 function escrol_sistema6() {
 			var titulo = document.getElementById("sistema6");
@@ -534,7 +506,8 @@ function escrol_sistema6() {
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub6").classList.add("activoSub");
-			} else {document.getElementById("btnSub6").classList.remove("activoSub");}
+				document.getElementById("b6").classList.add("activoSub");
+			} else {document.getElementById("btnSub6").classList.remove("activoSub"); document.getElementById("b6").classList.remove("activoSub");}
 		}
 
 function escrol_sistema7() {
@@ -544,7 +517,8 @@ function escrol_sistema7() {
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub7").classList.add("activoSub");
-			} else {document.getElementById("btnSub7").classList.remove("activoSub");}
+				document.getElementById("b7").classList.add("activoSub");
+			} else {document.getElementById("btnSub7").classList.remove("activoSub"); document.getElementById("b7").classList.remove("activoSub");}
 		}
 function escrol_sistema8() {
 			var titulo = document.getElementById("sistema8");
@@ -553,7 +527,8 @@ function escrol_sistema8() {
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub8").classList.add("activoSub");
-			} else {document.getElementById("btnSub8").classList.remove("activoSub");}
+				document.getElementById("b8").classList.add("activoSub");
+			} else {document.getElementById("btnSub8").classList.remove("activoSub"); document.getElementById("b8").classList.remove("activoSub");}
 		}
 function escrol_sistema9() {
 			var titulo = document.getElementById("sistema9");
@@ -562,7 +537,8 @@ function escrol_sistema9() {
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub9").classList.add("activoSub");
-			} else {document.getElementById("btnSub9").classList.remove("activoSub");}
+				document.getElementById("b9").classList.add("activoSub");
+			} else {document.getElementById("btnSub9").classList.remove("activoSub"); document.getElementById("b9").classList.remove("activoSub");}
 		}
 function escrol_sistema10() {
 			var titulo = document.getElementById("sistema10");
@@ -571,176 +547,190 @@ function escrol_sistema10() {
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub10").classList.add("activoSub");
-			} else {document.getElementById("btnSub10").classList.remove("activoSub");}
+				document.getElementById("b10").classList.add("activoSub");
+			} else {document.getElementById("btnSub10").classList.remove("activoSub"); document.getElementById("b10").classList.remove("activoSub");}
 		}
 function escrol_sistema11() {
 			var titulo = document.getElementById("sistema11");
 			var progreso = titulo.offsetTop;
-			var otroTitulo = document.getElementById("finSistemas");
+			var otroTitulo = document.getElementById("sistema12");
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub11").classList.add("activoSub");
-			} else {document.getElementById("btnSub11").classList.remove("activoSub");}
+				document.getElementById("b11").classList.add("activoSub");
+			} else {document.getElementById("btnSub11").classList.remove("activoSub"); document.getElementById("b11").classList.remove("activoSub");}
+		}
+function escrol_sistema12() {
+			var titulo = document.getElementById("sistema12");
+			var progreso = titulo.offsetTop;
+			var otroTitulo = document.getElementById("finSistemas");
+			var Desprogreso = otroTitulo.offsetTop;
+			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
+				document.getElementById("btnSub12").classList.add("activoSub");
+				document.getElementById("b12").classList.add("activoSub");
+			} else {document.getElementById("btnSub12").classList.remove("activoSub"); document.getElementById("b12").classList.remove("activoSub");}
 		}
 
 /*Navegacion de indice de tablas*/
 
-function irCuadro1() {
+
+
+function irGaleria1() {
 	window.scroll(
-		{top: (document.getElementById("cuadro1").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria1").offsetTop), left: 0, }
 	);
-	console.log("cuadro 1");
+	console.log("galeria 1");
 }
-function irCuadro2() {
+function irGaleria2() {
 	window.scroll(
-		{top: (document.getElementById("cuadro2").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria2").offsetTop), left: 0, }
 	);
-	console.log("cuadro 2");
+	console.log("galeria 2");
 }
 
-function irCuadro3() {
+function irGaleria3() {
 	window.scroll(
-		{top: (document.getElementById("cuadro3").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria3").offsetTop), left: 0, }
 	);
-	console.log("cuadro 3");
+	console.log("galeria 3");
 }
-function irCuadro4() {
+function irGaleria4() {
 	window.scroll(
-		{top: (document.getElementById("cuadro4").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria4").offsetTop), left: 0, }
 	);
-	console.log("cuadro 4");
-}
-
-function irCuadro5() {
-	window.scroll(
-		{top: (document.getElementById("cuadro5").offsetTop), left: 0, }
-	);
-	console.log("cuadro 5");
+	console.log("galeria 4");
 }
 
-function irCuadro6() {
+function irGaleria5() {
 	window.scroll(
-		{top: (document.getElementById("cuadro6").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria5").offsetTop), left: 0, }
 	);
-	console.log("cuadro 6");
+	console.log("galeria 5");
 }
 
-function irCuadro7() {
+function irGaleria6() {
 	window.scroll(
-		{top: (document.getElementById("cuadro7").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria6").offsetTop), left: 0, }
 	);
-	console.log("cuadro 7");
+	console.log("galeria 6");
 }
-function irCuadro8() {
+
+function irGaleria7() {
 	window.scroll(
-		{top: (document.getElementById("cuadro8").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria7").offsetTop), left: 0, }
 	);
-	console.log("cuadro 8");
+	console.log("galeria 7");
 }
-function irCuadro9() {
+function irGaleria8() {
 	window.scroll(
-		{top: (document.getElementById("cuadro9").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria8").offsetTop), left: 0, }
+	);
+	console.log("galeria 8");
+}
+function irGaleria9() {
+	window.scroll(
+		{top: (document.getElementById("galeria9").offsetTop), left: 0, }
 	);
 }
-function irCuadro10() {
+function irGaleria10() {
 	window.scroll(
-		{top: (document.getElementById("cuadro10").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria10").offsetTop), left: 0, }
 	);
 }
 
-function irCuadro11() {
+function irGaleria11() {
 	window.scroll(
-		{top: (document.getElementById("cuadro11").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria11").offsetTop), left: 0, }
 	);
 }
-function irCuadro12() {
+function irGaleria12() {
 	window.scroll(
-		{top: (document.getElementById("cuadro12").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria12").offsetTop), left: 0, }
 	);
 }
-function irCuadro13() {
+function irGaleria13() {
 	window.scroll(
-		{top: (document.getElementById("cuadro13").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria13").offsetTop), left: 0, }
 	);
 }
-function irCuadro14() {
+function irGaleria14() {
 	window.scroll(
-		{top: (document.getElementById("cuadro14").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria14").offsetTop), left: 0, }
 	);
 }
-function irCuadro15() {
+function irGaleria15() {
 	window.scroll(
-		{top: (document.getElementById("cuadro15").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria15").offsetTop), left: 0, }
 	);
 }
-function irCuadro16() {
+function irGaleria16() {
 	window.scroll(
-		{top: (document.getElementById("cuadro16").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria16").offsetTop), left: 0, }
 	);
 }
-function irCuadro17() {
+function irGaleria17() {
 	window.scroll(
-		{top: (document.getElementById("cuadro17").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria17").offsetTop), left: 0, }
 	);
 }
-function irCuadro18() {
+function irGaleria18() {
 	window.scroll(
-		{top: (document.getElementById("cuadro18").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria18").offsetTop), left: 0, }
 	);
 }
-function irCuadro19() {
+function irGaleria19() {
 	window.scroll(
-		{top: (document.getElementById("cuadro19").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria19").offsetTop), left: 0, }
 	);
 }
-function irCuadro20() {
+function irGaleria20() {
 	window.scroll(
-		{top: (document.getElementById("cuadro20").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria20").offsetTop), left: 0, }
 	);
 }
-function irCuadro21() {
+function irGaleria21() {
 	window.scroll(
-		{top: (document.getElementById("cuadro21").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria21").offsetTop), left: 0, }
 	);
 }
-function irCuadro22() {
+function irGaleria22() {
 	window.scroll(
-		{top: (document.getElementById("cuadro22").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria22").offsetTop), left: 0, }
 	);
 }
-function irCuadro23() {
+function irGaleria23() {
 	window.scroll(
-		{top: (document.getElementById("cuadro23").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria23").offsetTop), left: 0, }
 	);
 }
-function irCuadro24() {
+function irGaleria24() {
 	window.scroll(
-		{top: (document.getElementById("cuadro24").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria24").offsetTop), left: 0, }
 	);
 }
-function irCuadro25() {
+function irGaleria25() {
 	window.scroll(
-		{top: (document.getElementById("cuadro25").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria25").offsetTop), left: 0, }
 	);
 }
-function irCuadro26() {
+function irGaleria26() {
 	window.scroll(
-		{top: (document.getElementById("cuadro26").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria26").offsetTop), left: 0, }
 	);
 }
-function irCuadro27() {
+function irGaleria27() {
 	window.scroll(
-		{top: (document.getElementById("cuadro27").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria27").offsetTop), left: 0, }
 	);
 }
-function irCuadro28() {
+function irGaleria28() {
 	window.scroll(
-		{top: (document.getElementById("cuadro28").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria28").offsetTop), left: 0, }
 	);
 }
-function irCuadro29() {
+function irGaleria29() {
 	window.scroll(
-		{top: (document.getElementById("cuadro29").offsetTop), left: 0, }
+		{top: (document.getElementById("galeria29").offsetTop), left: 0, }
 	);
 }
 /*==============********************* CARGA DE I F R A M E S ************************=======*/

@@ -50,12 +50,58 @@
 	overflow: auto;
 	position: relative;
 	box-shadow: 2px 2px 10px BLACK;
-	transition: scale 0.3s;
+	/*transition: scale .3s;*/
 	-webkit-animation-name: zoom;
-  	-webkit-animation-duration: 0.5s;
+  	-webkit-animation-duration: .5s;
   	animation-name: zoom;
-  	animation-duration: 0.5s;
+  	animation-duration: .5s;
 }
+
+.modal-indice {
+	position: relative;
+	margin-top: 170px;
+  	display: block;
+  	width: 70%;
+	height:auto;
+	border-bottom-right-radius: 30px;
+	overflow: auto;
+	box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+	/*modificar animacion*/
+	transition: all .3s;
+	-webkit-animation-name: desliz;
+  	-webkit-animation-duration: .3s;
+  	animation-name: desliz;
+  	animation-duration: .3s;
+}
+.modal-indice ul {
+	position: relative;
+	width: 99%;
+	list-style-type: disc;
+	list-style-position: inside;
+	background-color: rgba(248,248,255,1); /*era ghostwhite.  rgba(255, 255, 255, .4);*/
+	color: darkslategray;
+	
+	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
+}
+.modal-indice ul > li{
+	border-bottom: 1px solid darkslategray;
+	display: block;
+	padding: 7px 0 7px 2em;
+/*	text-decoration: none;*/
+	cursor: pointer;
+	
+	font-weight: bold;
+	font-size: .8em;
+}
+.modal-indice ul > li ol/*sub lista de HISTOLOGIA*/ {
+	font-weight: 100;
+	margin-top: .5em;
+}
+.modal-indice ul > li ol li /*ELEMENTOS sub lista de HISTOLOGIA*/ {
+	padding-top: .3em;
+	padding-bottom: .3em;
+}
+
 .fondoClaro {
 	background-color: ghostwhite;
 }
@@ -129,6 +175,7 @@
 
 
 /*Estilos para el MODAL que contiene la bibliografía--------- */
+
 .modal {
   	display: none; /* Hidden by default */
 	opacity: 0;
@@ -141,7 +188,21 @@
   	width: 100%; /* Full width */
   	height: 100%; /* Full height ANTES ERA 100%*/
   	overflow:scroll; /* Enable scroll if needed  ANTES ERA AUTO*/
-  	background-color: rgba(0, 0, 0, .7);  /*Black w/ opacity */
+  	background-color: rgba(0, 0, 0, .5); /*Black w/ opacity */
+	transition: opacity 0.4s;
+}
+.modaltransparente /*ESTE ES EL MODAL CONTENEDOR DEL INDICE LATERAL, solo cambiaste el fondo negro*/ {
+  	display: none; /* Hidden by default */
+  	position: fixed; /* Stay in place */
+  	z-index: 2; /* Sit on top */
+  	padding-top: 30px; /* Location of the box */
+	/*padding-bottom: 20px;*/
+  	left: 0;
+  	top: 0;
+  	width: 100%; /* Full width */
+  	height: 100%; /* Full height ANTES ERA 100%*/
+  	overflow:scroll; /* Enable scroll if needed  ANTES ERA AUTO*/
+  	background-color: rgba(0,0,0,.20); /*Black w/ opacity */
 	transition: opacity 0.3s;
 }
 
@@ -168,7 +229,7 @@
 	display: flex;
 	flex-direction: column;
 	
-	min-height: 500px;
+	min-height: 600px;
 	margin: 50px 50px 50px 50px;
 	overflow: hidden;
 }
@@ -185,12 +246,14 @@
 	flex-direction: row;
 	font-family: Open Sans, "Trebuchet MS", Arial, serif;
 	width: 400%;
-	
 	left: 0;
+	/*overflow-y: auto;
+	overflow-x: hidden;*/
 }
 .superior .page {
 	display: block; /*era block hasta6junio*/
 	width: 25%;
+	height: auto;
 	padding: 1em;
 }
 .superior p {
@@ -256,6 +319,15 @@ iframe {
 @keyframes zoomOut {
   from {transform:scale(1)} 
   to {transform:scale(.5)}
+}
+
+@keyframes desliz {
+	from {transform: translate(-80%,0px);}
+	to {transform: translate(0%,0px);}
+}
+@keyframes deslizBack {
+	from {transform: translate(0%,0px);}
+	to {transform: translate(-80%,0px);}
 }
 
 /* el boton cerrar X */
@@ -418,18 +490,26 @@ AQUI ESTÁN LAS ALTURAS VARIABLES, LA MAYORIA*/
 }
 @media (max-width: 550px) {
 	.modal-content-obj {
-
-  	width: 90%;
-	height:auto;
-	top: 70px;
-	font-size: 1em;
-	line-height: 1.7;
+		width: 90%;
+		height:auto;
+		top: 70px;
+		font-size: 1em;
+		line-height: 1.7;
+	}
+	
+	.modal-indice {
+		width: 100%;
+		border-bottom-right-radius: 0px;
 	}
 	.periquito {
 		top: 70px;
 	}
 }
-
+@media (max-width: 400px) {
+	.modal-indice {
+		margin-top: 110px;
+	}
+}
 
 /*
 @media (max-width: 450px) {
@@ -437,8 +517,4 @@ AQUI ESTÁN LAS ALTURAS VARIABLES, LA MAYORIA*/
 		height: 450px;
 	}
 }
-@media (max-width: 400px) {
-	iframe.misCanvas {
-		height: 400px;
-	}
 } @media (max-width: 350px) {iframe.misCanvas {height: 350px;} } @media (max-width: 325px) {iframe.misCanvas {height: 325px;} }*/

@@ -4,26 +4,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#boton_indice /*   "a" ANTERIOR*/ {
-		margin-right: 8em;
-		background-color:rgba(100, 149, 237, .0); /*ANTES TRANSPARENTE*/
-		overflow: visible;
-}
 #hamburspam {
 	background-color: darkslategray;
 	border-radius: 5px;

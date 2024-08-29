@@ -11,6 +11,7 @@
 overflow debe ser HIDDEN */
 body {
 	overflow: hidden;
+	background-color: ghostwhite;
 }
 /*AGREGADO ENERO 2024*/
 html {
@@ -37,8 +38,9 @@ section.contenedor {
 	margin-top: 200px; /*era 200*/
 	margin-left: auto;
 	margin-right: auto;
-	background-color: grey; /*mistyrose*/
+	background-color: gray/*mistyrose*/
 	width: 100%;
+	border-top: 1px solid lavender;
 }
 section.contenedor_sinheader {
 	position: relative;
@@ -128,10 +130,7 @@ section.contenedor_sinheader {
 	border-bottom: 1px dotted lightgrey;
 	border-radius: 5px;
 }
-#anatomia_temas a {
-	background-color: gold;
-	border-radius: 5px;
-}
+
 .barra > ul li a {
 	background-color: transparent;
 	padding: 0 0 10px 0;
@@ -146,13 +145,10 @@ section.contenedor_sinheader {
 }
 
 .activoSub {
-	background-color: cyan;
+	background-image: linear-gradient(rgb(191, 255, 234), aquamarine);
 	color: darkslateblue;
 }
 
-.barra ul a:hover {
-
-}
 
 div.texto-cap {
 	position: -webkit-sticky; /* Safari */
@@ -194,15 +190,6 @@ iframe.nuevo {
 	width: 100%;
 }
 
-.cajaFijaBolas {
-	box-sizing: border-box;
-	position: relative;
-	width: 100%;
-	visibility: visible; /*hidden*/
-	opacity: 0;
-	transition: opacity 1s;
-	/*background-color: rgba(84,48,204,0.50);*/
-}
 
 .videoframe {
 	display: block;
@@ -250,12 +237,7 @@ video {
 	margin: auto;
 }
 
-.DiaSegmento {
-	position: relative;
-	display: block;
-	width: 100%;
-	background-color: coral;
-}
+
 .revela {
 	opacity: 0;
 	transition: 2s all ease;
@@ -276,6 +258,13 @@ video {
 @media (min-width: 800px) {
 	.cajaFijaBolas {
 		padding-left: 300px;
+	}
+}
+
+@media (max-width: 400px) {
+	section.contenedor {
+		margin-top: 200px; /*100px*/
+		display: flex;
 	}
 }
 
@@ -300,7 +289,7 @@ video {
 	}
 	body {
 		background-attachment: fixed;
-		background-image: linear-gradient(	rgb(191, 255, 234), aquamarine);
+		background-image: linear-gradient(rgb(191, 255, 234), aquamarine);
 	}
 	#btnindice {display: none;}
 	
