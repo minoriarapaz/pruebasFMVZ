@@ -140,9 +140,10 @@ section.contenedor_sinheader {
 
 
 .activo {
-	background-image: linear-gradient(to right, darkslateblue, slateblue);
+	background-image: linear-gradient(to right, rgb(0, 102, 102), lightseagreen /*darkslateblue, slateblue*/);
 	color: white;
 }
+
 
 .activoSub {
 	background-image: linear-gradient(rgb(191, 255, 234), aquamarine);

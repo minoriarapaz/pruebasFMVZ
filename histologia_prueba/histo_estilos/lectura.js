@@ -23,6 +23,7 @@ function colorOscuro() {
 	/*document.getElementById("Contenido").style.color="gainsboro";*/
 	document.getElementById("fondoBiblio").style.backgroundColor="rgba(0, 0, 0, .8)";
 	document.getElementById("fondoLegal").style.backgroundColor="rgba(0, 0, 0, .8)";
+	document.body.style.backgroundColor="black";
 	cerrarControl();
 }
 function colorMedio() {
@@ -31,6 +32,7 @@ function colorMedio() {
 	
 	document.getElementById("fondoBiblio").style.backgroundColor="bisque";
 	document.getElementById("fondoLegal").style.backgroundColor="bisque";
+	document.body.style.backgroundColor="bisque";
 	cerrarControl();
 	
 }
@@ -40,6 +42,7 @@ function colorClaro() {
 	
 	document.getElementById("fondoBiblio").style.backgroundColor="ghostwhite";
 	document.getElementById("fondoLegal").style.backgroundColor="ghostwhite";
+	document.body.style.backgroundColor="ghostwhite";
 	
 	cerrarControl();
 }

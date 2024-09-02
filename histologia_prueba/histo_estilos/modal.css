@@ -202,7 +202,7 @@
   	width: 100%; /* Full width */
   	height: 100%; /* Full height ANTES ERA 100%*/
   	overflow:scroll; /* Enable scroll if needed  ANTES ERA AUTO*/
-  	background-color: rgba(0,0,0,.20); /*Black w/ opacity */
+  	background-color: transparent; /*Black w/ opacity */
 	transition: opacity 0.3s;
 }
 
