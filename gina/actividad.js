@@ -344,6 +344,14 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
+	// Capa_2
+	this.dot6 = new lib.mc_dot();
+	this.dot6.name = "dot6";
+	this.dot6.setTransform(0,0,1,0.6923);
+	this.dot6.alpha = 0;
+
+	this.timeline.addTween(cjs.Tween.get(this.dot6).wait(1));
+
 	// Capa_1
 	this.instance = new lib.CachedBmp_14();
 	this.instance.setTransform(-85.75,-14.6,0.5,0.5);
@@ -623,11 +631,16 @@ if (reversed == null) { reversed = false; }
 		this.bola5.on("pressmove", alMover.bind(this));
 		this.bola5.on("pressup", alSoltar5.bind(this));
 		
+		this.bola6.on("mousedown", alToque.bind(this));
+		this.bola6.on("pressmove", alMover.bind(this));
+		this.bola6.on("pressup", alSoltar6.bind(this));
+		
 		this.bola.objetivo = this.Diana; this.bola.objetivo2 = this.DianaExtra;
 		this.bola2.objetivo = this.Diana2;
 		this.bola3.objetivo = this.Diana3;
 		this.bola4.objetivo = this.Diana4;
 		this.bola5.objetivo = this.Diana5; this.bola5.objetivo2 = this.Diana6;
+		this.bola6.objetivo = this.Diana6; this.bola6.objetivo2 = this.Diana5;
 		
 		var origenX = this.bola.x;
 		var origenY = this.bola.y;
@@ -643,6 +656,9 @@ if (reversed == null) { reversed = false; }
 		
 		var origen5X = this.bola5.x;
 		var origen5Y = this.bola5.y;
+		
+		var origen6X = this.bola6.x;
+		var origen6Y = this.bola6.y;
 		
 		//para SOLTAR CUAALQUIERA
 		var coordenada=this.bola.offset;
@@ -768,14 +784,35 @@ if (reversed == null) { reversed = false; }
 						item.y = origen5Y;
 					}
 		}
+		function alSoltar6(event) {
+			console.log("Soltaste la 6");
+			var item = event.currentTarget;
+			
+			var pt = item.localToLocal(item.dot6.x, item.dot6.y, item.objetivo.box);
+			var ptextra = item.localToLocal(item.dot6.x, item.dot6.y, item.objetivo2.box);
+		
+			if (item.objetivo.box.hitTest(pt.x, pt.y)) {
+					item.x = item.objetivo.x;
+					item.y = item.objetivo.y;
+		
+				} else if (item.objetivo2.box/*5*/.hitTest(ptextra.x, ptextra.y)) {
+					item.x = item.objetivo2.x;
+					item.y = item.objetivo2.y;
+					}
+					else {
+						item.x = origen6X;
+						item.y = origen6Y;
+					}
+		}
 	}
 
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 
 	// Capa_1
-	this.instance = new lib.nombre6();
-	this.instance.setTransform(819.75,871);
+	this.bola6 = new lib.nombre6();
+	this.bola6.name = "bola6";
+	this.bola6.setTransform(819.75,871);
 
 	this.bola5 = new lib.nombre5();
 	this.bola5.name = "bola5";
@@ -825,33 +862,33 @@ if (reversed == null) { reversed = false; }
 	this.Diana.name = "Diana";
 	this.Diana.setTransform(483.45,871);
 
-	this.instance_1 = new lib.CachedBmp_46();
-	this.instance_1.setTransform(1078.85,388,0.5,0.5);
+	this.instance = new lib.CachedBmp_46();
+	this.instance.setTransform(1078.85,388,0.5,0.5);
 
-	this.instance_2 = new lib.bolaazul();
-	this.instance_2.setTransform(-124,63.4,1,1,0,0,0,102,102);
+	this.instance_1 = new lib.bolaazul();
+	this.instance_1.setTransform(-124,63.4,1,1,0,0,0,102,102);
 
-	this.instance_3 = new lib.hoyo();
-	this.instance_3.setTransform(1123.95,433.05,1,1,0,0,0,112,112);
+	this.instance_2 = new lib.hoyo();
+	this.instance_2.setTransform(1123.95,433.05,1,1,0,0,0,112,112);
 
-	this.instance_4 = new lib.CachedBmp_6();
-	this.instance_4.setTransform(338.95,512.7,0.5,0.5);
+	this.instance_3 = new lib.CachedBmp_6();
+	this.instance_3.setTransform(338.95,512.7,0.5,0.5);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.Diana},{t:this.Diana2},{t:this.Diana3},{t:this.Diana4},{t:this.DianaExtra},{t:this.Diana5},{t:this.Diana6},{t:this.bola2},{t:this.bola},{t:this.bola3},{t:this.bola4},{t:this.bola5},{t:this.instance}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.Diana},{t:this.Diana2},{t:this.Diana3},{t:this.Diana4},{t:this.DianaExtra},{t:this.Diana5},{t:this.Diana6},{t:this.bola2},{t:this.bola},{t:this.bola3},{t:this.bola4},{t:this.bola5},{t:this.bola6}]}).wait(1));
 
 	// Capa_2
-	this.instance_5 = new lib.CachedBmp_8();
-	this.instance_5.setTransform(68,27,0.5,0.5);
+	this.instance_4 = new lib.CachedBmp_8();
+	this.instance_4.setTransform(68,27,0.5,0.5);
 
-	this.instance_6 = new lib.aparato100dpi();
-	this.instance_6.setTransform(41,27,0.2704,0.2704);
+	this.instance_5 = new lib.aparato100dpi();
+	this.instance_5.setTransform(41,27,0.2704,0.2704);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_6},{t:this.instance_5}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_5},{t:this.instance_4}]}).wait(1));
 
 	// background
-	this.instance_7 = new lib.marquesina();
+	this.instance_6 = new lib.marquesina();
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(1));
 
 	this._renderFirstFrame();
 
