@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+section {
+	border: 1px solid ghostwhite;
+	display: block;
+	height: 1000px;
+	width: 1000px;
+	overflow-y: auto;
+	margin: auto;
+}
+.cabecera-frame {
+	display: block;
+	height: 70px;
+	padding: 10px 10px 5px 30px;
+	background-color: lightcoral;
+	color: white;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+iframe {
+	width: 100%;
+	height: 1000px;
+}
+
+@media (max-width: 1000px) {
+	section {
+		width: 100%;
+	}
+	iframe {
+		width: 100%;
+	}
+}
+@media (max-width: 700px) {
+	section {
+		height: auto;
+	}
+	iframe {
+		height: 700px;
+	}
+}
+@media (max-width: 500px) {
+	section {
+		height: auto;
+	}
+	iframe {
+		height: 500px;
+	}
+}
