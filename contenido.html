@@ -11,7 +11,6 @@
 <link href="minipig_estilos/cabecera.css" rel="stylesheet" type="text/css">
 <link href="minipig_estilos/modal.css" rel="stylesheet" type="text/css">
 <link href="minipig_estilos/textos.css" rel="stylesheet" type="text/css">
-<link href="minipig_estilos/navegacion.css" rel="stylesheet" type="text/css">
 <link href="minipig_estilos/lectura.css" rel="stylesheet" type="text/css">
 	
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -37,49 +36,47 @@
 		<div class="container logo-nav-container">
 			
 			<a class="logo-click" href="index.html"><img src="minipig_imagenes/interfaz/logo.png" alt="logo-header" class="img-full"><img src="minipig_imagenes/interfaz/logo.png" alt="logochico-header" class="img-mobile"></a>
-			
-			<div id="btnindice" class="boton_indice" onClick="show_indice()"><span class="equis" id="laX"></span>
-				<div id="rayas"><span class="pan"></span><span class="pan"></span><span class="pan"></span></div>
-			</div>
-			
-			<nav class="mininavegador" id="nav-indice">
-				<ul id="ul_menu_mobile">
-					<li><a  onClick="irPrologoM()">Prólogo</a></li>
-					<li><a  onClick="irIntroM()">Introducción</a></li>
-					<li><a  onClick="irMaterialM()">Material y métodos</a></li>
-					<li><a  onClick="irAnatomiaM()">Anatomía</a>
-						<ol>
-							<li><a onClick="irSistema1M()">1. Sistema nervioso</a></li>
-							<li><a onClick="irSistema2M()">2. Sistema cardiovascular</a></li>
-							<li><a onClick="irSistema3M()">3. Sistema digestivo</a></li>
-							<li><a onClick="irSistema4M()">4. Sistema urinario</a></li>
-							<li><a onClick="irSistema5M()">5. Órganos genitales hembra</a></li>
-							<li><a onClick="irSistema6M()">6. Órganos genitales macho</a></li>
-							<li><a onClick="irSistema7M()">7. Sistema endócrino</a></li>
-							<li><a onClick="irSistema8M()">8. Órganos linfoides</a></li>
-							<li><a onClick="irSistema9M()">9. Sistema tegumentario y locomotor</a></li>
-							<li><a onClick="irSistema10M()">10. Sistema respiratorio</a></li>
-							<li><a onClick="irSistema11M()">11. Ojo</a></li>
-						</ol>
-					</li>
-					<li id="btnUltimo"><i><a onClick="irTablasM()">Índice de tablas</a></i></li>
-				</ul>
-			</nav>
+
 		</div><!--clase container-->
 		
 		
 		
 		<!--BOTON DE LEGALES y biblio EN MODO MOBILE-->
 		<section>
-			<button class="boton_legal2" onMouseUp="verBiblio()">Bibliografía</button><button class="boton_legal2" onMouseUp="verLegales()">Legal</button>
+			<button class="boton_legal2" onMouseUp="verIndice2()">Contenido</button><button class="boton_legal2" onMouseUp="verBiblio()">Bibliografía</button><button class="boton_legal2" onMouseUp="verLegales()">Legal</button>
 		</section>
 		<!--BOTON DE LEGALES y biblio EN MODO MOBILE  FIIIIIIN-->
 	</header>
 	
 	
 
-	<div class="contenedor">
-		
+	<section class="contenedor">
+		<section id="modalIndice" class="modaltransparente" >
+				
+				<div id="tablaIndice" class="modal-indice fondoClaro">
+						<ul> <!--en modal.css-->
+							<li id="B1" class="activo" onClick="irPrologoM()">Prólogo</li>
+							<li id="B2" onClick="irIntroM()">Introducción</li>
+							<li id="B3" onClick="irMaterialM()" >Material y métodos</li>
+							<li id="B4" ><a onClick="irAnatomiaM()">Anatomía</a>
+							<ol>
+								<li id="b1" onClick="irSistema1M()">Sistema nervioso</li>
+								<li id="b2" onClick="irSistema2M()">Sistema cardiovascular</li>
+								<li id="b3" onClick="irSistema3M()">Sistema digestivo</li>
+								<li id="b4" onClick="irSistema4M()">Sistema renal</li>
+								<li id="b5" onClick="irSistema5M()">Órganos genitales - hembra</li>
+								<li id="b6" onClick="irSistema6M()">Órganos genitales - macho</li>
+								<li id="b7" onClick="irSistema7M()">Sistema endócrino</li>
+								<li id="b8" onClick="irSistema8M()">Órganos linfoides</li>
+								<li id="b9" onClick="irSistema9M()">Sistema tegumentario y locomotor</li>
+								<li id="b10" onClick="irSistema10M()">Sistema respiratorio</li>
+								<li id="b11" onClick="irSistema11M()">Ojo</li>
+							</ol>
+							</li>
+							<li id="B5" onClick="irTablasM()">Índice de tablas</li>
+						</ul>
+				</div>
+			</section>
 		
 		<!--CONTROLES DE LECTURA-->
 		<div id="ojo" class="btnOjo btnFondoGris" onclick="showControl()">
@@ -179,7 +176,7 @@
 				</div>
 			</div>
 			<!--inicia modal legales-->
-			<div class="modal" id="Legales">
+			<div class="modal" id="modalLegales">
 				<span class="cruz" id="tachelegal" onClick="verLegales()">&times;</span>
 				
 				<div id="fondoLegal" class="modal-content fondoClaro">
@@ -271,14 +268,18 @@
 			
 			<!--INICIAN LOS TEXTOS Y TODO LO CONTENIDO EN CLASE TEXTOS-->
 			
-			
+			<section class="granTema">
 			<h2 id="aPrologo">Prólogo</h2>
 			<p>De los animales vincu&shy;lados con el ser humano a lo largo de su curso evolutivo y del desa&shy;rrollo de sus civili&shy;zacio&shy;nes, el cerdo (<i>Sus scrofa</i>) adquirió un papel prepon&shy;derante descrito desde hace casi 45 mil años, en principio como preciada fuente de alimen&shy;tación humana, producto de la caza (pintura rupestre “Cerdo verrucoso” en la isla de Célebes). Posterior&shy;mente, referido en culturas milenarias como la china (4 900 aC), y en 1 500 aC, al inicio su domesti&shy;cación en Europa. Su impor&shy;tancia emerge hasta nuestros días vincu&shy;lada a la alimenta&shy;ción humana, a la investi&shy;gación cientí&shy;fica y a desarro&shy;llos médicos y farmacológicos.</p>
 			<p id="marcaPrologo">En la actualidad (2022) la carne de cerdo es la se&shy;gunda más con&shy;sumida en el mundo. La crianza del cerdo se des&shy;tina al consumo humano, como modelo de inves&shy;tigación y docencia, e incluso para animal de compañía. Los estu&shy;dios de labora&shy;torio son, micros&shy;copía en este caso, una herra&shy;mienta para forta&shy;lecer el estudio y el cono&shy;cimiento básico de los tejidos y órganos, así como para entender los facto&shy;res denomina&shy;dos patoló&shy;gicos, que modifican la estruc&shy;tura. Desde el siglo pasado los estudios micros&shy;cópicos fueron el recur&shy;so que permitió el diagnós&shy;tico de diversas enfermedades.</p>
 			<p>Esta obra está dirigida a estudiantes, inves&shy;tigado&shy;res y profesio&shy;nistas del área de las ciencias médicas, bio&shy;lógicas y de la salud, donde los cerdos tienen un amplio campo de aplicación. Su objetivo funda&shy;mental es presentar las caracte&shy;rísticas histológicas de los principales órganos de impor&shy;tancia para el diagnós&shy;tico de enferme&shy;dades y para los estudios del uso de productos farmaco&shy;lógicos y hormo&shy;nales, entre otros. El conoci&shy;miento de la histo&shy;logía es básico para el entendimiento de los procesos fisiológicos y de las afecta&shy;ciones pato&shy;lógicas de cualquier ser vivo. El lector encontrará órganos selec&shy;cionados en dife&shy;rentes edades: desde el naci&shy;miento (semana cero) hasta las 21 semanas de vida, a nivel micros&shy;cópico, período a través del cual puede obser&shy;varse con facilidad su desa&shy;rrollo gradual.</p>
+			</section>
+			
 			
 			<div  class="raya-separado" id="aIntro"></div>
 			
+			
+			<section class="granTema">
 			<h2>Introducción</h2>
 			
 			<p>En el mundo hay más de 300 razas porcinas, la mayor parte destinadas para consumo. Se considera que poco más de 40 son miniatura, provenientes de diferentes países.<a onClick="verBiblio()"><b>[1]</b></a>  En 1949, se reporta la cruza de las razas Guinea hog con Piney rooter, de Luisina, lo que originó la conocida Minnesota minipig, de aproximadamente 70 kg en la edad adulta. El objetivo de las cruzas es reducir aún más su tamaño. La Minnesota minipig se cruza con la vietnamita pot belly de la que se obtienen las hembras F1, que a su vez se cruzan con machos Landrance, y después de varias generaciones, se obtienen cerdos miniatura color blanco, a los que se les conoce como Göttingen minipig, los cuales se destinan a la investigación, viven principalmente en bioterios. Su composición genética es 60% vietnamita, 33% Minnesota y 7% Landrace. Actualmente (2022), se conocen diferentes razas de cerdos miniatura (<small>Cuadro 1</small>) de diferentes países, en las cuales se observan sus características morfométricas.</p>
@@ -387,8 +388,13 @@
 			</ol>
 			
 			
-			<div  class="raya-separado" id="aMaterial"></div>
 			
+			</section>
+				
+			<div  class="raya-separado" id="aMaterial"></div>	
+			
+			
+			<section class="granTema">
 			<h2>Material y métodos</h2>
 			<p>Se contó con 22 cerdos miniatura divididos en dos grupos 11 hembras y 11 machos, que se sacrificaron a las siguientes semanas de edad: 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 y 21. Las hembras que se utilizaron fueron las de control de la tesis de licenciatura Efecto en el desarrollo de foliculos ováricos en cerdas miniatura mediante el empleo de un bloqueador de GnRH (Improvac), el cual fue aprobado por el CICUA con el número 0662, el 21 de octubre de 2020. Los machos, a su vez, fueron los controles de la tesis de maestría Calidad de la carne y rendimiento de la canal en cerdos miniatura vacunados conta GnRH bajo protocolos de corta y larga duración, con la aprobación del comité SICUAE de la FMVZ-UNAM, bajo el protocolo con clave MC-2018/2-18.</p>
 			<p>Los animales fueron alojados y alimentados según la NOM-062-ZOO-1999, en corrales tipo danés con las siguientes dimensiones 1.5 m × 3 m, proporcionando un espacio de 4.5 m2. Para la matanza se procedió según lo indicado por la NOM-033-ZOO-1993, se realizó de la siguiente manera: sujeción del animal por los corvejones, el animal quedó mirando hacia abajo, es decir, con la cabeza en dirección al suelo. Se mojó al animal por completo. Con tenazas se insensibilizó al animal mediante shock eléctrico a 1.3 A, se colocó entre la oreja y el ojo de cada lado en el punto de intersección donde se cruzan una línea horizontal, que va de la comisura lateral del ojo hacia atrás, y una línea vertical que baja desde la base de la oreja (sobre las sienes del animal), y permane&shy;cieron en contacto con la piel de 3 a 6 segundos.</p>
@@ -406,23 +412,27 @@
 				<li>Ojo</li>
 			</ol>
 			<p>Después del sacrificio se tomaron fotografías de cada órgano con cámara Canon en dos estudios de fotografía móvil ajustados al tamaño del órgano a fotografiar. Se evaluó y registró la alometría (largo [cm], ancho [cm], peso [g]) de cada órgano de los mencionados en las edades consideradas. </p>
+			</section>
+			
 			
 			<div  class="raya-separado" id="aAnatomia"></div>
 			
+			<section class="granTema">
+			<div class="h1envolvente h1sinpadding"><h2>Anatomía del cerdo miniatura</h2></div>
 			
-			<div class="h1envolvente h1sinpadding"><h2 >Anatomía del cerdo miniatura</h2></div>
-			
-			<img class="fotografia" alt="ilustracion de adorno" src="minipig_imagenes/interfaz/pigs.png">
+			<img class="fotografia" alt="imagen de adorno" src="minipig_imagenes/interfaz/pigs.png">
 			
 			
 			<div class="raya-separado-sub" id="sistema1"></div>
+			
+			<section class="Tema NoVisible" id="tema1">
 			<h3>Sistema nervioso</h3>
 			<p>El sistema nervioso hace que el organismo reaccione ante el medio interno y externo. Además, controla y lleva a cabo distintas actividades metabólicas. El cerebro y el cerebelo se localizan en la cabeza, cubiertos o protegidos por el cráneo. El sistema nervioso está compuesto por el sistema nervioso central (SNC) y el sistema nervioso periférico (SNP). El snc a su vez está constituido por el encéfalo y la médula espinal, mientras que el snp está formado por los nervios y los ganglios craneales, espinales y autónomos. El sistema nervioso se origina de la capa germinal ectodérmica. A continuación se presentan algunas de sus características anatómicas y las funciones del cerebro y cerebelo.</p>
 			
 			
 			
 			
-			<h4 class="txt-izquierda">Cerebro</h4>
+			<h4>Cerebro</h4>
 			<p>La corteza cerebral se divide en las siguientes regiones:</p>
 			<ul>
 				<li><strong>1) Occipital.</strong> Localizada en la parte posterior del cerebro, está constituida por tres o cuatro pequeños giros orientados horizontalmente y separados por surcos poco profundos. Es el centro del sistema visual de la percepción (la vista); la interpretación de imágenes, el reconocimiento de ruidos y  el reconocimiento espacial.</li>
@@ -432,7 +442,7 @@
 				<li><strong>5) Fisura longitudinal.</strong> Divide longitudinalmente al cerebro en dos hemisferios unidos entre sí por el cuerpo calloso. Durante el desarrollo, a medida que el cerebro aumenta de tamaño se producen giros y surcos, tales como los surcos central, colateral, coroideo y hipocámpico.</li>
 			</ul>
 			
-			<h4 class="txt-izquierda">Cerebelo</h4>
+			<h4>Cerebelo</h4>
 			<p>El cerebelo está unido a la superficie dorsal y caudal del tallo del encéfalo. Se incluye en un estuche osteofibroso formado por una pared inferior y otra superior. El cerebelo participa en la coordinación de movimientos, de funciones cognitivas como la atención, el aprendizaje y otros estímulos sensoriales temporales. De la morfometría de cerebro y el cerebelo de los cerdos miniatura, se anotan las medidas en centímetros y el peso en gramos promedio, en el <small>Cuadro 2:</small></p>
 			
 			
@@ -529,7 +539,7 @@
 					<td>4</td>
 				</tr>
 			</tbody>
-</table>
+			</table>
 			
 			
 			
@@ -537,13 +547,16 @@
 			<p>A continuación se presentan las imágenes del cerebro y cerebelo de los cerdos miniatura a las siguientes edades (semanas): 0, 1, 3, 5, 7, 9, 13, 15, 17, 19 y 21.</p>
 			
 			<button onClick="abrir1()">Cerebro y cerebelo</button>
+				
+			</section>
 			
 			<div class="raya-separado-sub" id="sistema2"></div>
 			
+			<section class="Tema NoVisible NoVisible" id="tema2">
 			<h3>Sistema cardiovascular</h3>
 			<p>Para fines de esta obra únicamente se presentará el corazón, ya que constituye una estructura importante para el diagnóstico de diversas enfermedades en los cerdos. En cuanto a los orígenes del tubo cardíaco, se forma a partir de grupos de células angiogénicas: las que se encuentran en la placa o excrecencia cardiogénica. La placa cardiogénica se deriva del mesodermo esplacnopleural. </p>
 			
-			<h4 class="txt-izquierda">Corazón</h4>
+			<h4>Corazón</h4>
 			<p>El corazón se localiza en el tórax, 3/5 partes hacia la izquierda, dorsal al esternón, a ambos lados se encuentran los pulmones. Está envuelto por la bolsa pericárdica, que tiene dos hojas, una interna sobre la superficie cardíaca, y otra externa ligada a los grandes vasos, entre ellas existe líquido. El corazón tiene forma de cono invertido dirigido a la izquierda. En la base se encuentran los vasos sanguíneos encargados de ingresar (las cavas) y sacar la sangre, la aorta y el tronco pulmonar. Tiene dos superficies:  atrial y auricular, además  de dos bordes: ventriculares derecho e izquierdo. Es irrigado por las arterias coronarias que llevan sangre al músculo cardíaco. En su anatomía interna está dividido en cuatro cavidades: dos del lado derecho y dos en el izquierdo.</p>
 			
 			<ul class="bullet">
@@ -625,13 +638,14 @@
 			<p>A continuación se presentan las imágenes del corazón de los cerdos miniatura de las siguientes edades (semanas): 0, 1, 5, 7, 9, 11, 13, 15, 17 y 21.</p>
 			<button onClick="abrir2()">Corazón</button>
 			
-			
+			</section>
 			<div class="raya-separado-sub" id="sistema3"></div>
 			
+			<section class="Tema NoVisible NoVisible" id="tema3">
 			<h3>Sistema digestivo</h3>
 			
-			<p>El tracto gastrointestinal se deriva del endodermo embrionario. Su formación y desarrollo dependen en gran medida del plegamiento cefalocaudal y lateral del embrión. En consecuencia, la formación del intestino tubular es un fenómeno pasivo y consiste en la inversión e incorporación del saco vitelino revestido por endodermo en la cavidad corporal, quedando un conducto angosto y largo: conducto onfalomesentérico o vitelino. En la región craneal del endodermo, se forma el intestino craneal; en la caudal, el intestino caudal, y entre ambas, el intestino medio, éste comunica con el saco vitelino a través de un pedículo: el conducto onfalomesentérico. Las estructuras anatómicas que se incluyen en este libro son:</p>
-			<h4 class="txt-izquierda">Lengua</h4>
+			<p>El tracto gastrointestinal se deriva del endodermo embrionario. Su formación y desarrollo dependen en gran medida del plegamiento cefalocaudal y lateral del embrión. En consecuencia, la formación del intestino tubular es un fenómeno pasivo y consiste en la inversión e incorporación del saco vitelino revestido por endodermo en la cavidad corporal, quedando un conducto angosto y largo: conducto onfalomesentérico o vitelino. En la región craneal del endodermo, se forma el intestino craneal; en la caudal, el intestino caudal, y entre ambas, el intestino medio, éste comunica con el saco vitelino a través de un pedículo: el conducto onfalomesentérico.</p>
+			<h4>Lengua</h4>
 			<p>La lengua se localiza en la cavidad oral, está conformada por músculo cubierto por una túnica mucosa cornificada en su parte dorsal, donde se encuentran las papilas, se tienen cuatro tipos de papilas, tres de ellas son gustativas: circunvaladas, fungiformes y foliadas. Mientras que la función de las filiformes es detectar la textura de la comida, y se localizan en la toda la superficie de la lengua; destacan en la punta y a los lados. Las circunvaladas (caliciformes) se identifican en la parte central y caudal de la lengua en formación similar a una ‘V’ invertida; mientras que las fungiformes se hallan dispersas y hacia el centro de la lengua.</p>
 			<p>Por debajo de la mucosa o superficie de la lengua está el músculo, es la mayor parte del tejido y se caracteriza por su fuerza, se aprecian cuatro grandes haces de fibras que le dan la forma y movimiento, también hay otras ramas musculares en diferentes direcciones. Su tamaño y peso se va incrementando según el crecimiento del cerdo <small>(Cuadro 4)</small>.</p>
 			
@@ -701,12 +715,9 @@
 			</tbody>
 </table>
 			
+		
 			
-
-			
-			<button onClick="abrir3()">Lengua</button>
-			
-			<h4 class="txt-izquierda">Esófago</h4>
+			<h4>Esófago</h4>
 			<p>El esófago es el órgano tubular que transita por el cuello, dorsal a la tráquea; se introduce en la cavidad torácica por la abertura craneal desde el flanco izquierdo del cuello atravesando el mediatino craneal entre la tráquea y el músculo largo del cuello. Alcanza al mediastino medio sobre el corazón y sigue por el mediastino caudal, cruza el diafragma por el hiato esofágico, terminando en el estómago. Se divide en cuatro porciones:</p>
 			<ul class="bullet">
 				<li><strong>Cervical</strong>, va desde el cartílago cricoides hasta la horquilla esternal</li>
@@ -769,7 +780,7 @@
 			
 			
 			
-			<h4 class="txt-izquierda">Estómago</h4>
+			<h4>Estómago</h4>
 			<p>El estómago está situado en el cuadrante superior e izquierdo del abdomen, ocupa parte del epigastrio, parte de la región umbilical y el hipocondrio izquierdo. Tiene forma de ‘J’, debido a sus dos curvaturas: mayor y menor. Posee dos extremos u orificios, uno superior llamado cardias (desemboca en el esófago), y otro inferior, la porción pilórica (salida al duodeno).</p>
 			
 			<ul class="bullet">
@@ -831,11 +842,11 @@
 </table>
 			
 			
-			<h4 class="txt-izquierda">Intestino delgado</h4>
+			<h4>Intestino delgado</h4>
 			
 			<p>El intestino es la continuación del estómago e inicia con el duodeno, después el yeyuno y el íleon. El duodeno proporcionalmente es más largo que el del hombre e intraperitoneal, aunque también esta fijo al retroperitoneo en su cuarta porción y apoyado sobre la vena cava caudal infrahepática a la altura de la vena renal derecha. No rodea  la cabeza del páncreas. El colédoco desemboca en el duodeno independientemente del conducto pancreático, y lo hace en el borde mesentérico de la primera porción duodenal cercana del píloro, dependiendo de la edad del animal.</p>
 			
-			<h4 class="txt-izquierda">Yeyuno e íleon</h4>
+			<h4>Yeyuno e íleon</h4>
 			<p>Después de salir del duodeno, ingresa a la parte media del intestino delgado, el yeyuno. Es la segunda parte del intestino delgado y se encuentra en  la mitad derecha del abdomen. No existe un límite claro entre el yeyuno y el íleon, pero la pared del yeyuno es más gruesa y su luz es más ancha que en el íleon. En el yeyuno se observan pliegues circulares más prominentes y abundancia de linfonódulos agregados. Mientras que el íleon es la última porción del intestino delgado. Se encuentra en el abdomen, cuadrante del lado derecho del abdomen, termina en el orificio ileal (unión ileocecal), donde comienza el ciego del intestino grueso, en este punto se observa acumulación de tejido linfoide. En la unión ileocecal, hacia la luz del ciego se forma el pliegue ileocecal. En el <small>Cuadro 7</small>, se observa el largo en centímetros, del inestino delgado a las siguientes edades: 0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 y 21 semanas.</p>
 			
 			
@@ -877,7 +888,7 @@
 			
 
 			
-			<h4 class="txt-izquierda">Intestino grueso</h4>
+			<h4>Intestino grueso</h4>
 			<p>El intestino grueso comprende cuatro secciones: ciego, colon, recto y canal anal. El ciego tiene dos secciones, la primera tiene un final ciego, y la segunda se conecta con el colon. El ciego es relativamente corto y está formado por una base, cuerpo y ápice. El ciego es un saco cilíndrico sin salida que se continua con la porción proximal del colon. El colon es largo, tiene tres trayectos: ascendente, transverso y descendente. La porción ascendente del colon se acomoda en una serie de asas espirales con orientación centrípeta y centrífuga. La siguiente porción del intestino grueso es el recto y finalmente el ano. El ciego y la parte proximal de la espiral del colon presentan bandas de tejido muscular que producen pequeños sacos laterales (haustras). En los animales de más de ocho semanas, el recto está embebido en grasa y se dilata para formar el ámpula rectal justo antes de que termine en el canal anal. Como se puede apreciar en el <small>Cuadro 7</small>, el crecimiento del intestino grueso, se incrementa drásticamente después de la tercera semana de edad: la edad del destete. En el <small>Cuadro 8</small> se observa el largo en centímetros del intestino grueso a las siguientes edades (semanas): 0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 y 21.</p>
 		
 			
@@ -916,7 +927,7 @@
 			</tbody>
 			</table>
 			
-			<h4 class="txt-izquierda">Hígado</h4>
+			<h4>Hígado</h4>
 			<p>El hígado del cerdo es multilobulado y multisegmentado, de color marrón. Se distinguen seis lóbulos, dos derechos (medial y lateral) y dos izquierdos (medial y lateral) separados por la fisura del ligamento redondo; un caudado y uno cuadrado rudimentario. Los lóbulos están separados, excepto en sus partes más craneales. Los dos centrales presentan entre sí una indentación de separación menor que con los laterales, de modo que algunos autores dan el nombre de lóbulo medio a estos segmentos centrales. La vesícula biliar se sitúa entre el lóbulo medial derecho  y el cuadrado, y parte del medial izquierdo. El sistema venoso portal está formado por la vena mesentérica craneal <spam class="versalita">(vmc)</spam> y la esplénica, que confluyen por detrás del páncreas en la porta. La vena porta es muy gruesa, en el cerdo no hay transcavidad epiploidea, por lo que a la vena se accede directamente disecando el cuerpo del páncreas. En el <small>Cuadro 9</small>, se presenta la morfometría del hígado de los cerdos miniatura en crecimiento de las siguientes edades (semanas): 0, 1, 2, 3, 5, 7, 9, 11, 13, 15, 17, 19 y 21.</p>
 			
 
@@ -988,7 +999,7 @@
 			
 			
 			
-			<h4 class="txt-izquierda">Páncreas</h4>
+			<h4>Páncreas</h4>
 			<p>El páncreas es completamente retroperitoneal y no existe marco cólico como en el humano. Presenta un cuerpo y dos lóbulos: derecho e izquierdo. Su vascularización depende de las arterias pancreaticoduodenales craneal y caudal. La vena porta atraviesa su cuerpo. Dos tercios del páncreas se localizan a la izquierda estableciendo contacto con el estómago, el bazo y el riñón. Es una glándula tubuloacinar compuesta, encapsulada y lobulada en la que se distinguen dos porciones: exocrina y endocrina.</p>
 			
 			<ol>
@@ -996,7 +1007,16 @@
 				<li><b>Páncreas endócrino -</b> conformado por los islotes pancreáticos.</li>
 			</ol>
 			
+			<button onClick="abrirTracto()">Tracto digestivo</button>
+			<button onClick="abrir3()">Lengua</button>
+			
+				</section>
+			
+			
 			<div class="raya-separado-sub" id="sistema4"></div>
+				
+				
+			<section class="Tema NoVisible" id="tema4">
 			<h3>Sistema urinario</h3>
 			
 			<p>El aparato urinario se desarrolla a partir del mesodermo intermedio y del endodermo del seno urogenital. Durante el desarrollo del riñón aparecen tres sistemas: el pronefros (sistema excretor), mesonefros (yema ureteral, que nace del conducto mesoméfrico) y metanefros o blastema renal (riñón).</p>
@@ -1074,10 +1094,13 @@
 			
 			<button onClick="abrir4()">Riñón</button>
 			
+				</section>
+				
+				
 			<div class="raya-separado-sub" id="sistema5"></div>
 			
 			
-			
+			<section class="Tema NoVisible" id="tema5">
 			<h3>Órganos genitales - hembra o cerda miniatura</h3>
 			
 			<p>Los órganos genitales, al igual que el sistema urinario, se originan del mesodermo intermedio del mesotelio.</p>
@@ -1428,10 +1451,13 @@
 			
 			
 			
-			<button onClick="abrir5()">Ovario</button>
+			<button onClick="abrir5()">Sistema reproductor - hembra</button>
 			
+				</section>
 			
 			<div class="raya-separado-sub" id="sistema6"></div>
+				
+			<section class="Tema NoVisible" id="tema6">
 			<h3>Órganos genitales - macho o verraco miniatura</h3>
 			
 			<h4>Testículos</h4>
@@ -1550,7 +1576,7 @@
 			
 			
 			
-			<h4 class="txt-izquierda">Glándulas accesorias</h4>
+			<h4>Glándulas accesorias</h4>
 			<p>En el verraco, las glándulas accesorias son las vesículas seminales, las bulbouretrales y la próstata. Todas se ubican en la porción pélvica de la úretra en la cavidad abdominal. Para fines de la obra, se presentarán solo las siguientes estructuras:</p>
 			
 			<h4>Vesículas seminales</h4>
@@ -1834,9 +1860,12 @@
 			
 			<button onClick="abrir6()">Testículo</button>
 			
-			
+				</section>
 			
 			<div class="raya-separado-sub" id="sistema7"></div>
+				
+				
+			<section class="Tema NoVisible" id="tema7">
 			<h3>Sistema endócrino</h3>
 			<h4>Tiroides</h4>
 			<p>La glándula tiroides se sitúa a nivel de los 6–7 primeros anillos traqueales. Es un órgano impar, medial que se localiza debajo del cartílago hiodes en la región anatómica infrahioidea. Desde la embriología, es una prolongación de la faringe que se separó del epitelio de revestimiento. La paratiroides se ubica en la bifurcación terminal de la carótida común. En el <small>Cuadro 23</small>, se ve el largo, ancho y peso de la tiroides en diferentes semanas de edad.</p>
@@ -1987,11 +2016,17 @@
 			</table>
 			
 
-			<button onClick="abrir7()">Tiróides</button>
+			<button onClick="abrir7()">Tiroides</button>
 			<button onClick="abrir7a()">G. adrenales</button>
 			
+				</section>
+				
+				
 			<div class="raya-separado-sub" id="sistema8"></div>
+				
+			<section class="Tema NoVisible" id="tema8">
 			<h3>Órganos linfoides</h3>
+				
 			<h4>Bazo</h4>
 			<p>El bazo tiene forma alargada, plana y aquillada, ligeramente  triangular en un corte transversal, de color rojo oscuro y superficie lisa. Presenta una cara parietal y otra medial. El ligamento gastroesplénico fija el bazo a la curvatura mayor del estómago. El peso, ancho y largo a diferentes semanas de edad se presentan en el <small>Cuadro 25.</small></p>
 			
@@ -2110,10 +2145,12 @@
 			
 			<button onClick="abrir8()">Timo</button>
 			
-			
+				</section>
 			
 			<div class="raya-separado-sub" id="sistema9"></div>
 			
+				
+			<section class="Tema NoVisible" id="tema9">
 			<h3>Sistema tegumentario y locomotor</h3>
 			<h4>Piel</h4>
 			<p>La piel del cerdo es gruesa. Al igual que en todos los mamíferos, reviste el cuerpo. Está constituida por varias capas, la más externa es la epidermis, le sigue la dermis, la hipodermis, y al final, están los músculos. Presenta los folículos pilosos, y los pelos gruesos y rígidos (cerdas). Contiene a las glándulas sebáceas, cuyo desarrollo en esta especie es rudimentario, así como, a las glándulas sudoríparas en las capas profundas de la hipodermis.</p>
@@ -2122,10 +2159,11 @@
 			
 			<button onClick="abrir9()">Piel</button>
 			<button onClick="abrir10()">Dorso/pierna</button>
+				</section>
 			
 			<div class="raya-separado-sub" id="sistema10"></div>
 			
-			
+			<section class="Tema NoVisible" id="tema10">
 			<h3>Sistema respiratorio</h3>
 			<h4>Tráquea</h4>
 			<p>La tráquea es un tubo membranoso, flexible, de anillos de cartílago, que se extiende desde la laringe, a nivel de las vértebras C4 y C5, hasta el nivel de la T5, donde se ramifican los bronquios, dorsalmente al corazón. A diferencia de otras especies, presenta un bronquio derecho impar, que forma el lóbulo craneal del cerdo (bronquio traqueal) y, posteriormente, la tráquea se bifurca para formar los bronquios principales izquierdo y derecho. En el <small>Cuadro 27</small>, se observa el ancho y largo de  la tráquea a diferentes edades.</p>
@@ -2255,10 +2293,13 @@
 			
 			
 			<button onClick="abrir11()">Pulmón</button>
+				<button onClick="abrirVarilla()">Varilla</button>
 			
+				</section>
 			
 			<div class="raya-separado-sub" id="sistema11"></div>
 			
+			<section class="Tema NoVisible" id="tema11">
 			<h3>Ojo</h3>
 			<p>El ojo es un globo casi esférico hueco, ubicado en la cabeza (cara). A la capa externa se le conoce como esclerótica y es fibrosa. La capa media se compone de coroides, cuerpo ciliar e iris. Y la interna o retina es tejido nervioso o sensorial. En el <small>Cuadro 29</small>, se observa el peso y la altura del ojo del cerdo miniatura a diferentes semanas de edad.</p>
 			
@@ -2316,13 +2357,18 @@
 			
 			
 			<button onClick="abrir12()">Ojo</button>
-			
-			
+			</section> <!--FIN TEMA DEL OJO-->
+				
+				
+			<img class="fotografia marginTopextra" alt="imagen de remate" src="minipig_imagenes/interfaz/pigs.png">
+				
+				
+			</section> <!--FIN DE LOS TEMAS D ANATOMI-->
 			<div class="raya-separado-sub" id="finSistemas"></div>
 			
 
 			
-			<p>Índice de tablas</p>
+			<h3>Índice de tablas</h3>
 			
 			<ol>
 				<li><a onClick="irCuadro1()">Origen de algunas razas de cerdos miniatura</a></li>
@@ -2370,7 +2416,7 @@
 		
 		
 		
-	</div><!-- CONTENEDOR TODO TODO-->
+	</section><!-- CONTENEDOR TODO TODO-->
 	
 	
 	

@@ -43,13 +43,7 @@
  	-ms-user-select: none; /* IE 10 and IE 11 */
   	user-select: none; /* Standard syntax */
 }
-#dias {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 1em;
-	font-weight: bold;
-	color: ghostwhite;
-	padding-top: 3px;
-}
+
 
 
 .bola {

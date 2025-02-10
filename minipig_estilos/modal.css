@@ -56,6 +56,52 @@
   	animation-name: zoom;
   	animation-duration: 0.5s;
 }
+
+.modal-indice {
+	position: relative;
+	margin-top: 170px;
+  	display: block;
+  	width: 70%;
+	height:auto;
+	border-bottom-right-radius: 30px;
+	overflow: auto;
+	box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+	/*modificar animacion*/
+	transition: all .3s;
+	-webkit-animation-name: desliz;
+  	-webkit-animation-duration: .3s;
+  	animation-name: desliz;
+  	animation-duration: .3s;
+}
+.modal-indice ul {
+	position: relative;
+	width: 99%;
+	list-style-type: disc;
+	list-style-position: inside;
+	background-color: rgba(248,248,255,1); /*era ghostwhite.  rgba(255, 255, 255, .4);*/
+	color: darkslategray;
+	
+	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
+}
+.modal-indice ul > li{
+	border-bottom: 1px solid darkslategray;
+	display: block;
+	padding: 7px 0 7px 2em;
+/*	text-decoration: none;*/
+	cursor: pointer;
+	
+	font-weight: bold;
+	font-size: .8em;
+}
+.modal-indice ul > li ol/*sub lista de HISTOLOGIA*/ {
+	font-weight: 100;
+	margin-top: .5em;
+}
+.modal-indice ul > li ol li /*ELEMENTOS sub lista de HISTOLOGIA*/ {
+	padding-top: .3em;
+	padding-bottom: .3em;
+}
+
 .fondoClaro {
 	background-color: ghostwhite;
 }
@@ -76,7 +122,7 @@
 	text-indent: 0em;
 	line-height: 1.6;
 	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
-	color: gainsboro;
+	color: ghostwhite;
 	transition: scale 1s;
 	transition-timing-function: ease-in-out;
 	
@@ -85,13 +131,15 @@
   animation-name: zoom;
   animation-duration: 2s;
 }
-.modal-content-obj p {
+.modal-content-obj > p {
 	margin-bottom: .3em;
 	hyphens: auto;
 	-webkit-hyphens: auto;
 	-ms-hyphens: auto;
+	text-justify: none;
 	text-align: center;
 }
+
 .modal-content-obj strong {
 	color: ghostwhite;
 }
@@ -142,6 +190,21 @@
   	height: 100%; /* Full height ANTES ERA 100%*/
   	overflow:scroll; /* Enable scroll if needed  ANTES ERA AUTO*/
   	background-color: rgba(0, 0, 0, .7);  /*Black w/ opacity */
+	transition: opacity 0.3s;
+}
+
+.modaltransparente /*ESTE ES EL MODAL CONTENEDOR DEL INDICE LATERAL, solo cambiaste el fondo negro*/ {
+  	display: none; /* Hidden by default */
+  	position: fixed; /* Stay in place */
+  	z-index: 2; /* Sit on top */
+  	padding-top: 30px; /* Location of the box */
+	/*padding-bottom: 20px;*/
+  	left: 0;
+  	top: 0;
+  	width: 100%; /* Full width */
+  	height: 100%; /* Full height ANTES ERA 100%*/
+  	overflow:scroll; /* Enable scroll if needed  ANTES ERA AUTO*/
+  	background-color: transparent; /*Black w/ opacity */
 	transition: opacity 0.3s;
 }
 
@@ -258,6 +321,14 @@ iframe {
   to {transform:scale(.5)}
 }
 
+@keyframes desliz {
+	from {transform: translate(-80%,0px);}
+	to {transform: translate(0%,0px);}
+}
+@keyframes deslizBack {
+	from {transform: translate(0%,0px);}
+	to {transform: translate(-80%,0px);}
+}
 /* el boton cerrar X */
 .cruz {
 	z-index: 3;
@@ -401,6 +472,10 @@ AQUI ESTÁN LAS ALTURAS VARIABLES, LA MAYORIA*/
 		border-left: 1px solid ghostwhite;
 		border-right: 1px solid ghostwhite;
 	}
+	
+	.modal-indice {
+		margin-top: 110px;
+	}
 }
 
 
@@ -418,15 +493,19 @@ AQUI ESTÁN LAS ALTURAS VARIABLES, LA MAYORIA*/
 }
 @media (max-width: 550px) {
 	.modal-content-obj {
-
-  	width: 90%;
-	height:auto;
-	top: 70px;
-	font-size: 1em;
-	line-height: 1.7;
+		width: 90%;
+		height:auto;
+		top: 70px;
+		font-size: 1em;
+		line-height: 1.7;
 	}
 	.periquito {
 		top: 70px;
+	}
+	
+	.modal-indice {
+		width: 100%;
+		border-bottom-right-radius: 0px;
 	}
 }
 

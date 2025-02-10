@@ -207,6 +207,25 @@ span.equis:after {
 	height: 80px;
 }
 
+#naveLateral {
+	position: absolute;
+	width: 500px;
+	height: 100%;
+	z-index: 2;
+	left: 0px;
+	background-color: darkseagreen;
+	
+	-webkit-transition: all .7s;
+	transition: all .7s;
+	
+	box-sizing: border-box;
+	padding: 1em;
+}
+
+#naveLateral ul {
+	list-style-position: inside;
+	list-style-type: none;
+}
 
 
 

@@ -23,7 +23,7 @@ h3, h4 {
 }
 
 h3 {
-	margin-bottom: 2em;
+	margin-bottom: 5em;
 	margin-top: 2.5em;
 }
 h4 {
@@ -66,6 +66,25 @@ h4 {
 /*	margin: auto;*/
 }
 
+section.granTema {
+	margin-bottom: 300px;
+}
+section.Tema {
+	margin-bottom: 300px;
+	transition: opacity .5s;
+	transition-timing-function: ease-in-out;
+	
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+	scroll-margin-top: 300px;
+}
+.NoVisible {
+	opacity: 0;
+}
+.Visible {
+	opacity: 1;
+}
+
 @media (max-width: 800px) {
 	.textos {
 		padding-left: 15%;
@@ -95,7 +114,7 @@ spam.versalita {
 }
 
 
-.textos > p, .DiaSegmento > p {
+.textos section > p, .DiaSegmento section > p /* antes de poner sections tenías el Child >p*/ {
 	hyphens: auto;
 	-webkit-hyphens: auto;
 	-ms-hyphens: auto;
@@ -192,28 +211,6 @@ td strong {
 	margin-bottom: 1.5em;
 }
 
-.notas {
-	position: relative;
-	width: 100%;
-	margin-top: 3em;
-	font-size: .8em;
-	hyphens: none;
-	-webkit-hyphens: none;
-	-ms-hyphens: none;
-}
-
-.notas ol {
-	border-top: 1px solid gray;
-	list-style-type: decimal;
-	list-style-position: outside;
-}
-.notas ol li {
-	margin-bottom: .5em;
-}
-.notas ol li:target {
-	background-color: greenyellow;
-}
-
 .txt-centrado { text-align: center;}
 .txt-izquierda {text-align: left;}
 
@@ -235,7 +232,7 @@ td strong {
 	height: 2px;
 	background-color: slateblue;
 	margin-top: 5em;
-	margin-bottom: 5em;
+	margin-bottom: 8em;
 	/*scroll-snap-align: start;
 	scroll-snap-stop: always;
 	scroll-margin-top: 200px;*/
@@ -249,8 +246,6 @@ td strong {
 	overflow: visible;
 	top: 100;;
 	padding: 50px 020 0px;
-	
-lear: bo5h/*debi a que el elemento predecesor es un fichero floar right*/
 }
 .h1sinpadding {
 	padding-top: 0px;
@@ -350,7 +345,7 @@ table.tipoAncha {
 	cursor: pointer;
 }
 
-.textos > button {
+.textos section > button {
 	display: block;
 	border-radius: 10px;
 	border: none;
@@ -360,13 +355,19 @@ table.tipoAncha {
 	font-size: .9em;
 	padding: 20px 20px 20px 20px;
 	margin: auto;
+	margin-top: 4em;
 	margin-bottom: 1em;
+	clear: right;
 }
 
 img.fotografia {
 	display: block;
 	position: relative;
 	width: 100%;
+}
+
+.marginTopextra /*esta en la imagen de remate*/ {
+	margin-top: 200px;
 }
 
 @media (min-width: 1200px) {
@@ -399,7 +400,7 @@ img.fotografia {
 		padding-left: 5%;
 		padding-right: 5%;
 	}
-	.textos > p {
+	.textos > p /*ANTES de que metieras Sections aquí ERA CHILD >P*/ {
 		
 		text-align: left;
 		text-indent: 0%;

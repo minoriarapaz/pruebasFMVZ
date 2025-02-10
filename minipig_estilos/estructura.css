@@ -11,6 +11,7 @@
 overflow debe ser HIDDEN */
 body {
 	overflow: hidden;
+	background-color: ghostwhite;
 }
 /*AGREGADO ENERO 2024*/
 html {
@@ -30,7 +31,7 @@ html {
 	float: left;
 }*/
 
-div.contenedor {
+section.contenedor {
 	position: relative;
 	/*overflow:visible; si es HIDDEN el sticky no funcionará*/
 	/*border-top: 3px dotted blue;*/
@@ -40,8 +41,9 @@ div.contenedor {
 	margin-right: auto;
 	background-color: grey; /*mistyrose*/
 	width: 100%;
+	border-top: 1px solid lavender;
 }
-div.contenedor_sinheader {
+section.contenedor_sinheader {
 	position: relative;
 	/*overflow:visible; si es HIDDEN el sticky no funcionará*/
 	/*border: 2px dashed blue;*/
@@ -129,10 +131,7 @@ div.contenedor_sinheader {
 	border-bottom: 1px dotted lightgrey;
 	border-radius: 5px;
 }
-#anatomia_temas a {
-	background-color: gold;
-	border-radius: 5px;
-}
+
 .barra > ul li a {
 	background-color: transparent;
 	padding: 0 0 10px 0;
@@ -151,9 +150,6 @@ div.contenedor_sinheader {
 	color: darkslateblue;
 }
 
-.barra ul a:hover {
-
-}
 
 div.texto-cap {
 	position: -webkit-sticky; /* Safari */
@@ -193,16 +189,6 @@ iframe.nuevo {
 }
 .ximagen img {
 	width: 100%;
-}
-
-.cajaFijaBolas {
-	box-sizing: border-box;
-	position: relative;
-	width: 100%;
-	visibility: visible; /*hidden*/
-	opacity: 0;
-	transition: opacity 1s;
-	/*background-color: rgba(84,48,204,0.50);*/
 }
 
 .videoframe {
@@ -251,12 +237,6 @@ video {
 	margin: auto;
 }
 
-.DiaSegmento {
-	position: relative;
-	display: block;
-	width: 100%;
-	background-color: coral;
-}
 .revela {
 	opacity: 0;
 	transition: 2s all ease;
@@ -274,12 +254,6 @@ video {
   to {transform:scale(1)}
 }
 
-@media (min-width: 800px) {
-	.cajaFijaBolas {
-		padding-left: 300px;
-	}
-}
-
 @media (max-width: 550px) {
 	#barranavegacion img.img-full {
 		display: none;
@@ -288,7 +262,7 @@ video {
 		display: block;
 		opacity: .8;
 	}
-	/*div.contenedor {
+	/*section.contenedor {
 		margin-top: 200px;
 	}*/
 }

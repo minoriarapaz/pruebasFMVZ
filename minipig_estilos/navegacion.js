@@ -6,40 +6,9 @@
 
 console.log("variable i es "+i);
 
-		function show_indice() {
-			if (i==1) {
-				document.getElementById("nav-indice").style.display="block";
-				i=2;
-				document.getElementById("btnindice").style.backgroundColor="ghostwhite";
-				document.getElementById("rayas").style.display="none";
-				document.getElementById("laX").style.display="block";
-				/*CIERRA EL CONTROL DE LECTURA si está ABIERTO*/
-				document.getElementById("Control").style.height="0px";
-				document.getElementById("ojo").style.display="none";
-				console.log("cerraste control");
-				/*CONTROL LECTURA*/
-			}
-			else {
-				i=1;
-				document.getElementById("nav-indice").style.display="none";/*(antes null)*/
-				document.getElementById("btnindice").style.backgroundColor="transparent";/*(antes null)*/
-				/*document.getElementById("nav-indice").style.height="500px";*/
-				document.getElementById("rayas").style.display="block";
-				document.getElementById("laX").style.display="none";
-				/*muestra el ojo*/
-				document.getElementById("ojo").style.display="block";
-				
-			}
-		} /*FIN  SHOW_INDICE*/
+	
 
-function cerrarIndice() {
-	i=1;
-	document.getElementById("nav-indice").style.display="none";/*(antes null)*/
-	document.getElementById("btnindice").style.backgroundColor="transparent";/*(antes null)*/
-				
-	document.getElementById("rayas").style.display="block";
-	document.getElementById("laX").style.display="none";
-}
+
 
 /*FUNCION DEL MENU DESPLEGABLE PARA MOBIL  acaba*/
 
@@ -59,7 +28,7 @@ function abrir4() {
 	window.open("pdf/anatomia_rinon.pdf", "_blank");
 }
 function abrir5() {
-	window.open("pdf/anatomia_ovario.pdf", "_blank");
+	window.open("pdf/anatomia_reprohembra.pdf", "_blank");
 }
 
 function abrir6() {
@@ -85,6 +54,15 @@ function abrir11() {
 }
 function abrir12() {
 	window.open("pdf/anatomia_ojo.pdf", "_blank");
+}
+function abrirTracto() {
+	window.open("pdf/anatomia_tracto.pdf", "_blank");
+}
+function abrirVarilla() {
+	window.open("pdf/anatomia_varilla.pdf", "_blank");
+}
+function abrirHembra() {
+	window.open("pdf/anatomia_reprohembra.pdf", "_blank");
 }
 
 
@@ -209,28 +187,28 @@ function irBiblio() {
 
 function irPrologoM() {
 	window.scrollTo(0, 0);
-	show_indice();
+	verIndice2();
 }
 
 function irIntroM() {
 	window.scroll({top: (document.getElementById("aIntro").offsetTop - compensacion), left: 0, });
-	show_indice();
+	verIndice2();
 }
 function irMaterialM() {
 	window.scroll(
 		{top: (document.getElementById("aMaterial").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 
 function irAnatomiaM() {
 	window.scroll(
 		{top: (document.getElementById("aAnatomia").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 		}
 function irBiblioM() {
-	show_indice();
+	verIndice2();
 }
 
 
@@ -239,75 +217,75 @@ function irSistema1M() {
 	window.scroll(
 		{top: (document.getElementById("sistema1").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 
 function irSistema2M() {
 	window.scroll(
 		{top: (document.getElementById("sistema2").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema3M() {
 	window.scroll(
 		{top: (document.getElementById("sistema3").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema4M() {
 	window.scroll(
 		{top: (document.getElementById("sistema4").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema5M() {
 	window.scroll(
 		{top: (document.getElementById("sistema5").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema6M() {
 	window.scroll(
 		{top: (document.getElementById("sistema6").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema7M() {
 	window.scroll(
 		{top: (document.getElementById("sistema7").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema8M() {
 	window.scroll(
 		{top: (document.getElementById("sistema8").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema9M() {
 	window.scroll(
 		{top: (document.getElementById("sistema9").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema10M() {
 	window.scroll(
 		{top: (document.getElementById("sistema10").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 function irSistema11M() {
 	window.scroll(
 		{top: (document.getElementById("sistema11").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 
 function irTablasM() {
 	window.scroll(
 		{top: (document.getElementById("finSistemas").offsetTop - compensacion), left: 0, }
 	);
-	show_indice();
+	verIndice2();
 }
 
 
@@ -320,82 +298,7 @@ function irTablasM() {
 
 /*================FUNCION PARA EL S C R O L L y el INDICE LATERAL==============*/
 
-$(document).ready(function(){
-	
-	
-	/*$("#boton1").click(function(){
-    $(this).addClass("activo");
-	  $(this).siblings().removeClass("activo");
-  });
-	
-  $("#boton2").click(function(){
-    $(this).addClass("activo");
-	  $(this).siblings().removeClass("activo");
-  });
-	
-	$("#boton3").click(function(){
-    $(this).addClass("activo");
-	$(this).siblings().removeClass("activo");
-  });
-	
-	$("#boton4").click(function(){
-    $(this).addClass("activo");
-	$(this).siblings().removeClass("activo");
-		
-	});*/
-	
-	/*SUBINDICE */
-	
-	/*$("#btnSub1").click(function(){
-    $(this).toggleClass("activoSub");
-	$(this).siblings().removeClass("activoSub");
-	});
-	
-	$("#btnSub2").click(function(){
-    $(this).toggleClass("activoSub");
-	$(this).siblings().removeClass("activoSub");
-	});
-	$("#btnSub3").click(function(){
-    $(this).toggleClass("activoSub");
-	$(this).siblings().removeClass("activoSub");
-	});
-	$("#btnSub4").click(function(){
-    $(this).toggleClass("activoSub");
-	$(this).siblings().removeClass("activoSub");
-	});
-	$("#btnSub5").click(function(){
-    $(this).toggleClass("activoSub");
-	$(this).siblings().removeClass("activoSub");
-	});
-	$("#btnSub6").click(function(){
-    $(this).toggleClass("activoSub");
-	$(this).siblings().removeClass("activoSub");
-	});
-	$("#btnSub7").click(function(){
-    $(this).toggleClass("activoSub");
-	$(this).siblings().removeClass("activoSub");
-	});
-	$("#btnSub8").click(function(){
-    $(this).toggleClass("activoSub");
-	$(this).siblings().removeClass("activoSub");
-	});
-	$("#btnSub9").click(function(){
-    $(this).toggleClass("activoSub");
-	$(this).siblings().removeClass("activoSub");
-	});
-	$("#btnSub10").click(function(){
-    $(this).toggleClass("activoSub");
-	$(this).siblings().removeClass("activoSub");
-	});
-	$("#btnSub11").click(function(){
-    $(this).toggleClass("activoSub");
-	$(this).siblings().removeClass("activoSub");
-	});
-	$("#btnSub12").click(function(){
-    $(this).toggleClass("activoSub");
-	$(this).siblings().removeClass("activoSub");
-	});*/
-});
+
 
 window.onscroll = function() {escrol_prologo(); escrol_introduccion(); escrol_material();  escrol_anatomia(); escrol_sistema1(); escrol_sistema2(); escrol_sistema3(); escrol_sistema4(); escrol_sistema5(); escrol_sistema6(); escrol_sistema7(); escrol_sistema8(); escrol_sistema9(); escrol_sistema10(); escrol_sistema11(); escrol_indexTablas()};
 	
@@ -409,6 +312,12 @@ function escrol_prologo() {
 				document.getElementById("boton3").classList.remove("activo");
 				document.getElementById("boton4").classList.remove("activo");
 				document.getElementById("boton7").classList.remove("activo");
+				
+				document.getElementById("B1").classList.add("activo");
+				document.getElementById("B2").classList.remove("activo");
+				document.getElementById("B3").classList.remove("activo");
+				document.getElementById("B4").classList.remove("activo");
+				document.getElementById("B5").classList.remove("activo");
 			}
 }
 function escrol_introduccion() {
@@ -422,6 +331,12 @@ function escrol_introduccion() {
 				document.getElementById("boton4").classList.remove("activo");
 				
 				document.getElementById("boton7").classList.remove("activo");
+				
+				document.getElementById("B2").classList.add("activo");
+				document.getElementById("B1").classList.remove("activo");
+				document.getElementById("B3").classList.remove("activo");
+				document.getElementById("B4").classList.remove("activo");
+				document.getElementById("B5").classList.remove("activo");
 			}
 		}	
 
@@ -436,6 +351,13 @@ function escrol_material() {
 				document.getElementById("boton4").classList.remove("activo");
 				
 				document.getElementById("boton7").classList.remove("activo");
+				
+				document.getElementById("B3").classList.add("activo");
+				document.getElementById("B1").classList.remove("activo");
+				document.getElementById("B2").classList.remove("activo");
+				document.getElementById("B4").classList.remove("activo");
+				
+				document.getElementById("B5").classList.remove("activo");
 			
 			
 			} else {
@@ -455,6 +377,12 @@ function escrol_anatomia() {
 				
 				document.getElementById("boton7").classList.remove("activo");
 				
+				document.getElementById("B4").classList.add("activo");
+				document.getElementById("B1").classList.remove("activo");
+				document.getElementById("B2").classList.remove("activo");
+				document.getElementById("B3").classList.remove("activo");
+				document.getElementById("B5").classList.remove("activo");
+				
 				document.getElementById("anatomia_temas").style.height = "340px";
 			} else {
 				document.getElementById("anatomia_temas").style.height = "0px";
@@ -473,6 +401,12 @@ function escrol_indexTablas() {
 				
 				document.getElementById("boton4").classList.remove("activo");
 				
+				document.getElementById("B5").classList.add("activo");
+				document.getElementById("B1").classList.remove("activo");
+				document.getElementById("B2").classList.remove("activo");
+				document.getElementById("B3").classList.remove("activo");
+				document.getElementById("B4").classList.remove("activo");
+				
 				document.getElementById("anatomia_temas").style.height = "0px";
 			}
 		}
@@ -486,7 +420,11 @@ function escrol_sistema1() {
 			
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub1").classList.add("activoSub");
-			} else {document.getElementById("btnSub1").classList.remove("activoSub");}
+				document.getElementById("b1").classList.add("activoSub");
+				/*hace visible o no visible el tema V*/
+				document.getElementById("tema1").classList.remove("NoVisible");
+				
+			} else {document.getElementById("btnSub1").classList.remove("activoSub"); document.getElementById("b1").classList.remove("activoSub"); document.getElementById("tema1").classList.add("NoVisible");}
 		}
 
 function escrol_sistema2() {
@@ -497,7 +435,10 @@ function escrol_sistema2() {
 	
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub2").classList.add("activoSub");
-			} else {document.getElementById("btnSub2").classList.remove("activoSub");}
+				document.getElementById("b2").classList.add("activoSub");
+				/*hace visible o no visible el tema V*/
+				document.getElementById("tema2").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub2").classList.remove("activoSub"); document.getElementById("b2").classList.remove("activoSub"); document.getElementById("tema2").classList.add("NoVisible");}
 		}
 
 function escrol_sistema3() {
@@ -507,7 +448,10 @@ function escrol_sistema3() {
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub3").classList.add("activoSub");
-			} else {document.getElementById("btnSub3").classList.remove("activoSub");}
+				document.getElementById("b3").classList.add("activoSub");
+				/*hace visible o no visible el tema V*/
+				document.getElementById("tema3").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub3").classList.remove("activoSub"); document.getElementById("b3").classList.remove("activoSub"); document.getElementById("tema3").classList.add("NoVisible");}
 		}
 function escrol_sistema4() {
 			var titulo = document.getElementById("sistema4");
@@ -516,7 +460,10 @@ function escrol_sistema4() {
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub4").classList.add("activoSub");
-			} else {document.getElementById("btnSub4").classList.remove("activoSub");}
+				document.getElementById("b4").classList.add("activoSub");
+				/*hace visible o no visible el tema V*/
+				document.getElementById("tema4").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub4").classList.remove("activoSub"); document.getElementById("b4").classList.remove("activoSub"); document.getElementById("tema4").classList.add("NoVisible");}
 		}
 function escrol_sistema5() {
 			var titulo = document.getElementById("sistema5");
@@ -525,7 +472,10 @@ function escrol_sistema5() {
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub5").classList.add("activoSub");
-			} else {document.getElementById("btnSub5").classList.remove("activoSub");}
+				document.getElementById("b5").classList.add("activoSub");
+				/*hace visible o no visible el tema V*/
+				document.getElementById("tema5").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub5").classList.remove("activoSub"); document.getElementById("b5").classList.remove("activoSub"); document.getElementById("tema5").classList.add("NoVisible");}
 		}
 function escrol_sistema6() {
 			var titulo = document.getElementById("sistema6");
@@ -534,7 +484,10 @@ function escrol_sistema6() {
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub6").classList.add("activoSub");
-			} else {document.getElementById("btnSub6").classList.remove("activoSub");}
+				document.getElementById("b6").classList.add("activoSub");
+				/*hace visible o no visible el tema V*/
+				document.getElementById("tema6").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub6").classList.remove("activoSub"); document.getElementById("b6").classList.remove("activoSub"); document.getElementById("tema6").classList.add("NoVisible");}
 		}
 
 function escrol_sistema7() {
@@ -544,7 +497,10 @@ function escrol_sistema7() {
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub7").classList.add("activoSub");
-			} else {document.getElementById("btnSub7").classList.remove("activoSub");}
+				document.getElementById("b7").classList.add("activoSub");
+				/*hace visible o no visible el tema V*/
+				document.getElementById("tema7").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub7").classList.remove("activoSub"); document.getElementById("b7").classList.remove("activoSub"); document.getElementById("tema7").classList.add("NoVisible");}
 		}
 function escrol_sistema8() {
 			var titulo = document.getElementById("sistema8");
@@ -553,7 +509,10 @@ function escrol_sistema8() {
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub8").classList.add("activoSub");
-			} else {document.getElementById("btnSub8").classList.remove("activoSub");}
+				document.getElementById("b8").classList.add("activoSub");
+				/*hace visible o no visible el tema V*/
+				document.getElementById("tema8").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub8").classList.remove("activoSub"); document.getElementById("b8").classList.remove("activoSub"); document.getElementById("tema8").classList.add("NoVisible");}
 		}
 function escrol_sistema9() {
 			var titulo = document.getElementById("sistema9");
@@ -562,7 +521,10 @@ function escrol_sistema9() {
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub9").classList.add("activoSub");
-			} else {document.getElementById("btnSub9").classList.remove("activoSub");}
+				document.getElementById("b9").classList.add("activoSub");
+				/*hace visible o no visible el tema V*/
+				document.getElementById("tema9").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub9").classList.remove("activoSub"); document.getElementById("b9").classList.remove("activoSub"); document.getElementById("tema9").classList.add("NoVisible");}
 		}
 function escrol_sistema10() {
 			var titulo = document.getElementById("sistema10");
@@ -571,7 +533,10 @@ function escrol_sistema10() {
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub10").classList.add("activoSub");
-			} else {document.getElementById("btnSub10").classList.remove("activoSub");}
+				document.getElementById("b10").classList.add("activoSub");
+				/*hace visible o no visible el tema V*/
+				document.getElementById("tema10").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub10").classList.remove("activoSub"); document.getElementById("b10").classList.remove("activoSub"); document.getElementById("tema10").classList.add("NoVisible");}
 		}
 function escrol_sistema11() {
 			var titulo = document.getElementById("sistema11");
@@ -580,7 +545,10 @@ function escrol_sistema11() {
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub11").classList.add("activoSub");
-			} else {document.getElementById("btnSub11").classList.remove("activoSub");}
+				document.getElementById("b11").classList.add("activoSub");
+				/*hace visible o no visible el tema V*/
+				document.getElementById("tema11").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub11").classList.remove("activoSub"); document.getElementById("b11").classList.remove("activoSub"); document.getElementById("tema11").classList.add("NoVisible");}
 		}
 
 /*Navegacion de indice de tablas*/
