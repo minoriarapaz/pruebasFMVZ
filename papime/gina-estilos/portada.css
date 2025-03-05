@@ -1,0 +1,306 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.area {
+	position: absolute;
+	width: 100%;
+	height: 1000px;
+	background-image: url("../columba_imagenes/interfaz/fondo_vertical3.jpg");
+	background-position: center;
+	background-size:cover;
+	background-repeat: no-repeat;
+	overflow-x:hidden;
+}
+
+@media (min-width: 900px) {
+	.area {
+		margin: auto;
+		width: 700px;
+		left: 0;
+		right: 0;
+	}
+}
+
+.titulo {
+	display: block;
+	width: 90%;
+	height: 200px;
+	margin: auto;
+	margin-top: 100px;
+	border: 1px solid transparent;
+}
+.sangria {
+	text-indent: 1em;
+}
+
+@media (min-width: 600px) {
+	.titulo {
+		width: 70%;
+	}
+}
+.titulo img {
+	width: 100%;
+}
+
+.botonINICIO {
+	display: block;
+	width: 200px;
+	height: 100px;
+	
+	background-color: darkslategray;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px;
+	text-align: center;
+	padding-top: 1.5em;
+	color: ghostwhite;
+	font-family: Open Sans, Verdana;
+	font-weight: bolder;
+	font-size: 1.3em;
+}
+.pagina {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	z-index: 2;
+	opacity: 1;
+}
+.pagina2 {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: blue;
+	z-index: 2;
+	opacity: .7;
+	margin-left: 100%;
+	transition: margin .5s;
+}
+
+.autoras {
+	display: block;
+	background-image: linear-gradient(rgba(0,0,0,.0)0%, rgba(0,0,0,1)60%);
+	color: whitesmoke;
+	padding-top: 3em;
+	padding-bottom: 1em;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	margin-top: 0em;
+	border-radius: 20px 20px 20px 20px;
+}
+.autoras p {
+	font-size: 1.8em;
+	font-weight: bold;
+	font-family: Open Sans, "Trebuchet MS", Arial, serif;
+	margin-bottom: .2em;
+	text-shadow: 2px 4px 7px rgba(0,0,0,.5);
+	background-color: rgba(0,0,0,0.3);
+}
+@media (max-width: 450px) {
+	.autoras p {
+		font-size: 1.2em;
+	}
+	.autoras {
+		margin-top: 0em;
+	}
+}
+
+.pliego {
+	position: absolute;
+	display: flex;
+	width: 600%;
+	height: 100%;
+	background-color: white;
+	z-index: 2;
+	opacity: 1;
+	margin-left: 100%;
+	transition: margin .5s;
+}
+
+.page {
+	position: relative;
+	display: block;
+	width: 16.66%;
+	height:auto;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 20px;
+	padding-bottom: 3em;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background-image:url("../columba_imagenes/interfaz/fondo_vertical_blanco.jpg");
+	background-position: center;
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+.page p {
+	font-family: Open Sans, "Trebuchet MS", Arial, serif;;
+	font-kerning: auto;
+	margin-bottom: .5em;
+	font-weight: normal;
+	background-color: rgba(255,255,255,0.8);
+	padding-left: 10px;
+}
+.page p.agradecimiento {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 20%;
+	color: darkslategray;
+}
+.page p.sinfondo {
+	background-color: transparent;
+}
+
+.page p.jcentro {
+	text-align: center;
+}
+.page p.justizq {
+	text-align: left;
+}
+.page p.margensup {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.page p.margensupminus {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.page strong, .page b {
+	color: darkslategray;
+}
+.imagen_adorno {
+	display: block;
+	width: 50%;
+	margin: auto;
+	margin-bottom: 2em;
+}
+.imagen_adorno_chica {
+	display: block;
+	width: 250px;
+	margin: auto;
+	margin-bottom: 2em;
+}
+
+.rojo {
+	background-color: indianred;
+}
+.azul {
+	background-color: deepskyblue;
+}
+.btn_prev, .btn_next {
+	display: block;
+	z-index: 6;
+	cursor: pointer;
+	position: absolute;
+	top: 20%;
+	width: auto;
+	padding: 100px 16px 100px 16px;
+	  margin-top: -40px;
+	  color: white;
+	  font-weight: bold;
+	  font-size: 20px;
+	  border-radius: 0 10px 10px 0;
+	  user-select: none;
+	  -webkit-user-select: none;
+	/*height: 200px;*/
+	background-color: rgba(0, 0, 0, 0.2);
+}
+.btn_next {
+	right: 0;
+	border-radius: 10px 0 0 10px;
+}
+
+@media (max-width: 500px) {
+	.btn_next {
+		padding-left: 15px;
+		padding-right: 10px;
+		top: 25%;
+	}
+	.btn_prev {
+		padding-left: 10px;
+		padding-right: 15px;
+		top: 25%;
+	}
+	.botonINICIO {
+		width: 30%;
+		height: 70px;
+		margin-top: 50px;
+		font-size: 1em;
+	}
+	.titulo {
+		height: 100px;
+	}
+	iframe {
+		height: 150px;
+	}
+	.escudos {
+	width: 80%;
+		height: 80px;
+	}
+	.imagen_adorno {
+		width: 80%;
+	}
+	.page {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.page p {
+		font-size: .95em;
+	}
+}
+
+@media (max-width: 350px) {
+	iframe {
+		height: 100px;
+	}
+}
+
+.btn_next:hover, .btn_prev:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+#anterior {
+	display: none;
+}
+
+iframe {
+	border-style: none;
+	cursor: pointer;
+}
+.colorgris {
+	color: darkslategray;
+}
+.escudos {
+	display: block;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+.escudos_direct {
+	margin: auto;
+	width: 140px;
+	margin-bottom: 1em;
+}
+
+.logolicencia {
+	display: block;
+	margin: auto;
+	max-width: 150px;
+}
+
+.flotader {
+	float: right;
+}
+.flotaizq {
+	float: left;
+}

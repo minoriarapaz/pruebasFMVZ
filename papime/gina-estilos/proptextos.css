@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/* CSS Document */
+
+h2 {
+	display: inline-block;
+	border: 1px dotted red;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+h3, h4 {
+	display: block;
+	position: relative;
+	border: 2px solid black;
+	margin: auto;
+	text-align: left;
+}
+h3 {
+	margin-bottom: 1em;
+}
+h4 {
+	margin-top: 1em;
+}
+.concepto h4 {
+	margin-top: 0em;
+	margin-bottom: .5em;
+	color: white;
+}
+section p {
+	border: 1px dotted red;
+	
+	display: block;
+	clear: right;
+	margin-bottom: .5em;
+	color: darkslategray;
+	font-size: 1.1em;
+	text-align: justify;
+	
+	margin-left: 10%;
+	margin-right: 10%;
+}
+p.primerP {
+	margin-top: 2em;
+}
+ol, ul {
+	
+	color: white;
+	list-style-position: inside;
+	display: block;
+	font-size: 1.1em;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 2em;
+	padding: 1em;
+	border-radius: 40px;
+	
+	background-image: linear-gradient(cornflowerblue 50%, rgb(72, 129, 234));
+}
+ul {
+	list-style-type: none;
+}
+
+ul li {
+	margin-bottom: .5em;
+}
+
+.concepto {
+	display: block;
+	position: relative;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 1em;
+	padding: 1em;
+	border-radius: 40px;
+	background-image: linear-gradient(cornflowerblue 50%, rgb(72, 129, 234));
+}
+.concepto > p {
+	color: ghostwhite;
+	text-align: left;
+	margin-left: 0%;
+	margin-right: 0%;
+}
+
+@media (min-width: 1000px)  {
+	section p {
+		border: 1px dotted red;
+	
+		display: block;
+		margin-bottom: .5em;
+		color: darkslategray;
+		font-size: 1.1em;
+		text-align: justify;
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+	.concepto, ol, ul {
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+}
+@media (min-width: 1500px) {
+	section p, ol, ul {
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+	.concepto, ol, ul {
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+}
