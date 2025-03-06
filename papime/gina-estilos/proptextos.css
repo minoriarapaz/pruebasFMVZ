@@ -10,7 +10,6 @@ h2 {
 h3, h4 {
 	display: block;
 	position: relative;
-	border: 2px solid black;
 	margin: auto;
 	text-align: left;
 }
@@ -19,6 +18,15 @@ h3 {
 }
 h4 {
 	margin-top: 1em;
+}
+
+h3.metodo {
+	background-image: linear-gradient(lightcoral 50%, rgb(236, 95, 95));
+	width: 100%;
+	padding: 1em 1em 1em 15%;
+	text-align: left;
+	font-size: 1.5em;
+	color: white;
 }
 .concepto h4 {
 	margin-top: 0em;
@@ -33,6 +41,7 @@ section p {
 	margin-bottom: .5em;
 	color: darkslategray;
 	font-size: 1.1em;
+	
 	text-align: justify;
 	
 	margin-left: 10%;
@@ -40,6 +49,10 @@ section p {
 }
 p.primerP {
 	margin-top: 2em;
+}
+
+p.noJusty {
+	text-align: left;
 }
 ol, ul {
 	

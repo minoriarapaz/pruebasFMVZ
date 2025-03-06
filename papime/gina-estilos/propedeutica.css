@@ -50,6 +50,9 @@ section {
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
 }
+section.metodos {
+	padding-top: 0;
+}
 
 
 
@@ -90,6 +93,8 @@ section {
 	margin: auto;
 	margin-right: 10%;
 	margin-bottom: 1em;
+}
+.sombraIMG {
 	box-shadow: 3px 3px 10px rgba(0,0,0,.2);
 }
 
@@ -97,6 +102,89 @@ section {
 	float: left;
 }
 
+/*------aqui empiezan css para el contenedor especial y todo lo que tiene dentro*/
+.cajaEspecial {
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+
+	height: auto;
+	margin-top: 1em;
+	margin-bottom: 2em;
+	/*border: 2px dotted blue;*/
+}
+.subcaja {
+	position: relative;
+	/*border: 2px solid orange;*/
+}
+.subcaja img {
+	border-radius: 30px;
+}
+
+.displayColumnas, .displayColumnasD {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	max-height: 1000px;
+}
+.displayColumnasD{
+	
+}
+.displayBlock {
+	display: block;
+}
+
+.displayColumnas > div {
+	display:  block;
+	
+	font-weight: bold;
+	/*border: 2px solid black;*/
+}
+.displayColumnas > div > p {
+	color: white;
+	display: block;
+	margin-right: 0;
+	text-align: center;
+	padding: .5em;
+	border-radius: 15px;
+	background-image: linear-gradient(lightcoral 50%, rgb(236, 95, 95));
+	box-shadow: 3px 3px 5px rgba(0,0,0,.2);
+}
+.displayColumnasD > div > p {
+	color: black;
+	display: block;
+	margin-left: 0;
+	text-align: center;
+	padding: .3em;
+	border-radius: 15px;
+	border: none;
+	/*background-image: linear-gradient(cornflowerblue 50%, rgb(72, 129, 234));*/
+	box-shadow: 3px 3px 5px rgba(0,0,0,.2);
+}
+#losMetodos .subcaja > img {
+	display: block;
+	height: 100%;
+}
+#vet-guantes {
+	max-height: 600px;
+	overflow: hidden;
+	padding-left: 20px;
+}
+
+.img-larga {
+	width: 100%;
+}
+/*------aqui termina css para el contenedor especial y todo lo que tiene dentro*/
+
+.ancho60 {
+	width: 60%;
+	border: 2px dotted blue;
+}
+.ancho50 {width: 50%;}
+.ancho40 {
+	width: 40%;border: 2px dotted blue;
+}
 @media (max-width: 1000px) {
 	.img-foto, .img-ilustracion {
 		margin: auto;
