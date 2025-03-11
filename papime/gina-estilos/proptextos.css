@@ -6,18 +6,28 @@ h2 {
 	border: 1px dotted red;
 	margin-left: 10%;
 	margin-right: 10%;
+	letter-spacing: 1px;
 }
 h3, h4 {
 	display: block;
 	position: relative;
 	margin: auto;
 	text-align: left;
+	font-family: Georgia, Gill Sans, Cambria;
 }
 h3 {
 	margin-bottom: 1em;
+	font-size: 1.5em;
+	letter-spacing: 1px;
 }
 h4 {
 	margin-top: 1em;
+	font-size: 1.1em;
+}
+.columnaTitulo h4 {
+	text-align: center;
+	margin-top: 0;
+	color: white;
 }
 
 h3.metodo {
@@ -43,7 +53,7 @@ section p {
 	font-size: 1.1em;
 	
 	text-align: justify;
-	
+	line-height: 1.6;
 	margin-left: 10%;
 	margin-right: 10%;
 }
@@ -66,14 +76,35 @@ ol, ul {
 	padding: 1em;
 	border-radius: 40px;
 	
-	background-image: linear-gradient(cornflowerblue 50%, rgb(72, 129, 234));
 }
+
+
+
+
+ol.olLetras {
+	list-style-type: upper-alpha;
+}
+.olLetras li {
+	margin-bottom: 1em;
+}
+ol.olLetras li > ul {
+	border-radius: 0px;
+	border-left: 2px solid ghostwhite;
+}
+
 ul {
 	list-style-type: none;
 }
 
 ul li {
 	margin-bottom: .5em;
+}
+
+.envolvente {
+	border: 2px solid ghostwhite;
+	border-radius: 40px;
+	padding-left: 2em;
+	padding-top: 1em;
 }
 
 .concepto {
@@ -89,8 +120,14 @@ ul li {
 .concepto > p {
 	color: ghostwhite;
 	text-align: left;
-	margin-left: 0%;
+	margin-left: 5%;
 	margin-right: 0%;
+}
+
+.concepto > ol /*o en class subConcepto*/ {
+	background-color: black;
+	margin-left: 5%;
+	margin-right: 0;
 }
 
 @media (min-width: 1000px)  {

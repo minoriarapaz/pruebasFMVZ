@@ -3,6 +3,7 @@
 
 
 * {
+	box-sizing: border-box;
 	margin: 0px;
 	padding: 0px;
 }
@@ -23,6 +24,8 @@ main {
 	width: 80%;
 	margin: auto;
 	background-color: ghostwhite;
+	background-image: url("../graficos-interfaz/textura.png");
+	background-repeat: repeat;
 
 }
 header {
@@ -43,10 +46,9 @@ section {
 	width: 100%;
 	height: auto;
 	
-	font-family: Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
+	font-family: Roboto, Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
 	font-size: 1.2em;
-	border: 2px solid blue;
-	
+	box-shadow: 0 5px 8px rgba(0, 0, 0, .5);
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
 }
@@ -152,7 +154,8 @@ section.metodos {
 	box-shadow: 3px 3px 5px rgba(0,0,0,.2);
 }
 .displayColumnasD > div > p {
-	color: black;
+	color: darkslategray;
+	font-weight: bold;
 	display: block;
 	margin-left: 0;
 	text-align: center;
@@ -176,6 +179,98 @@ section.metodos {
 	width: 100%;
 }
 /*------aqui termina css para el contenedor especial y todo lo que tiene dentro*/
+/* COMIENZA CAJA ESPECIAL 2 */
+.cajaEspecial2 {
+	position: relative;
+	display: block;
+	flex-wrap: nowrap;
+	width: 100%;
+
+	height: auto;
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+.subcajaCabezal {
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	width: 100%;
+	height: auto;
+}
+.subcaja2 {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: auto;
+	border-bottom: 2px solid cornflowerblue;
+	padding: 0 5px 0 5px;;
+}
+.columna {
+	position: relative;
+	width: 49%;
+	height: auto;
+	overflow: auto;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
+}
+div.columnaTitulo {
+	position: relative;
+	display: inline-block;
+	width: 49%;
+	height: auto;
+	text-align: center;
+	padding: .4em;
+	border-radius: 15px 15px 0 0;
+}
+.columna > div {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	border-radius: 15px;
+	border-bottom: 3px solid darkslateblue; /*rgb(21, 78, 183)*/
+	background-image: linear-gradient(cornflowerblue 50%, rgb(72, 129, 234));
+	height: auto;
+	margin: 10px 0 10px 0;
+	
+}
+@media (min-width: 1300px) {
+	.columna > div {justify-content: flex-start; flex-wrap: nowrap;}
+	.columna > div .descripcion {width: 62%;}
+}
+
+.columna .descripcion {
+	color: ghostwhite;
+	width: auto;
+	height: auto;
+	padding: 10px;
+	font-size: .8em;
+}
+.descripcion strong {
+	display: block;
+	margin-bottom: .5em;
+}
+.columna .divImagen {
+	display: block;
+	position: relative;
+	width: 200px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
+	border-radius: 15px;
+}
+.divImagen img {
+	width: 100%;
+}
+
+
+/*TERMINA CAJA ESPECIAL 2--------*/
+
+.fondoAzul {
+	background-image: linear-gradient(cornflowerblue 50%, rgb(72, 129, 234));
+}
+.fondoCoral {
+	background-image: linear-gradient(lightcoral 50%, rgb(236, 95, 95));
+}
 
 .ancho60 {
 	width: 60%;
