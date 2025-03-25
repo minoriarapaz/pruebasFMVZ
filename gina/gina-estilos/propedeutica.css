@@ -3,6 +3,7 @@
 
 
 * {
+	box-sizing: border-box;
 	margin: 0px;
 	padding: 0px;
 }
@@ -23,6 +24,8 @@ main {
 	width: 80%;
 	margin: auto;
 	background-color: ghostwhite;
+	background-image: url("../graficos-interfaz/textura.png");
+	background-repeat: repeat;
 
 }
 header {
@@ -43,12 +46,14 @@ section {
 	width: 100%;
 	height: auto;
 	
-	font-family: Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
+	font-family: Roboto Condensed, Open Sans, Roboto, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
 	font-size: 1.2em;
-	border: 2px solid blue;
-	
+	box-shadow: 0 5px 8px rgba(0, 0, 0, .5);
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
+}
+section.metodos {
+	padding-top: 0;
 }
 
 
@@ -90,6 +95,8 @@ section {
 	margin: auto;
 	margin-right: 10%;
 	margin-bottom: 1em;
+}
+.sombraIMG {
 	box-shadow: 3px 3px 10px rgba(0,0,0,.2);
 }
 
@@ -97,6 +104,216 @@ section {
 	float: left;
 }
 
+/*------aqui empiezan css para el contenedor especial y todo lo que tiene dentro*/
+.cajaEspecial {
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+
+	height: auto;
+	margin-top: 1em;
+	margin-bottom: 2em;
+	border: 2px dotted blue;
+}
+.subcaja {
+	position: relative;
+	/*border: 2px solid orange;*/
+}
+.ancho70 p {
+	margin-right: 5%;
+	text-align: left;
+}
+.subcaja img {
+	border-radius: 30px;
+}
+
+.displayColumnas, .displayColumnasD {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	max-height: 1000px;
+}
+.displayColumnasD{
+	
+}
+.displayBlock {
+	display: block;
+}
+
+.displayColumnas > div {
+	display:  block;
+	
+	font-weight: bold;
+	/*border: 2px solid black;*/
+}
+.displayColumnas > div > p {
+	color: white;
+	display: block;
+	margin-right: 0;
+	text-align: center;
+	padding: .5em;
+	border-radius: 15px;
+	background-image: linear-gradient(lightcoral 50%, rgb(236, 95, 95));
+	box-shadow: 3px 3px 5px rgba(0,0,0,.2);
+}
+.displayColumnasD > div > p {
+	color: darkslategray;
+	font-weight: bold;
+	display: block;
+	margin-left: 0;
+	text-align: center;
+	padding: .3em;
+	border-radius: 15px;
+	border: none;
+	/*background-image: linear-gradient(cornflowerblue 50%, rgb(72, 129, 234));*/
+	box-shadow: 3px 3px 5px rgba(0,0,0,.2);
+}
+#losMetodos .subcaja > img {
+	display: block;
+	height: 100%;
+}
+#vet-guantes {
+	max-height: 600px;
+	overflow: hidden;
+	padding-left: 20px;
+}
+
+.img-larga {
+	width: 100%;
+}
+/*------aqui termina css para el contenedor especial y todo lo que tiene dentro*/
+/* COMIENZA CAJA ESPECIAL 2 */
+.cajaEspecial2 {
+	position: relative;
+	display: block;
+	flex-wrap: nowrap;
+	width: 100%;
+
+	height: auto;
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+.subcajaCabezal {
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	width: 100%;
+	height: auto;
+	padding: 0 5px 0 5px;
+}
+.subcaja2 {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: auto;
+	border-bottom: 2px solid cornflowerblue;
+	padding: 0 5px 0 5px;
+}
+.columna {
+	position: relative;
+	width: 49%;
+	height: auto;
+	overflow: auto;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
+}
+div.columnaTitulo {
+	position: relative;
+	display: inline-block;
+	width: 49%;
+	height: auto;
+	text-align: center;
+	padding: .4em;
+	border-radius: 15px 15px 0 0;
+}
+.columna > div {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	border-radius: 15px;
+	border-bottom: 3px solid darkslateblue; /*rgb(21, 78, 183)*/
+	background-image: linear-gradient(cadetblue 50%, rgb(67, 110, 112));/*linear-gradient(cornflowerblue 50%, rgb(72, 129, 234));*/
+	height: auto;
+	margin: 10px 0 10px 0;
+	
+}
+@media (min-width: 1300px) {
+	.columna > div {justify-content: flex-start; flex-wrap: nowrap;}
+	.columna > div .descripcion {width: 62%;}
+}
+
+.columna .descripcion {
+	color: ghostwhite;
+	width: auto;
+	height: auto;
+	padding: 10px;
+	font-size: .8em;
+}
+.descripcion strong {
+	display: block;
+	margin-bottom: .5em;
+}
+.columna .divImagen {
+	display: block;
+	position: relative;
+	width: 200px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
+	border-radius: 15px;
+}
+.subcaja .divImagen {
+	display: block;
+	position: relative;
+	max-width: 300px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, .5);
+	border-radius: 15px;
+
+}
+.ancho50 img {
+	width: 100%;
+	display: block;
+	position: relative;
+}
+.divImagen img {
+	width: 100%;
+}
+
+
+/*TERMINA CAJA ESPECIAL 2--------*/
+
+.fondoAzul {
+	background-image: linear-gradient(cornflowerblue 50%, rgb(72, 129, 234));
+	border-bottom: 5px solid darkslateblue;
+	color: ghostwhite;
+}
+.fondoCyan {
+	background-image: linear-gradient(cadetblue 50%, rgb(67, 110, 112));
+	border-bottom: 5px solid rgb(0, 51, 51);
+	color: ghostwhite;
+}
+
+.fondoCoral {
+	background-image: linear-gradient(lightcoral 50%, rgb(236, 95, 95));
+	border-bottom: 5px solid sienna;
+	color: ghostwhite;
+}
+
+.ancho60 {
+	width: 60%;
+	border: 2px dotted blue;
+}
+.ancho70 {
+	width: 70%;border: 1px solid red;
+}
+.ancho50 {width: 50%;}
+.ancho40 {
+	width: 40%;border: 2px dotted blue;
+}
+.ancho30 {
+	width: 30%;border: 1px solid red;
+}
 @media (max-width: 1000px) {
 	.img-foto, .img-ilustracion {
 		margin: auto;

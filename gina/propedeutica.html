@@ -26,6 +26,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	
+	<!----end fuentes -->
 
 	<link rel="icon" type="image/x-icon" href="gina-imagenes/interfaz/favicon.ico">
 <title>Manual de propedéutica clínica veterinaria</title>
@@ -53,7 +67,7 @@
 			<section>
 			<h3>Terminología</h3>
 			<p>Los signos son manifestaciones objetivas que el clínico veterinario reconoce o provoca durante el examen. Pueden ser:</p>
-			<ul>
+			<ul class="fondoAzul">
 				<li><strong>1) Físicas:</strong> <br>exantemas, alteración del pulso, dilatación cardiaca, etcétera.</li>
 				<li><strong>2) Químicas:</strong><br> albuminuria, hiperglicemia, etc.</li>
 				<li><strong>3) Del comportamiento:</strong> <br>disminución de la postura, agresividad, disminución en la producción lechera, anorexia.</li>
@@ -94,18 +108,349 @@
 		<!-- ******************SECCION******************-->
 		<section>
 			<h3>¿Qué es la semiotécnica o propedéutica?</h3>
-			<img src="gina-imagenes/vet-estetoscopio.png" alt="ilustracion2" class="img-ilustracion">
+			<img src="gina-imagenes/vet-estetoscopio.png" alt="vet palpando vaca" class="img-ilustracion">
 			<p>Es un conjunto ordenado de métodos y procedimientos del que se vale el clínico veterinario para evidenciar los síntomas y detectar los signos, y así elaborar un diagnóstico.</p>
 			<p>Para llegar con éxito al diagnóstico, el clínico se vale de sus sentidos y de los conocimientos  adquiridos que le permitirán hacer una exploración clínica adecuada, para lo cual debe adquirir el hábito de realizar el examen semiológico en forma metódica y ordenada, a fin de construir el cuadro clínico completo.</p>
 			<p>Es importante la interacción del clínico con el animal y con sus propietarios o responsables. Es en el diálogo con ellos (la entrevista médica) donde se obtiene la información más valiosa. Con ésta y los datos recogidos por el examen físico se confecciona la historia clínica. </p>
 			<p>Un dato importante a registrar en la historia clínica son los que identifican al dueño o cuidador responsable del animal y el lugar físico donde se encuentran él o los animales por razones médico legales, inscripción en registros genealógicos, registros de producción, controles sanitarios y/o por la aparición de enfermedades de reporte obligatorio. </p>
 			
 		</section>
-		<!-- ******************SECCION******************-->
+		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
 		<section>
 			<h2>Métodos fisicos de exploración</h2>
-			<img src="gina-imagenes/vet-guantes.png" alt="ilustracion3" class="img-ilustracion">
+			<div class="cajaEspecial" id="losMetodos">
+				<div class="subcaja ancho50 displayColumnas">
+					<div><p>Inspección</p></div>
+					<div><p>Palpación</p></div>
+					<div><p>Percusión</p></div>
+					<div><p>Auscultación</p></div>
+					<div><p>Olfación</p></div>
+					<div><p>Mensuración o medición</p></div>
+					<div><p>Métodos complementarios</p></div>
+				</div>
+				<div class="subcaja ancho50 displayBlock" id="vet-guantes"><img src="gina-imagenes/vet-guantes-full.png" alt="doc con guantes"></div>
+			</div><!--cajaEspecial-->
 		</section>
+		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
+		<section class="metodos">
+			<h3 class="metodo">Inspección</h3>
+			<p>Se denomina así a la exploración objetiva <strong>por medio de la vista.</strong></p>
+			<p>Permite evidenciar cambios cualitativos y cuantitativos que pueden proporcionar información de valor para orientar el diagnóstico.</p> 
+			<p>Es la primera maniobra semiológica que se debe realizar, recordando la frase “la primera sin tocar” </p>
+			<img src="gina-imagenes/vet-mirandooveja.png" alt="vet inspeccionando" class="img-ilustracion">
+			<div class="concepto">
+				<h4>Inspección general</h4>
+			<p>Es la exploración de la totalidad del cuerpo del animal considerando el “estado general del sujeto”, del ambiente donde se encuentra, si se concurre al domicilio o al establecimiento. En el caso de grupos de animales se les inspecciona sin perturbarlos buscando anormalidades en los individuos, como es separarse del grupo y un comportamiento indiferente. </p></div>
+			<div class="concepto">
+				<h4>Inspección particular</h4>
+			<p>Se reduce a un lugar o región determinada del cuerpo del animal a observar, debiendo contar con una buena iluminación.</p></div>
+			
+			<p class="noJusty">La Inspección es directa o inmediata cuando el clínico usa sus ojos.</p>
+			<p class="noJusty">Si usara aparatos auxiliares como lupa, especulos o endoscopios sería una inspección “indirecta o mediata”.</p>
+			<p>Una inspección externa se limitará al exterior del paciente, y una interna a las cavidades o al interior de un órgano a través de instrumentos como el endo, por ejemplo.</p>
+		</section>
+		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
+		<section>
+			<p>La inspección debe realizarse con luz natural, y si no, con luz blanca artificial (para distinguir el color de las mucosas, p. ej.)</p>
+			<p>El valor semiológico de la inspección general es <strong>“evaluar el estado general del sujeto”</strong> en:</p>
+			
+			<div class="cajaEspecial">
+				<div class="subcaja ancho60 displayBlock">
+					<img class="img-larga" src="gina-imagenes/foto-borregosdescanso.jpg" alt="foto lounge borregos">
+					
+				</div>
+				<div class="subcaja ancho40 displayColumnasD">
+					<div><p>la estación</p></div>
+					<div><p>el decúbito</p></div>
+					<div><p>la marcha</p></div>
+					<div><p>el pelaje</p></div>
+					<div><p>el estado de nutrición</p></div>
+				</div>
+			</div><!--cajaEspecial-->
+			
+			<p>La inspección particular es <strong>“la observación de una zona o región explorada”</strong> como:</p>
+			<div class="cajaEspecial">
+				<div class="subcaja ancho60 displayBlock">
+					<img class="img-larga" src="gina-imagenes/ginaconcabra2.jpg" alt="vet inspeccionando">
+					
+				</div>
+				<div class="subcaja ancho40 displayColumnasD">
+					<div><p>cabeza</p></div>
+					<div><p>tronco</p></div>
+					<div><p>abdomen</p></div>
+					<div><p>el pelaje</p></div>
+					<div><p>miembros anteriores y posteriores o regiones de ellos. </p></div>
+				</div>
+			</div><!--cajaEspecial-->
+			
+			<div class="concepto">
+			<p>En el caso de grupos (bovinos,caprinos y ovinos) hay que evaluar comportamientos distintivos de los animales enfermos y su relación con los sanos.</p></div>
+		</section>
+		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
+		<section class="metodos">
+			<h3 class="metodo">Palpación</h3>
+			<p>Es la exploración por medio del sentido del tacto, a veces con la mano llena y otras con la yema de los dedos. Tiene como finalidad apreciar caracteres del órgano palpado.</p>
+			<img src="gina-imagenes/vet-tocandocabra.png" alt="vet palpando" class="img-ilustracion">
+			
+			<p>La palpación se clasifica en</p>
+			<ol class="olLetras fondoAzul">
+				<li><strong>Directa o inmediata: </strong>a través de las manos.</li>
+				<li><strong>Indirecta o mediata: </strong>(por medio de instrumentos como catéteres, sondas, mango de martillo, especulos, pinza de pie, etc).</li>
+				<li><strong>Monomanual:</strong> se utiliza una sola mano.</li>
+				<li><strong>Bimanual:</strong>
+				<ul class="subLista">
+				<li>Directa<br><small>dos manos realizan la maniobra al mismo tiempo</small></li>
+					<li>Indirecta<br><small>una mano realiza la maniobra y la otra sostiene un instrumento</small></li>
+					</ul>
+				</li>
+				<li><strong>Combinada:</strong>
+					<ul class="subLista">
+						<li>Bimanual<br><small>se palpa con una mano activa y la otra pasiva </small></li>
+						<li>Manual instrumental<br><small>se palpa por medio de instrumentos con una 
+	mano y con la otra se palpa en forma directa.</small></li>
+						<li>Amplexión<br><small>sólo en pequeños animales. Se palpan ambos hemitorax a la vez; permite verificar la amplitud e igualdad de los movimientos respiratorios.</small></li>
+					</ul>
+				
+				</li>
+				<li><strong>Externa:</strong> sobre el exterior del animal</li>
+				<li><strong>Interna: </strong>a través de una cavidad (rectal, bucal, vaginal, etc.)</li>
+
+			</ol>
+		</section>
+		
+		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
+		
+		<section>
+		<p>La palpación según la intensidad de la maniobra se clasifica en <strong>superficial</strong> y <strong>profunda</strong>.</p>
+		
+			
+		<div class="cajaEspecial2">
+			<div class="subcajaCabezal">
+				<div class="columnaTitulo fondoCoral"><h4>Superficial</h4></div>
+				<div class="columnaTitulo fondoCoral"><h4>Profunda</h4></div>
+			</div><!--cabezal-->
+			<div class="subcaja2">
+				<div class="columna" id="palpacionSuperficial">
+					<div>
+						<div class="divImagen"><img src="gina-imagenes/palpa-presion.png" alt="manopresionando"></div><div class="descripcion"><strong>Con presión</strong>Se realiza con la punta de los dedos o el puño cerrado, o a través de algún instrumento (mango del martillo percutorio).</div>
+					</div>
+					<div>
+						<div class="divImagen"><img src="gina-imagenes/palpa-dorso.png" alt="manodorso"></div><div class="descripcion"><strong>Dorso de la mano</strong>Para tomar subjetivamente la temperatura</div>
+					</div>
+					<div>
+						<div class="divImagen"><img src="gina-imagenes/palpa-pellizcamiento.png" alt="manopellizcando"></div><div class="descripcion"><strong>Por pellizcamiento</strong>Se utilizan los dedos de la mano en forma de pinzas. </div>
+					</div>
+					<div>
+						<div class="divImagen"><img src="gina-imagenes/palpa-deslizamiento.png" alt="manodeslizamiento"></div><div class="descripcion"><strong>Por deslizamiento</strong>Determina planos superficiales sobre planos profundos. Por ejemplo, el ganglio prefemoral en bovinos o axilar en perros. Puede tener como variable la palpación por enganche y empuje </div>
+					</div>
+					<div>
+						<div class="divImagen"><img src="gina-imagenes/palpa-rozamiento.png" alt="manorozamiento"></div><div class="descripcion"><strong>Por rozamiento</strong>Se desliza la yema de los dedos sobre la piel tratando de percibir deformaciones debajo de la misma. Se usa en dermatología.</div>
+					</div>
+				</div><!--columna-->
+				<div class="columna" id="palpacionProfunda">
+					<div>
+						<div class="divImagen"><img src="gina-imagenes/palpa-profunda.png" alt="manopresionando"></div>
+						<div class="descripcion">Para palpar un órgano interno, como el estómago en caninos. En grandes especies (bovinos, equinos) no se realiza a causa de la gruesa capa muscular. Con ella se recaban datos como forma, tamaño, temperatura, consistencia, superficie, movilidad, volumen, elasticidad, sensibilidad y algunos caracteres especiales como fluctuación, crepitación, vibración, reductibilidad, fremito, etc. También determina la forma, extensión y delimitación de una región o de un órgano explorado. La reductibilidad se utiliza para diagnosticar hernias, p. ej. Fremito, es un ruido palpable típico de las pleuritis.</div></div>
+				</div><!--columna-->
+			
+			</div><!--subcaja2 para columnas-->
+		</div> <!--TERMINA CAJA ESPECIAL 2-->
+	
+		
+		</section>
+		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
+		<section class="metodos">
+			<h3 class="metodo">Percusión</h3>
+			<p>Es esta maniobra se golpea brevemente el cuerpo del paciente a fin de provocar una vibración en los tejidos de los órganos y en su contenido, produciendo sonidos de intensidad y tono diferentes, así como resonancias.</p>
+				<p>Con su interpretación obtendremos datos de interés clínico.</p>
+			
+			<ol class="olNumbers fondoAzul">
+				<li><strong>Percusión manual</strong><br>Se realiza con la mano, ya sea en forma inmediata (punta de dedo, puño, etc.) o mediata. La mediata es una maniobra digito-digital, en la que el dedo de una mano actúa como plexímetro, mientras el índice y anular de la otra actúan como elemento percutor. </li>
+				<li><strong>Percusión instrumental</strong><br>Se realiza por medio de instrumentos percutorios, martillo solo o  martillo y plexímetro juntos. </li>
+			</ol>
+			<p>También la podemos clasificar de esta forma:</p>
+			
+			<ol class="olNumbers fondoAzul">
+				<li><strong>Inmediata</strong><br>Se percute directamente sobre la superficie corporal.</li>
+				<li><strong>Mediata</strong><br>Cuando, entre la superficie a percutir y el percutor, media un cuerpo a manera de plexímetro.</li>
+			</ol>
+		</section>
+		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
+		<section>
+			
+			
+			<div class="cajaEspecial">
+				<div class="subcaja ancho70"><p>El martillo de percusión generalmente tiene una cabeza de goma para las partes blandas, con un extremo de metal para las partes duras del organismo (senos paranasales, casco, etc.).</p>
+				<p>El plexímetro es una lamina que se interpone entre el cuerpo del enfermo y el percutor para concentrar las vibraciones y conseguir un sonido más claro.</p>
+				<p>Los plexímetros son de materiales como metal, vidrio, plástico, y sus formas varían desde alargados hasta circulares. Es importante que su espesor no sea mayor a 2 mm., ni pueden ser de hojalata pues alteraría los sonidos. En caso de no tener uno adecuado se puede sustituir con una goma de borrar delgada o goma eva.</p>
+				</div>
+				<div class="subcaja ancho30"><div class="divImagen"><img src="gina-imagenes/martillo-plexi.png" alt="martillo"></div>
+				</div>
+			</div>
+			<p>Hay dos tipos de percusión según su intensidad.</p>
+			<ol class="olNumbers fondoAzul">
+				<li><strong>Superficial o topográfica</strong><br>Se aplican golpes suaves con el fin de hacer vibrar las partes más superficiales. Se denomina topográfica porque puede delimitar la proyección de los órganos sobre la superficie del cuerpo.</li>
+				<li><strong>Exploradora o profunda</strong><br>Se dan golpes más fuertes respecto a la superficial, con el objeto de provocar la vibración de las partes profundas. Se utiliza para explorar las partes u órganos proyectados previamente sobre la pared</li>
+			</ol>
+		</section>
+		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
+		<section class="metodos">
+			<h4 class="metodo">Técnicas de percusión</h4>
+			<p><strong>Percusión inmediata</strong></p>
+			<ol class="olNumbers fondoAzul">
+				<li><strong>Manual</strong><br>Si es manual se debe tener en cuenta la intensidad del golpe que estará de acuerdo a la parte que se esté percutiendo. Cuando se hace digital como puede ser la percusión de los senos paranasales del perro deben darse golpes suaves y rápidos retirando rápidamente los dedos para evitar que las vibraciones se apaguen por la aposición del mismo. Igualmente en la percusión con el puno cerrado en senos paranasales en grandes animales se darán golpes más enérgicos.</li>
+				<li><strong>Instrumental:</strong><br>Se realiza con la parte metálica del martillo, el resto de la técnica es similar a la manual. Se utiliza en senos paranasales de grandes animales o en la pezuña de los bovinos o casco de los equinos.</li>
+			</ol>
+			
+			<p><strong>Percusión mediata</strong></p>
+			<ol class="olNumbers fondoCyan">
+				<li><strong>Manual</strong><br>se utiliza un dedo (medio o mayor) de una mano como plexímetro el cual debe apoyarse perfectamente, copiando la superficie a percutir, para que no se produzcan alteraciones de los ruidos percutorios y con el dedo índice y medio  o medio solo, de la otra mano, se dan golpes sobre el dedo que actúa como plexímetro en la segunda falange. Los golpes deben ser en grupos sucesivos de no más de tres, provocados en base a un juego de muñeca de la mano que percute, no dejando nunca apoyados los dedos sobre el plexímetro entre cada golpe .Esto se consigue solamente si el golpe fue dado con un juego de muñeca pues de lo contrario el dedo no puede retroceder. Los golpes deberán ser breves, rápidos y ligeros. Este método de percusión está reservado casi exclusivamente para los pequeños animales. 
+</li>
+				<li><strong>Instrumental:</strong><br>la técnica es similar a la anterior. El plexímetro debe contactar perfectamente sobre la superficie a percutir, el martillo se usa con su parte de goma. Se utiliza fundamentalmente para los grandes animales. </li>
+			</ol>
+			
+		</section>
+		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
+		<section>
+			<p>Resumen de las reglas generales de percusión</p>
+			<ol class="olSimple">
+				<li>Para una distinción exacta de los diversos sonidos producidos la percusión solo puede aprenderse con una práctica asidua y empleándose siempre los mismos elementos.</li>
+				<li>No debe haber ruidos exteriores.</li>
+				<li>No debe realizarse en lugares donde haya resonancia. Lo ideal es una habitación de proporciones medianas.</li>
+				<li>Tratar de que en la zona que se percuta no haya rigidez muscular</li>
+				<li>La intensidad de los golpes debe estar en relación directa a la parte a percutir (según se realice una percusión profunda o superficial).</li>
+				<li>Los golpes que se aplican deben ser perfectamente perpendicular al plexímetro. </li>
+				<li>Los golpes deben ser cortos y secos, no estando agrupados más de dos o tres golpes.</li>
+				<li>Aplicar correctamente el plexímetro sobre la superficie a percutir para que no quede aire interpuesto que modificará el sonido.</li>
+			</ol>
+			
+			<div class="concepto">
+			<p>El VALOR SEMIOLOGICO DE LA PERCUSION es obtener datos de sonoridad, elasticidad y sensibilidad. </p>
+			</div>
+		</section>
+		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
+		<section class="metodos">
+			<h4 class="metodo">Características de los sonidos percutorios</h4>
+			
+			<p>El sonido de la percusión se origina por las vibraciones que provocan los impulsos percutorios al hacer salir de la posición de reposo a las partes elásticas del cuerpo. </p>
+			<p>Con golpes medianamente fuertes se ha podido comprobar que la zona percutida ocupa un espacio cilíndrico dirigido al interior del cuerpo de 7 cm. de profundidad y 2,5 cm. de diámetro. Estas medidas son factibles de modificarse aumentando o disminuyendo la intensidad de los golpes. </p>
+			<p>Cuando se efectúa la percusión se provoca una depresión de la pared junto a los órganos y materiales contenidas en ellos en forma de arco dirigidos hacia adentro; luego de esto por el efecto anteriormente mencionado las partículas están más comprimidas y la pared al estar más deprimida entra en tensión con lo cual se produce una reacción que hace volver todo el conjunto a la posición original pero aún más, pues la inercia que trae sobrepasa estos límites: esto se repetirá varias veces con menor intensidad hasta que el sistema llegue al reposo. Todo este movimiento se traduce en vibraciones que caracterizan al sonido que se obtiene. </p>
+			<p>Según la elasticidad de la zona que vibra y la profundidad a que se encuentre el punto de percusión será diferente la vibración y se producirá un sonido o ruido percutorio distinto. En un sonido debemos tener en cuenta:</p>
+			<ol class="olNumbers fondoAzul">
+				<li>Altura o tono: depende del número de vibraciones, frecuencia,  con respecto a su altura. De acuerdo a este tenemos sonidos bajos o graves —frecuencia y agudos o altos— frecuencia. </li>
+				<li>Intensidad, es directamente proporcional a la intensidad de los golpes e inversamente proporcional al grosor de la pared. De acuerdo a la intensidad los sonidos pueden ser fuertes o débiles, depende de la amplitud de la vibración. </li>
+				<li>Timbre: depende de los sonidos secundarios que acompañan al fundamental </li>
+				<li>Duración del sonido: es el tiempo que tarda el sonido en apagarse depende de la intensidad inicial y fuerza elástica del cuerpo vibrante. De acuerdo a esto tenemos sonidos breves y largos.</li>
+			</ol>
+		</section>
+		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
+		<section>
+			<p>La percusión se basa en dos principios fundamentales: las zonas que tiene gases que pueden vibrar dan sonidos bajos (tono), fuertes (intensidad) y largos (duración). Esta triada forma el ruido que se conoce como CLARO, normal en los alvéolos pulmonares debido a que las ondas de la percusión sufren interferencias mutuas por la vibración del aire de los alvéolos, septos alveolares y  bronquíolos.</p>
+			<p>Las zonas que contienen líquidos o son compactas dan sonidos cortos (duración), altos (tono) y débiles (intensidad), constituyendo el ruido MATE (normal en órganos macizos o masa musculares. Ejemplos: hígado, tabla de cuello, espalda, glúteo, etc.)</p>
+			<p>Se entiende que entre estos dos extremos se presentan todas las graduaciones y que el clínico debe conocerlas para poder obtener mejores datos de este método exploratorio. Los términos intermedios más importantes son:</p>
+			<ol class="olLetras fondoCyan">
+				<li><strong>Sonido timpánico:</strong> normal en órganos huecos o en grandes cavidades con contenido de gas a presión. Es intenso, resonante y duradero se puede interpretar como un sonido fuerte y prolongado con más resonancia que el claro reforzado. Es un sonido semejante al golpe del tambor, se produce debido a que el órgano tiene pared elástica y el gas no tiene una presión excesiva produciéndose una vibración intensa, ejemplo cabeza del ciego, saco dorsal del rumen, cuando el gas esta a gran presión impide la vibración dando un sonido mate.</li>
+				<li><strong>Sonido submate:</strong> es un tono de poca intensidad, tono alto y corta duración. Se presenta en las zonas en que la onda percutoria abarca un órgano hueco con uno macizo. Por ejemplo cuando se interpone una lengüeta de pulmón entre el corazón y la pared costal u órganos que contienen aire en poca cantidad con  paredes gruesas y poco elásticas, el saco ventral del rumen que tiene alimento, agua y burbujas de gas.</li>
+				<li><strong>Sonido claro hipersonoro:</strong>es el término medio entre el timpánico y el claro. Es más fuerte, más bajo y más prolongado que el claro se da en los senos paranasales, en los alvéolos dilatados con aire a presión en el enfisema pulmonar. </li>
+				<li><strong>Sonido de olla rota o cascada:</strong> es el sonido que se percibe cuando se percute capas de aire que escapan a la compresión, es el caso típico de la mala colocación del plexímetro o cuando se percute una cavidad con aire que tiene comunicación con el exterior de modo que el golpe percutorio desaloja el aire de la cavidad.</li>
+			</ol>
+			<div class="concepto">
+				<p>PERCUSIÓN COMPARADA<br>Se hace para comparar órganos enfermos con otros sanos, es una maniobra que nunca debe dejarse de lado al examen clínico.</p>
+			</div>
+		</section>
+		
+		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
+		
+		<section class="metodos">
+			<h3 class="metodo">Auscultación</h3>
+			
+			<div class="cajaEspecial">
+				<div class="subcaja ancho50"><p>Es la exploración por medio sentido del oído.</p>
+				<p>Es la percepción por el oído de las manifestaciones acústicas originadas por procesos vitales normales o patológicos (circulación, respiración, digestión, etc.), con las cuales podemos inferir el estado de las mismas y de los órganos que las realizan.</p>
+				<p>De acuerdo a la forma en que se realiza puede ser:</p>
+				</div>
+				
+				<div class="subcaja ancho50"><img src="gina-imagenes/ausculta-cabra.png" alt="auscultando cabrita">
+				</div>
+			</div>
+			
+			<ol class="olNumbers fondoAzul">
+				<li><strong>Directa o inmediata</strong></li>
+				<li><strong>Indirecta, mediata o instrumental</strong></li>
+				<li><strong>A distancia</strong></li>
+				<li><strong>Métodos combinados</strong></li>
+			</ol>
+		</section>
+		
+		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
+		
+		<section>
+			<h4>Auscultación directa o inmediata</h4>
+			<p>Consiste en la aplicación directa del oído sobre la superficie corporal, interponiendo un paño limpio para evitar posibles contaminaciones. Las ventajas del sistema es que se puede realizar sin instrumental, evita la aparición de ruidos parásitos, pero tiene como inconveniente que hay regiones difíciles para aplicar el oído directamente, y a veces obliga a adoptar posturas incómodas o peligrosas por posibles reacciones del animal. Además tiene el inconveniente de que es difícil por medio del oído hacer la delimitación de los sonidos acústicos. Es el método predilecto para las aves. </p>
+			
+			<h4>Auscultación indirecta, mediata o instrumental</h4>
+			<p>Cuando se realiza por medio de instrumentos Para la auscultación mediata indirecta o instrumental se utiliza aparatos o instrumento como el estetoscopio y el fonendoscopio.</p>
+			
+			<div class="subcaja2">
+			<div class="columna">
+					<div>
+						<div class="divImagen"><img src="gina-imagenes/estetoscopio.jpg" alt="estetoscopio"></div>
+						<div class="descripcion"><strong>Estetoscopio:</strong> es un tubo rígido que en sus dos extremos se abre en forma de campana. Se aplica por un lado el oído y por el otro al animal.</div>
+					</div>
+			</div>
+			<div class="columna">
+				<div>
+						<div class="divImagen"><img src="gina-imagenes/fonendoscopio.png" alt="fonendoscopio"></div><div class="descripcion"><strong>Fonendoscopio:</strong> es un aparato constituido por varias partes que difiere del estetoscopio en que aumenta la intensidad del sonido (estetoscopio amplificador).</div>
+					</div>
+			</div>
+			</div>
+			
+			<div class="concepto">
+			<p>Para que el sonido se transmita perfectamente por el sistema este debe ser perfectamente hermético pues de lo contrario se atenúan mucho los ruidos. </p>
+			</div>
+			<p>La parte auricular del aparato está constituida por dos olivas de goma que se deben adaptar bien al oído sostenidas por dos vástagos rígidos y huecos unidos entre sí por una pieza articulada o elástica que es la que debe asegurar el ajuste de las olivas a los oídos. Luego se continúa el sistema por el juego de tubos de goma cuanto más cortos sean dichos tubos más nítida será la percepción por el aparato (disminuye la fidelidad para la transmisión de sonidos por  encima de los 100 ciclos por segundo de frecuencia). El término medio de longitud es de 25 a 30 cm. Lo ideal es un tubo de goma semirígido no blando de 0,32 cm. de luz (mejores que los comunes 0,47 cm.). Finalmente la parte receptora es del tipo de membrana o diafragma que tiene un diámetro de unos 3,9 cm. Generalmente en la auscultación se debe recurrir tanto al receptor de diafragma (refuerza las respuestas de frecuencia altas) como al de campana (que es el más apto para recoger los sonidos  de baja frecuencia). Esto se obtiene con el receptor de tipo Sprague-Bowles que reúne el diafragma y la campana en el mismo receptor.</p>
+			
+		</section>
+		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
+		<section>
+			<h4>Auscultación a distancia</h4>
+			<p>Se efectúa directamente a cierta distancia del enfermo cuando las circunstancias lo permitan, ejemplo (caballo roncador, tos en neumonía, etc.).</p>
+			
+			<h4>Métodos combinados</h4>
+			
+			<ol class="olLetras fondoAzul">
+				<li><strong>Percusión auscultada:</strong><br>el ruido audible es el signo de la moneda, sirve para determinas líquidos en cavidad pleural o peritoneal. Se coloca una moneda de plano sobre la región a explorar y con la otra de canto se percute sobre ella, el clínico del otro lado ausculta.  En las zonas claras hay un leve ruido a moneda, por encima del nivel del líquido hay un ruido metálico resonante y por debajo el ruido es claro profundo.</li>
+				<li><strong>Sucusión</strong><br>
+				Se utiliza en pequeños animales para verificar la presencia de liquido en cavidades, se toma al animal se lo sacude y luego se ausculta y se percibe el sonido de choque de onda líquida. 
+				</li>
+			</ol>
+			<p>Reglas generales para la auscultación</p>
+			<ol class="olSimple">
+				<li>Completo silencio exterior</li>
+				<li>El oído o el aparato debe apoyar perfectamente sobre la pared a auscultar con moderada presión. </li>
+				<li>Adoptar posiciones cómodas, tanto para el operador como para el paciente. </li>
+				<li>Evitar la rigidez muscular en la zona que se ausculta, ya que sino aparecerá un ruido parásito que se denomina rotatorio.</li>
+				<li>Eliminar los ruidos que estorban, por ejemplo al auscultar el corazón parar la respiración momentáneamente, ruido de frote de los pelos, etc.). </li>
+				<li>En ciertos casos se requiere provocar ruidos ex profeso, como ser la tos, modificar otros como ser la frecuencia respiratoria, etc.</li>
+				<li>Descartar ruidos propagados o accidentales. </li>
+				<li>Tratar de analizar cada ruido por separado y cada parte del mismo también separado</li>
+			</ol>
+			
+			<div class="concepto">
+				<p>Los ruidos audibles en los órganos se producen por el pasaje de gases y sus remolinos, líquidos y su combinación ruidos hidroaéreos. Se estudiaran en profundidad en cada aparato.</p>
+			</div>
+			
+		</section>
+		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
+		
+		<section class="metodos">
+			
+			<h3 class="metodo">Olfación</h3>
+			
+			
+		
+		</section>
+		
 	</main>
 </body>
 </html>

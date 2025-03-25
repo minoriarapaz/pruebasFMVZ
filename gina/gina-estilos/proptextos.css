@@ -6,19 +6,52 @@ h2 {
 	border: 1px dotted red;
 	margin-left: 10%;
 	margin-right: 10%;
+	letter-spacing: 1px;
 }
 h3, h4 {
 	display: block;
 	position: relative;
-	border: 2px solid black;
 	margin: auto;
 	text-align: left;
+	font-family: Georgia, Gill Sans, Cambria;
 }
 h3 {
 	margin-bottom: 1em;
+	font-size: 1.5em;
+	letter-spacing: 1px;
 }
 h4 {
 	margin-top: 1em;
+	margin-bottom: 1em;
+	font-size: 1.1em;
+}
+h5 {
+	font-size: 1em;
+}
+.columnaTitulo h4 {
+	text-align: center;
+	margin-top: 0;
+	color: white;
+}
+
+h3.metodo {
+	background-image: linear-gradient(lightcoral 50%, rgb(236, 95, 95));
+	width: 100%;
+	padding: 1em 1em 1em 15%;
+	text-align: left;
+	font-size: 1.5em;
+	color: white;
+}
+h4.metodo {
+	background-image: linear-gradient(lightcoral 50%, rgb(236, 95, 95));
+	width: 100%;
+	padding: 1em 1em 1em 15%;
+	text-align: left;
+	font-size: 1.1em;
+	color: white;
+	
+	margin-top: 0em;
+	margin-bottom: 1em;
 }
 .concepto h4 {
 	margin-top: 0em;
@@ -33,34 +66,72 @@ section p {
 	margin-bottom: .5em;
 	color: darkslategray;
 	font-size: 1.1em;
-	text-align: justify;
 	
+	text-align: justify;
+	line-height: 1.6;
 	margin-left: 10%;
 	margin-right: 10%;
+}
+div.ancho50 > p {
+	text-align: left;
 }
 p.primerP {
 	margin-top: 2em;
 }
+
+p.noJusty {
+	text-align: left;
+}
 ol, ul {
 	
-	color: white;
-	list-style-position: inside;
+	list-style-position: outside;
 	display: block;
 	font-size: 1.1em;
 	margin-left: 10%;
 	margin-right: 10%;
 	margin-bottom: 2em;
-	padding: 1em;
+	padding: 1em 1em 1em 2em;
 	border-radius: 40px;
 	
-	background-image: linear-gradient(cornflowerblue 50%, rgb(72, 129, 234));
 }
+
+
+ol.olNumbers {
+	list-style-type: decimal;
+}
+
+
+ol.olLetras {
+	list-style-type: upper-alpha;
+}
+.olLetras li, .olNumbers li {
+	margin-bottom: 1em;
+}
+ol.olLetras li > ul, ol.olNumbers li > ul {
+	border-radius: 0px;
+	border-left: 2px solid ghostwhite;
+}
+ol.olSimple {
+	border-left: 2px solid darkslategray;
+	border-radius: 0;
+}
+ol.olSimple li {
+	margin-bottom: .5em;
+}
+
 ul {
 	list-style-type: none;
 }
 
 ul li {
 	margin-bottom: .5em;
+}
+
+.envolvente {
+	border: 2px solid ghostwhite;
+	border-radius: 40px;
+	padding-left: 2em;
+	padding-top: 1em;
 }
 
 .concepto {
@@ -76,8 +147,14 @@ ul li {
 .concepto > p {
 	color: ghostwhite;
 	text-align: left;
-	margin-left: 0%;
+	margin-left: 5%;
 	margin-right: 0%;
+}
+
+.concepto > ol /*o en class subConcepto*/ {
+	background-color: black;
+	margin-left: 5%;
+	margin-right: 0;
 }
 
 @media (min-width: 1000px)  {

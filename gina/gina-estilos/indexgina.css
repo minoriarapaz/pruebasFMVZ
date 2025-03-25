@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+}
+
+
+section.tercio1 {
+	display: block;
+	width: 1000px;
+	height: auto;
+	margin: auto;
+	background-color: black;
+	color: ghostwhite;
+	box-sizing: border-box;
+	padding-top: 40px;
+	padding-bottom: 0px;
+	padding-left: 50px;
+	padding-right: 50px;
+	text-align: center;
+	font-family: Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
+	font-size: 2em;
+}
+section.tercio3 {
+	display: block;
+	position: relative;
+	width: 1000px;
+	height: auto;
+	margin: auto;
+	background-color: black;
+	color: ghostwhite;
+	box-sizing: border-box;
+	padding-top: 0px;
+	padding-bottom: 40px;
+	padding-left: 50px;
+	padding-right: 50px;
+	text-align: center;
+	font-family: Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
+	font-size: 1.5em;
+}
+section.tercio2 {
+	border-style: none;
+	display: block;
+	width: 1000px;
+	height: 800px;
+	margin: auto;
+}
+iframe {
+	border-style: none;
+	display: block;
+	width: 1000px;
+	height: 800px;
+	margin: auto;
+}
+
+.boton-iniciar {
+	
+	font-family: Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
+	
+	display: block;
+	margin: auto;
+	padding: 1em;
+  position: relative; /*absolute*/
+	width: 100px;
+  color: ghostwhite;
+  font-size: 1em; /*40px*/
+  font-weight: bold;
+	background-image: linear-gradient(lightcoral 50%, rgb(236, 95, 95));
+	border-radius: 10px;
+	text-align: center;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+@media (max-width: 800px) {
+	iframe, section.tercio2, section.tercio1, section.tercio3 {
+		width: 100%;
+	}
+
+}
