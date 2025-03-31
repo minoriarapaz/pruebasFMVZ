@@ -22,12 +22,13 @@ section.tercio1 {
 	color: ghostwhite;
 	box-sizing: border-box;
 	padding-top: 40px;
-	padding-bottom: 0px;
+	padding-bottom: 20px;
 	padding-left: 50px;
 	padding-right: 50px;
 	text-align: center;
 	font-family: Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
 	font-size: 2em;
+	border-bottom: 1px solid white;
 }
 section.tercio3 {
 	display: block;
@@ -38,8 +39,8 @@ section.tercio3 {
 	background-color: black;
 	color: ghostwhite;
 	box-sizing: border-box;
-	padding-top: 0px;
-	padding-bottom: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	padding-left: 50px;
 	padding-right: 50px;
 	text-align: center;
