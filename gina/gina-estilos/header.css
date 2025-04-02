@@ -6,34 +6,52 @@ header {
 	z-index: 1;
 	display: flex;
 	flex-direction: column;
-	background-image: linear-gradient(/*rgb(72, 129, 234), cornflowerblue 20%, */cornflowerblue 70%, rgb(72, 129, 234));
+	background-image: linear-gradient(/*rgb(72, 129, 234), cornflowerblue 20%, */cornflowerblue 30%, rgb(24, 88, 205));
 	width: 100%;
-	min-height: 200px;
+	height: 200px;
 	font-family: Roboto Condensed, Open Sans, Roboto, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
 }
 
 nav {
 	position: relative;
 	display: block;
-	border: 2px solid red;
-}
-nav a {
-	display: flex;
-	text-decoration: none;
-	padding: .2em;
-	background-color: gold;
-	border-left: 1px solid black;
+	height: 60px;
+	background-color: rgba(0,0,0,.1);
+	padding-top: 9px;
 }
 nav ul {
 	list-style-type: none;
 	display: flex;
-	border: 3px solid black;
+	flex-direction: row;
+	position: relative;
+	height: 100%;
 	padding: 0;
 	border-radius: 0;
 	font-size: 1.1em;
-	margin-left: 0;
-	margin-right: 0;
+	/*margin-left: 0;
+	margin-right: 0;*/
 	margin-bottom: 0;
+}
+nav a {
+	display: flex;
+	position: relative;
+	text-decoration: none;
+	height: 100%;
+	padding: .5em 2em .5em 2em;
+	background-image: linear-gradient(transparent 30%, rgba(0, 0, 0, .3));
+	background-color: lightcoral;
+	margin-left: 10px;
+	margin-right: 10px;	
+	border-radius: 10px 10px 0 0;
+	color: ghostwhite;
+	cursor: pointer;
+}
+.activo {
+	background-image: linear-gradient(rgba(0, 0, 0, .1) 10%, transparent); background-color: ghostwhite; color: darkslategray; font-weight: bold;
+}
+nav ul li {
+	height: 100%;
+	text-align: center;
 }
 
 div.cintilla {
@@ -73,5 +91,41 @@ div.logo img {
 	div.cintilla {
 		font-size: 2vw;
 		height: 30px;
+	}
+	nav ul li {
+		width: 33.3%;
+		display: block;
+		text-align: center;
+	}
+	nav a {
+		height: 100%;
+	
+	display: flex;
+	padding-top: .2em;
+	padding-bottom: .2em;
+	padding-right: 0;
+	padding-left: 10px;
+		
+		margin-right: 1px;
+
+		
+	}
+	
+	nav ul {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+@media (max-width: 450px) {
+	nav a {font-size: 4vw; margin-left: 0px; margin-right: 0px; border-right: 1px solid rgb(137, 16, 16);}
+	nav ul li {
+		width: 33.3%;}
+	div.logo {
+		padding-left: 0;
+		padding-right: 0;
+		height: 150px;
+		overflow: hidden;}
+	div.logo p {
+		font-size: 4vw;
 	}
 }

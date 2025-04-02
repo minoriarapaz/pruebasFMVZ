@@ -26,14 +26,12 @@ main {
 	background-color: ghostwhite;
 	background-image: url("../graficos-interfaz/textura.png");
 	background-repeat: repeat;
-
+	padding-top: 200px; /*para dejar ver la primera section bajo el header*/
 }
-header {
-	position: relative;
-	display: block;
-	background-color: cornflowerblue;
-	width: 100%;
-	min-height: 200px;
+@media (max-width: 800px) {
+	main {
+		width: 100%;
+	}
 }
 
 section {
@@ -51,12 +49,17 @@ section {
 	box-shadow: 0 5px 8px rgba(0, 0, 0, .5);
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
+	scroll-margin-top: 200px;
 }
+
+
 section.metodos {
 	padding-top: 0;
 }
 
-
+img {
+	display: block;
+}
 
 .adorno {
 	display: block;
@@ -67,7 +70,6 @@ section.metodos {
 	width: 500px;
 	height: 500px;
 		overflow: hidden;
-	border: 3px solid green;
 }
 .img-mascot {
 	max-height: 500px;
@@ -80,6 +82,7 @@ section.metodos {
 	position: relative;
 	width: 60%;
 	margin: auto;
+	border: 3px dashed black;
 }
 @media (max-width: 1000px) {
 	.img-foto {
@@ -91,9 +94,10 @@ section.metodos {
 	display: block;
 	border-radius: 20px;
 	position: relative;
-	max-width: 700px;
+	/*anchura cambia en media*/
+	width: 90%;
 	margin: auto;
-	margin-right: 10%;
+	/*margin-right: 10%;*/
 	margin-bottom: 1em;
 }
 .sombraIMG {
@@ -114,11 +118,10 @@ section.metodos {
 	height: auto;
 	margin-top: 1em;
 	margin-bottom: 2em;
-	border: 2px dotted blue;
 }
 .subcaja {
 	position: relative;
-	/*border: 2px solid orange;*/
+	overflow: hidden;
 }
 .ancho70 p {
 	margin-right: 5%;
@@ -126,7 +129,9 @@ section.metodos {
 }
 .subcaja img {
 	border-radius: 30px;
+
 }
+
 
 .displayColumnas, .displayColumnasD {
 	display: flex;
@@ -156,6 +161,21 @@ section.metodos {
 	border-radius: 15px;
 	background-image: linear-gradient(lightcoral 50%, rgb(236, 95, 95));
 	box-shadow: 3px 3px 5px rgba(0,0,0,.2);
+	cursor: pointer;
+}
+
+.displayColumnas > div > a {
+	color: white;
+	display: block;
+	width: auto;
+	margin-left: 10%;
+	margin-bottom: 20px;
+	text-align: center;
+	padding: .5em;
+	border-radius: 15px;
+	background-image: linear-gradient(cadetblue 50%, rgb(67, 110, 112));
+	box-shadow: 3px 3px 5px rgba(0,0,0,.2);
+	cursor: pointer;
 }
 .displayColumnasD > div > p {
 	color: darkslategray;
@@ -243,6 +263,7 @@ div.columnaTitulo {
 @media (min-width: 1300px) {
 	.columna > div {justify-content: flex-start; flex-wrap: nowrap;}
 	.columna > div .descripcion {width: 62%;}
+	main {width: 60%}
 }
 
 .columna .descripcion {
@@ -252,7 +273,7 @@ div.columnaTitulo {
 	padding: 10px;
 	font-size: .8em;
 }
-.descripcion strong {
+.descripcion > strong {
 	display: block;
 	margin-bottom: .5em;
 }
@@ -271,15 +292,20 @@ div.columnaTitulo {
 	border-radius: 15px;
 
 }
-.ancho50 img {
-	width: 100%;
-	display: block;
-	position: relative;
-}
+
 .divImagen img {
 	width: 100%;
 }
 
+.ancho50 img {
+	width: auto;
+	display: block;
+	position: relative;
+}
+
+.clearIzq {
+	clear: left;
+}
 
 /*TERMINA CAJA ESPECIAL 2--------*/
 
@@ -302,23 +328,22 @@ div.columnaTitulo {
 
 .ancho60 {
 	width: 60%;
-	border: 2px dotted blue;
 }
 .ancho70 {
 	width: 70%;border: 1px solid red;
 }
 .ancho50 {width: 50%;}
 .ancho40 {
-	width: 40%;border: 2px dotted blue;
+	width: 40%;
 }
 .ancho30 {
-	width: 30%;border: 1px solid red;
+	width: 30%;
 }
-@media (max-width: 1000px) {
-	.img-foto, .img-ilustracion {
-		margin: auto;
-	}
+
+
+
+@media (min-width: 1000px) {
 	.img-ilustracion {
-		width: 60%;
+		width: 70%;
 	}
 }

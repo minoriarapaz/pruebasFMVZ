@@ -4,15 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-<!--<link href="gina-estilos/estructura.css" rel="stylesheet" type="text/css">
-<link href="gina-estilos/botones.css" rel="stylesheet" type="text/css">
-<link href="gina-estilos/cabecera.css" rel="stylesheet" type="text/css">
-<link href="gina-estilos/modal.css" rel="stylesheet" type="text/css">
-<link href="gina-estilos/textos.css" rel="stylesheet" type="text/css">
-<link href="gina-estilos/lectura.css" rel="stylesheet" type="text/css">
-<script src="gina-estilos/modal.js"></script>
--->
-
 <!--NUEVA HOJA DE ESTILOS-->
 <link href="gina-estilos/propedeutica.css" rel="stylesheet" type="text/css">
 <link href="gina-estilos/proptextos.css" rel="stylesheet" type="text/css">
@@ -22,7 +13,9 @@
 
 	
 <script defer src="gina-estilos/prope.js" ></script>
-
+<script src="gina-estilos/navegacion.js"></script>
+	
+	
 	<!--FUENTES-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,12 +45,13 @@
 		<!--<div class="cintilla">MANUAL ILUSTRADO INTERACTIVO SOBRE PROPEDÉUTICA VETERINARIA EN BOVINOS, CAPRINOS Y OVINOS
 		</div>-->
 		<div class="logo"><img src="graficos-interfaz/logohexagonos.png" alt="logo libro" height="150">
-			<p>MANUAL ILUSTRADO INTERACTIVO SOBRE PROPEDÉUTICA VETERINARIA EN BOVINOS, CAPRINOS Y OVINOS<br><br><small>PAPIME PE 203724</small></p>
+			<p>MANUAL ILUSTRADO INTERACTIVO SOBRE PROPEDÉUTICA VETERINARIA<br>EN BOVINOS, CAPRINOS Y OVINOS<br><br><small>PAPIME PE 203724</small></p>
 		</div>
 		<nav>
 			<ul>
-				<li><a>Índice</a></li>
-				<li><a>Créditos</a></li>
+				<li><a id="boton1" onMouseUp="irIntroduccion()" class="activo" >¿Qué es la semiología?</a></li>
+				<li><a id="boton2" onMouseUp="irMetodos()">Métodos físicos de exploración</a></li>
+				<li><a id="boton3" onMouseUp="irExamen()" >Examen clínico</a></li>
 			</ul>
 		</nav>
 	
@@ -68,11 +62,13 @@
 		<div class="adorno"><img src="gina-imagenes/mascotVet-ambos.png" alt="mono" class="img-mascot"></div>
 		</section>
 		<!-- ******************SECCION******************-->
-			<section>
+			<section id="parte1">
 			<h3>¿Qué es la semiología?</h3>
 			<img src="gina-imagenes/ginaconcabra.png" alt="fotoconcabra" class="img-foto">
 			<p class="primerP">La semiología es una rama de la patología encargada del estudio de síntomas y signos. Es área básica del conocimiento científico; analiza la fenomenología de las enfermedades y se vale del diagnóstico clínico como plan de seguimiento de las clases y los procedimientos de exploración del paciente.</p>
 			<p>El correcto desarrollo de dicho plan de exploración nos permitirá identificar los trastornos funcionales, anatómicos y químicos que nos llevan a un diagnóstico, además de establecer un pronóstico acorde con la situación específica. A partir de estos dos aspectos diseñaremos el plan terapéutico y profiláctico que resolverá el problema de salud del individuo o de la población animal.</p>
+				
+				<img src="gina-imagenes/esquema1.png" alt="esquema1" class="img-ilustracion">
 			
 			</section>
 			<!-- ******************SECCION******************-->
@@ -126,25 +122,27 @@
 			<p>Es importante la interacción del clínico con el animal y con sus propietarios o responsables. Es en el diálogo con ellos (la entrevista médica) donde se obtiene la información más valiosa. Con ésta y los datos recogidos por el examen físico se confecciona la historia clínica. </p>
 			<p>Un dato importante a registrar en la historia clínica son los que identifican al dueño o cuidador responsable del animal y el lugar físico donde se encuentran él o los animales por razones médico legales, inscripción en registros genealógicos, registros de producción, controles sanitarios y/o por la aparición de enfermedades de reporte obligatorio. </p>
 			
+			<img src="gina-imagenes/esquema2.png" alt="esquema2" class="img-ilustracion">
+			
 		</section>
 		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
-		<section>
-			<h2>Métodos fisicos de exploración</h2>
+		<section id="parte2">
+			<h2>Métodos físicos de exploración</h2>
 			<div class="cajaEspecial" id="losMetodos">
 				<div class="subcaja ancho50 displayColumnas">
-					<div><p>Inspección</p></div>
-					<div><p>Palpación</p></div>
-					<div><p>Percusión</p></div>
-					<div><p>Auscultación</p></div>
-					<div><p>Olfación</p></div>
-					<div><p>Mensuración o medición</p></div>
-					<div><p>Métodos complementarios</p></div>
+					<div><a href="#metodo1">Inspección</a></div>
+					<div><a href="#metodo2">Palpación</a></div>
+					<div><a href="#metodo3">Percusión</a></div>
+					<div><a href="#metodo4">Auscultación</a></div>
+					<div><a href="#metodo5">Olfación</a></div>
+					<div><a href="#metodo6">Mensuración o medición</a></div>
+					<div><a href="#metodo7">Métodos complementarios</a></div>
 				</div>
 				<div class="subcaja ancho50 displayBlock" id="vet-guantes"><img src="gina-imagenes/vet-guantes-full.png" alt="doc con guantes"></div>
 			</div><!--cajaEspecial-->
 		</section>
 		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
-		<section class="metodos">
+		<section class="metodos"  id="metodo1">
 			<h3 class="metodo">Inspección</h3>
 			<p>Se denomina así a la exploración objetiva <strong>por medio de la vista.</strong></p>
 			<p>Permite evidenciar cambios cualitativos y cuantitativos que pueden proporcionar información de valor para orientar el diagnóstico.</p> 
@@ -199,7 +197,7 @@
 			<p>En el caso de grupos (bovinos,caprinos y ovinos) hay que evaluar comportamientos distintivos de los animales enfermos y su relación con los sanos.</p></div>
 		</section>
 		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
-		<section class="metodos">
+		<section class="metodos" id="metodo2">
 			<h3 class="metodo">Palpación</h3>
 			<p>Es la exploración por medio del sentido del tacto, a veces con la mano llena y otras con la yema de los dedos. Tiene como finalidad apreciar caracteres del órgano palpado.</p>
 			<img src="gina-imagenes/vet-tocandocabra.png" alt="vet palpando" class="img-ilustracion">
@@ -271,7 +269,7 @@
 		
 		</section>
 		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
-		<section class="metodos">
+		<section class="metodos" id="metodo3">
 			<h3 class="metodo">Percusión</h3>
 			<p>Es esta maniobra se golpea brevemente el cuerpo del paciente a fin de provocar una vibración en los tejidos de los órganos y en su contenido, produciendo sonidos de intensidad y tono diferentes, así como resonancias.</p>
 				<p>Con su interpretación obtendremos datos de interés clínico.</p>
@@ -373,7 +371,7 @@
 		
 		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
 		
-		<section class="metodos">
+		<section class="metodos" id="metodo4">
 			<h3 class="metodo">Auscultación</h3>
 			
 			<div class="cajaEspecial">
@@ -455,7 +453,7 @@
 		</section>
 		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
 		
-		<section class="metodos">
+		<section class="metodos" id="metodo5">
 			
 			<h3 class="metodo">Olfación</h3>
 			
@@ -466,7 +464,7 @@
 		
 		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
 		
-		<section class="metodos">
+		<section class="metodos" id="metodo6">
 			
 			<h3 class="metodo">Mensuración o medición</h3>
 			
@@ -477,7 +475,7 @@
 		
 		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
 		
-		<section class="metodos">
+		<section class="metodos" id="metodo7">
 			
 			<h3 class="metodo">Métodos complementarios de exploración </h3>
 			
@@ -500,7 +498,7 @@
 		
 		<!-- ******************SECCION******************************--------------_____-_-___________--_--_--_-____--_-__-_--_-->
 		
-		<section class="metodos">
+		<section class="metodos" id="parte3">
 			
 			<h3 class="metodo">Examen clínico</h3>
 			
