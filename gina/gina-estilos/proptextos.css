@@ -63,8 +63,7 @@ h4.metodo {
 }
 section p {
 	display: block;
-	clear: right;
-	
+/*	clear: right; borrado el 4 abril*/
 	color: darkslategray;
 	font-size: 1.1em;
 	

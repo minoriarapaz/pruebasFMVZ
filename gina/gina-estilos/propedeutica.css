@@ -100,6 +100,40 @@ img {
 	/*margin-right: 10%;*/
 	margin-bottom: 1em;
 }
+.divHexagono {
+	position: relative;
+	display: block;
+	width: 250px;
+	height: auto;
+	margin: auto;
+	margin-top: 50px;
+	padding-top: 20px;
+	
+	border-radius: 20px;
+	background-color: ghostwhite;
+	box-shadow: 1px 1px 20px rgba(0,0,0,.5);
+}
+
+.divHexagono > p {
+	display: block;
+	color: cadetblue;
+	font-size: .9em;
+	
+	text-align: center;
+	line-height: 1;
+	margin-bottom: 5px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 10px;
+}
+.divHexagono img {
+	width: 100%;
+}
+.divHexagono img.hexagonoEspecial {
+	height: 142px;
+	width: auto;
+	margin: auto;
+}
 .sombraIMG {
 	box-shadow: 3px 3px 10px rgba(0,0,0,.2);
 }
