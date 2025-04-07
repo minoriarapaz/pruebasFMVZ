@@ -25,8 +25,22 @@ $(document).ready(function(){
 });
 
 /* javascript clasico DESDE AQUI*/
+/* javascript clasico DESDE AQUI*/
+/* javascript clasico DESDE AQUI*/
+/* javascript clasico DESDE AQUI*/
+/* javascript clasico DESDE AQUI*/
+/* javascript clasico DESDE AQUI*/
+/* javascript clasico DESDE AQUI*/
+/* javascript clasico DESDE AQUI*/
 
-
+function irPrope1() {
+	alert("Ir a propedéutica de los pequeños rumiantes");
+	window.open("pequenos.html", "_self");
+}
+function irPrope2() {
+	alert("Ir a propedéutica de los bovinos");
+	window.open("https://www.w3schools.com", "_self");
+}
 
 function irMetodos() {
 	window.scroll(

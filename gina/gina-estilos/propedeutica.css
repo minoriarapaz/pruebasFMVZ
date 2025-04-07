@@ -17,6 +17,9 @@ body {
 	overflow: auto;
 	background-color: lightcoral;
 }
+body.parteDos {
+	background-color: cadetblue;
+}
 
 main {
 	position: relative;
@@ -27,6 +30,9 @@ main {
 	background-image: url("../graficos-interfaz/textura.png");
 	background-repeat: repeat;
 	padding-top: 200px; /*para dejar ver la primera section bajo el header*/
+}
+main.parteDos {
+	background-color: antiquewhite;
 }
 @media (max-width: 800px) {
 	main {
@@ -105,20 +111,18 @@ img {
 	display: block;
 	width: 250px;
 	height: auto;
-	margin: auto;
-	margin-top: 50px;
 	padding-top: 20px;
-	
 	border-radius: 20px;
 	background-color: ghostwhite;
 	box-shadow: 1px 1px 20px rgba(0,0,0,.5);
+	cursor: pointer;
 }
 
 .divHexagono > p {
 	display: block;
 	color: cadetblue;
 	font-size: .9em;
-	
+	/*flotacion se la pones con Clase*/
 	text-align: center;
 	line-height: 1;
 	margin-bottom: 5px;
@@ -134,6 +138,37 @@ img {
 	width: auto;
 	margin: auto;
 }
+.flotIzq {
+	float: left;
+}
+.flotDer {
+	float: right;
+}
+.envolvente {
+	border: 1px solid blue;
+	
+	position: relative;
+	display: flex;
+  	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: flex-end;
+	width: 100%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+.envolvente > img {
+	border: 1px dotted red;
+}
+.clearDer {
+	clear: right; 
+}
+
+.clearNO {
+	clear: none;
+}
+
+.invertidaH {transform: scaleX(-1);border: 3px solid black;}
+
 .sombraIMG {
 	box-shadow: 3px 3px 10px rgba(0,0,0,.2);
 }
@@ -342,6 +377,7 @@ div.columnaTitulo {
 }
 
 /*TERMINA CAJA ESPECIAL 2--------*/
+
 
 .fondoAzul {
 	background-image: linear-gradient(cornflowerblue 50%, rgb(72, 129, 234));
