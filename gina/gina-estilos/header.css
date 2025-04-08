@@ -45,6 +45,7 @@ nav a {
 	border-radius: 10px 10px 0 0;
 	color: ghostwhite;
 	cursor: pointer;
+	line-height: 1;
 }
 .activo {
 	background-image: linear-gradient(rgba(0, 0, 0, .1) 10%, transparent); background-color: ghostwhite; color: darkslategray; font-weight: bold;
@@ -88,6 +89,15 @@ div.logo img {
 }
 
 @media (max-width: 800px) {
+	
+	header {
+		height: 150px;
+	}
+	
+	div.logo img {
+		border: 1px solid gold;
+		height: 100px;
+	}
 	div.cintilla {
 		font-size: 2vw;
 		height: 30px;
@@ -127,5 +137,8 @@ div.logo img {
 		overflow: hidden;}
 	div.logo p {
 		font-size: 4vw;
+	}
+	div.logo img {
+		height: 90px;
 	}
 }
