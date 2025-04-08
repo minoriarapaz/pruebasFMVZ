@@ -34,12 +34,17 @@ $(document).ready(function(){
 /* javascript clasico DESDE AQUI*/
 
 function irPrope1() {
-	alert("Ir a propedéutica de los pequeños rumiantes");
-	window.open("pequenos.html", "_self");
+	window.open("pequenos.html", "_blank");
 }
 function irPrope2() {
-	alert("Ir a propedéutica de los bovinos");
-	window.open("https://www.w3schools.com", "_self");
+	window.open("bovinos.html", "_blank");
+}
+
+function irPrope1aqui() {
+	window.open("pequenos.html", "_self");
+}
+function irPrope2aqui() {
+	window.open("bovinos.html", "_self");
 }
 
 function irMetodos() {

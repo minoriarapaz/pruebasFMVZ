@@ -35,8 +35,18 @@ main.parteDos {
 	background-color: antiquewhite;
 }
 @media (max-width: 800px) {
+	.ancho50 > p {
+	font-size: .8em;
+}
+
+}
+
+@media (max-width: 800px) {
 	main {
 		width: 100%;
+	}
+	section {
+		scroll-margin-top: 100px;
 	}
 }
 
@@ -65,6 +75,11 @@ section.metodos {
 
 img {
 	display: block;
+	max-width: 100%;
+  	height: auto;
+}
+img.img-alta {
+	max-width: 95%;
 }
 
 .adorno {
@@ -121,7 +136,7 @@ img {
 .divHexagono > p {
 	display: block;
 	color: cadetblue;
-	font-size: .9em;
+	font-size: 1em;
 	/*flotacion se la pones con Clase*/
 	text-align: center;
 	line-height: 1;
@@ -131,7 +146,6 @@ img {
 	margin-top: 10px;
 }
 .divHexagono img {
-	width: 100%;
 }
 .divHexagono img.hexagonoEspecial {
 	height: 142px;
@@ -145,7 +159,6 @@ img {
 	float: right;
 }
 .envolvente {
-	border: 1px solid blue;
 	
 	position: relative;
 	display: flex;
@@ -157,7 +170,7 @@ img {
 	margin-bottom: 50px;
 }
 .envolvente > img {
-	border: 1px dotted red;
+	height: 200px;
 }
 .clearDer {
 	clear: right; 
@@ -167,7 +180,7 @@ img {
 	clear: none;
 }
 
-.invertidaH {transform: scaleX(-1);border: 3px solid black;}
+.invertidaH {transform: scaleX(-1);}
 
 .sombraIMG {
 	box-shadow: 3px 3px 10px rgba(0,0,0,.2);
@@ -190,7 +203,9 @@ img {
 }
 .subcaja {
 	position: relative;
+	display: block;
 	overflow: hidden;
+	border: 1px solid red;
 }
 .ancho70 p {
 	margin-right: 5%;
@@ -260,7 +275,6 @@ img {
 }
 #losMetodos .subcaja > img {
 	display: block;
-	height: 100%;
 }
 #vet-guantes {
 	max-height: 600px;
@@ -323,7 +337,7 @@ div.columnaTitulo {
 	flex-wrap: wrap;
 	justify-content: center;
 	border-radius: 15px;
-	border-bottom: 3px solid darkslateblue; /*rgb(21, 78, 183)*/
+	border-bottom: 3px solid rgb(0, 51, 51); /*rgb(21, 78, 183)*/
 	background-image: linear-gradient(cadetblue 50%, rgb(67, 110, 112));/*linear-gradient(cornflowerblue 50%, rgb(72, 129, 234));*/
 	height: auto;
 	margin: 10px 0 10px 0;
@@ -363,13 +377,14 @@ div.columnaTitulo {
 }
 
 .divImagen img {
-	width: 100%;
+/*	width: 100%;*/
 }
 
 .ancho50 img {
-	width: auto;
-	display: block;
+	/*width: 100%;
+	height: auto;*/
 	position: relative;
+	border: 1px dotted blue;
 }
 
 .clearIzq {

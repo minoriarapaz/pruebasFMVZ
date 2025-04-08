@@ -46,6 +46,8 @@ nav a {
 	color: ghostwhite;
 	cursor: pointer;
 	line-height: 1;
+	/*border-right: 1px solid ghostwhite;
+	border-left: 1px solid ghostwhite;*/
 }
 .activo {
 	background-image: linear-gradient(rgba(0, 0, 0, .1) 10%, transparent); background-color: ghostwhite; color: darkslategray; font-weight: bold;
@@ -78,14 +80,18 @@ div.logo p {
 	color: ghostwhite;
 	margin-top: 30px;
 }
+
+.colorCoral {
+	background-color: lightcoral;
+}
+
 @media (max-width: 450px) {
 	div.logo p {
 	margin-top: 10px;}
 }
 div.logo img {
-	display: block;
-	width: auto;
 	float: left;
+	height: 100%;
 }
 
 @media (max-width: 800px) {
@@ -95,7 +101,6 @@ div.logo img {
 	}
 	
 	div.logo img {
-		border: 1px solid gold;
 		height: 100px;
 	}
 	div.cintilla {
@@ -136,7 +141,7 @@ div.logo img {
 		height: 150px;
 		overflow: hidden;}
 	div.logo p {
-		font-size: 4vw;
+		font-size: 3vw;
 	}
 	div.logo img {
 		height: 90px;
