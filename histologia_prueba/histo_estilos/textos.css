@@ -64,7 +64,28 @@ h4 {
 	/*width: 100%; era 100, antes de que pusieras DISPLAY FLEX al contenedor*/
 	color: darkslategray;
 /*	margin: auto;*/
+	scroll-snap-type: none;
 }
+
+section.granTema {
+	margin-bottom: 300px;
+}
+section.Tema {
+	margin-bottom: 300px;
+	transition: opacity .5s;
+	transition-timing-function: ease-in-out;
+	
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+	scroll-margin-top: 270px;
+}
+.NoVisible {
+	opacity: 0;
+}
+.Visible {
+	opacity: 1;
+}
+
 
 @media (max-width: 800px) {
 	.textos {
@@ -95,7 +116,7 @@ spam.versalita {
 }
 
 
-.textos > p, .DiaSegmento > p {
+.textos section > p, .DiaSegmento section > p /* antes de poner sections tenías el Child >p*/ {
 	hyphens: auto;
 	-webkit-hyphens: auto;
 	-ms-hyphens: auto;
@@ -142,9 +163,7 @@ spam.versalita {
 	margin-left: 0em;
 	margin-bottom: .5em;
 }
-.malescrito {
-	background-color: coral;
-}
+
 .referencia {
 	border-bottom: 1px solid gray;
 	margin-left: 2em;
@@ -209,27 +228,6 @@ td strong {
 	text-align:center;
 }
 
-.notas {
-	position: relative;
-	width: 100%;
-	margin-top: 3em;
-	font-size: .8em;
-	hyphens: none;
-	-webkit-hyphens: none;
-	-ms-hyphens: none;
-}
-
-.notas ol {
-	border-top: 1px solid gray;
-	list-style-type: decimal;
-	list-style-position: outside;
-}
-.notas ol li {
-	margin-bottom: .5em;
-}
-.notas ol li:target {
-	background-color: greenyellow;
-}
 
 .txt-centrado { text-align: center;}
 .txt-izquierda {text-align: left;}
@@ -264,7 +262,7 @@ td strong {
 	top: 100;;
 	padding: 50px 020 0px;
 	
-lear: bo5h/*debi a que el elemento predecesor es un fichero floar right*/
+/*clear: both; debi a que el elemento predecesor es un fichero floar right*/
 }
 .h1sinpadding {
 	padding-top: 0px;
@@ -364,7 +362,7 @@ table.tipoAncha {
 	cursor: pointer;
 }
 
-.textos > button {
+.textos section > button {
 	display: block;
 	border-radius: 10px;
 	border: none;
@@ -375,6 +373,7 @@ table.tipoAncha {
 	padding: 20px 20px 20px 20px;
 	margin: auto;
 	margin-bottom: 1em;
+	clear: right;
 }
 
 img.fotografia {

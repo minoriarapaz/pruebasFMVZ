@@ -473,6 +473,9 @@ AQUI ESTÁN LAS ALTURAS VARIABLES, LA MAYORIA*/
 		border-left: 1px solid ghostwhite;
 		border-right: 1px solid ghostwhite;
 	}
+	.modal-indice {
+		margin-top: 110px;
+	}
 }
 
 
@@ -505,11 +508,7 @@ AQUI ESTÁN LAS ALTURAS VARIABLES, LA MAYORIA*/
 		top: 70px;
 	}
 }
-@media (max-width: 400px) {
-	.modal-indice {
-		margin-top: 110px;
-	}
-}
+
 
 /*
 @media (max-width: 450px) {

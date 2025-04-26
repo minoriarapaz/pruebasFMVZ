@@ -10,12 +10,13 @@
 
 overflow debe ser HIDDEN */
 body {
-	overflow: hidden;
+	overflow: auto; /*siempre HIDEN*/
 	background-color: ghostwhite;
 }
-/*AGREGADO ENERO 2024*/
+/*AGREGADO ABRIL 2025*/
 html {
   scroll-behavior: auto;/*smooth*/
+	scroll-snap-type: y proximity;
 }
 
 /*#barranavegacion img.img-full {
@@ -31,17 +32,16 @@ html {
 }*/
 
 section.contenedor {
+	width: 100%;
 	position: relative;
-	/*overflow:visible; si es HIDDEN el sticky no funcionará*/
-	/*border-top: 3px dotted blue;*/
 	padding-top: 0px;
 	margin-top: 200px; /*era 200*/
 	margin-left: auto;
 	margin-right: auto;
-	background-color: gray/*mistyrose*/
-	width: 100%;
+	background-color: gray;
 	border-top: 1px solid lavender;
 }
+
 section.contenedor_sinheader {
 	position: relative;
 	/*overflow:visible; si es HIDDEN el sticky no funcionará*/
@@ -191,7 +191,6 @@ iframe.nuevo {
 	width: 100%;
 }
 
-
 .videoframe {
 	display: block;
 	/*background-image: linear-gradient(mistyrose, lightpink);*/
@@ -238,7 +237,6 @@ video {
 	margin: auto;
 }
 
-
 .revela {
 	opacity: 0;
 	transition: 2s all ease;
@@ -254,12 +252,6 @@ video {
 @keyframes videoentra {
   from {transform:scale(0)} 
   to {transform:scale(1)}
-}
-
-@media (min-width: 800px) {
-	.cajaFijaBolas {
-		padding-left: 300px;
-	}
 }
 
 @media (max-width: 400px) {

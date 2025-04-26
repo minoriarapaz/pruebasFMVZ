@@ -34,7 +34,7 @@
   font-weight: bold;
   font-size: 20px;
   user-select: none;
-	background-color: rgba(72,61,139, 0.2);
+	background-color: rgba(0,0,0, 0.8);
   -webkit-user-select: none;
 }
 /* Position the "next button" to the right */
@@ -74,6 +74,7 @@
 	font-size: .9em;
 	font-weight: bold;
 	color: ghostwhite;
+	
 }
 .row {
 	border: 2px solid blue;

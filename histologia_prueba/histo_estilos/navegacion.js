@@ -454,7 +454,10 @@ function escrol_sistema1() {
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub1").classList.add("activoSub");
 				document.getElementById("b1").classList.add("activoSub");
-			} else {document.getElementById("btnSub1").classList.remove("activoSub"); document.getElementById("b1").classList.remove("activoSub");}
+				/*visibilidad del tema en scroll*/
+				document.getElementById("tema1").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub1").classList.remove("activoSub"); document.getElementById("b1").classList.remove("activoSub");
+				   document.getElementById("tema1").classList.add("NoVisible");}
 		}
 
 function escrol_sistema2() {
@@ -466,7 +469,10 @@ function escrol_sistema2() {
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub2").classList.add("activoSub");
 				document.getElementById("b2").classList.add("activoSub");
-			} else {document.getElementById("btnSub2").classList.remove("activoSub"); document.getElementById("b2").classList.remove("activoSub");}
+				/*visibilidad del tema en scroll*/
+				document.getElementById("tema2").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub2").classList.remove("activoSub"); document.getElementById("b2").classList.remove("activoSub");
+				   document.getElementById("tema2").classList.add("NoVisible");}
 		}
 
 function escrol_sistema3() {
@@ -477,7 +483,9 @@ function escrol_sistema3() {
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub3").classList.add("activoSub");
 				document.getElementById("b3").classList.add("activoSub");
-			} else {document.getElementById("btnSub3").classList.remove("activoSub"); document.getElementById("b3").classList.remove("activoSub");}
+				document.getElementById("tema3").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub3").classList.remove("activoSub"); document.getElementById("b3").classList.remove("activoSub");
+				   document.getElementById("tema3").classList.add("NoVisible");}
 		}
 function escrol_sistema4() {
 			var titulo = document.getElementById("sistema4");
@@ -487,7 +495,9 @@ function escrol_sistema4() {
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub4").classList.add("activoSub");
 				document.getElementById("b4").classList.add("activoSub");
-			} else {document.getElementById("btnSub4").classList.remove("activoSub"); document.getElementById("b4").classList.remove("activoSub");}
+				document.getElementById("tema4").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub4").classList.remove("activoSub"); document.getElementById("b4").classList.remove("activoSub");
+				   document.getElementById("tema4").classList.add("NoVisible");}
 		}
 function escrol_sistema5() {
 			var titulo = document.getElementById("sistema5");
@@ -497,7 +507,9 @@ function escrol_sistema5() {
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub5").classList.add("activoSub");
 				document.getElementById("b5").classList.add("activoSub");
-			} else {document.getElementById("btnSub5").classList.remove("activoSub"); document.getElementById("b5").classList.remove("activoSub");}
+				document.getElementById("tema5").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub5").classList.remove("activoSub"); document.getElementById("b5").classList.remove("activoSub");
+				   document.getElementById("tema5").classList.add("NoVisible");}
 		}
 function escrol_sistema6() {
 			var titulo = document.getElementById("sistema6");
@@ -507,7 +519,9 @@ function escrol_sistema6() {
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub6").classList.add("activoSub");
 				document.getElementById("b6").classList.add("activoSub");
-			} else {document.getElementById("btnSub6").classList.remove("activoSub"); document.getElementById("b6").classList.remove("activoSub");}
+				document.getElementById("tema6").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub6").classList.remove("activoSub"); document.getElementById("b6").classList.remove("activoSub");
+				   document.getElementById("tema6").classList.add("NoVisible");}
 		}
 
 function escrol_sistema7() {
@@ -518,7 +532,9 @@ function escrol_sistema7() {
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub7").classList.add("activoSub");
 				document.getElementById("b7").classList.add("activoSub");
-			} else {document.getElementById("btnSub7").classList.remove("activoSub"); document.getElementById("b7").classList.remove("activoSub");}
+				document.getElementById("tema7").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub7").classList.remove("activoSub"); document.getElementById("b7").classList.remove("activoSub");
+				   document.getElementById("tema7").classList.add("NoVisible");}
 		}
 function escrol_sistema8() {
 			var titulo = document.getElementById("sistema8");
@@ -528,7 +544,9 @@ function escrol_sistema8() {
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub8").classList.add("activoSub");
 				document.getElementById("b8").classList.add("activoSub");
-			} else {document.getElementById("btnSub8").classList.remove("activoSub"); document.getElementById("b8").classList.remove("activoSub");}
+				document.getElementById("tema8").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub8").classList.remove("activoSub"); document.getElementById("b8").classList.remove("activoSub");
+				   document.getElementById("tema8").classList.add("NoVisible");}
 		}
 function escrol_sistema9() {
 			var titulo = document.getElementById("sistema9");
@@ -538,7 +556,9 @@ function escrol_sistema9() {
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub9").classList.add("activoSub");
 				document.getElementById("b9").classList.add("activoSub");
-			} else {document.getElementById("btnSub9").classList.remove("activoSub"); document.getElementById("b9").classList.remove("activoSub");}
+				document.getElementById("tema9").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub9").classList.remove("activoSub"); document.getElementById("b9").classList.remove("activoSub");
+				   document.getElementById("tema9").classList.add("NoVisible");}
 		}
 function escrol_sistema10() {
 			var titulo = document.getElementById("sistema10");
@@ -548,7 +568,9 @@ function escrol_sistema10() {
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub10").classList.add("activoSub");
 				document.getElementById("b10").classList.add("activoSub");
-			} else {document.getElementById("btnSub10").classList.remove("activoSub"); document.getElementById("b10").classList.remove("activoSub");}
+				document.getElementById("tema10").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub10").classList.remove("activoSub"); document.getElementById("b10").classList.remove("activoSub");
+				   document.getElementById("tema10").classList.add("NoVisible");}
 		}
 function escrol_sistema11() {
 			var titulo = document.getElementById("sistema11");
@@ -558,7 +580,9 @@ function escrol_sistema11() {
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub11").classList.add("activoSub");
 				document.getElementById("b11").classList.add("activoSub");
-			} else {document.getElementById("btnSub11").classList.remove("activoSub"); document.getElementById("b11").classList.remove("activoSub");}
+				document.getElementById("tema11").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub11").classList.remove("activoSub"); document.getElementById("b11").classList.remove("activoSub");
+				   document.getElementById("tema11").classList.add("NoVisible");}
 		}
 function escrol_sistema12() {
 			var titulo = document.getElementById("sistema12");
@@ -568,7 +592,9 @@ function escrol_sistema12() {
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub12").classList.add("activoSub");
 				document.getElementById("b12").classList.add("activoSub");
-			} else {document.getElementById("btnSub12").classList.remove("activoSub"); document.getElementById("b12").classList.remove("activoSub");}
+				document.getElementById("tema12").classList.remove("NoVisible");
+			} else {document.getElementById("btnSub12").classList.remove("activoSub"); document.getElementById("b12").classList.remove("activoSub");
+				   document.getElementById("tema12").classList.add("NoVisible");}
 		}
 
 /*Navegacion de indice de tablas*/

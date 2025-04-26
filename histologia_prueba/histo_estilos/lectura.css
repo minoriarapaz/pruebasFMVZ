@@ -58,10 +58,10 @@ img.imgBtn {
 	padding-top: 10px;
 	padding-right: 10px;
 	padding-left: 10px;
-	background-image: linear-gradient(cadetblue, rgba(64,64,64,.5));
+	background-image: linear-gradient(lightseagreen, rgba(32, 178, 170, .8)/*rgb(0, 102, 102),rgb(0, 102, 102), rgba(0, 102, 102, .7)*/);
 }
 
-.controles .izquierdo {
+.izquierdo {
 	border-right: 1px solid ghostwhite;
 }
 #control_vacio {
@@ -75,7 +75,7 @@ img.imgBtn {
 }
 #control_vacio2 {
 	width: 26%;
-	background-image: linear-gradient(cadetblue, rgba(64,64,64,.5));
+	background-image: linear-gradient(lightseagreen, rgba(32, 178, 170, .8));
 }
 
 @media (max-width: 700px) {
@@ -109,6 +109,7 @@ button.boton_en_linea {
 	border:4px solid transparent;
 	overflow: hidden;
 	box-shadow: 1px 3px 1px rgba(255, 255, 255, 0.2);
+	background-color: ghostwhite;
 }
 .bletraM {font-size: small;}
 .bletraG {font-size: 120%;}
