@@ -15,7 +15,7 @@ body {
 }
 /*AGREGADO ENERO 2024*/
 html {
-  scroll-behavior: auto;/*smooth*/
+	scroll-behavior: auto;/*smooth*/
 	scroll-snap-type: y proximity;
 }
 
@@ -43,18 +43,7 @@ section.contenedor {
 	width: 100%;
 	border-top: 1px solid lavender;
 }
-section.contenedor_sinheader {
-	position: relative;
-	/*overflow:visible; si es HIDDEN el sticky no funcionará*/
-	/*border: 2px dashed blue;*/
-	padding-top: 0px;
-	margin-top: 0px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: mistyrose;
-	
-	width: 100%;
-}
+
 
 .barra {
 	display: none;
@@ -286,3 +275,4 @@ video {
 		background-color: blue;
 	}
 }
+

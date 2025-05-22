@@ -64,11 +64,15 @@ h4 {
 	/*width: 100%; era 100, antes de que pusieras DISPLAY FLEX al contenedor*/
 	color: darkslategray;
 /*	margin: auto;*/
-	scroll-snap-type: none;
+	/*scroll-snap-type: none; ocultado 2025 abril 30*/
 }
 
 section.granTema {
 	margin-bottom: 300px;
+	
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+	scroll-margin-top: 270px;
 }
 section.Tema {
 	margin-bottom: 300px;

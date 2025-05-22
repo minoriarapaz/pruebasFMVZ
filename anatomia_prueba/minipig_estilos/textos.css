@@ -64,6 +64,7 @@ h4 {
 	/*width: 100%; era 100, antes de que pusieras DISPLAY FLEX al contenedor*/
 	color: darkslategray;
 /*	margin: auto;*/
+	scroll-snap-type: none;
 }
 
 section.granTema {
@@ -233,9 +234,6 @@ td strong {
 	background-color: slateblue;
 	margin-top: 5em;
 	margin-bottom: 8em;
-	/*scroll-snap-align: start;
-	scroll-snap-stop: always;
-	scroll-margin-top: 200px;*/
 }
 
 .h1envolvente {
