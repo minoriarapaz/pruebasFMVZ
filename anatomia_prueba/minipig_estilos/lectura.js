@@ -69,7 +69,8 @@ $(document).ready(function(){
 	  
 	$("caption").addClass("textoColorClaro");
 	$("caption").removeClass("textoColorMedio");
-	  
+	 
+	  $("sup").addClass("textoColorClaro");
 	  
 	  /*aparte de los parrafos*/
   });
@@ -92,6 +93,7 @@ $(document).ready(function(){
 	$("caption").addClass("textoColorMedio");
 	$("caption").removeClass("textoColorClaro");
 	
+		$("sup").removeClass("textoColorClaro");
 	
   });
 	
@@ -111,6 +113,8 @@ $(document).ready(function(){
 	$(".textos ul").removeClass("textoColorClaro textoColorMedio");
 		
 	$("caption").removeClass("textoColorClaro");
+		
+	$("sup").removeClass("textoColorClaro");
 		
   });
 });

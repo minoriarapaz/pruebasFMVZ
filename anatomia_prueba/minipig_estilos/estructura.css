@@ -276,3 +276,10 @@ video {
 	}
 }
 
+.aviso {
+	background-color: indianred;
+	font-size: 2em;
+	color: white;
+	font-weight: bold;
+	padding: 1em;
+}

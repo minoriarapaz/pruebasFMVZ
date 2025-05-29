@@ -86,6 +86,8 @@ section.Tema {
 	opacity: 1;
 }
 
+a sup {color: darkslateblue;}
+
 @media (max-width: 800px) {
 	.textos {
 		padding-left: 15%;
@@ -130,6 +132,12 @@ spam.versalita {
 	/*margin-left: 20%;
 	margin-right: 20%;*/
 }
+.textos section > p.firma, .DiaSegmento section > p.firma {
+	text-align: right;
+	font-style: italic;
+	font-size: 1.1em;
+	margin-top: 2em;
+}
 /*para el control de lectura*/
 .textoColorClaro {color: gainsboro;}
 .textoColorMedio {color: #663333; /*#663333;*/}
@@ -140,8 +148,17 @@ spam.versalita {
 	display: block;
 	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
 	margin-bottom: 1.5em;
+	margin-left: 2em;
 	/*margin-left: 20%;
 	margin-right: 20%;*/
+}
+
+.textos ol.procedimiento {
+	margin-left: 1em;
+	margin-top: 2em;
+	padding-left: 2em;
+	border-left: 1px solid black;
+	list-style-position: outside;
 }
 
 .listaOrdenada_letras {
