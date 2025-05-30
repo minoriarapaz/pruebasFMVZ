@@ -23,7 +23,7 @@ function colorOscuro() {
 	/*document.getElementById("Contenido").style.color="gainsboro";*/
 	document.getElementById("fondoBiblio").style.backgroundColor="rgba(0, 0, 0, .8)";
 	document.getElementById("fondoLegal").style.backgroundColor="rgba(0, 0, 0, .8)";
-	document.body.style.backgroundColor="black";
+	document.body.style.backgroundImage="linear-gradient(lightgrey, darkslategray)";
 	cerrarControl();
 }
 function colorMedio() {
@@ -32,7 +32,7 @@ function colorMedio() {
 	
 	document.getElementById("fondoBiblio").style.backgroundColor="bisque";
 	document.getElementById("fondoLegal").style.backgroundColor="bisque";
-	document.body.style.backgroundColor="bisque";
+	document.body.style.backgroundImage="linear-gradient(bisque, rgb(255, 209, 153))";
 	cerrarControl();
 	
 }
@@ -42,7 +42,7 @@ function colorClaro() {
 	
 	document.getElementById("fondoBiblio").style.backgroundColor="ghostwhite";
 	document.getElementById("fondoLegal").style.backgroundColor="ghostwhite";
-	document.body.style.backgroundColor="ghostwhite";
+	document.body.style.backgroundImage="linear-gradient(rgb(191, 255, 234), aquamarine)";
 	cerrarControl();
 }
 
@@ -71,7 +71,7 @@ $(document).ready(function(){
 	$("caption").removeClass("textoColorMedio");
 	 
 	  $("sup").addClass("textoColorClaro");
-	  
+	  $(".bibliotextos a").addClass("textoColorClaro");
 	  /*aparte de los parrafos*/
   });
 	
@@ -94,6 +94,7 @@ $(document).ready(function(){
 	$("caption").removeClass("textoColorClaro");
 	
 		$("sup").removeClass("textoColorClaro");
+		$(".bibliotextos a").removeClass("textoColorClaro");
 	
   });
 	
@@ -115,6 +116,7 @@ $(document).ready(function(){
 	$("caption").removeClass("textoColorClaro");
 		
 	$("sup").removeClass("textoColorClaro");
+	$(".bibliotextos a").removeClass("textoColorClaro");
 		
   });
 });
