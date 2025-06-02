@@ -23,7 +23,7 @@
 /* The Modal (background) */
 
 .modalO {
-	  display: block; /* Hidden by default */
+	  display: block; 
 	  position: fixed; /* Stay in place */
 	  z-index: 2; /* Sit on top */
 	  padding-top: 30px; /* Location of the box */

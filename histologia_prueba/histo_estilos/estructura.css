@@ -10,7 +10,7 @@
 
 overflow debe ser HIDDEN */
 body {
-	overflow: auto; /*siempre HIDEN*/
+	overflow: hidden; /*siempre HIDEN*/
 	background-color: ghostwhite;
 }
 /*AGREGADO ABRIL 2025*/

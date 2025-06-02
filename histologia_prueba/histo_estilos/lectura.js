@@ -23,7 +23,7 @@ function colorOscuro() {
 	/*document.getElementById("Contenido").style.color="gainsboro";*/
 	document.getElementById("fondoBiblio").style.backgroundColor="rgba(0, 0, 0, .8)";
 	document.getElementById("fondoLegal").style.backgroundColor="rgba(0, 0, 0, .8)";
-	document.body.style.backgroundColor="black";
+	document.body.style.backgroundImage="linear-gradient(slategray 50%, black)";
 	cerrarControl();
 }
 function colorMedio() {
@@ -32,7 +32,7 @@ function colorMedio() {
 	
 	document.getElementById("fondoBiblio").style.backgroundColor="bisque";
 	document.getElementById("fondoLegal").style.backgroundColor="bisque";
-	document.body.style.backgroundColor="bisque";
+	document.body.style.backgroundImage="linear-gradient(bisque, rgb(255, 209, 153))";
 	cerrarControl();
 	
 }
@@ -42,7 +42,7 @@ function colorClaro() {
 	
 	document.getElementById("fondoBiblio").style.backgroundColor="ghostwhite";
 	document.getElementById("fondoLegal").style.backgroundColor="ghostwhite";
-	document.body.style.backgroundColor="ghostwhite";
+	document.body.style.backgroundImage="linear-gradient(rgb(191, 255, 234), aquamarine)";
 	
 	cerrarControl();
 }
@@ -70,6 +70,10 @@ $(document).ready(function(){
 	$(".captiongaleria").addClass("captionOscuro");
 	$(".captiongaleria").removeClass("captionClaro captionMedio");
 	$(".numbertext").addClass("txtGris");
+	  
+	  
+	$("sup").addClass("textoColorClaro");
+	$(".bibliotextos a").addClass("textoColorClaro");
   });
 	
 	$("#bMedio").click(function(){
@@ -94,6 +98,9 @@ $(document).ready(function(){
 	$(".captiongaleria").addClass("captionMedio");
 	$(".captiongaleria").removeClass("captionClaro captionOscuro");
 	$(".numbertext").removeClass("txtGris");
+		
+	$("sup").removeClass("textoColorClaro");
+	$(".bibliotextos a").removeClass("textoColorClaro");
 	
   });
 	
@@ -117,6 +124,9 @@ $(document).ready(function(){
 	$(".captiongaleria").addClass("captionClaro");
 	$(".captiongaleria").removeClass("captionMedio captionOscuro");
 	$(".numbertext").removeClass("txtGris");
+		
+	$("sup").removeClass("textoColorClaro");
+	$(".bibliotextos a").removeClass("textoColorClaro");
   });
 });
 

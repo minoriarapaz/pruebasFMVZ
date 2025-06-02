@@ -90,6 +90,9 @@ section.Tema {
 	opacity: 1;
 }
 
+/*agregados mayo 2025*/
+a sup {color: darkslateblue;}
+
 
 @media (max-width: 800px) {
 	.textos {
@@ -115,8 +118,10 @@ section.Tema {
 		margin-right: 0;
 	}
 }
-spam.versalita {
+span.versalita {
 	font-variant-caps: small-caps;
+	font-weight: bold;
+	font-size: 1.2em;
 }
 
 
