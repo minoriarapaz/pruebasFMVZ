@@ -82,7 +82,7 @@ section.Tema {
 	
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
-	scroll-margin-top: 240px;
+	scroll-margin-top: 300px;
 }
 .NoVisible {
 	opacity: 0;
