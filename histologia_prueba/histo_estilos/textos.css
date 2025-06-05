@@ -14,7 +14,7 @@ h1, h2  {
 	display: block;
 }
 
-h3, h4 {
+h3, h4, div.panelObj h3 {
 	font-family: Open Sans ,"Trebuchet MS", Arial, serif;
 	font-style:normal;
 	text-align: center;
@@ -26,6 +26,7 @@ h3 {
 	margin-bottom: 2em;
 	margin-top: 2.5em;
 }
+div.panelObj h3 {margin-top: 0em;}
 h4 {
 	margin-bottom: 1em;
 	margin-top: 3em;	
@@ -72,7 +73,7 @@ section.granTema {
 	
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
-	scroll-margin-top: 270px;
+	scroll-margin-top: 240px;
 }
 section.Tema {
 	margin-bottom: 300px;
@@ -81,7 +82,7 @@ section.Tema {
 	
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
-	scroll-margin-top: 270px;
+	scroll-margin-top: 240px;
 }
 .NoVisible {
 	opacity: 0;
@@ -125,7 +126,7 @@ span.versalita {
 }
 
 
-.textos section > p, .DiaSegmento section > p /* antes de poner sections tenías el Child >p*/ {
+.textos section > p, .DiaSegmento section > p, div.panelObj p /* antes de poner sections tenías el Child >p*/ {
 	hyphens: auto;
 	-webkit-hyphens: auto;
 	-ms-hyphens: auto;
@@ -136,10 +137,16 @@ span.versalita {
 	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
 	clear: left;
 	margin-bottom: .5em;
-	
-	/*margin-left: 20%;
-	margin-right: 20%;*/
 }
+
+.textos section > p.firma, .DiaSegmento section > p.firma {
+	text-align: right;
+	font-style: italic;
+	font-size: 1.1em;
+	margin-top: 2em;
+}
+
+
 /*para el control de lectura*/
 .textoColorClaro {color: gainsboro; /*gainsboro*/}
 .textoColorMedio {color: #663333 /*#663333;*/}
@@ -150,8 +157,16 @@ span.versalita {
 	display: block;
 	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
 	margin-bottom: 1.5em;
-	/*margin-left: 20%;
-	margin-right: 20%;*/
+	margin-left: 1.5em;
+	margin-top: 1.5em;
+	list-style-position: outside;
+}
+.textos ul {
+	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
+	margin-bottom: 1em;
+	margin-left: 1.5em;
+	margin-top: 1.5em;
+	list-style-position: outside; /*era inside hasta 5 junio*/
 }
 
 .textos ol.procedimiento {
@@ -164,7 +179,6 @@ span.versalita {
 
 .listaOrdenada_letras {
 	list-style-type: lower-alpha;
-	list-style-position: inside;
 }
 
 
@@ -185,14 +199,6 @@ span.versalita {
 	transform: rotate(90deg);
 }
 
-
-
-.textos ul {
-	/*list-style-type: none;*/
-	list-style-position: inside;
-	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
-	margin-bottom: 1em;
-}
 
 .textos ul.bullet {
 	list-style-type: disc;
@@ -391,6 +397,23 @@ img.fotografia {
 	width: 100%;
 }
 
+div.panelObj {
+	display: block;
+	background-image: linear-gradient(lightseagreen, rgb(0, 102, 102));
+	border-radius: 30px;
+	padding: 20px;
+	margin-top: 50px;
+	animation: aparece;
+	animation-timeline: view(); /*solo sirve en chrome */
+}
+
+@keyframes aparece {
+	from {opacity: .2; scale: .1;}
+	to {opacity: 1; scale: 1;}
+}
+div.panelObj p, div.panelObj h3 {color: ghostwhite;}
+
+
 @media (min-width: 1200px) {
 	.textos {
 		padding-left: 15%;
@@ -421,7 +444,7 @@ img.fotografia {
 		padding-left: 5%;
 		padding-right: 5%;
 	}
-	.textos > p {
+	.textos > p, div.panelObj p {
 		
 		text-align: left;
 		text-indent: 0%;
