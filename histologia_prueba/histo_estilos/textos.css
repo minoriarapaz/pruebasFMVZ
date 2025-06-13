@@ -399,12 +399,17 @@ img.fotografia {
 
 div.panelObj {
 	display: block;
+	width: 80%;
 	background-image: linear-gradient(lightseagreen, rgb(0, 102, 102));
 	border-radius: 30px;
 	padding: 20px;
 	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
 	animation: aparece;
-	animation-timeline: view(); /*solo sirve en chrome */
+	animation-timeline: view(70% 5%); /*solo sirve en chrome */
+	
+	box-shadow: 20px 20px 30px 0px black;
 }
 
 @keyframes aparece {
