@@ -256,9 +256,16 @@
 	height: auto;
 	padding: 1em;
 }
+
+.separacion {
+	border-top: 2px solid rgb(0, 102, 102);
+	margin-top: 3em;
+	padding-top: 2em;
+}
 .superior p {
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-bottom: .8em;
+}
+#page1 {
 	text-align: center;
 }
 .inferior {
@@ -278,7 +285,7 @@ button.boton_legal {
 	border-radius: 5px;
 	border-style: none;
 	width: auto;
-	background-image: linear-gradient(slateblue, darkslateblue);
+	background-image: linear-gradient(rgb(0, 102, 102), lightseagreen);
 	color: ghostwhite;
 }
 .boton_legal_mark {
@@ -295,9 +302,9 @@ img.logo-licencia {
 	border-top: 1px solid darkslategray;
 	padding-bottom: 1em;
 }
-.page-segmento p {
-	margin-bottom: .6em;
-}
+
+
+
 p.titulillo /*el titulo de los directorios*/ {
 	margin-bottom: 1em;
 	margin-top: 1em;
@@ -365,7 +372,7 @@ iframe {
   font-size: 1em; /*40px*/
   font-weight: bold;
 	padding: 8px 50px 8px 50px; /*  ÁREA DE CLICADO */
-	background-image: linear-gradient(slateblue, darkslateblue);
+	background-image: linear-gradient(lightseagreen, rgb(0, 102, 102)  /*darkslateblue, slateblue*/);
 	border-radius: 10px;
 	text-align: center;
 	transition: 0.3s;

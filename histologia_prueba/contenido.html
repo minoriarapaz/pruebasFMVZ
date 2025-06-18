@@ -174,9 +174,10 @@
 				<div class="modal-content-obj" id="textoObjetivo">
 				<p>El uso del material contenido en esta obra será exclusivamente para fines educativos e informativos, &shy;y deberá citar la fuente:</p>
 					
-					<p><small>"Trujillo, María Elena. <i>Histología del cerdo miniatura en crecimiento.</i> México:UNAM;2024."</small></p>
+					<p><small>"Trujillo, María Elena. <i>Histología del cerdo miniatura en crecimiento.</i> México:UNAM;2025."</small></p>
 					
 					<a class="btnContinuar" onClick="modalObj()">Continuar</a>
+					
 				</div>
 			</div>
 			
@@ -233,7 +234,7 @@
 			  	<span class="cruz" id="tache2" onClick="verLegales()">&times;</span>
 				
 				<div id="fondoLegal" class="modal-content fondoClaro">
-					<section>
+					<section class="legal-seccion">
 						<div class="marquesina">
 							<img style="width:100px;" src="histologia_img/interfaz/pig.png" alt="logopig" class="logosmall">
 						</div>
@@ -245,6 +246,15 @@
 												
 						<div class="superior" id="pagLegales">
 							<div class="page" id="page1">
+								
+								<p>Autores</p>
+								<p><strong>María Elena Trujillo Ortega</strong></p>
+								<p><strong>Elein Hernández Trujillo</strong></p>
+								<p><strong>Stephany Hernández Trujillo</strong></p>
+								<p><strong>Rafael Hernández González</strong></p>
+								
+								
+								<section class="separacion">
 								<p>Primera edición (html), xx de xxxxx de 2024</p>
 								<p>DR® 2023 UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO</p>
 								<p>Ciudad Universitaria, Coyoacán, 04510, Ciudad de México.</p>
@@ -252,10 +262,17 @@
 								<p><i>Esta edición y sus características son propiedad de la UNAM.</i></p>
 								<p><br><b>Hecho en México</b></p>
 								<img class="logo-licencia" src="histologia_img/interfaz/licencia_cc2.jpg" alt="logo licencia" style="width:200px;">
+								</section>
 							</div>
 							
 							<div class="page" id="page2">
-								<p><b>Diseño y programación:<br></b>Carlos Iván Sánchez-Sánchez</p>
+								<p><small>Diseño y programación:</small><br><span class="versalita">carlos iván sánchez-sánchez</span></p>
+								<p><small>Dirección de arte de imágenes y retoque digital:</small><br><span class="versalita">angélica corona gómez</span></p>
+								<p><small>Clasificación y rotulado de imágenes:</small><br><span class="versalita">alejandra catalina larraguivel vázquez</span></p>
+								<p><small>Revisión lingüística y de galeras:</small><br><span class="versalita">elizabeth sarmiento de la huerta</span></p>
+								<p><small>Seguimiento editorial:</small><br><span class="versalita">silvia maría ibáñez zavala</span></p>
+								<p><small>Gestión legal:</small><br><span class="versalita">laura edith martínez alvarez</span></p>
+								<p><small>Webmaster:</small> <br><span class="versalita">marco antonio domínguez guadarrama</span></p>
 							</div>
 							
 							<div class="page" id="page3">
@@ -265,7 +282,8 @@
 							
 							<div class="page" id="page4">
 								<section class="page-segmento">
-									<p class="titulillo">UNAM</p>
+							
+									<p class="titulillo"><b>UNAM</b></p>
 									<p>Dr. Leonardo Lomelí Vanegas<br><small>Rector</small></p>
 
 									<p>Dra. Patricia Dolores Dávila Aranda
@@ -280,26 +298,25 @@
 									<p>Dra. Diana Tamara Martínez Ruíz
 									<br><small>Secretaria de Desarrollo Institucional</small></p>
 
-									<p>Lic. Raúl Arcenio Aguilar Tamayo
-									<br><small>Secretario de Prevención, Atención
-								y Seguridad Universitaria</small></p>
+									<p>M. I. Fernando Macedo Chagolla
+									<br><small>Secretario de Servicio y Atención a la Comunidad Universitaria</small></p>
 								</section>
 								<section class="page-segmento">
-									<p class="titulillo">FMVZ</p>
+									<p class="titulillo"><b>FMVZ</b></p>
 									
-									<p>Dr. Carlos Guillermo Gutiérrez Aguilar
+									<p>Dr. Carlos G. Gutiérrez Aguilar
 									<br><small>Director</small></p>
-									<p>Dr. Jorge Hernández Espinosa
+									
+									<p>Dr. José Luis Dávalos Flores
 									<br><small>Secretario General</small></p>
 
 									<p>L.C. Enrique López Martínez
 									<br><small>Secretario Administrativo</small></p>
 
-									<p>Dr. José Ángel G. Gutiérrez Pabello
+									<p>M. en C. Mariano Hernández Gil
 									<br><small>Secretario de Vinculación y Proyectos Especiales</small></p>
 
-
-									<p>Dr. Enrique Jesús Delgado Suárez
+									<p>MVZ Miguel Ángel Cuevas Díaz
 									<br><small>Jefe del Departamento de Publicaciones</small></p>
 
 									<p>MVZ Enrique Basurto Argueta
@@ -335,7 +352,7 @@
 			<h2>Introducción</h2>
 			
 			
-			<p>En el mundo hay más de 300 razas porcinas, la mayor parte se destinan para consumo, dentro de las que se considera, que poco más de 40 son miniatura, provenientes de diferentes países.<a onClick="verBiblio()"><b><sup>[1]</sup></b></a> En 1949, se reporta la cruza de las razas Guinea hog con Piney rooter, de Luisina, lo que originó la conocida Minnesota minipig de aproximadamente 70 kg en la edad adulta. El objetivo de las cruzas es reducir aún más su tamaño. La Minnesota minipig se cruza con la vietnamita pot belly de la que se obtienen las hembras F1, que a su vez se cruzan con machos Landrance, y después de varias generaciones, se obtienen cerdos miniatura color blanco, a los que se les conoce como Göttingen minipig, los cuales se destinan a la investigación, viven principalmente en bioterios. Su composición genética es 60% vietnamita, 33% Minnesota y 7% Landrace. Actualmente (2022), se conocen diferentes razas de cerdos miniatura <small>(Cuadro 1)</small> de diferentes países, en las cuales se observan sus características morfométricas.</p>
+			<p>En el mundo hay más de 300 razas porcinas, la mayor parte se destinan para consumo, dentro de las que se considera, que poco más de 40 son miniatura, provenientes de diferentes países. En 1949, se reporta la cruza de las razas Guinea hog con Piney rooter, de Luisina, lo que originó la conocida Minnesota minipig de aproximadamente 70 kg en la edad adulta. El objetivo de las cruzas es reducir aún más su tamaño. La Minnesota minipig se cruza con la vietnamita pot belly de la que se obtienen las hembras F1, que a su vez se cruzan con machos Landrance, y después de varias generaciones, se obtienen cerdos miniatura color blanco, a los que se les conoce como Göttingen minipig, los cuales se destinan a la investigación, viven principalmente en bioterios. Su composición genética es 60% vietnamita, 33% Minnesota y 7% Landrace. Actualmente (2022), se conocen diferentes razas de cerdos miniatura <small>(Cuadro 1)</small> de diferentes países, en las cuales se observan sus características morfométricas.</p>
 			
 			
 			<table class="tipo1" id="cuadro1">
@@ -511,7 +528,7 @@
 			<h4 class="txt-izquierda">Cerebro</h4>
 			<p>En el cerebro, a cualquier edad se observan las sustancias gris y blanca. En la zona cortical se localiza la sustancia gris, que a su vez, está formada del exterior al interior por la capa molecular granular externa (células piramidales), la granular interna (células piramidales internas, o ganglionares, y de células polimorfas). La diversidad en la forma de las neuronas es lo que da el nombre a las zonas. Las neuronas tienen diferentes formas: estrelladas, fusiformes, piramidales, piriformes, con abundantes dendritas y redondeadas. Entre las neuronas se distribuyen células de neuroglia, escaso tejido conectivo y vasos sanguíneos. El endotelio vascular continuo, la fina envoltura de tejido conectivo que rodea a los vasos sanguíneos y la presencia de células de la microglía constituyen la barrera hematoencefálica. En la substancia blanca se encuentran las fibras nerviosas (axones) de las neuronas de la sustancia gris, las fibras están rodeadas de mielina, la sustancia que da la coloración blanca a la zona, entre las fibras nerviosas se observan algunas células gliales y las responsables de formar mielina.</p>
 				
-				<section id="galeria18" class="galeria">
+				<section id="galeria1" class="galeria">
 				<div class="captiongaleria">
 					Cerebro
 				</div>
@@ -701,7 +718,7 @@
 			<p>En el cerebelo, también se identifican ambas sustancias: la blanca (fibras mielínicas) en el centro, rodeada por la sustancia gris, que se divide en tres capas: molecular externa (somas dispersos, neuronas en cesta), intermedia de células piramidales, que tienen un solo axón y la capa de la granulosa interna (células con núcleos hipercromáticos). A continuación, se presentan los cortes histológicos de los cerebros y cerebelos de los cerdos miniatura a las siguientes edades (semanas): 0, 1, 3, 5, 7, 9, 13, 15, 17, 19 y 21.</p>
 			
 			<!-- galeria del cerebelo -->
-			<section id="galeria1" class="galeria">
+			<section id="galeria2" class="galeria">
 				<div class="captiongaleria">
 					Cerebelo
 				</div>
@@ -825,7 +842,7 @@
 			</ul>
 			<p>A continuación, se presentan los cortes histológicos del corazón de los cerdos miniatura de las siguientes semanas de edad:  0, 1, 5, 7, 9, 11, 13, 15, 17 y 21.</p>
 			
-			<section id="galeria2" class="galeria">
+			<section id="galeria3" class="galeria">
 				<div class="captiongaleria">Corazón</div>
 				<div class="numbertext">Imagen <span id="numer2">1</span></div>
 				<div class="slideFalsa" id="corazon-falsa">
@@ -941,7 +958,7 @@
 			<h4 class="txt-izquierda">Lengua</h4>
 			<p>Se observaron cortes transversales del ápice de la lengua y de la porción caudal a la altura de la “V” lingual. En el ápice de la lengua, se aprecia epitelio estratificado con diferentes grados de cornificación, abundan las papilas filiformes en toda su superficie, tienen forma de espina y su centro está formado por el tejido conectivo de la lámina propia, que se mezcla con la submucosa. En este se localizan glándulas mucosas y seromucosas, el tejido conectivo de la submucosa rodea al músculo de la lengua formando el epimisio, el músculo lingual se orienta en diferentes direcciones. Las papilas circunvaladas se observan en el corte caudal de la lengua, se aprecian de una a tres papilas, no se elevan por encima de la lámina propia (en la base se ve el foso), donde se abren los conductos de las glándulas serosas tubuloalveolares que limpian el material alimenticio.</p>
 			
-			<section id="galeria19" class="galeria">
+			<section id="galeria4" class="galeria">
 				<div class="captiongaleria">
 					Lengua
 				</div>
@@ -1067,7 +1084,7 @@
 			<h4 class="txt-izquierda">Esófago</h4>
 			<p>La pared esofágica está formada por mucosa, submucosa, muscular y túnica adventicia a falta de serosa, la cual solo lo envuelve al pasar el diafragma, la mucosa presenta epitelio estratificado queratinizado, la submucosa está íntimamente adherida a la mucosa, y débilmente adherida a la túnica muscular. Se compone de tejido conectivo laxo con fascículos de tejido conectivo entrelazados de diferentes formas y fibras elásticas. Tiene abundantes vasos sanguíneos, fibras nerviosas, en su porción cervical glándulas tubuloalveolares mucosas. La túnica muscular tiene la peculiaridad de estar constituida por dos capas, una circular interna y una longitudinal externa, en la porción cervical anterior la musculatura es estriada, en el trayecto torácico es mixta, y en la porción terminal, es exclusivamente músculo liso. La túnica adventicia está formada por tejido conectivo laxo que contiene vasos linfáticos, sanguíneos y nervios. La porción torácica está revestida por pleura mediastínica.</p>
 			
-				<section id="galeria20" class="galeria">
+				<section id="galeria5" class="galeria">
 					<div class="captiongaleria">Esófago</div>
 					<div class="numbertext">Imagen <span id="numer20">1</span></div>
 					<div class="slideFalsa" id="esofago-falsa">
@@ -1167,7 +1184,7 @@
 			<p>El epitelio de recubrimiento es columnar simple con microvellosidades con células caliciformes secretoras de moco intercaladas, la lámina propia de tejido conectivo abundante separado de la submucosa por la lámina muscular de la mucosa, en la submucosa se aprecian glándulas tubulares. La muscular del órgano se observa claramente, está formada por capa muscular circular interna y muscular longitudinal externa ambas de músculo liso. La serosa está formada por una fina capa de tejido conectivo con vasos sanguíneos cubierta por mesotelio.Al intestino grueso lo forman tres porciones: ciego, colon y recto. La porción del ciego presenta mucosa, submucosa, muscular y serosa. La mucosa se observa sin vellosidades y el epitelio columnar simple con microvellosidades presenta abundantes exocrinocitos caliciformes, la línea del epitelio presenta invaginaciones hacia la lámina propia para producir criptas intestinales que casi alcanzan la lámina muscular de la mucosa. En el tejido conectivo de la lámina propia y, a través del epitelio, se observan células linfoides. La submucosa es característica y, cerca de la válvula ileocecal, abundan nódulos de tejido linfoide. Su lámina muscular en su porción longitudinal o externa es prominente. La serosa recubre todo el órgano. </p>
 			<p>En el colon, la morfología de la mucosa y submucosa es similar a la del ciego. La capa muscular formada por músculo liso en dirección longitudinal forma la apariencia que el colon tiene de las haustras. La serosa no presenta cambios particulares. En el recto, la mucosa es similar a la de las otras regiones del intestino grueso, sin embargo, se aprecia un menor número de criptas, lámina muscular de la mucosa es circular con tejido eréctil. El principal cambio es la ausencia de la capa longitudinal tipo tenia; por el contrario, la capa circular de músculo liso es mucho más gruesa y aparente. No existe serosa por lo que hay una túnica adventicia.</p>
 				
-			<section id="galeria23" class="galeria">
+			<section id="galeria6" class="galeria">
 					<div class="captiongaleria">Intestino grueso - ciego</div>
 					<div class="numbertext">Imagen <span id="numer23"></span></div><!--iba dentro de MySlides-->
 					<div class="slideFalsa" id="ciego-falsa">
@@ -1218,7 +1235,7 @@
 			</section>
 			
 				
-				<section id="galeria24" class="galeria">
+				<section class="galeria">
 					<div class="captiongaleria">Intestino grueso - colon</div>
 					
 					<div class="numbertext">Imagen <span id="numer24">1</span></div><!--iba dentro de MySlides-->
@@ -1258,7 +1275,7 @@
 					
 				</section>
 				
-				<section id="galeria25" class="galeria">
+				<section class="galeria">
 					<div class="captiongaleria">Intestino grueso - recto</div>
 					
 					<div class="numbertext">Imagen <span id="numer25">1</span></div><!--iba dentro de MySlides-->
@@ -1328,7 +1345,7 @@
 					
 				</section>
 				
-				<section id="galeria26" class="galeria">
+				<section class="galeria">
 					<div class="captiongaleria">Intestino grueso - ano</div>
 					
 					<div class="numbertext">Imagen <span id="numer26">1</span></div><!--iba dentro de MySlides-->
@@ -1339,7 +1356,7 @@
 					
 				</section>
 				
-				<section id="galeria27" class="galeria">
+				<section class="galeria">
 					<div class="captiongaleria">Ganglio mesentérico</div>
 					
 					<div class="numbertext">Imagen <span id="numer27">1</span></div><!--iba dentro de MySlides-->
@@ -1401,7 +1418,7 @@
 					
 				</section>
 				
-				<section id="galeria28" class="galeria">
+				<section class="galeria">
 					<div class="captiongaleria">Divertículo</div>
 					
 					<div class="numbertext">Imagen <span id="numer28">1</span></div><!--iba dentro de MySlides-->
@@ -1437,7 +1454,7 @@
 			
 			<p>La apariencia histológica del hígado es característica, el parénquima formado por los hepatocitos se ve organizado en lobulillos hepáticos de forma hexagonal bien delimitados por la presencia de tejido conectivo, en los vértices se observan los espacios porta (conducto biliar, conducto linfático, arteria y vena hepática). El estroma formado por las trabéculas de tejido conectivo de la cápsula, delimita los lobulillos y abunda, en los espacios porta se introduce finamente al interior del lobulillo para formar con fibras reticulares el soporte para las cadenas de hepatocitos orientados hacia la vena central del lobulillo. Entre las cadenas de hepatocitos corren sinusoides revestidos por endotelio discontinuo formado por células endoteliales y células retículo endoteliales con actividad fagocítica (macrófagos estrellados). Los sinusoides conducen la sangre hacia la vena central.</p>
 			
-				<section id="galeria29" class="galeria">
+				<section id="galeria7" class="galeria">
 					<div class="captiongaleria">Hígado</div>
 					
 					<div class="numbertext">Imagen <span id="numer29">1</span></div><!--iba dentro de MySlides-->
@@ -1534,7 +1551,7 @@
 			
 			<p>El estroma del páncreas lo forma tejido conectivo laxo que delimita la cápsula y las trabéculas que forman lobulillos. El parénquima que conforma los lobulillos está formado por dos tipos de glándulas (exocrino y endócrino). El tejido glandular exocrino está formado por células acinosas serosas con túbulos que se unen a los conductos pancreáticos. Las células acinosas son cónicas y presentan acidofilia y estriación por las mitocondrias hacia la base y en su borde apical son más claras. El tejido glandular endócrino está formado por los islotes pancreáticos son acúmulos celulares acordonados con abundante vascularización en el cual se localizan las células alfa, beta, <span class="versalita">c</span> y delta. Las más abundantes son las células beta productoras de insulina, las alfa producen glucágon, y las delta, somatostatina. Las células c son una fase de alguna de las células alfa o beta. En algunas razas de cerdos se ha descrito un mayor número de islotes en cerdos Landrace que en los Duroc. Semanas: 1, 3, 5, 7, 11, 13, 15, 17, 19, 21.</p>
 
-			<section id="galeria4" class="galeria">
+			<section id="galeria8" class="galeria">
 					<div class="captiongaleria">Páncreas</div>
 					
 					<div class="numbertext">Imagen <span id="numer4">1</span></div><!--iba dentro de MySlides-->
@@ -1622,7 +1639,7 @@
 			<p>El riñón presenta dos regiones claramente definidas, la zona cortical y la medular. En la corteza se localizan los glomérulos renales con su cápsula y aparato yuxtaglomerular; la porción contorneada de los túbulos proximales y la porción cortorneada de túbulos contorneados distales con las porciones ascendentes y descendentes de estos tubos, y las porciones del túbulo colector. En la porción medular, se observa la continuación de los túbulos renales proximales y distales con la nefrona o de retorno de estos túbulos. La unidad funcional es la nefrona, se encuentra constituida por el glomérulo, la cápsula renal y los túbulos contorneados: proximal y distal; el túbulo colector y el conector renal. El glomérulo consta de una red capilar revestida por una capa de células endoteliales, una región central formada por células mesangiales, células epiteliales que forman la cápsula glomerular.</p>
 				<p>Semanas: 0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21.</p>
 			
-			<section id="galeria3" class="galeria">
+			<section id="galeria9" class="galeria">
 				<div class="captiongaleria">Riñón</div>
 				<div class="numbertext">Imagen <span id="numer3">1</span></div>
 				<div class="slideFalsa" id="rinon-falsa">
@@ -1839,7 +1856,7 @@
 				  <a class="next" onclick="moverSlides3(1)">&#10095;</a>
 			</section>
 			
-				<section id="galeria30" class="galeria">
+				<section id="galeria10" class="galeria">
 				<div class="captiongaleria">Ureter</div>
 				<div class="numbertext">Imagen <span id="numer30">1</span></div>
 				<div class="slideFalsa" id="ureter-falsa">
@@ -1871,7 +1888,7 @@
 				<a class="next" onclick="moverSlides30(1)">&#10095;</a>
 				</section>
 					
-				<section id="galeria31" class="galeria">
+				<section id="galeria11" class="galeria">
 				<div class="captiongaleria">Uretra</div>
 					
 				<div class="numbertext">Imagen <span id="numer31">1</span></div>
@@ -1973,7 +1990,7 @@
 					
 				</section>
 					
-				<section id="galeria32" class="galeria">
+				<section id="galeria12" class="galeria">
 				<div class="captiongaleria">Vejiga</div>
 					
 				<div class="numbertext">Imagen <span id="numer32">1</span></div>
@@ -2038,7 +2055,7 @@
 			<p>Forman los labios de la vulva, glándulas sebáceas y tubulares, junto con depósitos de grasa, tejido elástico, una delgada capa de músculo liso, y la parte externa de piel y vasos sanguíneos, así como el clítoris ubicado en la comisura ventral, compuesto por tejido eréctil con abundantes terminaciones nerviosas.</p>
 				<p>Semana: 5.</p>
 			
-				<section id="galeriaxxxx" class="galeria">
+				<section id="galeria13" class="galeria">
 					<div class="captiongaleria">Vulva</div>
 					
 					<div class="numbertext">Imagen <span id="numerxxxxx">1</span></div><!--iba dentro de MySlides-->
@@ -2053,7 +2070,7 @@
 				<p>La vagina se compone de tres capas: mucosa, submucosa, muscular y adventicia, la mucosa presenta epitelio estratificado escamoso, por lo que tiene la posibilidad de cambiar de grosor o número de capas y tipo de células, dependiendo de la etapa del ciclo estral. La lámina propia-submucosa es vascularizada y su apariencia cambia con el efecto hormonal. La porción muscular se compone de dos capas: una capa de músculo liso grueso circular y otra longitudinal, esta última rica en vasos sanguíneos, células nerviosas y tejido conectivo laxo y compacto.</p>
 				<p>Semanas: 0, 3, 5, 7, 11, 13, 15, 17, 19, 21.</p>
 			
-			<section id="galeria5" class="galeria">
+			<section id="galeria14" class="galeria">
 				<div class="captiongaleria">Vagina</div>
 				<div class="numbertext">Imagen <span id="numer5">1</span></div>
 				<div class="slideFalsa" id="vagina-falsa">
@@ -2140,11 +2157,11 @@
 
 			</section>
 			
-				<div class="aviso">El siguiente tema, CÉRVIX, no aparece en la última versión del texto (28 mayo) ¿es correcto?</div>
+		
 			<h4 class="txt-izquierda">Cérvix</h4>
-			<p>Esta formado por tejido conectivo y músculo liso, el tejido conectico tiene constituyentes fibrosos formados por colágena, elastina y reticulina.</p>
+			<p>Esta formado por tejido conectivo y músculo liso, el tejido conectivo tiene constituyentes fibrosos formados por colágena, elastina y reticulina.</p>
 				
-				<section id="galeria33" class="galeria">
+				<section id="galeria15" class="galeria">
 				<div class="captiongaleria">Cérvix</div>
 				<div class="numbertext">Imagen <span id="numer33">1</span></div>
 				<div class="slideFalsa" id="cervix-falsa">
@@ -2186,7 +2203,7 @@
 			<h4 class="txt-izquierda">Útero</h4>
 				<p>El útero se compone de tres capas: mucosa (endometrio), muscular (miometrio) y serosa (perimetrio). El endometrio (mucosa) contiene un epitelio columnar simple, además de lámina propia que contiene glandular tubulares simples rodeadas de epitelio columnar estratificado, estas glándulas se encargan de producir la llamada leche uterina (histotrofo). El miometrio se compone a su vez de tres capas musculares: longitudinal externa, circular media y transversal externa. La histología de los cuernos uterinos es similar al resto del útero. El cérvix está formado por tejido conectivo y músculo liso. El tejido conectivo tiene constituyentes fibrosos formados por colágena, elastina y reticulina.</p>
 			
-			<section id="galeria34" class="galeria">
+			<section id="galeria16" class="galeria">
 				<div class="captiongaleria">Útero</div>
 				<div class="numbertext">Imagen <span id="numer34">1</span></div>
 				<div class="slideFalsa" id="utero-falsa">
@@ -2271,7 +2288,7 @@
 			<h4 class="txt-izquierda">Tuba uterina u oviducto</h4>
 			<p>La tuba uterina está conformada de tres capas histológicas: mucosa, muscular y serosa. La muscular comprende dos capas musculares lisas una circular y otra longitudinal, las cuales se contraen para facilitar el transporte de los gametos femenino y masculino, y ayudan al óvulo a desnudarse o prepararse para la fertilización. Mientras que la mucosa tiene una serie de pliegues (primarios, secundarios y terciarios), que tienen células epiteliales cilíndricas, ciliadas y no ciliadas.</p>
 			
-			<section id="galeria35" class="galeria">
+			<section id="galeria17" class="galeria">
 				<div class="captiongaleria">Tuba uterina u oviducto</div>
 				<div class="numbertext">Imagen <span id="numer35">1</span></div>
 				<div class="slideFalsa" id="oviducto-falsa">
@@ -2323,7 +2340,7 @@
 			<p>Posteriormente, las células de la granulosa se incrementan y se agrupan, generando espacios para lo que será el antro folicular mientras el ovocito permanece en sección conocida como cúmulo ovígero, rodeado de las células de la granulosa (ahora corona radiada) y se conocerá como folículo secundario. En la parte externa del folículo, también sufre modificaciones, ya que las células del estroma lo rodean y se conocen como células de la teca (interna y externa). El desarrollo folicular continua rápidamente para llegar al folículo terciario o vesicular, similar al secundario, pero con el antro folicular aumentado por líquido folicular, lo que provoca que el diámetro del folículo sea mayor y se proyecte a la superficie del ovario, para dar paso a la ovulación. Después de la ovulación se observan los cuerpos hemorrágicos que originarán los cuerpos lúteos.</p>
 				
 				
-				<section id="galeria36" class="galeria">
+				<section id="galeria18" class="galeria">
 				<div class="captiongaleria">Ovario</div>
 				<div class="numbertext">Imagen <span id="numer36">1</span></div>
 				<div class="slideFalsa" id="ovario-falsa">
@@ -2428,7 +2445,7 @@
 			<p>El parénquima testicular cambia a través de las diferentes semanas de desarrollo, durante las primeras semanas los túbulos seminíferos presentan pocas células en su lumen, a las 13 semanas el testículo está dividido en septos que convergen en el centro, dentro de los septos se encuentran los túbulos seminíferos sostenidos por tejido conectivo con abundantes capilares y endocrinocitos intersticiales secretores (Leydig), en el interior de los túbulos se observan diferentes tipos de células y células espermáticas en desarrollo. Los epiteliocitos sustentaculares (Sertoli) son células grandes que forman compatimentos en los que se desarrolla la espermiogénesis. Hacia el lumen se observan diferentes etapas de maduración de espermatocitos secundarios y espermatozoides. Los túbulos seminíferos desembocan en un túbulo seminífero recto. Al unirse varios, en conjunto, forman la red testicular o <i>rete testis</i>, atraviesan la túnica albugínea y terminan en el conducto epididimario.</p>
 					<p>Semanas: 0, 1, 3, 5, 7, 11, 13, 15, 17, 19, 21.</p>
 			
-			<section id="galeria6" class="galeria">
+			<section id="galeria19" class="galeria">
 				<div class="captiongaleria">Testículo</div>
 				<div class="numbertext">Imagen <span id="numer6">1</span></div>
 				<div class="slideFalsa" id="testiculo-falsa">
@@ -2485,7 +2502,7 @@
 			
 			<p>El epidídimo tiene fibras musculares y epitelio uniestratificado columnar. Los túbulos epididimarios presentan células pequeñas en la capa basal y columnares ciliadas grandes en la superficie, junto con microvellosidades. En los animales, a partir de las 13 semanas de edad se distinguen las siguientes regiones: cabeza, cuerpo y cola. En el lumen de la cola se observan abundantes espermatozoides. En las primeras porciones del epidídimo se observan espermatozoides con gota espermática.</p>
 			
-					<section id="galeria37" class="galeria">
+					<section id="galeria20" class="galeria">
 					<div class="captiongaleria">Epidídimo</div>
 					<div class="numbertext">Imagen <span id="numer37">1</span></div>
 					<div class="slideFalsa" id="epi-falsa">
@@ -2698,7 +2715,7 @@
 			<p>El pene es un órgano fibroelástico, con un cuerpo cavernoso y uno esponjoso. El cuerpo cavernoso está rodeado por tejido conectivo con trabéculas que contienen células musculares lisas, en la túnica interna se encuentran arteriolas helicoidales. Los espacios cavernosos y del cuerpo esponjoso están delimitados por endotelio. La uretra peneana se localiza dentro del cuerpo esponjoso, su mucosa presenta pliegues longitudinales cubiertos por epitelio transicional.</p>
 					<p>Semanas: 3, 5, 7, 11, 13, 15, 17, 19.</p>
 			
-			<section id="galeria14" class="galeria">
+			<section id="galeria21" class="galeria">
 				<div class="captiongaleria">Pene</div>
 				<div class="numbertext">Imagen <span id="numer14">1</span></div>
 				<div class="slideFalsa" id="pene-falsa">
@@ -2758,7 +2775,7 @@
 			<h4 class="txt-izquierda">Vesículas seminales</h4>
 			<p>La apariencia de las vesículas seminales varía con la edad, a partir de la semana 13 están cubiertas por una cápsula de tejido conectivo compacto con músculo liso que se extiende para formar lóbulos y lobulillos. Al interior, en la porción glandular, se constituyen por un túbulo contorneado con numerosos divertículos. El epitelio es seudoestratificado cilíndrico de citoplasma claro y abundante.</p>
 			
-			<section id="galeria38" class="galeria">
+			<section id="galeria22" class="galeria">
 						<div class="captiongaleria">Vesículas seminales</div>
 						<div class="numbertext">Imagen <span id="numer38">1</span></div>
 						<div class="slideFalsa" id="vesicula-falsa">
@@ -2846,7 +2863,7 @@
 			<p>A partir de la semana 13 de edad, los conductos colectores de las glándulas bulbouretrales tienen epitelio simple, cúbico y columnar. Los conductos interlobulillares tienen epitelio seudoestratificado columnar que al final se unen en el conducto bulbouretral revestido por epitelio de transición. La porción glandular es una simple columna con células de citoplasma claro que secretan moco. La capa muscular está presente en todas las etapas de desarrollo.</p>
 					<p>Semanas: 0, 1, 3, 7, 11, 13, 15, 17, 19, 21.</p>
 			
-			<section id="galeria8" class="galeria">
+			<section id="galeria23" class="galeria">
 				<div class="captiongaleria">Glándula bulbouretral</div>
 				<div class="numbertext">Imagen <span id="numer8">1</span></div>
 				<div class="slideFalsa" id="bulbo-falsa">
@@ -2931,7 +2948,7 @@
 			<p>La apariencia de la próstata cambia con la edad al alcanzar la pubertad (13 semanas). Antes de la pubertad solo se aprecian ductos con epitelio columnar simple sin estructura glandular. A partir de la semana 13 presenta una cápsula de tejido conectivo compacto irregular con fibras musculares lisas. La porción glandular tiene epitelio simple cilíndrico que consta de dos tipos de células: células con abundante aparato de Golgi y células con gránulos mucosos. Los conductos de secreción tienen epitelio columnar que se convierte en estratificado columnar en las porciones terminales.</p>
 					<p>Semanas: 0, 1, 3, 5, 7, 11, 13, 15, 17, 19, 21.</p>
 			
-			<section id="galeria9" class="galeria">
+			<section id="galeria24" class="galeria">
 				<div class="captiongaleria">Próstata</div>
 				<div class="numbertext">Imagen <span id="numer9">1</span></div>
 				<div class="slideFalsa" id="prostata-falsa">
@@ -3079,7 +3096,7 @@
 			<p>La tiroides es una glándula con cápsula y trabéculas de tejido conectivo. Su parénquima está formado por folículos tiroideos con epitelio cúbico simple secretor, que rodean la periferia del folículo de diferentes tamaños que contienen un coloide tiroideo.</p>
 				<p>Semana: 0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21.</p>
 			
-			<section id="galeria7" class="galeria">
+			<section id="galeria25" class="galeria">
 				<div class="captiongaleria">Tiroides y paratiroides</div>
 				<div class="numbertext">Imagen <span id="numer7">1</span></div>
 				
@@ -3193,7 +3210,7 @@
 				<p>Semanas: 0, 1, 3, 5, 7, 13, 15, 17, 21.</p>
 			
 				
-				<section id="galeria10" class="galeria">
+				<section id="galeria26" class="galeria">
 				<div class="captiongaleria">Adrenales</div>
 				<div class="numbertext">Imagen <span id="numer10">1</span></div>
 					
@@ -3293,7 +3310,7 @@
 			<p>El bazo es una cápsula de tejido conectivo fibroso con fibras elásticas y musculares lisas, y está rodeado de mesotelio. Hay trabéculas que se distribuyen hacia el interior, por la cápsula y las trabéculas transitan arterias. El parénquima se compone de pulpa roja y blanca, la blanca es tejido linfoide que se agrega en nódulos periarteriolares y, alrededor de las trabéculas que en corte transversal muestran la arteria linfonodular (mal llamada central), también se aprecia tejido linfoide disperso por el estroma, la pulpa roja corresponde a sangre y tejido hematopoyético, donde se ven abundantes eritrocitos, megacariocitos, entre otros tipos celulares.</p>
 					<p>Semanas: 0, 1, 3, 5, 7, 11, 13, 15, 17, 21.</p>
 			
-			<section id="galeria11" class="galeria">
+			<section id="galeria27" class="galeria">
 				<div class="captiongaleria">Bazo</div>
 				<div class="numbertext">Imagen <span id="numer11">1</span></div>
 				
@@ -3394,7 +3411,7 @@
 			<p>El timo es un órgano lobulado con cápsula de tejido conectivo laxo que se divide de forma incompleta en lóbulos. Presenta corteza y médula, la corteza contiene abundantes linfocitos pequeños (timocitos) que descansan sobre el estroma de epiteliocitos reticulares y fibras reticulares que se intercalan con los capilares sanguíneos formando una barrera hemotímica. La médula se caracteriza por contener abundantes linfocitos, pero dispersos, lo cual permite ver a los epiteliocitos reticulares. En la médula se aprecian los corpúsculos tímicos, estructuras hialinas acidófilas, formadas por epiteliocitos reticulares en diferentes fases de degeneración.</p>
 					<p>Semanas: 0, 1, 3, 5.</p>
 			
-			<section id="galeria12" class="galeria">
+			<section id="galeria28" class="galeria">
 				<div class="captiongaleria">Timo</div>
 				<div class="numbertext">Imagen <span id="numer12">1</span></div>
 				<div class="slideFalsa" id="timo-falsa">
@@ -3451,7 +3468,7 @@
 			<h4 class="txt-izquierda">Piel</h4>
 			<p>La epidermis es un tejido epitelial estratificado cornificado, su capa basal (la más profunda) contiene células en constante división, le sigue el estrato espinoso: varias capas de células cuboidales con núcleo oscuro o picnosis unidas por desmosomas. Le sigue el estrato granular, de 3 a 5 capas de células con gránulos acidófilos y, al último o externo, se llama estrato córneo, también varias capas de células muertas anucleadas que contienen queratina.</p>
 				
-				<section id="galeria39" class="galeria">
+				<section id="galeria29" class="galeria">
 						<div class="captiongaleria">Piel</div>
 						<div class="numbertext">Imagen <span id="numer39">1</span></div>
 						<div class="slideFalsa" id="piel-falsa">
@@ -3547,7 +3564,8 @@
 			<h4 class="txt-izquierda">Músculo</h4>
 			<p>Las secciones de músculo esquelético contienen fibrocélulas alargadas (miofibrillas) con extremos romos, presentan estrías transversales y multinucleadas en posición periférica. Las secciones transversales muestran paquetes o fascículos de miofibrillas con sus núcleos periféricos. No se observan diferencias histológicas entre los músculos: región dorsal (lomo) y pierna.</p>
 			<p>Región dorsal (lomo) [semanas]: 0, 1, 3, 5, 7, 11, 13, 15, 17, 19, 21.</p>
-			<section id="galeria13" class="galeria">
+			
+					<section id="galeria30" class="galeria">
 				<div class="captiongaleria">Lomo</div>
 				<div class="numbertext">Imagen <span id="numer13">1</span></div>
 				<div class="slideFalsa" id="lomo-falsa">
@@ -3644,7 +3662,8 @@
 			</section>
 			
 					<p>Pierna [semanas]: 0, 1, 3, 7, 11, 13, 15, 17, 19, 21.</p>
-			<section id="galeria17" class="galeria">
+			
+					<section id="galeria31" class="galeria">
 				<div class="captiongaleria">Pierna</div>
 				<div class="numbertext">Imagen <span id="numer17">1</span></div>
 				<div class="slideFalsa" id="pierna-falsa">
@@ -3722,7 +3741,7 @@
 					<p>Semanas: 0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21.</p>
 			
 			
-			<section id="galeria15" class="galeria">
+			<section id="galeria32" class="galeria">
 				<div class="captiongaleria">Tráquea</div>
 				<div class="numbertext">Imagen <span id="numer15">1</span></div>
 				<div class="slideFalsa" id="traquea-falsa">
@@ -3818,7 +3837,7 @@
 			<p>El pulmón se conforma de un parénquima formado por sáculos alveolares rodeados por redes capilares, bronquiolos y bronquios. Los alvéolos están separados por tabiques o septos interalveolares. Los bronquios presentan epitelio columnar pseudoestratificado con exocrinocitos mucosos. La lámina propia submucosa de tejido conectivo laxo continua con segmentos de cartílago hialino y fibras musculares lisas, el resto se rodea de tejido conectivo laxo y parénquima pulmonar. El epitelio que reviste a los alvéolos está formado por dos tipos celulares, conocidos como neumocitos tipo <strong>I</strong> (células planas), células de revestimiento e intercambio gaseoso y neumocitos tipo <strong>II</strong> (células alveolares o granulares), células secretoras de material surfactante.</p>
 					<p>Semanas: 0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21.</p>
 				
-					<section id="galeria40" class="galeria">
+					<section id="galeria33" class="galeria">
 				<div class="captiongaleria">Pulmón</div>
 				<div class="numbertext">Imagen <span id="numer40">1</span></div>
 				<div class="slideFalsa" id="pulmon-falsa">
@@ -3936,7 +3955,7 @@
 			<p>En el ojo, el cuerpo ciliar, el iris y la coroides forman a la úvea o túnica vascular. Principalmente, es tejido conectivo laxo altamente vascularizado. El iris separa a la cámara anterior de la posterior, se une al cuerpo ciliar; en la parte central se ubica la pupila, que cuenta con un esfínter con músculo liso inervado por fibras parasimpáticas. La lente se sitúa atrás de la pupila, tiene una cápsula de lámina basal con epitelio de células cuboidales proteicas, que en conjunto son fibras. El cuerpo vítreo es una masa gelatinosa formada por una solución acuosa de colágeno tipos <strong>I</strong> y <strong>IV</strong>, y de hialuronato y células dispersas denominadas hialocitos. La retina es la más profunda, es una capa neuronal formada por neuronas fotorreceptoras y de otras neuronas que envían información a través del nervio óptico al encéfalo.</p>
 					<p>Semanas: 0, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21.</p>
 			
-			<section id="galeria16" class="galeria">
+			<section id="galeria34" class="galeria">
 				<div class="captiongaleria">Ojo</div>
 				<div class="numbertext">Imagen <span id="numer16">1</span></div>
 				<div class="slideFalsa" id="ojo-falsa">
@@ -4064,39 +4083,39 @@
 			
 			<ol>
 				<li><a onClick="irGaleria1()">Cerebro</a></li>
-				<li><a >Cerebelo</a></li>
-				<li><a onClick="irGaleria2()">Corazón</a></li>
-				<li><a >Lengua</a></li>
-				<li><a >Esófago</a></li>
-				<li><a >Estómago</a></li>
-				<li><a >Intestino delgado</a></li>
-				<li><a >Intestino grueso</a></li>
-				<li><a >Hígado</a></li>
-				<li><a onClick="irGaleria4()">Páncreas</a></li>
-				<li><a onClick="irGaleria3()">Riñón</a></li>
-				<li><a >Vejiga</a></li>
-				<li><a >Ovario</a></li>
-				<li><a >Oviducto</a></li>
-				<li><a >Útero</a></li>
-				<li><a onClick="irGaleria5()">Vagina</a></li>
-				<li><a >Vulva</a></li>
-				<li><a onClick="irGaleria6()">Testículo</a></li>
-				<li><a >Epidídimo</a></li>
-				<li><a onClick="irGaleria14()">Pene</a></li>
-				<li><a >Vesículas seminales</a></li>
-				<li><a onClick="irGaleria8()">Glándulas bulbouretrales</a></li>
-				<li><a onClick="irGaleria9()">Próstata</a></li>
-				<li><a onClick="irGaleria7()">Tiroides</a></li>
-				<li><a >Hipófisis</a></li>
-				<li><a onClick="irGaleria10()">Adrenales</a></li>
-				<li><a onClick="irGaleria11()">Bazo</a></li>
-				<li><a onClick="irGaleria12()">Timo</a></li>
-				<li><a >Piel</a></li>
-				<li><a onClick="irGaleria13()">Lomo</a></li>
-				<li><a >Pierna</a></li>
-				<li><a onClick="irGaleria15()">Tráquea</a></li>
-				<li><a >Pulmón</a></li>
-				<li><a onClick="irGaleria16()">Ojo</a></li>
+				<li><a onClick="irGaleria2()">Cerebelo</a></li>
+				<li><a onClick="irGaleria3()">Corazón</a></li>
+				<li><a onClick="irGaleria4()">Lengua</a></li>
+				<li><a onClick="irGaleria5()">Esófago</a></li>
+				<li><a onClick="irGaleria6()">Intestino grueso</a></li>
+				<li><a onClick="irGaleria7()">Hígado</a></li>
+				<li><a onClick="irGaleria8()">Páncreas</a></li>
+				<li><a onClick="irGaleria9()">Riñón</a></li>
+				<li><a onClick="irGaleria10()">Uréter</a></li>
+				<li><a  onClick="irGaleria11()">Uretra</a></li>
+				<li><a  onClick="irGaleria12()">Vejiga</a></li>
+				<li><a  onClick="irGaleria13()">Vulva</a></li>
+				<li><a onClick="irGaleria14()">Vagina</a></li>
+				<li><a  onClick="irGaleria15()">Cérvix</a></li>
+				<li><a onClick="irGaleria16()">Útero</a></li>
+				<li><a onClick="irGaleria17()">Tuba uterina u oviducto</a></li>
+				<li><a onClick="irGaleria18()">Ovario</a></li>
+				<li><a onClick="irGaleria19()">Testículo</a></li>
+				<li><a onClick="irGaleria20()">Epidídimo</a></li>
+				<li><a onClick="irGaleria21()">Pene</a></li>
+				<li><a onClick="irGaleria22()">Vesículas seminales</a></li>
+				<li><a onClick="irGaleria23()">Glándulas bulbouretrales</a></li>
+				<li><a onClick="irGaleria24()">Próstata</a></li>
+				<li><a onClick="irGaleria25()">Tiroides y paratiroides</a></li>
+				<li><a onClick="irGaleria26()">Adrenales</a></li>
+				<li><a onClick="irGaleria27()">Bazo</a></li>
+				<li><a onClick="irGaleria28()">Timo</a></li>
+				<li><a onClick="irGaleria29()">Piel</a></li>
+				<li><a onClick="irGaleria30()">Lomo</a></li>
+				<li><a onClick="irGaleria31()">Pierna</a></li>
+				<li><a onClick="irGaleria32()">Tráquea</a></li>
+				<li><a onClick="irGaleria33()">Pulmón</a></li>
+				<li><a onClick="irGaleria34()">Ojo</a></li>
 			
 			</ol>
 			

@@ -127,7 +127,7 @@ span.versalita {
 }
 
 
-.textos section > p, .DiaSegmento section > p, div.panelObj p /* antes de poner sections tenías el Child >p*/ {
+.textos section.granTema > p, .textos section.Tema > p, .DiaSegmento section > p, div.panelObj p /* antes de poner sections tenías el Child >p*/ {
 	hyphens: auto;
 	-webkit-hyphens: auto;
 	-ms-hyphens: auto;

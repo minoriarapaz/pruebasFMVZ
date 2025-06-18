@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"animacion_pig_atlas_1", frames: [[828,1317,690,402],[974,0,744,402],[0,974,1650,341],[0,1818,1057,104],[974,404,825,231],[974,637,500,200],[0,0,972,972],[0,1317,826,499]]}
+		{name:"anatomia_animacion_atlas_1", frames: [[746,1317,690,402],[0,1317,744,402],[0,974,1650,341],[974,501,1057,315],[1438,1317,425,425],[1652,818,378,425],[0,0,972,972],[974,0,826,499]]}
 ];
 
 
@@ -27,57 +27,57 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_5 = function() {
-	this.initialize(ss["animacion_pig_atlas_1"]);
+(lib.CachedBmp_4 = function() {
+	this.initialize(ss["anatomia_animacion_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_4 = function() {
-	this.initialize(ss["animacion_pig_atlas_1"]);
+(lib.CachedBmp_3 = function() {
+	this.initialize(ss["anatomia_animacion_atlas_1"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_3 = function() {
-	this.initialize(ss["animacion_pig_atlas_1"]);
+(lib.CachedBmp_2 = function() {
+	this.initialize(ss["anatomia_animacion_atlas_1"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_2 = function() {
-	this.initialize(ss["animacion_pig_atlas_1"]);
+(lib.CachedBmp_1 = function() {
+	this.initialize(ss["anatomia_animacion_atlas_1"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_1 = function() {
-	this.initialize(ss["animacion_pig_atlas_1"]);
+(lib.escudoFMVZ100dpi = function() {
+	this.initialize(ss["anatomia_animacion_atlas_1"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.escudos100dpi = function() {
-	this.initialize(ss["animacion_pig_atlas_1"]);
+(lib.escudoUNAM100dpi = function() {
+	this.initialize(ss["anatomia_animacion_atlas_1"]);
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.marconegro100 = function() {
-	this.initialize(ss["animacion_pig_atlas_1"]);
+	this.initialize(ss["anatomia_animacion_atlas_1"]);
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.titulo = function() {
-	this.initialize(ss["animacion_pig_atlas_1"]);
+	this.initialize(ss["anatomia_animacion_atlas_1"]);
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
@@ -133,7 +133,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_4();
+	this.instance = new lib.CachedBmp_3();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -155,7 +155,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.CachedBmp_3();
+	this.instance = new lib.CachedBmp_2();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1601,7 +1601,7 @@ if (reversed == null) { reversed = false; }
 	// Capa_2 (mask)
 	var mask = new cjs.Shape();
 	mask._off = true;
-	mask.graphics.p("EghgAEiIAApDMAvYAAAIAAC6ICCAAIAAi6IRnAAIAAJDg");
+	mask.graphics.p("EghgAEiIAApDMBDBAAAIAAJDg");
 	mask.setTransform(203.5,128.05);
 
 	// Capa_1
@@ -1658,17 +1658,20 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Capa_1
-	this.instance = new lib.escudos100dpi();
-	this.instance.setTransform(114,5,0.6,0.6);
+	this.instance = new lib.escudoUNAM100dpi();
+	this.instance.setTransform(-28,60,0.23,0.23);
 
-	this.instance_1 = new lib.CachedBmp_2();
-	this.instance_1.setTransform(0,141,0.5,0.5);
+	this.instance_1 = new lib.escudoFMVZ100dpi();
+	this.instance_1.setTransform(462,60,0.22,0.22);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
+	this.instance_2 = new lib.CachedBmp_1();
+	this.instance_2.setTransform(0,33.05,0.5,0.5);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.autorayescudos, new cjs.Rectangle(0,5,528.5,188), null);
+}).prototype = getMCSymbolPrototype(lib.autorayescudos, new cjs.Rectangle(-28,33.1,583.5,157.5), null);
 
 
 (lib.anatomia = function(mode,startPosition,loop,reversed) {
@@ -1682,15 +1685,27 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	// FlashAICB
-	this.instance = new lib.CachedBmp_1();
-	this.instance.setTransform(0.85,-0.65,0.5,0.5);
+	// Capa_2 (mask)
+	var mask = new cjs.Shape();
+	mask._off = true;
+	mask.graphics.p("EghWAIrIAAxVMBCtAAAIAARVg");
+	mask.setTransform(207.5,45.55);
+
+	// Capa_1
+	this.instance = new lib.titulo();
+	this.instance.setTransform(0,0,0.5,0.5);
+
+	var maskedShapeInstanceList = [this.instance];
+
+	for(var shapedInstanceItr = 0; shapedInstanceItr < maskedShapeInstanceList.length; shapedInstanceItr++) {
+		maskedShapeInstanceList[shapedInstanceItr].mask = mask;
+	}
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.anatomia, new cjs.Rectangle(0.9,-0.6,412.5,115.5), null);
+}).prototype = getMCSymbolPrototype(lib.anatomia, new cjs.Rectangle(0,0,413,101.1), null);
 
 
 (lib.secuenciaanimadaredux = function(mode,startPosition,loop,reversed) {
@@ -1894,7 +1909,7 @@ if (reversed == null) { reversed = false; }
 	this.shape_42.graphics.f("#FFFFFF").s().p("AsjMwQiNgbh/g7Qhkgvg5gxQgmghgygaIhTgqQgwgZgkgeQgvgogsg+QiEixgQjGQgJhnAch4QAMg1AihJQAehAAdgtQAOgUA7glQA9gmBPgkQDGhcB8AAQBgAADvAnICrAaQBXAMAuAAQBkAADrgxQDgguA+gcQBEggBdgaQBzggCBgQQB8gQBlBAQAnAYAbAfQAYAbAIAWQAygDA9AoQANAJAhAZQAbAVAPAIQAeAEB1AwIBwAwIDHAEQAFgEALAAIADACQAGgKAQAAIABABQAGgGAKgBQAFgDAHgBQAGgDAJAAQAhATAQBTQAIAqACAmIgLAAIAAACIgGAAIgEACQgGADgEAGIAAAAIgBACQhMCXjZBlQhNAkhlAfIiUAsQiNCnjoB+QiZBUh1AiQg2APhWAqIlXCuQkGCHkSAAQhrAAhtgUg");
 	this.shape_42.setTransform(199.4997,83.639);
 
-	this.instance_1 = new lib.CachedBmp_5();
+	this.instance_1 = new lib.CachedBmp_4();
 	this.instance_1.setTransform(26.95,0,0.5,0.5);
 
 	this.shape_43 = new cjs.Shape();
@@ -2822,9 +2837,9 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	this.actionFrames = [134];
+	this.actionFrames = [114];
 	// timeline functions:
-	this.frame_134 = function() {
+	this.frame_114 = function() {
 		this.stop();
 		
 		this.aPortada.addEventListener("click", iniciar.bind(this));
@@ -2838,60 +2853,55 @@ if (reversed == null) { reversed = false; }
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).wait(134).call(this.frame_134).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).wait(114).call(this.frame_114).wait(1));
 
-	// acciones
+	// btn
+	this.instance = new lib.marconegro100();
+	this.instance.setTransform(0,0,0.7202,0.7202);
+
 	this.aPortada = new lib.botontrans();
 	this.aPortada.name = "aPortada";
 	this.aPortada.setTransform(349.25,258.55,1,1,0,0,0,249.6,167.3);
-	this.aPortada._off = true;
 	new cjs.ButtonHelper(this.aPortada, 0, 1, 2, false, new lib.botontrans(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.aPortada).wait(134).to({_off:false},0).wait(1));
-
-	// escudos
-	this.instance = new lib.autorayescudos();
-	this.instance.setTransform(349.95,551.15,1,1,0,0,0,264.1,101.6);
-	this.instance.alpha = 0;
-	this.instance._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(109).to({_off:false},0).to({alpha:1},5).wait(21));
-
-	// bordes_negros
-	this.instance_1 = new lib.marconegro100();
-	this.instance_1.setTransform(0,0,0.7202,0.7202);
-	this.instance_1._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(83).to({_off:false},0).wait(52));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance},{t:this.aPortada}]},114).wait(1));
 
 	// titulo
-	this.instance_2 = new lib.titulocompleto();
-	this.instance_2.setTransform(349.5,249.8,1,1,0,0,0,206.5,124.8);
-	this.instance_2.alpha = 0;
-	this.instance_2._off = true;
+	this.instance_1 = new lib.titulocompleto();
+	this.instance_1.setTransform(349.5,249.8,1,1,0,0,0,206.5,124.8);
+	this.instance_1.alpha = 0;
+	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(109).to({_off:false},0).to({alpha:1},8).wait(18));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(109).to({_off:false},0).to({alpha:1},5).wait(1));
 
 	// animacionreduc
-	this.instance_3 = new lib.secuenciaanimadaredux();
-	this.instance_3.setTransform(350,350,0.3871,0.3871,0,0,0,186,100.5);
+	this.instance_2 = new lib.secuenciaanimadaredux();
+	this.instance_2.setTransform(350,350,0.3871,0.3871,0,0,0,186,100.5);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).to({scaleX:1,scaleY:1},59,cjs.Ease.cubicInOut).wait(10).to({regX:186.5,regY:100.7,scaleX:0.425,scaleY:0.425,x:274.15,y:331.95},44,cjs.Ease.cubicInOut).to({_off:true},4).wait(18));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).to({scaleX:1,scaleY:1},59,cjs.Ease.cubicInOut).wait(10).to({regX:186.5,regY:100.7,scaleX:0.425,scaleY:0.425,x:274.15,y:331.95},44,cjs.Ease.cubicInOut).to({_off:true},1).wait(1));
+
+	// escud_autor
+	this.instance_3 = new lib.autorayescudos();
+	this.instance_3.setTransform(349.95,551.15,1,1,0,0,0,264.1,101.6);
+	this.instance_3.alpha = 0;
+	this.instance_3._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(109).to({_off:false},0).to({y:522.6,alpha:1},5).wait(1));
 
 	// pig1
 	this.instance_4 = new lib.pig();
 	this.instance_4.setTransform(349.05,331.9,0.4999,0.4999,0,0,0,412.2,85.4);
 	this.instance_4._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(117).to({_off:false},0).wait(18));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(114).to({_off:false},0).wait(1));
 
-	// histologia
+	// anatomia
 	this.instance_5 = new lib.anatomia();
-	this.instance_5.setTransform(348.5,499.3,1,1,0,0,0,206.5,124.8);
+	this.instance_5.setTransform(349.5,499.3,1,1,0,0,0,206.5,124.8);
 	this.instance_5.alpha = 0;
 	this.instance_5._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(83).to({_off:false},0).to({y:249.8,alpha:1},21,cjs.Ease.cubicOut).wait(12).to({alpha:0},9).wait(10));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(83).to({_off:false},0).to({y:249.8,alpha:1},21,cjs.Ease.cubicOut).wait(11));
 
 	// del_cerdo
 	this.instance_6 = new lib.delcerdominuatura();
@@ -2899,7 +2909,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_6.alpha = 0;
 	this.instance_6._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(93).to({_off:false},0).to({y:249.8,alpha:1},15,cjs.Ease.cubicOut).wait(27));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(93).to({_off:false},0).to({y:249.8,alpha:1},15,cjs.Ease.cubicOut).wait(7));
 
 	// en_crc_imiento
 	this.instance_7 = new lib.en_crecimientp();
@@ -2907,20 +2917,20 @@ if (reversed == null) { reversed = false; }
 	this.instance_7.alpha = 0;
 	this.instance_7._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(98).to({_off:false},0).to({y:249.8,alpha:1},16,cjs.Ease.cubicOut).wait(21));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(98).to({_off:false},0).to({y:249.8,alpha:1},16,cjs.Ease.cubicOut).wait(1));
 
 	// mask_dots
 	this.instance_8 = new lib.dotsmascara();
 	this.instance_8.setTransform(339.4,365.35,0.8999,0.8999,89.9951,0,0,-24.9,0);
 	this.instance_8._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(83).to({_off:false},0).wait(52));
+	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(83).to({_off:false},0).wait(32));
 
 	// negro
 	this.instance_9 = new lib.fondonegro();
 	this.instance_9.setTransform(350.1,350.1,1.0171,1.0171,0,0,0,350.1,350.1);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(94).to({regX:350,regY:350,x:350,y:350},0).wait(41));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(94).to({regX:350,regY:350,x:350,y:350},0).wait(21));
 
 	this._renderFirstFrame();
 
@@ -2932,10 +2942,10 @@ lib.properties = {
 	width: 700,
 	height: 700,
 	fps: 30,
-	color: "#999966",
+	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/animacion_pig_atlas_1.png", id:"animacion_pig_atlas_1"}
+		{src:"imagenes/anatomia_animacion_atlas_1.png", id:"anatomia_animacion_atlas_1"}
 	],
 	preloads: []
 };

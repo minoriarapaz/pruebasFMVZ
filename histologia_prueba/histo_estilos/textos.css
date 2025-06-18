@@ -82,7 +82,7 @@ section.Tema {
 	
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
-	scroll-margin-top: 300px;
+	scroll-margin-top: 250px;
 }
 .NoVisible {
 	opacity: 0;
@@ -126,7 +126,7 @@ span.versalita {
 }
 
 
-.textos section > p, .DiaSegmento section > p, div.panelObj p /* antes de poner sections tenías el Child >p*/ {
+.textos section.granTema > p, .textos section.Tema > p, .DiaSegmento section > p, div.panelObj p /* antes de poner sections tenías el Child >p*/ {
 	hyphens: auto;
 	-webkit-hyphens: auto;
 	-ms-hyphens: auto;

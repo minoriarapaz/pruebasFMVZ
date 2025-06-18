@@ -759,6 +759,31 @@ function irGaleria29() {
 		{top: (document.getElementById("galeria29").offsetTop), left: 0, }
 	);
 }
+function irGaleria30() {
+	window.scroll(
+		{top: (document.getElementById("galeria30").offsetTop), left: 0, }
+	);
+}
+function irGaleria31() {
+	window.scroll(
+		{top: (document.getElementById("galeria31").offsetTop), left: 0, }
+	);
+}
+function irGaleria32() {
+	window.scroll(
+		{top: (document.getElementById("galeria32").offsetTop), left: 0, }
+	);
+}
+function irGaleria33() {
+	window.scroll(
+		{top: (document.getElementById("galeria33").offsetTop), left: 0, }
+	);
+}
+function irGaleria34() {
+	window.scroll(
+		{top: (document.getElementById("galeria34").offsetTop), left: 0, }
+	);
+}
 /*==============********************* CARGA DE I F R A M E S ************************=======*/
 
 
