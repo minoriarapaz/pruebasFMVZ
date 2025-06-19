@@ -21,12 +21,12 @@ let slideIndex17 = 1;
 let slideIndex18 = 1;
 let slideIndex19 = 1;
 let slideIndex20 = 1;
-//let slideIndex21 = 1; ERA PARA ESTOMAGO, QUE NO EXISTE
+let slideIndex21 = 1;
 let slideIndex22 = 1;
 let slideIndex23 = 1;
 let slideIndex24 = 1;
 let slideIndex25 = 1;
-//let slideIndex26 = 1; ERA PARA ANO, que no necesita script,
+let slideIndex26 = 1;
 let slideIndex27 = 1;
 let slideIndex28 = 1;
 let slideIndex29 = 1;
@@ -35,12 +35,13 @@ let slideIndex31 = 1;
 let slideIndex32 = 1;
 let slideIndex33 = 1;
 let slideIndex34 = 1;
-let slideIndex35 = 1;
-let slideIndex36 = 1;
-let slideIndex37 = 1; //epididimo
-let slideIndex38 = 1;
-let slideIndex39 = 1;
-let slideIndex40 = 1;
+
+let slideIndexG1 = 1;
+let slideIndexG2 = 1;
+let slideIndexG3 = 1;
+let slideIndexG4 = 1;
+let slideIndexG5 = 1;
+
 
 
 // GALERIA 1 cerebelo
@@ -59,7 +60,7 @@ function mostrarSlides(N) {
   }
   slides[slideIndex-1].style.display = "block";
 	
-	document.getElementById("cerebelo-falsa").style.display="none";
+	document.getElementById("cerebro-falsa").style.display="none";
 	document.getElementById("numer1").innerHTML = slideIndex;
 }
 
@@ -86,7 +87,7 @@ function mostrarSlides2(N) {
 	}
 	slides[slideIndex2-1].style.display = "block";
 
-	document.getElementById("corazon-falsa").style.display="none";
+	document.getElementById("cerebelo-falsa").style.display="none";
 	document.getElementById("numer2").innerHTML = slideIndex2;
 }
 function openGaleria2(I) {
@@ -110,7 +111,7 @@ function mostrarSlides3(N) {
 		slides[w].style.display = "none";
 	}
 	slides[slideIndex3-1].style.display = "block";
-	document.getElementById("rinon-falsa").style.display="none";
+	document.getElementById("corazon-falsa").style.display="none";
 	document.getElementById("numer3").innerHTML = slideIndex3;
 }
 function openGaleria3(I) {
@@ -134,7 +135,7 @@ function mostrarSlides4(N) {
 		slides[w].style.display = "none";
 	}
 	slides[slideIndex4-1].style.display = "block";
-	document.getElementById("pancreas-falsa").style.display="none";
+	document.getElementById("lengua-falsa").style.display="none";
 	document.getElementById("numer4").innerHTML = slideIndex4;
 }
 function openGaleria4(I) {
@@ -159,7 +160,7 @@ function mostrarSlides5(N) {
 	}
 	slides[slideIndex5-1].style.display = "block";
 	document.getElementById("numer5").innerHTML = slideIndex5;
-	document.getElementById("vagina-falsa").style.display="none";
+	document.getElementById("esofago-falsa").style.display="none";
 }
 function openGaleria5(I) {
 	let G = document.getElementById("galeria5");
@@ -183,11 +184,136 @@ function mostrarSlides6(N) {
 	}
 	slides[slideIndex6-1].style.display = "block";
 
-	document.getElementById("testiculo-falsa").style.display="none";
+	document.getElementById("ciego-falsa").style.display="none";
 	document.getElementById("numer6").innerHTML = slideIndex6;
 }
 function openGaleria6(I) {
 	let G = document.getElementById("galeria6");
+	let Ima = G.getElementsByTagName("img");
+	let direccion = Ima[I].src;
+	window.open(direccion);
+}
+
+//funciones para galeria G1
+function moverSlidesG1(N) {
+  mostrarSlidesG1(slideIndexG1 += N);
+}
+function mostrarSlidesG1(N) {
+	let w;
+	const laGaleriaG1 = document.getElementById("galeriaG1");
+	let slides = laGaleriaG1.getElementsByClassName("mySlides");
+	if (N > slides.length) {slideIndexG1 = 1}
+	if (N < 1) {slideIndexG1 = slides.length}
+	for (w = 0; w < slides.length; w++) {
+		slides[w].style.display = "none";
+	}
+	slides[slideIndexG1-1].style.display = "block";
+
+	document.getElementById("colon-falsa").style.display="none";
+	document.getElementById("numerG1").innerHTML = slideIndexG1;
+}
+function openGaleriaG1(I) {
+	let G = document.getElementById("galeriaG1");
+	let Ima = G.getElementsByTagName("img");
+	let direccion = Ima[I].src;
+	window.open(direccion);
+}
+
+//funciones para galeria G2
+function moverSlidesG2(N) {
+  mostrarSlidesG2(slideIndexG2 += N);
+}
+function mostrarSlidesG2(N) {
+	let w;
+	const laGaleriaG2 = document.getElementById("galeriaG2");
+	let slides = laGaleriaG2.getElementsByClassName("mySlides");
+	if (N > slides.length) {slideIndexG2 = 1}
+	if (N < 1) {slideIndexG2 = slides.length}
+	for (w = 0; w < slides.length; w++) {
+		slides[w].style.display = "none";
+	}
+	slides[slideIndexG2-1].style.display = "block";
+
+	document.getElementById("recto-falsa").style.display="none";
+	document.getElementById("numerG2").innerHTML = slideIndexG2;
+}
+function openGaleriaG2(I) {
+	let G = document.getElementById("galeriaG2");
+	let Ima = G.getElementsByTagName("img");
+	let direccion = Ima[I].src;
+	window.open(direccion);
+}
+
+//funciones para galeria G3
+function moverSlidesG3(N) {
+  mostrarSlidesG3(slideIndexG3 += N);
+}
+function mostrarSlidesG3(N) {
+	let w;
+	const laGaleriaG3 = document.getElementById("galeriaG3");
+	let slides = laGaleriaG3.getElementsByClassName("mySlides");
+	if (N > slides.length) {slideIndexG3 = 1}
+	if (N < 1) {slideIndexG3 = slides.length}
+	for (w = 0; w < slides.length; w++) {
+		slides[w].style.display = "none";
+	}
+	slides[slideIndexG3-1].style.display = "block";
+
+	document.getElementById("ano-falsa").style.display="none";
+	document.getElementById("numerG3").innerHTML = slideIndexG3;
+}
+function openGaleriaG3(I) {
+	let G = document.getElementById("galeriaG3");
+	let Ima = G.getElementsByTagName("img");
+	let direccion = Ima[I].src;
+	window.open(direccion);
+}
+
+//funciones para galeria G4
+function moverSlidesG4(N) {
+  mostrarSlidesG4(slideIndexG4 += N);
+}
+function mostrarSlidesG4(N) {
+	let w;
+	const laGaleriaG4 = document.getElementById("galeriaG4");
+	let slides = laGaleriaG4.getElementsByClassName("mySlides");
+	if (N > slides.length) {slideIndexG4 = 1}
+	if (N < 1) {slideIndexG4 = slides.length}
+	for (w = 0; w < slides.length; w++) {
+		slides[w].style.display = "none";
+	}
+	slides[slideIndexG4-1].style.display = "block";
+
+	document.getElementById("mesenterico-falsa").style.display="none";
+	document.getElementById("numerG4").innerHTML = slideIndexG4;
+}
+function openGaleriaG4(I) {
+	let G = document.getElementById("galeriaG4");
+	let Ima = G.getElementsByTagName("img");
+	let direccion = Ima[I].src;
+	window.open(direccion);
+}
+
+//funciones para galeria G5
+function moverSlidesG5(N) {
+  mostrarSlidesG5(slideIndexG5 += N);
+}
+function mostrarSlidesG5(N) {
+	let w;
+	const laGaleriaG5 = document.getElementById("galeriaG5");
+	let slides = laGaleriaG5.getElementsByClassName("mySlides");
+	if (N > slides.length) {slideIndexG5 = 1}
+	if (N < 1) {slideIndexG5 = slides.length}
+	for (w = 0; w < slides.length; w++) {
+		slides[w].style.display = "none";
+	}
+	slides[slideIndexG5-1].style.display = "block";
+
+	document.getElementById("diverticulo-falsa").style.display="none";
+	document.getElementById("numerG5").innerHTML = slideIndexG5;
+}
+function openGaleriaG5(I) {
+	let G = document.getElementById("galeriaG5");
 	let Ima = G.getElementsByTagName("img");
 	let direccion = Ima[I].src;
 	window.open(direccion);
@@ -208,7 +334,7 @@ function mostrarSlides7(N) {
 	}
 	slides[slideIndex7-1].style.display = "block";
 
-	document.getElementById("tiroides-falsa").style.display="none";
+	document.getElementById("higado-falsa").style.display="none";
 	document.getElementById("numer7").innerHTML = slideIndex7;
 }
 function openGaleria7(I) {
@@ -233,7 +359,7 @@ function mostrarSlides8(N) {
 	}
 	slides[slideIndex8-1].style.display = "block";
 
-	document.getElementById("bulbo-falsa").style.display="none";
+	document.getElementById("pancreas-falsa").style.display="none";
 	document.getElementById("numer8").innerHTML = slideIndex8;
 }
 function openGaleria8(I) {
@@ -258,7 +384,7 @@ function mostrarSlides9(N) {
 	}
 	slides[slideIndex9-1].style.display = "block";
 
-	document.getElementById("prostata-falsa").style.display="none";
+	document.getElementById("rinon-falsa").style.display="none";
 	document.getElementById("numer9").innerHTML = slideIndex9;
 }
 function openGaleria9(I) {
@@ -283,7 +409,7 @@ function mostrarSlides10(N) {
 	}
 	slides[slideIndex10-1].style.display = "block";
 
-	document.getElementById("adrenal-falsa").style.display="none";
+	document.getElementById("ureter-falsa").style.display="none";
 	document.getElementById("numer10").innerHTML = slideIndex10;
 }
 function openGaleria10(I) {
@@ -308,7 +434,7 @@ function mostrarSlides11(N) {
 	}
 	slides[slideIndex11-1].style.display = "block";
 
-	document.getElementById("bazo-falsa").style.display="none";
+	document.getElementById("uretra-falsa").style.display="none";
 	document.getElementById("numer11").innerHTML = slideIndex11;
 }
 function openGaleria11(I) {
@@ -334,7 +460,7 @@ function mostrarSlides12(N) {
 	}
 	slides[slideIndex12-1].style.display = "block";
 
-	document.getElementById("timo-falsa").style.display="none";
+	document.getElementById("vejiga-falsa").style.display="none";
 	document.getElementById("numer12").innerHTML = slideIndex12;
 }
 function openGaleria12(I) {
@@ -359,7 +485,7 @@ function mostrarSlides13(N) {
 	}
 	slides[slideIndex13-1].style.display = "block";
 
-	document.getElementById("lomo-falsa").style.display="none";
+	document.getElementById("vulva-falsa").style.display="none";
 	document.getElementById("numer13").innerHTML = slideIndex13;
 }
 function openGaleria13(I) {
@@ -383,7 +509,7 @@ function mostrarSlides14(N) {
 		slides[w].style.display = "none";
 	}
 	slides[slideIndex14-1].style.display = "block";
-	document.getElementById("pene-falsa").style.display="none";
+	document.getElementById("vagina-falsa").style.display="none";
 	document.getElementById("numer14").innerHTML = slideIndex14;
 }
 function openGaleria14(I) {
@@ -408,7 +534,7 @@ function mostrarSlides15(N) {
 	}
 	slides[slideIndex15-1].style.display = "block";
 
-	document.getElementById("traquea-falsa").style.display="none";
+	document.getElementById("cervix-falsa").style.display="none";
 	document.getElementById("numer15").innerHTML = slideIndex15;
 }
 function openGaleria15(I) {
@@ -433,7 +559,7 @@ function mostrarSlides16(N) {
 	}
 	slides[slideIndex16-1].style.display = "block";
 
-	document.getElementById("ojo-falsa").style.display="none";
+	document.getElementById("utero-falsa").style.display="none";
 	document.getElementById("numer16").innerHTML = slideIndex16;
 }
 function openGaleria16(I) {
@@ -458,7 +584,7 @@ function mostrarSlides17(N) {
 	}
 	slides[slideIndex17-1].style.display = "block";
 
-	document.getElementById("pierna-falsa").style.display="none";
+	document.getElementById("tuba-falsa").style.display="none";
 	document.getElementById("numer17").innerHTML = slideIndex17;
 }
 function openGaleria17(I) {
@@ -483,7 +609,7 @@ function mostrarSlides18(N) {
 	}
 	slides[slideIndex18-1].style.display = "block";
 
-	document.getElementById("cerebro-falsa").style.display="none";
+	document.getElementById("ovario-falsa").style.display="none";
 	document.getElementById("numer18").innerHTML = slideIndex18;
 }
 function openGaleria18(I) {
@@ -508,7 +634,7 @@ function mostrarSlides19(N) {
 	}
 	slides[slideIndex19-1].style.display = "block";
 
-	document.getElementById("lengua-falsa").style.display="none";
+	document.getElementById("testiculo-falsa").style.display="none";
 	document.getElementById("numer19").innerHTML = slideIndex19;
 }
 function openGaleria19(I) {
@@ -533,7 +659,7 @@ function mostrarSlides20(N) {
 	}
 	slides[slideIndex20-1].style.display = "block";
 
-	document.getElementById("esofago-falsa").style.display="none";
+	document.getElementById("epididimo-falsa").style.display="none";
 	document.getElementById("numer20").innerHTML = slideIndex20;
 }
 function openGaleria20(I) {
@@ -543,8 +669,30 @@ function openGaleria20(I) {
 	window.open(direccion);
 }
 
-//funciones para galeria 21 NO EXISTE EL ESTOMAGO
+//funciones para galeria 21
+function moverSlides21(N) {
+  mostrarSlides21(slideIndex21 += N);
+}
+function mostrarSlides21(N) {
+	let w;
+	const laGaleria21 = document.getElementById("galeria21");
+	let slides = laGaleria21.getElementsByClassName("mySlides");
+	if (N > slides.length) {slideIndex21 = 1}
+	if (N < 1) {slideIndex21 = slides.length}
+	for (w = 0; w < slides.length; w++) {
+		slides[w].style.display = "none";
+	}
+	slides[slideIndex21-1].style.display = "block";
 
+	document.getElementById("pene-falsa").style.display="none";
+	document.getElementById("numer21").innerHTML = slideIndex21;
+}
+function openGaleria21(I) {
+	let G = document.getElementById("galeria21");
+	let Ima = G.getElementsByTagName("img");
+	let direccion = Ima[I].src;
+	window.open(direccion);
+}
 
 //funciones para galeria 22
 function moverSlides22(N) {
@@ -561,7 +709,7 @@ function mostrarSlides22(N) {
 	}
 	slides[slideIndex22-1].style.display = "block";
 
-	document.getElementById("delgado-falsa").style.display="none";
+	document.getElementById("vesiculas-falsa").style.display="none";
 	document.getElementById("numer22").innerHTML = slideIndex22;
 }
 function openGaleria22(I) {
@@ -590,7 +738,7 @@ function mostrarSlides23(N) {
 	}
 	slides[slideIndex23-1].style.display = "block";
 
-	document.getElementById("ciego-falsa").style.display="none";
+	document.getElementById("bulbo-falsa").style.display="none";
 	document.getElementById("numer23").innerHTML = slideIndex23;
 
 }
@@ -617,7 +765,7 @@ function mostrarSlides24(N) {
 	}
 	slides[slideIndex24-1].style.display = "block";
 
-	document.getElementById("colon-falsa").style.display="none";
+	document.getElementById("prostata-falsa").style.display="none";
 	document.getElementById("numer24").innerHTML = slideIndex24;
 
 }
@@ -643,7 +791,7 @@ function mostrarSlides25(N) {
 	}
 	slides[slideIndex25-1].style.display = "block";
 
-	document.getElementById("recto-falsa").style.display="none";
+	document.getElementById("tiroides-falsa").style.display="none";
 	document.getElementById("numer25").innerHTML = slideIndex25;
 
 }
@@ -654,7 +802,31 @@ function openGaleria25(I) {
 	window.open(direccion);
 }
 
-//la galeria 26 solo tiene una imagen
+//funciones para galeria 26
+function moverSlides26(N) {
+  mostrarSlides26(slideIndex26 += N);
+}
+function mostrarSlides26(N) {
+	let w;
+	const laGaleria26 = document.getElementById("galeria26");
+	let slides = laGaleria26.getElementsByClassName("mySlides");
+	if (N > slides.length) {slideIndex26 = 1}
+	if (N < 1) {slideIndex26 = slides.length}
+	for (w = 0; w < slides.length; w++) {
+		slides[w].style.display = "none";
+	}
+	slides[slideIndex26-1].style.display = "block";
+
+	document.getElementById("adrenal-falsa").style.display="none";
+	document.getElementById("numer26").innerHTML = slideIndex26;
+
+}
+function openGaleria26(I) {
+	let G = document.getElementById("galeria26");
+	let Ima = G.getElementsByTagName("img");
+	let direccion = Ima[I].src;
+	window.open(direccion);
+}
 
 //funciones para galeria 27
 function moverSlides27(N) {
@@ -671,7 +843,7 @@ function mostrarSlides27(N) {
 	}
 	slides[slideIndex27-1].style.display = "block";
 
-	document.getElementById("mesenterico-falsa").style.display="none";
+	document.getElementById("bazo-falsa").style.display="none";
 	document.getElementById("numer27").innerHTML = slideIndex27;
 
 }
@@ -698,7 +870,7 @@ function mostrarSlides28(N) {
 	}
 	slides[slideIndex28-1].style.display = "block";
 
-	document.getElementById("diverticulo-falsa").style.display="none";
+	document.getElementById("timo-falsa").style.display="none";
 	document.getElementById("numer28").innerHTML = slideIndex28;
 
 }
@@ -724,7 +896,7 @@ function mostrarSlides29(N) {
 	}
 	slides[slideIndex29-1].style.display = "block";
 
-	document.getElementById("higado-falsa").style.display="none";
+	document.getElementById("piel-falsa").style.display="none";
 	document.getElementById("numer29").innerHTML = slideIndex29;
 
 }
@@ -750,7 +922,7 @@ function mostrarSlides30(N) {
 	}
 	slides[slideIndex30-1].style.display = "block";
 
-	document.getElementById("ureter-falsa").style.display="none";
+	document.getElementById("lomo-falsa").style.display="none";
 	document.getElementById("numer30").innerHTML = slideIndex30;
 
 }
@@ -776,7 +948,7 @@ function mostrarSlides31(N) {
 	}
 	slides[slideIndex31-1].style.display = "block";
 
-	document.getElementById("uretra-falsa").style.display="none";
+	document.getElementById("pierna-falsa").style.display="none";
 	document.getElementById("numer31").innerHTML = slideIndex31;
 
 }
@@ -802,7 +974,7 @@ function mostrarSlides32(N) {
 	}
 	slides[slideIndex32-1].style.display = "block";
 
-	document.getElementById("vejiga-falsa").style.display="none";
+	document.getElementById("traquea-falsa").style.display="none";
 	document.getElementById("numer32").innerHTML = slideIndex32;
 
 }
@@ -828,7 +1000,7 @@ function mostrarSlides33(N) {
 	}
 	slides[slideIndex33-1].style.display = "block";
 
-	document.getElementById("cervix-falsa").style.display="none";
+	document.getElementById("pulmon-falsa").style.display="none";
 	document.getElementById("numer33").innerHTML = slideIndex33;
 
 }
@@ -854,7 +1026,7 @@ function mostrarSlides34(N) {
 	}
 	slides[slideIndex34-1].style.display = "block";
 
-	document.getElementById("utero-falsa").style.display="none";
+	document.getElementById("ojo-falsa").style.display="none";
 	document.getElementById("numer34").innerHTML = slideIndex34;
 
 }
