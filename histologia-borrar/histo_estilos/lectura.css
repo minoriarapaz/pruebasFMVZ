@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/* CSS Document */
+
+div.btnOjo {
+	display: none;
+	position: fixed;
+	top: 200px;
+	right: 30px;
+	width: 50px;
+	height: auto;
+	padding: 5px;
+	border-radius: 0 0 20px 20px;
+	cursor: pointer;
+	z-index: 2;
+}
+.btnFondoGris {
+	background-color: rgba(0,0,0,0.0);
+}
+.btnFondoBlanco {
+	background-color: rgba(255,255,255,0.40);
+}
+
+@media (max-width: 400px) {
+	div.btnOjo {
+		top: 140px; right: 0px;
+	}
+	.controles {
+		top: 140px;
+	}
+}
+
+div.btnOjo img {display: block;}
+img.imgBtn {
+	position: relative;
+	width: 40px;
+	margin: auto;
+	opacity: .8;
+}
+
+
+.controles {
+	display: flex; /*FLEX*/
+	position: fixed;
+	top: 10;/*-10*/
+	width: 100%;
+	height: 0px; /*60*/
+	overflow-y: hidden;
+	transition: 0.2s;
+	z-index: 2;
+}
+.control_sec {
+	position: relative;
+	display: block;
+	float: right;
+	/*flex-flow: row-reverse;*/
+	width: 24%;
+	height: auto;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	background-image: linear-gradient(lightseagreen, rgba(32, 178, 170, .8)/*rgb(0, 102, 102),rgb(0, 102, 102), rgba(0, 102, 102, .7)*/);
+}
+
+.izquierdo {
+	border-right: 1px solid ghostwhite;
+}
+#control_vacio {
+	width: 26%;
+	/*background-color: rgba(64,64,64,0.5);*/
+}
+@media (min-width: 800px) {
+	#control_vacio {
+		background-image: linear-gradient(transparent, transparent);
+	}
+}
+#control_vacio2 {
+	width: 26%;
+	background-image: linear-gradient(lightseagreen, rgba(32, 178, 170, .8));
+}
+
+@media (max-width: 700px) {
+	.control_sec {
+		width: 40%;
+	}
+	#control_vacio, #control_vacio2 {
+		width: 10%;
+	}
+}
+
+@media (max-width: 500px) {
+	.control_sec {
+		width: 50%;
+	}
+	#control_vacio, #control_vacio2 {
+		display: none;
+	}
+}
+
+
+
+button.boton_en_linea {
+	height: 35px;
+	min-width: 35px;
+	display: block;
+	float: right;
+	position: relative;
+	margin: 2px;
+	border-radius: 10px 0px 10px 10px;
+	border:4px solid transparent;
+	overflow: hidden;
+	box-shadow: 1px 3px 1px rgba(255, 255, 255, 0.2);
+	background-color: ghostwhite;
+}
+.bletraM {font-size: small;}
+.bletraG {font-size: 120%;}
+.bletraEG {font-size: x-large;}
+
+
+.botonbola {
+	border-radius: 50%;
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 28px;
+	height: 28px;
+	margin: 2px;
+	transition: background .4s;
+	cursor: pointer;
+	box-shadow: 1px 3px 1px rgba(255, 255, 255, 0.2);
+}
+.medio {background-color: bisque; border:4px solid transparent;}
+.claro {background-color: ghostwhite; border:4px solid transparent;}
+.oscuro {background-color: black; border:4px solid transparent;}
+button.defaul, div.defaul {border:4px solid slateblue;}
+
+
