@@ -11,7 +11,6 @@
 overflow debe ser HIDDEN */
 body {
 	overflow: hidden; /*siempre HIDEN*/
-	background-color: black;
 }
 #cerdito {
 	z-index: 4;
@@ -21,7 +20,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	
-	background-color: indianred;
+	background-color: black;
 }
 
 
