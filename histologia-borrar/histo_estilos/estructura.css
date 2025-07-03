@@ -19,10 +19,13 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+
 	background-color: black;
 }
-
+#cerdito iframe {
+	border-style: none;
+	width: 150px;
+}
 
 /*AGREGADO ABRIL 2025*/
 html {
