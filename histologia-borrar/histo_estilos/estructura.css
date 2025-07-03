@@ -20,7 +20,7 @@ body {
 	justify-content: center;
 	align-items: center;
 
-	background-color: black;
+	background-image: linear-gradient(lightseagreen 70%, rgb(27, 152, 145) 99%);
 }
 #cerdito iframe {
 	border-style: none;
