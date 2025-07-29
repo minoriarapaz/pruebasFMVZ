@@ -12,6 +12,8 @@ overflow debe ser HIDDEN */
 body {
 	overflow: hidden; /*siempre HIDEN*/
 }
+
+/*CARGADOR*/
 #cerdito {
 	z-index: 4;
 	position: relative;
@@ -26,6 +28,9 @@ body {
 	border-style: none;
 	width: 150px;
 	background-color: lightseagreen;
+}
+#percentage {
+	color: ghostwhite;
 }
 
 /*AGREGADO ABRIL 2025*/

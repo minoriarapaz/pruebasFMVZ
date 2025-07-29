@@ -28,7 +28,6 @@ function modalObj() {
 		}
 
 
-
 var L=1
 
 function cerrarBiblio() {
@@ -117,12 +116,34 @@ function irDirectorios() {
 
 		
 /*CARGADOR*/
-
+/*
 window.onload = function() {
 	$('#cerdito').fadeOut();
 }
+*/
 
 
+
+window.onload = function() {
+    const preloader = document.getElementById("cerdito"); 
+/*    const progress = document.getElementById("progress"); */
+    const percentageText = document.getElementById("percentage"); 
+ /*   const content = document.getElementById('content'); */
+ 
+    let percentage = 0; 
+ 
+    const interval = setInterval(() => { 
+        percentage += 10; // Increase percentage 
+        /*percentageText.textContent = percentage + "%";*/ // Update percentage text 
+		
+		percentageText.innerHTML =  percentage + "%";
+ 
+        if (percentage >= 100) { 
+            clearInterval(interval); 
+            preloader.style.display="none";// Hide preloader 
+        } 
+    }, 500); // Update every 500ms 
+}; 
 
 
 
