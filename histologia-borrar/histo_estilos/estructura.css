@@ -32,6 +32,16 @@ body {
 #percentage {
 	color: ghostwhite;
 }
+#barrita {
+	display: block;
+	position: relative;
+	width: 100px; 
+    height: 10px; 
+    background-color: ghostwhite; 
+    /*transition: width 0.2s;*/ 
+}
+
+/*FIN CARGADOR*/
 
 /*AGREGADO ABRIL 2025*/
 html {

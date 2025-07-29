@@ -133,12 +133,12 @@ window.onload = function() {
     let percentage = 0; 
  
     const interval = setInterval(() => { 
-        percentage += 10; // Increase percentage 
-        /*percentageText.textContent = percentage + "%";*/ // Update percentage text 
+        progreso += 10; // Increase percentage 
+        /*percentageText.textContent = progreso + "%";*/ // Update percentage text 
 		
-		percentageText.innerHTML =  percentage + "%";
+		percentageText.innerHTML =  progreso + "%";
  
-        if (percentage >= 100) { 
+        if (progreso >= 100) { 
             clearInterval(interval); 
             preloader.style.display="none";// Hide preloader 
         } 
