@@ -115,35 +115,10 @@ function irDirectorios() {
 
 
 		
-/*CARGADOR*/
-/*
+/*CARGADOR S I M P L E*/
 window.onload = function() {
 	$('#cerdito').fadeOut();
 }
-*/
-
-
-
-window.onload = function() {
-    const preloader = document.getElementById("cerdito"); 
-/*    const progress = document.getElementById("progress"); */
-    const percentageText = document.getElementById("percentage"); 
- /*   const content = document.getElementById('content'); */
- 
-    let percentage = 0; 
- 
-    const interval = setInterval(() => { 
-        progreso += 10; // Increase percentage 
-        /*percentageText.textContent = progreso + "%";*/ // Update percentage text 
-		
-		percentageText.innerHTML =  progreso + "%";
- 
-        if (progreso >= 100) { 
-            clearInterval(interval); 
-            preloader.style.display="none";// Hide preloader 
-        } 
-    }, 500); // Update every 500ms 
-}; 
 
 
 
