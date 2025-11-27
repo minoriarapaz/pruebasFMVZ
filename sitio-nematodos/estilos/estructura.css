@@ -28,8 +28,6 @@ main {
 	box-sizing: border-box;
 	margin-left: 250px;
 	width: 85%;
-	border-left: 5px solid dodgerblue;
-	border-right: 5px solid dodgerblue;
 	background-color: snow;
 }
 div.portadita {
@@ -60,7 +58,7 @@ section {
 section.Contenido {
 	position: relative;
 	width: 99%;
-	border: 3px solid red;
+	
 }
 
 
@@ -130,7 +128,7 @@ section.Textos .segmento {
 	section.Textos {
 		flex-wrap: wrap;
 		flex-direction: column;
-		border: 1px solid pink;
+		
 	}
 	section.Textos .segmento {
 		width: 100%;
