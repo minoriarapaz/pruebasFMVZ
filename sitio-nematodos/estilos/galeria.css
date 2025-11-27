@@ -155,4 +155,27 @@
 }
 
 
+@media (max-width: 800px) {
+	.Galeria-prev {
+		display: block;
+		position: relative;
+		width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 2em;
+		border-radius: 30px;
+		padding: 10px;
+		background-color: dodgerblue;/*rgba(30, 144, 255, 1)*/
+		-webkit-user-select: none; /* Safari */
+		-ms-user-select: none; /* IE 10 and IE 11 */
+		user-select: none;
+	}
+}
+
+@media (max-width: 400px) {
+	.Galeria-prev {
+		width: 93%;
+	}
+}
+
 

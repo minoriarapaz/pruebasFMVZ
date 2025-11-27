@@ -1,10 +1,10 @@
 <!doctype html>
-<html>
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <title>Nemátodos</title>
 		
-	
+<link rel="icon" type="image/x-icon" href="interfaz/icono-favicon.ico">	
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!--ESTILO Y JAVASCRIP-->
@@ -31,7 +31,7 @@
 
 <body>
 	<h1>Nematodos</h1>
-	<header>
+	<header id="cabecera">
 	  <div id="hamburguesa" onclick="verIndice()">
 			<div class="hamb1"></div>
 			<div class="hamb2"></div>
@@ -119,7 +119,7 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 			
 			
 			<section id="Introduccion">
-				<div class="portadita">
+				<div class="portadita" id="panel1">
 				Introducción
 				</div>
 				<div class="separaTemas"></div>
@@ -136,7 +136,7 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 			
 			<section id="Taxonomia">
 				
-				<div class="portadita">Más que la taxonomía</div>
+				<div class="portadita" id="panel2">Más que la taxonomía</div>
 				<div class="separaTemas"></div>
 				<h2>Más que la taxonomía</h2>
 				<p class="primerParrafo">
@@ -186,7 +186,7 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 			</section>
 			
 			<section id="Estructura">
-				<div class="portadita">Estructura de los nematodos</div>
+				<div class="portadita" id="panel3">Estructura de los nematodos</div>
 				<div class="separaTemas"></div>
 				<h2>Estructura de los nematodos</h2>
 				
@@ -200,11 +200,13 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 
 					</p>
 					
-					
 					<div class="Galeria-prev">
-					<p><small>Abrir figura interactiva 3</small></p>
-					<img onClick="verModal(1)" src="figuras/figura3-thumb.png" alt="muestra de galeria 1">
-					</div>
+					<p><small>Figura 3 (interactiva)</small></p>
+					<a onClick="verModal(1)">
+						<img src="figuras/figura3-thumb.png" alt="miniatura de las imagenes interactivas" aria-labelledby="imagen simple del conjunto de cinco imagenes interactivas">
+					</a>
+				</div>
+					
 				
 				</section><!--SUBTEMA-->
 			

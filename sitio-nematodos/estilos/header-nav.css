@@ -124,7 +124,6 @@ nav a span, ol small {color: dodgerblue;}
 @media (max-width: 1200px) {
 	header {
 		z-index: 4;
-		
 		display: flex;
 		flex-wrap: nowrap;
 		flex-direction: row;
