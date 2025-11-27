@@ -4,7 +4,7 @@
 .modalGaleria {
 	display: none; 
 	position: fixed; /* Stay in place */
-	z-index: 2; /* Sit on top */
+	z-index: 5; /* Sit on top */
 	padding-top: 30px; /* Location of the box */
 	left: 0;
 	top: 0;
@@ -23,13 +23,12 @@
 	margin: auto;
 	margin-bottom: 2em;
 	margin-top: 4em;
-	border: 1px dashed red;
 }
 .diapositiva, .diapoFalsa {
 	overflow: hidden;
 }
-.diapoFalsa {border: 3px solid pink;}
-.diapositiva {border: 3px solid gold; display: none;}
+.diapoFalsa {/*border: 3px solid pink;*/}
+.diapositiva {/*border: 3px solid gold;*/ display: none;}
 .diapositiva img, .diapoFalsa img,  .galeria div:first-child img /*la primera imagen -falsa- de galería*/ {
 	display:block;
 	/*max-width: 100%;*/
@@ -42,7 +41,7 @@
 	display: block;
 	min-height: 100px;
 	background-color: indianred;
-	border: 1px dashed pink;
+	/*border: 1px dashed pink;*/
 }
 .diapoFalsa p, .diapositiva p /*pie de foto individual*/ {
 	display: inline-block;
