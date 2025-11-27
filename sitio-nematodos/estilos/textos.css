@@ -31,7 +31,6 @@ section.Contenido > section > p, section.subtema > p {
 	margin-right: auto;
 	text-indent: 1em;
 	
-	border: 1px dotted blue;
 	width: 650px;
 	
 }

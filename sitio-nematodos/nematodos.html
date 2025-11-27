@@ -44,11 +44,11 @@
 		
 		<nav id="Indice">
 			<ul>
-				<li><a><!--<span>&bull;</span>-->Introducción</a></li>
-				<li><a>Más que la taxonomía</a></li>
+				<li><a onClick="irIntroduccion()">Introducción</a></li><!--<span>&bull;</span>-->
+				<li><a onClick="irTaxonomia()">Más que la taxonomía</a></li>
 				<li id="Indice3"><a onClick="Despliegue()">Estructura de los nematodos</a>
 					<ol class="index-especies" id="subIndice">
-						<li><small>1 </small>Generalidades</li>
+						<li><a onClick="irEstructura()"><small>1 </small>Generalidades</a></li>
 						<li><small>2 </small>Exoesqueleto y musculatura</li>
 						<li><small>3 </small>Pseudocele</li>
 						<li><small>4 </small>Tracto digestivo</li>
@@ -118,7 +118,7 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 					</div> <!--modal para galeria-->
 			
 			
-			<section>
+			<section id="Introduccion">
 				<div class="portadita">
 				Introducción
 				</div>
@@ -134,7 +134,7 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 				
 			</section>
 			
-			<section>
+			<section id="Taxonomia">
 				
 				<div class="portadita">Más que la taxonomía</div>
 				<div class="separaTemas"></div>
@@ -185,7 +185,7 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 		
 			</section>
 			
-			<section>
+			<section id="Estructura">
 				<div class="portadita">Estructura de los nematodos</div>
 				<div class="separaTemas"></div>
 				<h2>Estructura de los nematodos</h2>
@@ -195,6 +195,12 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 					<p class="primerParrafo">
 						En el ámbito biológico y médico, los helmintos se dividen en helmintos planos y helmintos redondos; en estos últimos están incluidos los nematodos por su estructura o morfología. Un ejemplo representativo es la hembra esférica, globosa, hinchada y saculada de las especies <i>Meloidogyne</i>,<a><sup>(19, 20)</sup></a> que parasita y lesiona disímiles vegetales y hortalizas como las preciadas variedades de plantas de chiles en México.<a><sup>(21)</sup></a>La gran mayoría de los nematodos son cilíndricos con punta; como diminutas agujas vivientes, esto es asombroso, un detalle fascinante que pocos notan <small>(Figuras 3A–B, 4 y 5)</small>. Con una porción anterior, donde se localiza la cápsula bucal <small>(Figuras 4a–b, 5a–b y 9a)</small> y una porción posterior o caudal, donde la mayoría tiene una cola estilizada <small>(Figura 4c)</small>. 
 					</p>
+					<p>
+					Esos que no entran en la mayoría, pueden tener una cola invaginada con una cola en punta oculta como en <i>Desportesius invaginatus</i>,<a><sup>(22)</sup></a> o en espiral, como la de estadios larvarios, las de algunas hembras y machos. También la cauda puede ser una membrana con rayos musculosos <small>(Figuras 4e, 5f y g, y 9b)</small>, que se asemeja a una cola de sirena o extensiones como brazos, presente en los vigorosos machos tipo estrongílido. El cuerpo de los nematodos es serpenteado, pero hay muchas variaciones, hay parásitos que están constantemente enrollados, como <i>Spirocerca lupi</i>, o por el contrario, como <i>Strongylus</i> spp., que están dispuestos como estacas o en palizadas rígidas.
+
+					</p>
+					
+					
 					<div class="Galeria-prev">
 					<p><small>Abrir figura interactiva 3</small></p>
 					<img onClick="verModal(1)" src="figuras/figura3-thumb.png" alt="muestra de galeria 1">

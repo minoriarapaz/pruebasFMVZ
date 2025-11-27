@@ -62,7 +62,6 @@ header > .titulo h1 {
 }
 
 nav {
-	
 	display: block;
 	width: 90%;
 	margin-left: auto;
@@ -100,7 +99,7 @@ nav ul > li > ol {
 	/*border-left: 1px dashed red;*/
 }
 nav ul > li > ol li {
-	margin-bottom: .5em;
+	margin-bottom: 1em;
 }
 
 
@@ -124,7 +123,7 @@ nav a span, ol small {color: dodgerblue;}
 /*RESPOSIVO 3 TAMAÑOS*/
 @media (max-width: 1200px) {
 	header {
-		z-index: 2;
+		z-index: 4;
 		
 		display: flex;
 		flex-wrap: nowrap;
@@ -147,15 +146,6 @@ nav a span, ol small {color: dodgerblue;}
 		margin-left: 0;
 		float: left;
 	}
-	header > .titulo h1 {
-		clear: left;
-		display: inline-block;
-		font-size: 1em;
-		font-weight:100;
-		line-height: 1.2em;
-		margin: 28px 0px 0px 0px;
-		
-	}
 	#hamburguesa {
 		display: block;
 	}
@@ -167,7 +157,7 @@ nav a span, ol small {color: dodgerblue;}
 		width: 300px;
 		min-height: 500px;
 		position: fixed;
-		z-index: 3;
+		z-index: 4;
 		left: -300px;
 		top: 100px;
 		overflow: scroll; /* Enable scroll if needed  ANTES ERA AUTO*/

@@ -45,3 +45,24 @@ function verIndice() {
 		
 	}
 }
+
+
+/*FUNCIONES INDICE Y NAVEGACION*/
+function irTaxonomia() {
+	window.scroll(
+		{top: (document.getElementById("Taxonomia").offsetTop /*- compensacion*/), left: 0, }
+	);
+	/*verIndice2();*/
+}
+function irIntroduccion() {
+	window.scroll(
+		{top: (document.getElementById("Introduccion").offsetTop /*- compensacion*/), left: 0, }
+	);
+	/*verIndice2();*/
+}
+function irEstructura() {
+	window.scroll(
+		{top: (document.getElementById("Estructura").offsetTop /*- compensacion*/), left: 0, }
+	);
+	/*verIndice2();*/
+}
