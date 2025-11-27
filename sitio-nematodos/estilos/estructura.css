@@ -1,0 +1,156 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+/*overflow debe ser HIDDEN */
+body {
+	overflow-x: hidden;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	box-sizing: border-box;
+	font-family:  "Nunito", Lucida Grande, Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
+	
+	background-color: black;
+}
+
+
+main {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	box-sizing: border-box;
+	margin-left: 250px;
+	width: 85%;
+	border-left: 5px solid dodgerblue;
+	border-right: 5px solid dodgerblue;
+	background-color: snow;
+}
+div.portadita {
+	background-color: grey;
+	background-image: url("../interfaz/foto-portadita.jpg");
+	background-size: cover;
+	background-position: center;
+	background-blend-mode:multiply;
+	
+	display: flex;
+	justify-content: space-around; /*para centrar texto*/
+	align-items: center;/*para centrar texto*/
+	
+	position: relative;	
+	width: 100%;
+	height: 200px;
+	
+	
+	font-size: 3em;
+	color: white;
+}
+
+section {
+	position: relative;
+	background-color: transparent;
+}
+
+section.Contenido {
+	position: relative;
+	width: 99%;
+	border: 3px solid red;
+}
+
+
+section.Contenido > section {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+section button {
+	display: block;
+	width: 150px;
+	min-height: 50px;
+	margin: 10px;
+	color: white;
+	background-color: lightcoral;
+}
+
+section.Textos .segmento {
+	width: 50%;
+	box-sizing: border-box;
+}
+.txtDerecha {
+	/*padding-left: 100px;*/
+}
+
+.segmento p {
+	width: 300px;
+	margin-left: auto;
+	margin-bottom: 1em;
+	line-height: 1.7em;
+	border: 1px solid antiquewhite;
+}
+
+
+#indice1 {
+}
+.indiceVisible {
+	display: block;
+}
+
+
+
+
+@media (max-width: 1200px) {
+	body {
+	/*overflow: hidden; siempre HIDEN*/
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: column;
+		box-sizing: border-box;
+	}
+	
+	
+	main {
+		width: 100%; margin-left: 0; margin-top: 100px;
+	}
+	
+}
+
+
+
+
+
+
+@media (max-width: 800px) {
+	section.Textos {
+		flex-wrap: wrap;
+		flex-direction: column;
+		border: 1px solid pink;
+	}
+	section.Textos .segmento {
+		width: 100%;
+	}
+	.segmento p {
+		width: 80%;
+		float: left;
+		margin-left: 50px;
+	}
+	div.portadita {
+		height: 200px;
+	}
+
+	
+}
+
+@media (max-width: 400px) {
+	
+	
+	div.portadita {
+		height: 175px;
+	}
+}

@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Nemátodos</title>
+		
+	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--ESTILO Y JAVASCRIP-->
+<link href="estilos/estructura.css" rel="stylesheet" type="text/css">
+<link href="estilos/galeria.css" rel="stylesheet" type="text/css">
+<link href="estilos/header-nav.css" rel="stylesheet" type="text/css">
+<script src="estilos/navegacion.js"></script>
+<script src="estilos/galeria.js"></script>
+	
+	
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+	
+<!--<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">-->
+	
+
+<link rel="icon" type="image/x-icon" href="casos-graficos/interfaz/favicon.ico">
+<link href="estilos/textos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<h1>Nematodos</h1>
+	<header>
+	  <div id="hamburguesa" onclick="verIndice()">
+			<div class="hamb1"></div>
+			<div class="hamb2"></div>
+			<div class="hamb3"></div>
+		</div>
+		<div class="titulo">
+			<img id="titulo-compacto" src="interfaz/logo-small.png" alt="titulo del libro"> <img id="titulo-horizontal" src="interfaz/logo-small-horizontal.png" alt="titulo horizontal">
+		</div>
+		
+		
+		<nav id="Indice">
+			<ul>
+				<li><a><!--<span>&bull;</span>-->Introducción</a></li>
+				<li><a>Más que la taxonomía</a></li>
+				<li id="Indice3"><a onClick="Despliegue()">Estructura de los nematodos</a>
+					<ol class="index-especies" id="subIndice">
+						<li><small>1 </small>Generalidades</li>
+						<li><small>2 </small>Exoesqueleto y musculatura</li>
+						<li><small>3 </small>Pseudocele</li>
+						<li><small>4 </small>Tracto digestivo</li>
+						<li><small>5 </small>Tracto reproductor</li>
+						<li><small>6 </small>Mecanismos sensoriales</li>
+						
+					</ol>
+				<li><a>Historia de vida</a></li>
+				<li><a>Impacto ecológico de los nematodos</a></li>
+				<li><a>Bibliografía</a></li>
+				</li>
+			</ul>
+		
+		</nav>
+	</header>
+	
+	<main>
+		
+		
+		
+		<section class="Contenido">
+			
+			<div class="modalGaleria" id="MG1">
+				<span class="cruz" id="tache" onClick="verModal()">&times;</span>
+				
+				<div class="galeria" id="esquemas1">
+					<div class="captiongaleria">
+						3 - Cuerpo de los nematodos
+					</div>
+					<div class="numbertext"><span id="contador1">1</span></div>
+					<div class="diapoFalsa" id="falsa">
+					<img onClick="openGaleria(1)" src="figuras/figura3-a.png" alt="default1">
+						<div class="descripcion"><p>Esquema tridimensional de un nematodo</p></div>
+						
+				 	</div>
+				  	<div class="diapositiva">
+					<img onClick="openGaleria(1)" src="figuras/figura3-a.png" alt="figura3">
+						<div class="descripcion"><p>Esquema tridimensional de un nematodo</p></div>
+						
+				  	</div>
+
+				  	<div class="diapositiva">
+					  <img onClick="openGaleria(2)" src="figuras/figura3-b.png" alt="figura3" >
+						<div class="descripcion"><p>Esquema sagital de un nematodo hembra</p></div>
+						
+				  	</div>
+					<div class="diapositiva">
+					  <img onClick="openGaleria(3)" src="figuras/figura3-c.png"  alt="figura3">
+						<div class="descripcion"><p>Esquema de un corte transversal de un nematodo hembra. 
+a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal, c) Cutícula, d) Porción posterior o caudal, e) Cola, f) Esófago, g) Estriaciones de la cutícula, h) Hipodermis, i) Músculo, j) Intestino, k) Lumen, l) Ano, m) Gónada, n) Útero con huevos, o) Vulva, p) Pseudocele, q) Cordón nervioso</p></div>
+						
+				 	</div>
+				  	<div class="diapositiva">				
+					  <img onClick="openGaleria(4)" src="figuras/figura3-d.png" alt="figura3">
+						<div class="descripcion"></div>
+				  	</div>
+					<div class="diapositiva">				
+					  <img onClick="openGaleria(4)" src="figuras/figura3-e.png" alt="figura3">
+						<div class="descripcion"></div>
+				  	</div>
+				
+				  <!-- Next and previous buttons -->
+				  	<a class="prev" onclick="moverSlides(-1)">&#10094;</a>
+				  	<a class="next" onclick="moverSlides(1)">&#10095;</a>
+					</div> <!--GALERIA-->
+					
+					</div> <!--modal para galeria-->
+			
+			
+			<section>
+				<div class="portadita">
+				Introducción
+				</div>
+				<div class="separaTemas"></div>
+				
+				<h2>Introducción</h2>
+				<p class="primerParrafo">
+				En la Unidad de Desarrollo de Organismos Parasitarios de la Facultad de Medicina Veterinaria y Zootecnia de la <span class="versalita">UNAM</span>, es rutina cultivar heces de animales, para ello, se recrea lo que sucede en la naturaleza adecuando en el laboratorio las condiciones de temperatura, humedad y oxigenación, el proceso continuo de vida de la materia orgánica. La finalidad es detectar micro- y macrorganismos. Días después de haber sembrado las heces, se desarrollan entidades filamentosas cilíndricas, unas son finas con movimientos serpenteantes, rápidos y vigorosos, parecen látigos que se contraen y se estiran; otras son gruesas, se mueven de forma tortuosa, errática y más lenta, como si acabaran de despertar, están un tanto aletargadas.
+				</p>
+				<p class="ultimoParrafo">
+				Las primeras están asociadas con larvas parásitas y las segundas, es muy probable que sean larvas de vida libre. En este microecosistema, llamado también “islote ecológico”, creado en el laboratorio, se están desarrollando ciclos de vida de <strong>nematodos</strong>. El objetivo de la presente obra es tratar de responder a la pregunta: ¿qué es un nematodo? Del griego <i>nema</i>, hilo, y <i>oides</i>, aspecto, se construye la palabra “filiforme”, para después incorporarse al español la palabra <a onClick="verBiblio(1)"><strong>nematodo<sup>(1)</sup></strong></a> a partir del francés <i>nématode</i>. El universo de estos organismos es vasto y diverso, así como los ciclos biológicos en los que se involucran; lo más enriquecedor es descubrir el rol que juegan en esta maquinaria viva llamada planeta.
+				</p>
+				
+			</section>
+			
+			<section>
+				
+				<div class="portadita">Más que la taxonomía</div>
+				<div class="separaTemas"></div>
+				<h2>Más que la taxonomía</h2>
+				<p class="primerParrafo">
+				Con el destronamiento del reino como bien lo narra <a onClick="verBiblio(2)">López de Olmos Reyes<sup>(2)</sup></a> y los descubrimientos de <a onClick="verBiblio(3)">Woese et al.,<sup>(3)</sup></a> se eliminaron los cinco reinos de clasificación de los seres vivos y, mediante la filogenética, se establecieron relaciones entre diversos organismos, por lo que hoy se reúnen en árboles de carácter universal. Pareciera que Charles Darwin ya lo había anticipado. Poco más de cien años después, “El Sistema de los Tres Dominios” revolucionó las teorías, remplazó a “la corte real de los reinos” a partir de la genética. Esta teoría de los dominios es un modelo de clasificación basado en las diferencias entre las secuencias de nucleótidos en los ribosomas y de <span class="versalita">ARN</span> de transferencia de la célula, la estructura de los lípidos de la membrana y la sensibilidad a los <a onClick="verBiblio(4)">antibióticos.<sup>(4)</sup></a>
+				</p>
+				<p>
+				Este sistema propone que una célula antepasada común “Cenancestor” o <i>“Last Universal Common Ancestor”</i><span class="versalita">(LUCA)</span>, dio lugar a tres células diferentes, donde cada una representa un dominio: Archea, Bacteria y Eukarya. Algo así como un nuevo orden mundial. De esta forma, en esta nueva taxonomía, los nematodos pertenecen al dominio <strong>Eukarya</strong>, <i>verbatim</i>,<a><sup>(2)</sup></a> también llamados eucariotas o eucariontes: organismos con células que poseen un núcleo definido en el que se resguarda el <span class="versalita">ADN</span>; incluyendo a los animales, las plantas, los hongos y los protistas; los primeros tres típicamente pluricelulares.
+				</p>
+				<p>
+				Así se garantiza que los nematodos sean animales, al igual que un gato o un humano. Entonces, en este dominio, estos animales están dentro del filo <strong>Nematoda o Nemathelmintes</strong>. Utilizando la bioinformática, recientemente se han descrito doce clados principales,<a><sup>(5, 6)</sup></a> donde el ancestro común no es un parásito. Este detalle será retomado más adelante cuando se cuestione el rol de estos organismos en el planeta. Los clados 1–6 corresponden a la clase Adenophorea. Esta nomenclatura se refiere a todos los animales que tienen glándulas caudales, y los clados 8–12 pertenecen a la clase Secernentea, que concierne a los secretores, aquellos con un sistema secretor-excretor con canales laterales. Dejando el clado 7 a una única familia monogénica de nematodos terrestres con una única línea evolutiva, la clase <strong>Teratocephalidae</strong>, relativa a las adaptaciones evolutivas hacia la vida terrestre<a><sup>(7)</sup></a>; sus miembros son diferentes, tanto  en morfología como en fisiología <small>(Figura 1)</small>.
+				</p>
+				<div class="Galeria-prev">
+					<p><small>Figura 1</small></p>
+					<a href="figuras/figura1.png" target="_blank">
+				<img src="figuras/figura1.png" alt="Imagen representativa de la Relación filogenética de los taxones de nematodos">
+					</a>
+				</div>
+				
+				<p>
+				Muchos autores coinciden<a><sup>(5,8-12)</sup></a> en que la clasificación de los nematodos va más allá de la morfología, las claves dicotómicas o taxonómicas, e incluso, las herramientas genómicas también dejan dudas de sus resultados, lo cierto es que al hablar de nematodos, el mundo es muy diverso y abundante en organismos fascinantes.
+				</p>
+				
+				<p>Bongers y Ferris<a><sup>(9)</sup></a> señalan que cuatro de cada cinco animales multicelulares del planeta son nematodos. Las recientes estimaciones indican que son los más numerosos de los <strong>metazoarios</strong>, con un total de 27 000 especies identificadas,<a><sup>(5, 12, 13)</sup></a> pero existen más de 10 millones sin identificar.<a><sup>(14)</sup></a> Sin embargo, se calcula que solo se ha descrito entre el 6 y 56% de la diversidad de nematodos del planeta y que falta una proporción de alrededor del 86% por descubrir.<a><sup>(11) </sup></a>
+				</p>
+				<p>
+				Algunas especies de nematodos son de vida libre, mientras que otras están bien adaptadas a la vida parasitaria en plantas y animales, incluyendo al hombre <small>(Figura 2)</small>. Los nematodos que ejercen parasitismo pueden encontrarse en los clados 1, 2, 5 y 8–12<a><sup>(5, 6, 12, 13)</sup></a> <small>(Figura 1)</small>.
+				</p>
+				<p class="parrafoResaltado">
+				Los <strong>metazoarios</strong>, a diferencia de los organismos unicelulares <strong>protozoarios</strong>, son entidades pluricelulares e invertebrados. Son los animales más pequeños que habitan en la Tierra e incluyen las grandes familias de helmintos y artrópodos.
+				</p>
+				<p>
+				De los nematodos que habitan en el mar, se ha clasificado un 42%<a><sup>(5)</sup></a> y representan más del 90% de la <strong>meiofauna</strong> marina,<a><sup>(15)</sup></a> por otro lado, los nematodos que se desarrollan en el agua dulce y en los ecosistemas terrestres representan el 58% del total conocido<a><sup>(5,12)</sup></a> <small>(Figura 2)</small>. La biodiversidad de estos organismos es tan basta que se han identificado en altitudes de hasta los 5 000 msnm<a><sup>(5, 16)</sup></a> y, en la profundidad del mar, desde los 4 000 m<a><sup>(15)</sup></a> y hasta los 8 380 metros.<a><sup>(17)</sup></a> 
+				</p>
+				<p class="parrafoResaltado">
+				La <strong>meiofauna</strong> o meiobentos son los metazoarios más pequeños que habitan en el sustrato de los arroyos y otras superficies, como los fardos de las raíces de los árboles y otros residuos de gran tamaño.<a><sup>(18)</sup></a>
+				</p>
+				
+				<div class="Galeria-prev">
+					<p><small>Figura 2</small></p>
+					<a href="figuras/figura2.png" target="_blank">
+				<img src="figuras/figura2.png" alt="Estimación de los nematodos marinos y terrestres">
+					</a>
+				</div>
+				
+				
+		
+			</section>
+			
+			<section>
+				<div class="portadita">Estructura de los nematodos</div>
+				<div class="separaTemas"></div>
+				<h2>Estructura de los nematodos</h2>
+				
+				<section class="subtema">
+					<h3>Generalidades</h3>
+					<p class="primerParrafo">
+						En el ámbito biológico y médico, los helmintos se dividen en helmintos planos y helmintos redondos; en estos últimos están incluidos los nematodos por su estructura o morfología. Un ejemplo representativo es la hembra esférica, globosa, hinchada y saculada de las especies <i>Meloidogyne</i>,<a><sup>(19, 20)</sup></a> que parasita y lesiona disímiles vegetales y hortalizas como las preciadas variedades de plantas de chiles en México.<a><sup>(21)</sup></a>La gran mayoría de los nematodos son cilíndricos con punta; como diminutas agujas vivientes, esto es asombroso, un detalle fascinante que pocos notan <small>(Figuras 3A–B, 4 y 5)</small>. Con una porción anterior, donde se localiza la cápsula bucal <small>(Figuras 4a–b, 5a–b y 9a)</small> y una porción posterior o caudal, donde la mayoría tiene una cola estilizada <small>(Figura 4c)</small>. 
+					</p>
+					<div class="Galeria-prev">
+					<p><small>Abrir figura interactiva 3</small></p>
+					<img onClick="verModal(1)" src="figuras/figura3-thumb.png" alt="muestra de galeria 1">
+					</div>
+				
+				</section><!--SUBTEMA-->
+			
+			
+			</section><!--TEMA ESTRUCTURA DE LOS NEMATODOS-->
+			
+			
+				
+				
+				
+		</section><!-- seccion Contenido-->
+	</main>
+	
+	
+	
+</body>
+</html>

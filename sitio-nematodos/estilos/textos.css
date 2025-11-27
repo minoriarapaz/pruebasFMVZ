@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* CSS Document */
+
+h1, h2 {display: none;}
+h3 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+.versalita {
+	font-variant: small-caps;
+	font-size: 85%;
+}
+
+.separaTemas {
+	display: block;
+	background-color: dodgerblue;
+	width: 100%;
+	height: 50px;
+	padding-top: 10px;
+	margin-bottom: 2em;
+	
+	color: ghostwhite;
+	font-size: 1.5em;
+}
+
+/*solo los P que son hijos directos del section.Contenido > section*/
+section.Contenido > section > p, section.subtema > p {
+	color: darkslategray;
+	margin-bottom: .8em;
+	margin-left: auto;
+	margin-right: auto;
+	text-indent: 1em;
+	
+	border: 1px dotted blue;
+	width: 650px;
+	
+}
+
+section.Contenido > section > p.primerParrafo, section.subtema > p.primerParrafo {
+	text-indent: 0;
+}
+section.Contenido > section > p.ultimoParrafo, section.subtema > p.ultimoParrafo {
+	margin-bottom: 5em;
+}
+
+
+section.Contenido > section > p.parrafoResaltado, section.subtema > p.parrafoResaltado {
+	background-image: linear-gradient(dodgerblue 60%, slateblue);
+	padding: 1em;
+	margin: auto;
+	border-radius: 20px;
+	color: ghostwhite;
+	margin-bottom: .8em;
+	text-indent: 0;
+	
+	font-style: oblique;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+}
+
+/*Hipervinculos (citas y bibliografia) dentro de los p comúnes*/
+section.Contenido > section > p > a, section.subtema > p > a {
+	color: slateblue;
+	cursor: pointer;
+}
+
+/*los hipervinculos dentro de los parrafos resaltados*/
+section.Contenido > section > .parrafoResaltado > a {
+	color: snow;
+}
+
+
+@media (max-width: 1200px) {
+	section.Contenido > section > p, section.Contenido > section > p.parrafoResaltado {
+		width: 650px;
+	}
+}
+
+@media (max-width: 800px) {
+	section.Contenido > section > p, section.Contenido > section > p.parrafoResaltado {
+		width: 70%;
+	}
+}
+
+@media (max-width: 400px) {
+	section.Contenido > section > p, section.Contenido > section > p.parrafoResaltado {
+		width: 90%;
+	}
+}
