@@ -48,9 +48,9 @@
 				<li><a onClick="irTaxonomia()">Más que la taxonomía</a></li>
 				<li id="Indice3"><a onClick="Despliegue()">Estructura de los nematodos</a>
 					<ol class="index-especies" id="subIndice">
-						<li><a onClick="irEstructura()"><small>1 </small>Generalidades</a></li>
-						<li><small>2 </small>Exoesqueleto y musculatura</li>
-						<li><small>3 </small>Pseudocele</li>
+						<li><a onClick="irSubtema(0)"><small>1 </small>Generalidades</a></li>
+						<li><a onClick="irSubtema(1)"><small>2 </small>Exoesqueleto y musculatura</a></li>
+						<li><a onClick="irSubtema(2)"><small>3 </small>Pseudocele</a></li>
 						<li><small>4 </small>Tracto digestivo</li>
 						<li><small>5 </small>Tracto reproductor</li>
 						<li><small>6 </small>Mecanismos sensoriales</li>
@@ -58,7 +58,7 @@
 					</ol>
 				<li><a>Historia de vida</a></li>
 				<li><a>Impacto ecológico de los nematodos</a></li>
-				<li><a>Bibliografía</a></li>
+				<li><a onClick="YdeSubtema1()">Bibliografía</a></li>
 				</li>
 			</ul>
 		
@@ -140,7 +140,7 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 				<div class="separaTemas"></div>
 				<h2>Más que la taxonomía</h2>
 				<p class="primerParrafo">
-				Con el destronamiento del reino como bien lo narra <a onClick="verBiblio(2)">López de Olmos Reyes<sup>(2)</sup></a> y los descubrimientos de <a onClick="verBiblio(3)">Woese et al.,<sup>(3)</sup></a> se eliminaron los cinco reinos de clasificación de los seres vivos y, mediante la filogenética, se establecieron relaciones entre diversos organismos, por lo que hoy se reúnen en árboles de carácter universal. Pareciera que Charles Darwin ya lo había anticipado. Poco más de cien años después, “El Sistema de los Tres Dominios” revolucionó las teorías, remplazó a “la corte real de los reinos” a partir de la genética. Esta teoría de los dominios es un modelo de clasificación basado en las diferencias entre las secuencias de nucleótidos en los ribosomas y de <span class="versalita">ARN</span> de transferencia de la célula, la estructura de los lípidos de la membrana y la sensibilidad a los <a onClick="verBiblio(4)">antibióticos.<sup>(4)</sup></a>
+				Con el destronamiento del reino como bien lo narra <a onClick="verBiblio(2)">López de Olmos Reyes<sup>(2)</sup></a> y los descubrimientos de <a onClick="verBiblio(3)">Woese et al.,<sup>(3)</sup></a> se eliminaron los cinco reinos de clasificación de los seres vivos y, mediante la filogenética, se establecieron relaciones entre diversos organismos, por lo que hoy se reúnen en árboles de carácter universal. Pareciera que Charles Darwin ya lo había anticipado. Poco más de cien años después, “El Sistema de los Tres Dominios” revolucionó las teorías, remplazó a “la corte real de los reinos” a partir de la genética. Esta teoría de los dominios es un modelo de clasificación basado en las diferencias entre las secuencias de nucleótidos en los ribosomas y de <span class="versalita">ARN</span> de transferencia de la célula, la estructura de los lípidos de la membrana y la sensibilidad a los antibióticos.<a onClick="verBiblio(4)"><sup>(4)</sup></a>
 				</p>
 				<p>
 				Este sistema propone que una célula antepasada común “Cenancestor” o <i>“Last Universal Common Ancestor”</i><span class="versalita">(LUCA)</span>, dio lugar a tres células diferentes, donde cada una representa un dominio: Archea, Bacteria y Eukarya. Algo así como un nuevo orden mundial. De esta forma, en esta nueva taxonomía, los nematodos pertenecen al dominio <strong>Eukarya</strong>, <i>verbatim</i>,<a><sup>(2)</sup></a> también llamados eucariotas o eucariontes: organismos con células que poseen un núcleo definido en el que se resguarda el <span class="versalita">ADN</span>; incluyendo a los animales, las plantas, los hongos y los protistas; los primeros tres típicamente pluricelulares.
@@ -186,11 +186,14 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 			</section>
 			
 			<section id="Estructura">
-				<div class="portadita" id="panel3">Estructura de los nematodos</div>
+				<div class="portadita-estructura" id="panel3">
+					Estructura de los nematodos
+					<span id="nombreSubtema"></span>
+				</div>
 				<div class="separaTemas"></div>
 				<h2>Estructura de los nematodos</h2>
 				
-				<section class="subtema">
+				<section class="subtema" id="Subtema1">
 					<h3>Generalidades</h3>
 					<p class="primerParrafo">
 						En el ámbito biológico y médico, los helmintos se dividen en helmintos planos y helmintos redondos; en estos últimos están incluidos los nematodos por su estructura o morfología. Un ejemplo representativo es la hembra esférica, globosa, hinchada y saculada de las especies <i>Meloidogyne</i>,<a><sup>(19, 20)</sup></a> que parasita y lesiona disímiles vegetales y hortalizas como las preciadas variedades de plantas de chiles en México.<a><sup>(21)</sup></a>La gran mayoría de los nematodos son cilíndricos con punta; como diminutas agujas vivientes, esto es asombroso, un detalle fascinante que pocos notan <small>(Figuras 3A–B, 4 y 5)</small>. Con una porción anterior, donde se localiza la cápsula bucal <small>(Figuras 4a–b, 5a–b y 9a)</small> y una porción posterior o caudal, donde la mayoría tiene una cola estilizada <small>(Figura 4c)</small>. 
@@ -207,8 +210,102 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 					</a>
 				</div>
 					
+					<p>
+					La estructura o arreglo general de un nematodo se describe a continuación de afuera hacia adentro, esto puede lograrse gracias a las observaciones en Microscopia Electrónica de Barrido <span class="versalita">(MEB)</span> que permite ver la estructura o superficie<a><sup>(23-27)</sup></a> <small>(Figuras 4 y 5)</small> o Microscopia Electrónica de Transmisión <span class="versalita">(MET)</span> que permite ver la ultraestructura o el detalle celular y los organelos <small>(Figuras 6, 8, 11–15, 17)</small><a><sup>(23, 24)</sup></a>.
+					</p>
 				
-				</section><!--SUBTEMA-->
+				</section><!--SUBTEMA 1 generalidades-->
+				
+				
+				<section class="subtema" id="Subtema2">
+					<h3>Exoesqueleto y musculatura</h3>
+					<p>
+					Gibbons(20) refiere la estructura general comenzando con el órgano más grande que es <strong>la cutícula</strong>, otros autores le llaman también <strong>exoesqueleto</strong>.(8) El cual recubre todo el cuerpo desde la porción anterior hasta la caudal, recubriendo e invaginando la cápsula bucal antes de la faringe, así como también, el ano y la cloaca, vagina y aberturas de secreción-excreción. La cutícula es anulada por estriaciones transversales, pero también longitudinales que puede ser un recubrimiento sencillo como la de <i>Ancylostoma caninum</i><a><sup>(27)</sup></a> o de los tricostrongílidos como <i>Haemonchus</i><a><sup>(24, 26, 28)</sup></a> <small>(Figuras 4, 6 y 8)</small> y <i>Trichostrongylus colubriformis</i> <small>(Figura 5)</small>; pero, también puede ser compleja y presentar muchas variaciones como poros, ganchos, protuberancias, papilas, setas, crestas, cordones, pliegues, etcétera.
+					</p>
+					
+					<!--AQUI EMPIEZAN MUCHAS IMAGENES
+					+
+					+
+					+
+					+
+					+
+					+
+					+-->
+					<p>
+					La complejidad o simpleza de la cutícula es evidente por la estructura documentada de muchos nematodos. Por ejemplo, la gran protuberancia o bulbo cefálico espinoso de <i>Echinocephalus inserratus</i>,<a><sup>(29)</sup></a> o las membranas laterales de <i>Oesophagostomum columbianum</i><a><sup>(30)</sup></a> que recorren todo su cuerpo, o las aletas o proyecciones cervicales de <i>Toxocara</i> spp.(31, 32) y las aletas caudales de <i>Abbreviata leptosoma</i>(33) y Desportesius invaginatus.(22) Los pliegues cervicales y ventrales de Ternidens deminutus(34) son una suerte de babero o cuello de encaje como los del siglo XVII del rey Luis XV. 
+					</p>
+					<p>
+					Del mismo modo, las ornamentaciones tan extravagantes de los apéndices cefálicos foliados de <i>Acrobeles</i> spp.<a><sup>(35)</sup></a> son dignas de un carnaval, al cual puede acompañar <i>Ichthyocephaloides dasyacanthus</i> con sus espinas finas emplumadas que recubren todo su cuerpo,<a><sup>(36)</sup></a> o los grandes picos dispuestos en tres cordones o filas a lo largo de la superficie dorsal media y junto con las espinas en la superficie ventral, que hacen que <i>Buckleyatractis marinkelli</i> parezca un verdadero guerrero <i>mohawk</i>,(37) o las espinas cervicales festonadas de <i>Gnathostoma</i> spp.(38) dispuestas como una bufanda estilizada, quizá, mejor aún, las espinas de todo el cuerpo de <i>Paratractis hystrix</i>,<a><sup>(37)</sup></a> que parecen una estola emplumada, también están los peines ventrales de <i>Pterygodermatites bovieri</i>,<a><sup>(39)</sup></a> una analogía de un viejito barbado.
+					</p>
+					<p>
+					Los mucrones estrellados de las colas de <i>Aphelenchoides</i> spp.<a><sup>(40)</sup></a>; o la cola de la hembra de <i>Setaria</i> spp. con más de cinco espinas grandes de punta roma<a><sup>(41)</sup></a> dispuestas tal plumero; el arreglo caudal de las espinas prominentes de los machos, así como también sus expansiones cuticulares vesiculares globosas llamadas glándulas bacilares de <i>Trichuris landak</i>,<a><sup>(42)</sup></a> un <i>outfit</i> digno de una pasarela extravagante de la naturaleza. La cutícula se reconoce porque tiene tres zonas o capas, la epicutícula o zona cortical, la mesocutícula o zona media, y la zona basal, que contiene la endocutícula y, finalmente, la hipodermis.<a><sup>(8) </sup></a>
+					</p>
+					<p>
+					Estas zonas son muy fáciles de ver a través de <span class="versalita">MET</span>, por ejemplo, en nematodos parásitos como <i>H. contortus</i><a><sup>(26)</sup></a> <small>(Figura 6a)</small>. Estas capas basales secretan y nutren la cutícula rica en colágeno y disulfuros, sostienen las funciones del órgano que es proteger al helminto del ambiente al ser un exoesqueleto, pero, también permiten a los nematodos intercambios nutritivos y adaptativos por la permeabilidad que provee, asimismo, conforman los procesos de ecdisis<a><sup>(43)</sup></a> para el desarrollo y crecimiento de los nematodos, y participan activamente al ceder el movimiento verminoso de estos cilindros vivos. 
+					</p>
+					<p>
+					Esta muda implica: <b>1)</b> la separación de la cutícula de la epidermis, <b>2)</b> la formación de una nueva cutícula que surge de la superficie más externa de la hipodermis y <b>3)</b> el desprendimiento de la cutícula vieja,<a><sup>(8)</sup></a> que en algunos casos, como en la L3 infectivas de los tricostrongilidos, está separada, se conserva como una vaina externa, y su desprendimiento se conoce como <i>exsheathment</i><a><sup>(44)</sup></a> o desenvaine <small>(Figura 7)</small>. Este proceso ha sido estructuralmente <span class="versalita">(MEB)</span> bien expuesto por <a>Brianti et al.<sup>(45)</sup></a> en larvas de ciatostominos del estadio tres al cuatro <small>(Figura 3E)</small>.
+					</p>
+					<p class="parrafoResaltado">
+					Los <em>ecdisozoos</em> segregan cutículas anexoesqueléticas que deben desprenderse durante el crecimiento y ser sustituidas por otras más grandes, un proceso denominado <em>ecdisis</em>. La muda periódica se produce en organismos alargados de <span style="font-style: normal">Ecdysozoa</span>, donde se incluyen insectos, arácnidos, quilópodos, miriápodos, ositos de agua o tardígrados y, obviamente, nematodos, entre otros.<a><sup>(43)</sup></a>
+					</p>
+					
+					<!--AQUI VIENE OTRA IMAGEN
+					+
+					
+					+
+					+
+					+
+					+
+					+
+					+
+					+
+					+
+					++
+					-->
+					<p>
+					Después de esta capa basal, las larvas se extienden a lo largo del organismo, desde la faringe hasta el ano, una sola capa de células musculares, que conforman músculos involucrados con el proceso de alimentación, digestión y excreción, así como aquellos asociados a la motilidad y reproducción.(8) En la ultraestructura de H. contortus, se ha mostrado este arreglo de la cutícula con las células longitudinales musculares ricas en mitocondrias focalmente distribuidas en el citoplasma (Figuras 6a y 8).(26) Bird y Bird(8) muestran en met fibras de actina y miosina como se observa en la Figura 6b. La distribución coronaria de los músculos con respecto a la cutícula y al pseudocele o pseudoceloma se esquematiza en la Figura 3C y, parcialmente, en las Figuras 6a, 8, 12, 13, 14b, 15b, 17.
+					</p>
+					
+				</section><!--SUBTEMA 2 exoesqueleto-->
+				
+				<section class="subtema" id="Subtema3">
+					<h3>Pseudocele</h3>
+					<p>
+					awdsijhfvg
+					</p>
+					<p>
+					awdsijhfvg
+					</p>
+					<p>
+					awdsijhfvg
+					</p>
+					<p>
+					awdsijhfvg
+					</p>
+					<p>
+					awdsijhfvg
+					</p>
+					<p>
+					awdsijhfvg
+					</p>
+					<p>
+					awdsijhfvg
+					</p><p>
+					awdsijhfvg
+					</p>
+					<p>
+					Durante eones ha existido una inteligencia orgánica, poseedora de la supremacía técnica sobre los aspectos del universo, con la cual han develado toda frontera física y filosófica hasta considerar el propio universo su espacio natural; ya no hay nada en él que represente misterio o curiosidad. Son seres que pueden aburrirse, cuyos ocios equivalen a los nuestros, pero en la debida escala. Nosotros damos una caminata por el campo y, por mero aburrimiento, o por las ganas de demostrar que podemos hacer algo, disparamos con nuestra pistola a un cactus saguaro hasta comprometer su centenaria vida, o tapamos un pequeño arroyo con basura y alteramos el estanque de renacuajos corriente abajo. Para la mayoría son cosas ínfimas, de insignificantes repercusiones. Bromas así de tontas ¿por qué serían solamente exclusivas de nuestra inteligencia? Quien decía que nadie viajaría trillones de años luz para cometer una mera agresión o actos sin compromiso, no imagina que para ellos eso pudiera ser como manejar en coche a la tienda, y que nosotros pudiéramos ser el insignificante hormiguero en el gran campo abierto del cosmos
+					</p>
+					<p>
+					Durante eones ha existido una inteligencia orgánica, poseedora de la supremacía técnica sobre los aspectos del universo, con la cual han develado toda frontera física y filosófica hasta considerar el propio universo su espacio natural; ya no hay nada en él que represente misterio o curiosidad. Son seres que pueden aburrirse, cuyos ocios equivalen a los nuestros, pero en la debida escala. Nosotros damos una caminata por el campo y, por mero aburrimiento, o por las ganas de demostrar que podemos hacer algo, disparamos con nuestra pistola a un cactus saguaro hasta comprometer su centenaria vida, o tapamos un pequeño arroyo con basura y alteramos el estanque de renacuajos corriente abajo. Para la mayoría son cosas ínfimas, de insignificantes repercusiones. Bromas así de tontas ¿por qué serían solamente exclusivas de nuestra inteligencia? Quien decía que nadie viajaría trillones de años luz para cometer una mera agresión o actos sin compromiso, no imagina que para ellos eso pudiera ser como manejar en coche a la tienda, y que nosotros pudiéramos ser el insignificante hormiguero en el gran campo abierto del cosmos
+					</p>
+					<p>
+					Durante eones ha existido una inteligencia orgánica, poseedora de la supremacía técnica sobre los aspectos del universo, con la cual han develado toda frontera física y filosófica hasta considerar el propio universo su espacio natural; ya no hay nada en él que represente misterio o curiosidad. Son seres que pueden aburrirse, cuyos ocios equivalen a los nuestros, pero en la debida escala. Nosotros damos una caminata por el campo y, por mero aburrimiento, o por las ganas de demostrar que podemos hacer algo, disparamos con nuestra pistola a un cactus saguaro hasta comprometer su centenaria vida, o tapamos un pequeño arroyo con basura y alteramos el estanque de renacuajos corriente abajo. Para la mayoría son cosas ínfimas, de insignificantes repercusiones. Bromas así de tontas ¿por qué serían solamente exclusivas de nuestra inteligencia? Quien decía que nadie viajaría trillones de años luz para cometer una mera agresión o actos sin compromiso, no imagina que para ellos eso pudiera ser como manejar en coche a la tienda, y que nosotros pudiéramos ser el insignificante hormiguero en el gran campo abierto del cosmos
+					</p>
+					
+					
+				</section><!--SUBTEMA 3 pseudosele fin-->
 			
 			
 			</section><!--TEMA ESTRUCTURA DE LOS NEMATODOS-->

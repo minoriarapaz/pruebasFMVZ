@@ -28,8 +28,6 @@ main {
 	box-sizing: border-box;
 	margin-left: 250px;
 	width: 85%;
-	border-left: 2px solid dodgerblue;
-	border-top: 2px solid gold;
 	background-color: snow;
 }
 
@@ -49,8 +47,37 @@ div.portadita {
 	height: 200px;
 	
 	font-size: 3em;
-	color: white;
-	transition: color 1s, background 1s;
+	color: ghostwhite;
+	transition: color .6s, background 1.5s, opacity .6s;
+
+}
+div.portadita-estructura {
+	box-sizing: border-box; /*exclusiva de este div*/
+	overflow: hidden; /*exclusiva de este div*/
+	background-color: gray;
+	background-image: url("../interfaz/foto-estructura2.jpg");
+	background-size: cover;
+	background-position: center;
+	background-blend-mode:multiply;
+	
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;/*para centrar texto*/
+	
+	
+	position: sticky; top: 0; z-index: 2;
+	padding-top: 30px;
+	width: 100%;
+	height: 200px;
+	font-size: 3em;
+	color: ghostwhite;
+	transition: color .6s, background 1.5s, opacity .6s;
+
+}
+div.portadita-estructura span {
+	/*font-size: .5em;*/
+	font-size: 50%;
 }
 
 section {
@@ -60,12 +87,12 @@ section {
 
 section.Contenido {
 	position: relative;
-	width: 99%;
+	width: 100%;
 	/*para snap*/
 	
 }
 
-
+/*SECCIONES TEMAS*/
 section.Contenido > section {
 	display: flex;
 	flex-wrap: wrap;
@@ -74,11 +101,15 @@ section.Contenido > section {
 	position: relative;
 	width: 100%;
 	
+	border: 3px solid red;
+	
 }
-
+/*SECCION SUB-TEMA*/
 section.subtema {
 	position: relative;
 	width: 100%;
+	
+	border: 2px dashed red;
 }
 
 section button {
@@ -129,12 +160,12 @@ section.Textos .segmento {
 		width: 100%; margin-left: 0; top: 100px;
 	}
 	
-	div.portadita {
+	div.portadita, div.portadita-estructura {
 		height: 100px;
 		font-size: 2em;
 		top: 100px; /*bajar el stick por el header*/
 	}
-	
+
 }
 
 
@@ -156,7 +187,7 @@ section.Textos .segmento {
 		float: left;
 		margin-left: 50px;
 	}
-	div.portadita {
+	div.portadita, div.portadita-estructura {
 		line-height: 1em;
 	}
 
@@ -164,7 +195,7 @@ section.Textos .segmento {
 }
 
 @media (max-width: 400px) {
-	div.portadita {
+	div.portadita, div.portadita-estructura {
 		height: 50px;
 		font-size: 1em;
 		top: 100px; /*bajar el stick por el header*/

@@ -5,6 +5,7 @@ h1, h2 {display: none;}
 h3 {
 	text-align: center;
 	margin-bottom: 1em;
+	margin-top: 2em;
 }
 .versalita {
 	font-variant: small-caps;
@@ -29,7 +30,7 @@ section.Contenido > section > p, section.subtema > p {
 	margin-left: auto;
 	margin-right: auto;
 	text-indent: 1em;
-	
+	text-align: justify;
 	width: 650px;
 	
 }
@@ -55,6 +56,12 @@ section.Contenido > section > p.parrafoResaltado, section.subtema > p.parrafoRes
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 }
 
+em {
+	font-weight: bold;
+}
+a {
+	text-decoration: none;
+}
 /*Hipervinculos (citas y bibliografia) dentro de los p comúnes*/
 section.Contenido > section > p > a, section.subtema > p > a {
 	color: slateblue;
@@ -62,7 +69,7 @@ section.Contenido > section > p > a, section.subtema > p > a {
 }
 
 /*los hipervinculos dentro de los parrafos resaltados*/
-section.Contenido > section > .parrafoResaltado > a {
+section.Contenido > section > .parrafoResaltado > a, section.subtema > .parrafoResaltado > a{
 	color: snow;
 }
 
