@@ -23,11 +23,7 @@ header > .titulo img {
 	margin-top: 50px;
 }
 
-header > .titulo h1 {
-	font-size: 1.4em;
-	font-weight:bold;
-	margin: 45px;
-}
+
 
 
 
@@ -36,17 +32,22 @@ header > .titulo h1 {
 	display: none;
 }
 
-#hamburguesa {
+header > button {
 	display: none;
 	margin-left: 50px;
 	padding-top: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 70px;
 	height: 100%;
+	background-color: transparent;
+	border: none;
 }
 
 #hamburguesa div {
-	width: 30px;
+	width: 40px;
 	height: 4px;
-	background-color: ghostwhite;
+	background-color: dodgerblue;
 	margin: 4px 0;
 	transition: .4s;
 }
@@ -111,7 +112,7 @@ nav a span, ol small {color: dodgerblue;}
 
 .IndexActivo {
 	border-radius: 7px 0 0 7px;
-	background-color: aliceblue;
+	background-image: linear-gradient(to right, aliceblue 10%, cyan);
 	color: darkslategray;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -180,26 +181,28 @@ nav a span, ol small {color: dodgerblue;}
 
 
 @media (max-width: 800px) {
-	header > .titulo h1 {
-		float: left;
-		margin: 0px 0px 0px 0px;
-	}
+	
 }
 
-@media (max-width: 400px) {
-	header > .titulo h1 {
-		font-size: .8em;
-		color: gray;
+@media (max-width: 500px) {
+	
+	header {
+		height: 70px;
 	}
 	header > .titulo img {
 		height: auto;
 		width: 190px;
+		margin-top: 10px;
 		/*margin-left: auto;*/
 		
 		float: left;
 	}
-	#hamburguesa {
+	header > button {
 		margin-left: 30px;
 		height: 100%;
+		padding-top: 20px;
+	}
+	#hamburguesa div {
+		width: 30px;
 	}
 }

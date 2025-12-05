@@ -13,6 +13,7 @@
 <link href="estilos/header-nav.css" rel="stylesheet" type="text/css">
 <script src="estilos/navegacion.js"></script>
 <script src="estilos/galeria.js"></script>
+<script src="estilos/modal.js"></script>
 	
 	
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -27,18 +28,19 @@
 
 <link rel="icon" type="image/x-icon" href="casos-graficos/interfaz/favicon.ico">
 <link href="estilos/textos.css" rel="stylesheet" type="text/css">
+<link href="estilos/modal.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-	<h1>Nematodos</h1>
 	<header id="cabecera">
-	  <div id="hamburguesa" onclick="verIndice()">
+		<h1>Nematodos</h1>
+	  <button type="button" id="hamburguesa" onclick="verIndice()">
 			<div class="hamb1"></div>
 			<div class="hamb2"></div>
 			<div class="hamb3"></div>
-		</div>
+		</button>
 		<div class="titulo">
-			<img id="titulo-compacto" src="interfaz/logo-small.png" alt="titulo del libro"> <img id="titulo-horizontal" src="interfaz/logo-small-horizontal.png" alt="titulo horizontal">
+			<img id="titulo-compacto" src="interfaz/logo-small-autora.png" alt="titulo del libro"> <img id="titulo-horizontal" src="interfaz/logo-small-horizontal-autora.png" alt="titulo horizontal">
 		</div>
 		
 		
@@ -48,7 +50,7 @@
 				<li><a onClick="irTaxonomia()">Más que la taxonomía</a></li>
 				<li id="Indice3"><a onClick="Despliegue()">Estructura de los nematodos</a>
 					<ol class="index-especies" id="subIndice">
-						<li><a onClick="irSubtema(0)"><small>1 </small>Generalidades</a></li>
+						<li><a onClick="irEstructura()"><small>1 </small>Generalidades</a></li>
 						<li><a onClick="irSubtema(1)"><small>2 </small>Exoesqueleto y musculatura</a></li>
 						<li><a onClick="irSubtema(2)"><small>3 </small>Pseudocele</a></li>
 						<li><small>4 </small>Tracto digestivo</li>
@@ -58,7 +60,7 @@
 					</ol>
 				<li><a>Historia de vida</a></li>
 				<li><a>Impacto ecológico de los nematodos</a></li>
-				<li><a onClick="YdeSubtema1()">Bibliografía</a></li>
+				<li><a onClick="YdeSubtema1()"></a></li>
 				</li>
 			</ul>
 		
@@ -66,13 +68,140 @@
 	</header>
 	
 	<main>
+		<aside id="Bibliografia" onClick="salirBiblio()"><!--<button type="button" class="cruz"  onClick="salirBiblio()">&times;</button>-->
+			<ol id="Citas">
+				<li class="Citado">Falso</li>
+				<li class="Citado">1- Académie française. <cite><a href="https://www.dictionnaire-academie.fr/article/A9N0254" target="_blank">Nématodes.</a> Dictionnaire de l’Académie française, 9e ed.</cite>
+				</li>
+					
+				<li class="Citado">2- López de Olmos Reyes YS. <cite><a href="http://www.cienciorama.unam.mx/#!autor/057/?yasser-said-lopez-de-olmos-reyes" target="_blank">El destronamiento del reino.</a></cite>  
+				</li>
+				
+				<li class="Citado">3- Woese CR, Kandler O, Wheelis ML. <cite><a>Towards a natural system of organisms: proposal for the domains Archaea, Bacteria, and Eukarya.</a></cite> Proc Natl Acad Sci. 1980;87:4576–4579.<br>doi.org/10.1073/pnas.87.12.4576.
+				</li>
+				
+				<li class="Citado">4- Wheelis ML, Kandler O, Woese CR. <cite>On the nature of global classification.</cite> Proc Natl Acad Sci. 1992;89:2930–2934.<br>doi.org/10.1073/pnas.89.7.2930.
+				</li>
+				
+				<li class="Citado">5- Holterman M, Schratzberger M, Helder J. <cite>Nematodes as evolutionary commuters between marine, freshwater, and terrestrial habitats.</cite> Biol J Linn Soc. 2019;128(3):756–767.<br>doi.org/10.1093/biolinnean/blz107.
+				</li>
+				
+				<li class="Citado">6- Vlaar LE, Bertran A, Rahimi M, Dong L, Kammenga JE, Helder J, et al. <cite>On the role of dauer in the adaptation of nematodes to a parasitic lifestyle. Parasites Vectors.</cite> 2021;14:1–20.<br>doi.org/ 10.1186/s13071-021-04953-6.
+				</li>
+				
+				<li class="Citado">7- Karegar A, de Ley P, Geraert E. <cite><a href="https://www.documentation.ird.fr/hor/fdi:010012341">Three teratocephalid nematodes from Iran.</a></cite> Fundam Appl Nematol. 1997;20(5):459–472.
+				</li>
+				
+				<li class="Citado">8- Bird AF, Bird J. <cite>The structure of nematodes. </cite>San Diego: Academic Press; 2012.
+				</li>
+				
+				<li class="Citado">9- Bongers T, Ferris H. <cite>Nematode community structure as a bioindicator in environmental monitoring.</cite> Trends Ecol Evol. 1999;14(6):224–228.<br>doi.org/10.1016/S0169-5347(98)01583-3.
+				</li>
+				
+				<li class="Citado">10- De Ley P, Blaxter M. <cite>Systematic position and phylogeny.</cite> In: DL Lee, editor. <cite>The Biology of Nematodes.</cite> Boca Raton, US: CRC Press; 2002. pp. 1–30.
+				</li>
+				
+				<li class="Citado">11- Lee MR, Canales-Aguirre CB, Nunez D, Perez K, Hernandez CE, Brante A. <cite>The identification of sympatric cryptic free-living nematode species in the Antarctic intertidal.</cite> PLoS One. 2017;12(10). <br>doi.org/10.1371/journal.pone.0186140.
+				</li>
+				
+				<li class="Citado">12- Schratzberger M, Holterman M, van Oevelen D, Helder J. <cite>A worm's world: ecological flexibility pays off for free-living nematodes in sediments and soils. </cite>BioScience. 2019;69(11):867–876. <br>doi.org/10.1093/biosci/biz086.
+				</li>
+				
+				<li class="Citado">13- Apt-Baruch W. <cite>Parasitología humana. </cite>México, DF: McGraw-Hill Interamericana Editores; 2013. p. 33.
+				</li>
+				<li class="Citado">14- Hodda M. <cite>Phylum Nematoda: trends in species descriptions, the documentation of diversity, systematics, and the species concept.</cite> Zootaxa. 2022;5114(1):290–317.
+				</li>
+				<li class="Citado">15- Danovaro R, Gambi C. <cite>Cosmopolitism, rareness and endemism in deep-sea marine nematodes.</cite> Eur Zool J. 2022;89(1):653–665.<br>doi.org/10.1080/24750263.2022.2040621.
+				</li>
+				
+				<li class="Citado">16- Kashyap P, Afzal S, Rizvi AN, Ahmad W, Uniyal VP, Banerjee D. <cite>Nematode community structure along elevation gradient in high altitude vegetation cover of Gangotri National Park (Uttarakhand), India.</cite> Sci Rep. 2022;12(1):1428.<br>doi.org/10.1038/s41598-022-05472-9.
+				</li>
+				<li class="Citado">17- Miljutin DM, Gad G, Miljutina MM, Mokievsky VO, Fonseca-Genevois V, Esteves AM. <cite>The state of knowledge on deep-sea nematode taxonomy: how many valid species are known down there?</cite> Mar Biodivers. 2010;40:143–159. <br>doi.org/10.1007/s12526-010-0041-4.
+				</li>
+				
+			</ol>
+			
+	
+<!--
+	16.	
+	13.	
+	14.	Schratzberger M, Ingels J. Meiofauna matters: the roles of meiofauna in benthic ecosystems. J Exp Mar Biol Ecol. 2018;502:12–25. doi.org/10.1016/j.jembe.2017.01.007.
+	15.	Eisenback JD, Triantaphyllou HH. Root-knot nematodes: Meloidogyne species and races. In: WR Nickle, editor. Manual of agricultural nematology. New York: Marcell Dekker; 1991. pp. 191–274.
+	16.	Gibbons L. General organization. In: DL Lee, editor. The biology of nematodes. Boca Raton: CRC Press; 2002. pp. 31–60.
+	17.	Carrillo-Fasio JA, Angúlo-Castro A, Martínez-Gallardo JÁ, Ayala-Tafoya F, Yáñez-Juárez MG, Retes-Manjarrez JE. Distribution and incidence of root-knot nematodes (Meloidogyne spp.) on pepper in Sinaloa, Mexico. Trop Plant Pathol. 2021;46:195–200. doi.org/10.1007/s40858-020-00400-6. 
+	18.	Lee SI, Hong EJ, Kim HC, Ryu SY, Park BK, et al. Morphological and Molecular Characterization of Desportesius invaginatus (Nematoda: Acuariidae) from Egretta garzetta and Bubulcus ibis in Korea. J Vet Clin. 2021;38(2):75–81. doi:10.17555/jvc.2021.04.38.2.75.
+	19.	Lee DL. Life cycles. In: DL Lee, editor. The Biology of Nematodes. London, Reino Unido: CRC Press; 2002. pp. 61–72. doi.org/10.1201/b12614. 
+	20.	Martínez-Ortiz-de-Montellano C, Arroyo-López C, Fourquaux I, Torres-Acosta JFJ, Sandoval-Castro CA, Hoste H. Scanning electron microscopy of Haemonchus contortus exposed to tannin-rich plants under in vivo and in vitro conditions. Exp Parasitol. 2013;133(3):281–286. doi.org/10.1016/j.exppara.2012.11.024.
+	21.	Martínez-Ortiz-de-Montellano C, Torres-Acosta JFJ, Sandoval-Castro CA, Fourquaux I, Hoste H. Scanning electron microscopy of different vulval structures in a Mexican Haemonchus contortus isolate. Vet Parasitol Reg Stud Rep. 2021;26:100640. doi.org/10.1016/j.vprsr.2021.100640.
+	22.	Martínez-Ortiz-de-Montellano C, Torres-Acosta JFJ, Fourquaux I, Sandoval-Castro CA, Hoste H. Ultrastructural study of adult Haemonchus contortus exposed to polyphenol-rich materials under in vivo conditions in goats. Parasite. 2019;26:65. doi.org/10.1051/parasite/2019065.
+	23.	Uppal HS, Bal MS, Singla LD, Kaur P, Sandhu BS. Morphometric and scanning electron microscopy-based identification of Ancylostoma caninum parasites in dog. J Parasit Dis. 2017;41:517–522. doi.org/10.1007/s12639-016-0841-y.
+	24.	Gareh A, Elhawary NM, Tahoun A, Ramez AM, El-Shewehy DM, Elbaz E, et al. Epidemiological, morphological, and morphometric study on Haemonchus spp. recovered from goats in Egypt. Front Vet Sci. 2021;8:705619. doi.org/10.3389/fvets.2021.705619.
+	25.	Moravec F, Justine JL. Echinocephalus inserratus sp. n. (Nematoda: Gnathostomatidae) from the stingray Pastinachus ater (Dasyatidae) and new records of congeneric and some other nematode larvae from teleost fishes off New Caledonia. Folia Parasitol. 2021;68. doi.org/10.14411/fp.2021.014.
+	26.	Olivares-Orozco JL, Rodríguez-Diego JG. Morphology of Oesophagostomum columbianum (Strongylida: Chabertidae) by scanning electron microscopy. Rev Salud Anim. 2019;41(1). https://revistas.censa.edu.cu/index.php/RSA/article/view/1003
+	27.	Radwan NA, Khalil AI, El Mahi RA. Morphology and occurrence of species of Toxocara in wild mammal populations from Egypt. Comp Parasitol. 2009;76(2):273–282. doi.org/10.1654/4367.1.
+	28.	Shalaby H, El Namaky A, Kandil O, Hassan N. In vitro assessment of Balanites aegyptiaca fruit methanolic extract on the adult Toxocara canis. Iran J Parasitol. 2018;13(4):643. doi.org/10.18502/ijpa.v13i4.1181.
+	29.	Harras SF, Elmahy RA. New record of Abbreviata leptosoma Gervais, 1848 (Spirurida: Physalopteridae) infection in two species of lizards in north and south Sinai, Egypt. Egypt J Zool. 2019;72(72):1–10. doi.org/10.21608/ejz.2019.13977.1011.
+	30.	Goldsmid JM, Lyons NF. Studies on Ternidens deminutus Railliet &amp; Henry, 1909 (Nematoda). I. External morphology. J Helminthol. 1973;47(2):119–126. doi.org/10.1017/S0022149X00023816.
+	31.	Ruiz-Cuenca AN, Abolafia J. Comparative study of four known species of the genus Acrobeles von Linstow, 1877 (Nematoda, Cephalobidae) with ‘single’and ‘double’ cuticle from coastal dunes in Spain. J Helminthol. 2021;95. doi.org/10.1017/S0022149X21000316.
+	32.	Hunt DJ, Sutherland JA. Ichthyocephaloides dasyacanthus ng, n. sp. (Nematoda: Rhigonematoidea) from a millipede from Papua New Guinea. Syst Parasitol. 1984;6:141–146. doi.org/10.1007/BF02185522.
+	33.	Khalil LF, Gibbons LM. Two nematodes, Paratractis hystrix (Diesing, 1851) and Buckleyatractis marinkelli ng, n. sp. (Atractidae: Cosmocercoidea) from Podocnemis spp. in Colombia. Syst Parasitol. 1988;12(3):187–198. doi.org/10.1007/BF00007767.
+	34.	Kanjanapruthipong T, Ampawong S, Thaenkham U, Tuentam K, Watthanakulpanich D. Survival of immature pre-adult Gnathostoma spinigerum in humans after treatment with albendazole. PLoS One. 2022;17(3). doi.org/10.1371/journal.pone.0264766.
+	35.	Tkach VV, Swiderski ZP. Scanning electron microscopy of the rare nematode species Pterygodermatites bovieri (Nematoda: Rictaculariidae), a parasite of bats. Folia Parasitol. 1996;43(4):301–304. doi.org/10.14411/fp.1996.037.
+	36.	Handoo Z, Kantor M, Carta L. Taxonomy and identification of principal foliar nematode species (Aphelenchoides and Litylenchus). Plants. 2020;9(11):1490. doi.org/10.3390/plants9111490.
+	37.	Shoho C, Uni S. Scanning electron microscopy (SEM) of some Setaria species (Filarioidea, Nematoda). Zeitschrift für Parasitenkunde. 1977;53:93–104. doi.org/10.1007/BF00383119.
+	38.	Purwaningsih E. The first report of new species: Trichuris landak n. sp. Asian Pac J Trop Biomed. 2013;3(2):85–88. doi.org/10.1016/S2221-1691(13)60029-5.
+	39.	Wang D, Vannier J, Schumann I, Wang X, Yang XG, Komiya T, et al. Origin of ecdysis: fossil evidence from 535-million-year-old scalidophoran worms. Proc Biol Sci. 2019;286(1906):20190791. doi.org/10.1098/rspb.2019.0791.
+	40.	Bowman DD. Chapter 4: Helminths. In: Georgis’ Parasitology for Veterinarians E-Book. Elsevier Health Sciences; 2022. pp. 170–183.
+	41.	Brianti E, Giannetto S, Traversa D, Chirgwin SR, Shakya K, Klei TR. In vitro development of cyathostomin larvae from the third stage larvae to the fourth stage: morphologic characterization, effects of refrigeration, and species-specific patterns. Vet Parasitol. 2009;163(4):348–356. doi.org/10.1016/j.vetpar.2009.04.029.
+	42.	David M. Identification and functional characterization of an ABC transporter of Haemonchus contortus, the P-glycoprotein 13| Theses.fr [doctoral dissertation]. Toulouse 3;2016. http://theses.fr/2016TOU30014
+	43.	Maggenti AR. Nemata: higher classification. In: Manual of Agricultural Nematology. Boca Raton, US: CRC Press; 2020. pp. 147–188. doi.org/10.1201/9781003066576-5.
+	44.	Thewarage LD, Dissanayake DS, Perera US, Bandara AT, Perera BVP, Wickramasinghe S, et al. Morphology and molecular characterization of Parabronema smithii (Cobbold, 1882) (Nematoda: Habronematidae) from wild Asian elephant (Elephas maximus maximus) of Sri Lanka. Acta Parasitol. 2020;65:504–517. doi.org/10.2478/s11686-020-00193-3.
+	45.	Lopes-Torres EJ, da Silva Pinheiro RH, Rodrigues RAR, da Costa Francez L, Gonçalves EC, Giese EG. Additional characterization of the adult worm Mammomonogamus laryngeus (Railliet, 1899) and the tissue lesions caused by the infection in buffaloes. Vet Parasitol. 2020;283:109164. doi.org/10.1016/j.vetpar.2020.109164.
+	46.	El-Gameel SM, Al-Mokaddem AK, Salaeh NM, Attia MM. Morphomolecular characterization of Strongylus vulgaris isolated from donkeys with special references to histopathological study on the affected organs. J Parasit Dis. 2022;46(3):795–803. doi.org/10.1007/s12639-022-01498-y.
+	47.	Pinheiro RHDS, Melo S, Benigno RNM, Giese EG. Globocephalus urosubulatus (Alessandrini, 1909) (Nematoda: Ancylostomatidae) in Brazil: a morphological revisitation. Rev Bras Parasitol Vet. 2021;30. doi.org/10.1590/S1984-29612021078.
+	48.	Schmidt-Rhaesa A, Oldenburg V. Morphology of Soboliphyme baturini (Dioctophymatida, Nematoda) by SEM and histological sectioning. Zool Anz. 2021;290:58–70. doi.org/10.1016/j.jcz.2020.11.002.
+	49.	Eisenback JD, Hirschmann H. Morphological comparison of Meloidogyne males by scanning electron microscopy. J Nematol. 1980;12(1):23. doi.org/10.1094/PD-12-23.
+	50.	Jaiswal K, Mishra S, Bee A. Scanning electron microscopy of Ascaridia galli in Gallus gallus domesticus in Lucknow, UP, India. Indian J Sci Technol. 2020;13:102. doi.org/10.17485/IJST/v13i19.102.
+	51.	Civáňová Křížová K, Seifertová M, Baruš V, Hodová I, Mašová Š, Nurcahyo W, et al. First study of Ascaris lumbricoides from the semi-wild population of the Sumatran orangutan (Pongo abelii) in the context of morphological description and molecular phylogeny. Life. 2023;13(4):1016. doi.org/10.3390/life13041016.
+	52.	Morffe J, Hasegawa K. Morphological and molecular characterization of Travassosinema claudiae n. sp. (Oxyuridomorpha: Travassosinematidae) from the Japanese millipede Parafontaria laminata (Attems, 1909) (Polydesmida: Xystodesmidae). Zootaxa. 2017;4282(1):166–178. doi.org/10.11646/zootaxa.4282.1.10.
+	53.	Wilecki M, Lightfoot JW, Susoy V, Sommer RJ. Predatory feeding behaviour in Pristionchus nematodes is dependent on phenotypic plasticity and induced by serotonin. J Exp Biol. 2015;218(9):1306–1313. doi.org/10.1242/jeb.118620.
+	54.	Nguyen K, Shapiro-Ilan D, Stuart R, McCoy C, James R, Adams B. Heterorhabditis mexicana n. sp. (Rhabditida: Heterorhabditidae) from Tamaulipas, Mexico, and morphological studies of the bursa of Heterorhabditis spp. Nematology. 2004;6(2):231–244. doi.org/10.1163/1568541041218031.
+	55.	Pereira FB, Ferreira VL, Tomas WM, Elisei C, Paiva F, Tavares LER. Diaphanocephalus galeatus (Nematoda: Diaphanocephalidae), a poorly known parasite of lizards: redescription, first genetic characterization, and a revision of its congeners from Brazil. J Helminthol. 2019;93(5):629–635. doi.org/10.1017/S0022149X18000597.
+	56.	Virgilio LR, Nogueira A, Takemoto RM, Passere MD, de Oliveira AV, Meneguetti DUO, et al. Morphological description and molecular characterization of Ancyracanthus electrophori n. sp. (Gnathostomatoidea: Gnathostomatidae): a new nematode parasitic in the electric eel Electrophorus varii (Gymnotiformes: Gymnotidae), from the Brazilian Amazon. J Helminthol. 2023;97. doi.org/10.1017/S0022149X22000864.
+	57.	Malan FS, de Kock M, Els H. Scanning electron microscopy of Bunostomum phlebotomum (Railliet, 1900). J S Afr Vet Assoc. 1986;57(4):227–230. doi.org/10.4102/jsava.v57i4.1150.
+	58.	Lopes-Torres EJ, Girard-Dias W, Mello WN, Simões RO, Pinto IS, Maldonado A, et al. Taxonomy of Physaloptera mirandai (Nematoda: Physalopteroidea) based on three-dimensional microscopy and phylogenetic positioning. Acta Trop. 2019;195:115–126. doi.org/10.1016/j.actatropica.2019.04.002.
+	59.	Eisenback JD, Holland LA, Schroeder J, Thomas SH, Beacham JM, Hanson SF, et al. Meloidogyne aegracyperi n. sp. (Nematoda: Meloidogynidae), a root-knot nematode parasitizing yellow and purple nutsedge in New Mexico. J Nematol. 2019;51. doi.org/10.21307/jofnem-2019-071.
+	60.	Munn EA, Munn PD. Feeding and digestion. In: DL Lee, editor. The Biology of Nematodes. CRC Press; 2002. pp. 211–232.
+	61.	Soetaert K, Muthumbi A, Heip C. Size and shape of ocean margin nematodes: morphological diversity and depth-related patterns. Mar Ecol Prog Ser. 2002;242:179–193. doi.org/10.3354/meps.
+	62.	Çakmak T, Kaydan MB, Gözel Ç, Peña-Santiago R, Abolafia J, Gözel U. New records of free-living nematode species from Mount Ararat, Turkey, with SEM study of three remarkable species. Biologia. 2021;76:63–75. doi.org/10.2478/s11756-020-00495-x.
+	63.	Mladineo I, Hrabar J, Smodlaka H, Palmer L, Sakamaki K, Keklikoglou K, et al. Functional ultrastructure of the excretory gland cell in zoonotic anisakids (Anisakidae, Nematoda). Cells. 2019;8(11):1451. doi.org/10.3390/cells8111451.
+	64.	Lichtenfels JR, Wergin WP, Murphy C, Pilitt PA. Bilateral, perivulval cuticular pores in trichostrongylid nematodes. J Parasitol. 1995;81(5):633–636. doi.org/10.2307/3283865.
+	65.	Decraemer W, Magnusson C, Bert W. Morphological and molecular characterisation of Trichodorus hellalae n. sp. (Nematoda: Trichodoridae) from Norway. Eur J Plant Pathol. 2021;161(1):91–105. doi.org/10.1007/s10658-021-02306-8.
+	66.	Kryvoruchenko D, Prykhodko Y, Mazannyі O, Titarenko O, Reva I, Sherstiuk L. Differential diagnosis of Dirofilaria immitis nematodes (Nematoda, Onchocercidae). Regul Mech Biosyst. 2021;12(4):642–648. doi.org/10.15421/022188.
+	67.	Carta LK, Handoo ZA, Hoberg EP, Erbe EF, Wergin WP. Evaluation of some vulval appendages in nematode taxonomy. Comp Parasitol. 2009;76(2):191–209. doi.org/10.1654/4302.1.
+	68.	Lichtenfels JR, Pilitt PA, Gibbons LM. Ovejector structure in the Haemonchinae (Nematoda: Trichostrongyloidea) of ruminants. J Parasitol. 2003;89(5):984–993. doi.org/10.1645/GE-3162.
+	69.	Abraham D. Biology of Dirofilaria immitis. In: Dirofilariasis. Boca Raton, US: CRC Press; 2018. pp. 29–46. doi.org/10.1201/9781351071420-2.
+	70.	Bodri MS. Nematodes. In: GA Lewbart. Invertebrate Medicine. 2nd edition. Hoboken, NJ, US: John Wyle &amp; Sons Inc.; 2022. pp. 537–561. doi.org/10.1002/9781119569831.
+	71.	Brüggemann J. Nematodes as live food in larviculture: a review. J World Aquac Soc. 2012;43(6):739–763. doi.org/10.1111/j.1749-7345.2012.00608.x.
+	72.	Stuart-Fox D. Making sense of animal senses. Nature. 2022;6:1408. doi.org/10.1038/s41559-022-01851-7.
+	73.	Shatilovich A, Gade VR, Pippel M, Hoffmeyer TT, Tchesunov AV, Stevens L, et al. A novel nematode species from the Siberian permafrost shares adaptive mechanisms for cryptobiotic survival with C. elegans dauer larva. PLoS Genet. 2023;19(7). doi.org/10.1371/journal.pgen.1010798.
+	74.	McCarthy C, Vineer HR, Morgan ER, van Dijk J. Predicting the unpredictable? A climate-based model of the timing of peak pasture infectivity for Dictyocaulus viviparus. Vet Parasitol. 2022;m309:109770. doi.org/10.1016/j.vetpar.2022.109770.
+	75.	Hao K, Tian ZX, Wang ZC, Huang SQ. Pollen grain size associated with pollinator feeding strategy. Proc Biol Sci. 2020;287(1933):20201191. doi.org/10.1098/rspb.2020.1191.
+	76.	Hailu FA, Hailu YA. Agro-ecological importance of nematodes (round worms). Acta Sci Agric. 2020;4(1):156–162. doi.org/10.31080/ASAG.2020.04.0763.
+	77.	McClain CR, Boyer AG. Biodiversity and body size are linked across metazoans. Proc Biol Sci. 2009;276(1665):2209–2215. doi.org/10.1098/rspb.2009.0245.
+	78.	Lempereur L, Delobelle M, Doom M, Haelters J, Levy E, Losson B, et al. Crassicauda boopis in a fin whale (Balaenoptera physalus) ship-struck in the eastern North Atlantic Ocean. Parasitol Open. 2017;3. doi.org/10.1017/pao.2017.10.
+	79.	Martínez-Ortiz-de-Montellano C, Castañeda REQ, Dantán-González ED, Díaz HA, Márquez Mota CCM, Toledo-Alvarado HOT. Concepción integrativa del parasitismo: redefiniendo nuevos conceptos. Bioagrociencias. 2022;15(2). doi.org/10.56369/BAC.4448.
+	80.	Ding J, Liu X, Bai X, Wang Y, Li J, Wang C, Li S, Liu M, Wang X. Trichinella spiralis: inflammation modulator. J Helminthol. 2020; 94. doi.org/10.1017/S0022149X20000802.
+	81.	Zaiss Mario M, Rapin A, Lebon L, Dubey Lalit K, Mosconi I, Sarter K, Piersigilli A, Menin L, Walker Alan W, Rougemont J, Paerewijck O, Geldhof P, McCoy Kathleen D, Macpherson Andrew J, Croese J, Giacomin Paul R, Loukas A, Junt T, Marsland Benjamin J, Harris NL. The intestinal microbiota contributes to the ability of helminths to modulate allergic inflammation. Immunity. 2015;43:998–1010. doi.org/10.1016/j.immuni.2015.09.012.
+	82.	Walshe N, Mulcahy G, Hodgkinson J, Peachey L. No Worm is an island; the influence of commensal gut microbiota on cyathostomin infections. Animals. 2020;10:2309. doi.org/10.3390/ani10122309.
+	83.	Piña-Martínez R, Martínez-Ortiz-de-Montellano C, Márquez-Mota CC, Dantán-González E. Integrative view of diseases in ruminants: towards a holistic model. CABI Reviews. 2025;20(1):0015. https://www.cabidigitallibrary.org/doi/epdf/10.1079/cabireviews.2025.0015.-->
+
 		
-		
-		
+		</aside>
 		<section class="Contenido">
 			
 			<div class="modalGaleria" id="MG1">
-				<span class="cruz" id="tache" onClick="verModal()">&times;</span>
+				<button class="cruz"  onClick="verGaleria()">&times;</button>
 				
 				<div class="galeria" id="esquemas1">
 					<div class="captiongaleria">
@@ -80,33 +209,33 @@
 					</div>
 					<div class="numbertext"><span id="contador1">1</span></div>
 					<div class="diapoFalsa" id="falsa">
-					<img onClick="openGaleria(1)" src="figuras/figura3-a.png" alt="default1">
+					<img onClick="cambiarImg(1)" src="figuras/figura3-a.png" alt="default1">
 						<div class="descripcion"><p>Esquema tridimensional de un nematodo</p></div>
 						
 				 	</div>
 				  	<div class="diapositiva">
-					<img onClick="openGaleria(1)" src="figuras/figura3-a.png" alt="figura3">
+					<img onClick="cambiarImg(1)" src="figuras/figura3-a.png" alt="figura3">
 						<div class="descripcion"><p>Esquema tridimensional de un nematodo</p></div>
 						
 				  	</div>
 
 				  	<div class="diapositiva">
-					  <img onClick="openGaleria(2)" src="figuras/figura3-b.png" alt="figura3" >
+					  <img onClick="cambiarImg(2)" src="figuras/figura3-b.png" alt="figura3" >
 						<div class="descripcion"><p>Esquema sagital de un nematodo hembra</p></div>
 						
 				  	</div>
 					<div class="diapositiva">
-					  <img onClick="openGaleria(3)" src="figuras/figura3-c.png"  alt="figura3">
+					  <img onClick="cambiarImg(3)" src="figuras/figura3-c.png"  alt="figura3">
 						<div class="descripcion"><p>Esquema de un corte transversal de un nematodo hembra. 
 a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal, c) Cutícula, d) Porción posterior o caudal, e) Cola, f) Esófago, g) Estriaciones de la cutícula, h) Hipodermis, i) Músculo, j) Intestino, k) Lumen, l) Ano, m) Gónada, n) Útero con huevos, o) Vulva, p) Pseudocele, q) Cordón nervioso</p></div>
 						
 				 	</div>
 				  	<div class="diapositiva">				
-					  <img onClick="openGaleria(4)" src="figuras/figura3-d.png" alt="figura3">
+					  <img onClick="cambiarImg(4)" src="figuras/figura3-d.png" alt="figura3">
 						<div class="descripcion"></div>
 				  	</div>
 					<div class="diapositiva">				
-					  <img onClick="openGaleria(4)" src="figuras/figura3-e.png" alt="figura3">
+					  <img onClick="cambiarImg(4)" src="figuras/figura3-e.png" alt="figura3">
 						<div class="descripcion"></div>
 				  	</div>
 				
@@ -129,7 +258,7 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 				En la Unidad de Desarrollo de Organismos Parasitarios de la Facultad de Medicina Veterinaria y Zootecnia de la <span class="versalita">UNAM</span>, es rutina cultivar heces de animales, para ello, se recrea lo que sucede en la naturaleza adecuando en el laboratorio las condiciones de temperatura, humedad y oxigenación, el proceso continuo de vida de la materia orgánica. La finalidad es detectar micro- y macrorganismos. Días después de haber sembrado las heces, se desarrollan entidades filamentosas cilíndricas, unas son finas con movimientos serpenteantes, rápidos y vigorosos, parecen látigos que se contraen y se estiran; otras son gruesas, se mueven de forma tortuosa, errática y más lenta, como si acabaran de despertar, están un tanto aletargadas.
 				</p>
 				<p class="ultimoParrafo">
-				Las primeras están asociadas con larvas parásitas y las segundas, es muy probable que sean larvas de vida libre. En este microecosistema, llamado también “islote ecológico”, creado en el laboratorio, se están desarrollando ciclos de vida de <strong>nematodos</strong>. El objetivo de la presente obra es tratar de responder a la pregunta: ¿qué es un nematodo? Del griego <i>nema</i>, hilo, y <i>oides</i>, aspecto, se construye la palabra “filiforme”, para después incorporarse al español la palabra <a onClick="verBiblio(1)"><strong>nematodo<sup>(1)</sup></strong></a> a partir del francés <i>nématode</i>. El universo de estos organismos es vasto y diverso, así como los ciclos biológicos en los que se involucran; lo más enriquecedor es descubrir el rol que juegan en esta maquinaria viva llamada planeta.
+				Las primeras están asociadas con larvas parásitas y las segundas, es muy probable que sean larvas de vida libre. En este microecosistema, llamado también “islote ecológico”, creado en el laboratorio, se están desarrollando ciclos de vida de <strong>nematodos</strong>. El objetivo de la presente obra es tratar de responder a la pregunta: ¿qué es un nematodo? Del griego <i>nema</i>, hilo, y <i>oides</i>, aspecto, se construye la palabra “filiforme”, para después incorporarse al español la palabra <a onClick="citar(1)"><strong>nematodo<sup>(1)</sup></strong></a> a partir del francés <i>nématode</i>. El universo de estos organismos es vasto y diverso, así como los ciclos biológicos en los que se involucran; lo más enriquecedor es descubrir el rol que juegan en esta maquinaria viva llamada planeta.
 				</p>
 				
 			</section>
@@ -140,46 +269,51 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 				<div class="separaTemas"></div>
 				<h2>Más que la taxonomía</h2>
 				<p class="primerParrafo">
-				Con el destronamiento del reino como bien lo narra <a onClick="verBiblio(2)">López de Olmos Reyes<sup>(2)</sup></a> y los descubrimientos de <a onClick="verBiblio(3)">Woese et al.,<sup>(3)</sup></a> se eliminaron los cinco reinos de clasificación de los seres vivos y, mediante la filogenética, se establecieron relaciones entre diversos organismos, por lo que hoy se reúnen en árboles de carácter universal. Pareciera que Charles Darwin ya lo había anticipado. Poco más de cien años después, “El Sistema de los Tres Dominios” revolucionó las teorías, remplazó a “la corte real de los reinos” a partir de la genética. Esta teoría de los dominios es un modelo de clasificación basado en las diferencias entre las secuencias de nucleótidos en los ribosomas y de <span class="versalita">ARN</span> de transferencia de la célula, la estructura de los lípidos de la membrana y la sensibilidad a los antibióticos.<a onClick="verBiblio(4)"><sup>(4)</sup></a>
+				Con el destronamiento del reino como bien lo narra <a onClick="citar(2)">López de Olmos Reyes<sup>(2)</sup></a> y los descubrimientos de <a onClick="citar(3)">Woese et al.,<sup>(3)</sup></a> se eliminaron los cinco reinos de clasificación de los seres vivos y, mediante la filogenética, se establecieron relaciones entre diversos organismos, por lo que hoy se reúnen en árboles de carácter universal. Pareciera que Charles Darwin ya lo había anticipado. Poco más de cien años después, “El Sistema de los Tres Dominios” revolucionó las teorías, remplazó a “la corte real de los reinos” a partir de la genética. Esta teoría de los dominios es un modelo de clasificación basado en las diferencias entre las secuencias de nucleótidos en los ribosomas y de <span class="versalita">ARN</span> de transferencia de la célula, la estructura de los lípidos de la membrana y la sensibilidad a los <a onClick="citar(4)">antibióticos.<sup>(4)</sup></a>
+				</p>
+				<p role="presentation">
+				Este sistema propone que una célula antepasada común “Cenancestor” o <i>“Last Universal Common Ancestor”</i><span class="versalita">(LUCA)</span>, dio lugar a tres células diferentes, donde cada una representa un dominio: Archea, Bacteria y Eukarya. Algo así como un nuevo orden mundial. De esta forma, en esta nueva taxonomía, los nematodos pertenecen al dominio <strong>Eukarya</strong>, <a onClick="citar(2)"><i>verbatim</i>,<sup>(2)</sup></a> también llamados eucariotas o eucariontes: organismos con células que poseen un núcleo definido en el que se resguarda el <span class="versalita">ADN</span>; incluyendo a los animales, las plantas, los hongos y los protistas; los primeros tres típicamente pluricelulares.
 				</p>
 				<p>
-				Este sistema propone que una célula antepasada común “Cenancestor” o <i>“Last Universal Common Ancestor”</i><span class="versalita">(LUCA)</span>, dio lugar a tres células diferentes, donde cada una representa un dominio: Archea, Bacteria y Eukarya. Algo así como un nuevo orden mundial. De esta forma, en esta nueva taxonomía, los nematodos pertenecen al dominio <strong>Eukarya</strong>, <i>verbatim</i>,<a><sup>(2)</sup></a> también llamados eucariotas o eucariontes: organismos con células que poseen un núcleo definido en el que se resguarda el <span class="versalita">ADN</span>; incluyendo a los animales, las plantas, los hongos y los protistas; los primeros tres típicamente pluricelulares.
+				Así se garantiza que los nematodos sean animales, al igual que un gato o un humano. Entonces, en este dominio, estos animales están dentro del filo <strong>Nematoda o Nemathelmintes</strong>. Utilizando la bioinformática, recientemente se han descrito doce clados principales,<a onClick="citar(5)"><sup>(5)</sup></a> <a onClick="citar(6)"><sup>(6)</sup></a> donde el ancestro común no es un parásito. Este detalle será retomado más adelante cuando se cuestione el rol de estos organismos en el planeta. Los clados 1–6 corresponden a la clase Adenophorea. Esta nomenclatura se refiere a todos los animales que tienen glándulas caudales, y los clados 8–12 pertenecen a la clase Secernentea, que concierne a los secretores, aquellos con un sistema secretor-excretor con canales laterales. Dejando el clado 7 a una única familia monogénica de nematodos terrestres con una única línea evolutiva, la clase <strong>Teratocephalidae</strong>, relativa a las adaptaciones evolutivas hacia la vida terrestre<a onClick="citar(7)"><sup>(7)</sup></a>; sus miembros son diferentes, tanto  en morfología como en fisiología <small>(Figura 1)</small>.
 				</p>
-				<p>
-				Así se garantiza que los nematodos sean animales, al igual que un gato o un humano. Entonces, en este dominio, estos animales están dentro del filo <strong>Nematoda o Nemathelmintes</strong>. Utilizando la bioinformática, recientemente se han descrito doce clados principales,<a><sup>(5, 6)</sup></a> donde el ancestro común no es un parásito. Este detalle será retomado más adelante cuando se cuestione el rol de estos organismos en el planeta. Los clados 1–6 corresponden a la clase Adenophorea. Esta nomenclatura se refiere a todos los animales que tienen glándulas caudales, y los clados 8–12 pertenecen a la clase Secernentea, que concierne a los secretores, aquellos con un sistema secretor-excretor con canales laterales. Dejando el clado 7 a una única familia monogénica de nematodos terrestres con una única línea evolutiva, la clase <strong>Teratocephalidae</strong>, relativa a las adaptaciones evolutivas hacia la vida terrestre<a><sup>(7)</sup></a>; sus miembros son diferentes, tanto  en morfología como en fisiología <small>(Figura 1)</small>.
-				</p>
-				<div class="Galeria-prev">
-					<p><small>Figura 1</small></p>
+				<figure>
+					<figcaption><b>Figura 1</b><br>Relación filogenética entre los principales taxones de nematodos basada en secuencias completas de <span class="versalita">ADN</span> ribosómico de subunidad pequeña. Los clados 1, 2, 5 y 8–12 se han relacionado con <a onClick="citar(6)">parasitismo.<sup>(6)</sup></a><cite>Imagen creada con BioRender.com</cite>
+
+					
+					</figcaption>
 					<a href="figuras/figura1.png" target="_blank">
-				<img src="figuras/figura1.png" alt="Imagen representativa de la Relación filogenética de los taxones de nematodos">
+						<img src="figuras/figura1.png" alt="Imagen representativa de la Relación filogenética de los taxones de nematodos">
 					</a>
-				</div>
+				</figure>
 				
 				<p>
-				Muchos autores coinciden<a><sup>(5,8-12)</sup></a> en que la clasificación de los nematodos va más allá de la morfología, las claves dicotómicas o taxonómicas, e incluso, las herramientas genómicas también dejan dudas de sus resultados, lo cierto es que al hablar de nematodos, el mundo es muy diverso y abundante en organismos fascinantes.
+				<a onClick="citarEspecial()">Muchos autores coinciden<sup>(5,8-12)</sup></a> en que la clasificación de los nematodos va más allá de la morfología, las claves dicotómicas o taxonómicas, e incluso, las herramientas genómicas también dejan dudas de sus resultados, lo cierto es que al hablar de nematodos, el mundo es muy diverso y abundante en organismos fascinantes.
 				</p>
 				
-				<p>Bongers y Ferris<a><sup>(9)</sup></a> señalan que cuatro de cada cinco animales multicelulares del planeta son nematodos. Las recientes estimaciones indican que son los más numerosos de los <strong>metazoarios</strong>, con un total de 27 000 especies identificadas,<a><sup>(5, 12, 13)</sup></a> pero existen más de 10 millones sin identificar.<a><sup>(14)</sup></a> Sin embargo, se calcula que solo se ha descrito entre el 6 y 56% de la diversidad de nematodos del planeta y que falta una proporción de alrededor del 86% por descubrir.<a><sup>(11) </sup></a>
+				<p>Bongers y Ferris<a onClick="citar(9)"><sup>(9)</sup></a> señalan que cuatro de cada cinco animales multicelulares del planeta son nematodos. Las recientes estimaciones indican que son los más numerosos de los <strong>metazoarios</strong>, con un total de 27 000 especies identificadas,<a onClick="citar(5)"><sup>(5, </sup></a><a onClick="citar(12)"><sup>12, </sup></a><a onClick="citar(13)"><sup>13)</sup></a> pero existen más de 10 millones sin identificar.<a onClick="citar(14)"><sup>(14)</sup></a> Sin embargo, se calcula que solo se ha descrito entre el 6 y 56% de la diversidad de nematodos del planeta y que falta una proporción de alrededor del 86% por descubrir.<a><sup>(11) </sup></a>
 				</p>
 				<p>
-				Algunas especies de nematodos son de vida libre, mientras que otras están bien adaptadas a la vida parasitaria en plantas y animales, incluyendo al hombre <small>(Figura 2)</small>. Los nematodos que ejercen parasitismo pueden encontrarse en los clados 1, 2, 5 y 8–12<a><sup>(5, 6, 12, 13)</sup></a> <small>(Figura 1)</small>.
+				Algunas especies de nematodos son de vida libre, mientras que otras están bien adaptadas a la vida parasitaria en plantas y animales, incluyendo al hombre <small>(Figura 2)</small>. Los nematodos que ejercen parasitismo pueden encontrarse en los clados 1, 2, 5 y 8–12<a onClick="citar(5)"><sup>(5, </sup></a><a onClick="citar(6)"><sup>6, </sup></a><a onClick="citar(12)"><sup>12, </sup></a><a onClick="citar(13)"><sup>13)</sup></a> <small>(Figura 1)</small>.
 				</p>
 				<p class="parrafoResaltado">
-				Los <strong>metazoarios</strong>, a diferencia de los organismos unicelulares <strong>protozoarios</strong>, son entidades pluricelulares e invertebrados. Son los animales más pequeños que habitan en la Tierra e incluyen las grandes familias de helmintos y artrópodos.
+				<em>Los <b>metazoarios</b>, a diferencia de los organismos unicelulares <strong>protozoarios</strong>, son entidades pluricelulares e invertebrados. Son los animales más pequeños que habitan en la Tierra e incluyen las grandes familias de helmintos y artrópodos.</em>
 				</p>
 				<p>
-				De los nematodos que habitan en el mar, se ha clasificado un 42%<a><sup>(5)</sup></a> y representan más del 90% de la <strong>meiofauna</strong> marina,<a><sup>(15)</sup></a> por otro lado, los nematodos que se desarrollan en el agua dulce y en los ecosistemas terrestres representan el 58% del total conocido<a><sup>(5,12)</sup></a> <small>(Figura 2)</small>. La biodiversidad de estos organismos es tan basta que se han identificado en altitudes de hasta los 5 000 msnm<a><sup>(5, 16)</sup></a> y, en la profundidad del mar, desde los 4 000 m<a><sup>(15)</sup></a> y hasta los 8 380 metros.<a><sup>(17)</sup></a> 
+				De los nematodos que habitan en el mar, se ha clasificado un 42%<a><sup>(5)</sup></a> y representan más del 90% de la <strong>meiofauna</strong> marina,<a><sup>(15)</sup></a> por otro lado, los nematodos que se desarrollan en el agua dulce y en los ecosistemas terrestres representan el 58% del total conocido<a><sup>(5, 12)</sup></a> <small>(Figura 2)</small>. La biodiversidad de estos organismos es tan basta que se han identificado en altitudes de hasta los 5 000 msnm<a><sup>(5, 16)</sup></a> y, en la profundidad del mar, desde los 4 000 m<a><sup>(15)</sup></a> y hasta los 8 380 metros.<a><sup>(17)</sup></a> 
 				</p>
 				<p class="parrafoResaltado">
-				La <strong>meiofauna</strong> o meiobentos son los metazoarios más pequeños que habitan en el sustrato de los arroyos y otras superficies, como los fardos de las raíces de los árboles y otros residuos de gran tamaño.<a><sup>(18)</sup></a>
+				<em>La <b>meiofauna</b> o meiobentos son los metazoarios más pequeños que habitan en el sustrato de los arroyos y otras superficies, como los fardos de las raíces de los árboles y otros residuos de gran tamaño.<a><sup>(18)</sup></a></em>
 				</p>
 				
-				<div class="Galeria-prev">
-					<p><small>Figura 2</small></p>
+				<figure>
+					<figcaption><b>Figura 2</b><br>
+					Estimación de los nematodos marinos y terrestres.<cite>Imagen creada con información de <a onClick="citar(5)">(5, </a><a onClick="citar(12)">12)</a> utilizando BioRender.com</cite>
+					</figcaption>
 					<a href="figuras/figura2.png" target="_blank">
 				<img src="figuras/figura2.png" alt="Estimación de los nematodos marinos y terrestres">
 					</a>
-				</div>
+				</figure>
 				
 				
 		
@@ -187,7 +321,7 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 			
 			<section id="Estructura">
 				<div class="portadita-estructura" id="panel3">
-					Estructura de los nematodos
+					<span id="h2falso">Estructura de los nematodos</span>
 					<span id="nombreSubtema"></span>
 				</div>
 				<div class="separaTemas"></div>
@@ -203,12 +337,12 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 
 					</p>
 					
-					<div class="Galeria-prev">
-					<p><small>Figura 3 (interactiva)</small></p>
-					<a onClick="verModal(1)">
+					<figure>
+					<figcaption>Figuras 3 </figcaption>
+					<a onClick="verGaleria()">
 						<img src="figuras/figura3-thumb.png" alt="miniatura de las imagenes interactivas" aria-labelledby="imagen simple del conjunto de cinco imagenes interactivas">
 					</a>
-				</div>
+				</figure>
 					
 					<p>
 					La estructura o arreglo general de un nematodo se describe a continuación de afuera hacia adentro, esto puede lograrse gracias a las observaciones en Microscopia Electrónica de Barrido <span class="versalita">(MEB)</span> que permite ver la estructura o superficie<a><sup>(23-27)</sup></a> <small>(Figuras 4 y 5)</small> o Microscopia Electrónica de Transmisión <span class="versalita">(MET)</span> que permite ver la ultraestructura o el detalle celular y los organelos <small>(Figuras 6, 8, 11–15, 17)</small><a><sup>(23, 24)</sup></a>.
@@ -220,17 +354,27 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 				<section class="subtema" id="Subtema2">
 					<h3>Exoesqueleto y musculatura</h3>
 					<p>
-					Gibbons(20) refiere la estructura general comenzando con el órgano más grande que es <strong>la cutícula</strong>, otros autores le llaman también <strong>exoesqueleto</strong>.(8) El cual recubre todo el cuerpo desde la porción anterior hasta la caudal, recubriendo e invaginando la cápsula bucal antes de la faringe, así como también, el ano y la cloaca, vagina y aberturas de secreción-excreción. La cutícula es anulada por estriaciones transversales, pero también longitudinales que puede ser un recubrimiento sencillo como la de <i>Ancylostoma caninum</i><a><sup>(27)</sup></a> o de los tricostrongílidos como <i>Haemonchus</i><a><sup>(24, 26, 28)</sup></a> <small>(Figuras 4, 6 y 8)</small> y <i>Trichostrongylus colubriformis</i> <small>(Figura 5)</small>; pero, también puede ser compleja y presentar muchas variaciones como poros, ganchos, protuberancias, papilas, setas, crestas, cordones, pliegues, etcétera.
+					Gibbons<a><sup>(20)</sup></a> refiere la estructura general comenzando con el órgano más grande que es <strong>la cutícula</strong>, otros autores le llaman también <strong>exoesqueleto</strong>.<a><sup>(8)</sup></a> El cual recubre todo el cuerpo desde la porción anterior hasta la caudal, recubriendo e invaginando la cápsula bucal antes de la faringe, así como también, el ano y la cloaca, vagina y aberturas de secreción-excreción. La cutícula es anulada por estriaciones transversales, pero también longitudinales que puede ser un recubrimiento sencillo como la de <i>Ancylostoma caninum</i><a><sup>(27)</sup></a> o de los tricostrongílidos como <i>Haemonchus</i><a><sup>(24, 26, 28)</sup></a> <small>(Figuras 4, 6 y 8)</small> y <i>Trichostrongylus colubriformis</i> <small>(Figura 5)</small>; pero, también puede ser compleja y presentar muchas variaciones como poros, ganchos, protuberancias, papilas, setas, crestas, cordones, pliegues, etcétera.
 					</p>
 					
-					<!--AQUI EMPIEZAN MUCHAS IMAGENES
-					+
-					+
-					+
-					+
-					+
-					+
-					+-->
+					<figure>
+						<figcaption>Figuras 4</figcaption>
+							<a onClick="verGaleria(1)">
+							<img src="figuras/figura4-a.JPG" alt="miniatura de las imagenes interactivas" aria-labelledby="imagen simple del conjunto de cinco imagenes interactivas">
+							</a>
+					</figure>
+					<figure>
+						<figcaption>Figura 4</figcaption>
+						<img src="interfaz/icono-favicon.ico" alt="fotomicrografías">
+					</figure>
+					<figure>
+						<figcaption>Figura 5</figcaption>
+						<img src="interfaz/icono-favicon.ico" alt="fotomicrografías">
+					</figure>
+					<figure>
+						<figcaption>Figura 6</figcaption>
+						<img src="interfaz/icono-favicon.ico" alt="fotomicrografías">
+					</figure>
 					<p>
 					La complejidad o simpleza de la cutícula es evidente por la estructura documentada de muchos nematodos. Por ejemplo, la gran protuberancia o bulbo cefálico espinoso de <i>Echinocephalus inserratus</i>,<a><sup>(29)</sup></a> o las membranas laterales de <i>Oesophagostomum columbianum</i><a><sup>(30)</sup></a> que recorren todo su cuerpo, o las aletas o proyecciones cervicales de <i>Toxocara</i> spp.(31, 32) y las aletas caudales de <i>Abbreviata leptosoma</i>(33) y Desportesius invaginatus.(22) Los pliegues cervicales y ventrales de Ternidens deminutus(34) son una suerte de babero o cuello de encaje como los del siglo XVII del rey Luis XV. 
 					</p>
@@ -241,13 +385,14 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 					Los mucrones estrellados de las colas de <i>Aphelenchoides</i> spp.<a><sup>(40)</sup></a>; o la cola de la hembra de <i>Setaria</i> spp. con más de cinco espinas grandes de punta roma<a><sup>(41)</sup></a> dispuestas tal plumero; el arreglo caudal de las espinas prominentes de los machos, así como también sus expansiones cuticulares vesiculares globosas llamadas glándulas bacilares de <i>Trichuris landak</i>,<a><sup>(42)</sup></a> un <i>outfit</i> digno de una pasarela extravagante de la naturaleza. La cutícula se reconoce porque tiene tres zonas o capas, la epicutícula o zona cortical, la mesocutícula o zona media, y la zona basal, que contiene la endocutícula y, finalmente, la hipodermis.<a><sup>(8) </sup></a>
 					</p>
 					<p>
-					Estas zonas son muy fáciles de ver a través de <span class="versalita">MET</span>, por ejemplo, en nematodos parásitos como <i>H. contortus</i><a><sup>(26)</sup></a> <small>(Figura 6a)</small>. Estas capas basales secretan y nutren la cutícula rica en colágeno y disulfuros, sostienen las funciones del órgano que es proteger al helminto del ambiente al ser un exoesqueleto, pero, también permiten a los nematodos intercambios nutritivos y adaptativos por la permeabilidad que provee, asimismo, conforman los procesos de ecdisis<a><sup>(43)</sup></a> para el desarrollo y crecimiento de los nematodos, y participan activamente al ceder el movimiento verminoso de estos cilindros vivos. 
+					Estas zonas son muy fáciles de ver a través de <abbr title="Microscopia Electrónica de Transmisión">MET</abbr>, por ejemplo, en nematodos parásitos como <i>H. contortus</i><a><sup>(26)</sup></a> <small>(Figura 6a)</small>. Estas capas basales secretan y nutren la cutícula rica en colágeno y disulfuros, sostienen las funciones del órgano que es proteger al helminto del ambiente al ser un exoesqueleto, pero, también permiten a los nematodos intercambios nutritivos y adaptativos por la permeabilidad que provee, asimismo, conforman los procesos de ecdisis<a><sup>(43)</sup></a> para el desarrollo y crecimiento de los nematodos, y participan activamente al ceder el movimiento verminoso de estos cilindros vivos. 
 					</p>
 					<p>
 					Esta muda implica: <b>1)</b> la separación de la cutícula de la epidermis, <b>2)</b> la formación de una nueva cutícula que surge de la superficie más externa de la hipodermis y <b>3)</b> el desprendimiento de la cutícula vieja,<a><sup>(8)</sup></a> que en algunos casos, como en la L3 infectivas de los tricostrongilidos, está separada, se conserva como una vaina externa, y su desprendimiento se conoce como <i>exsheathment</i><a><sup>(44)</sup></a> o desenvaine <small>(Figura 7)</small>. Este proceso ha sido estructuralmente <span class="versalita">(MEB)</span> bien expuesto por <a>Brianti et al.<sup>(45)</sup></a> en larvas de ciatostominos del estadio tres al cuatro <small>(Figura 3E)</small>.
 					</p>
 					<p class="parrafoResaltado">
-					Los <em>ecdisozoos</em> segregan cutículas anexoesqueléticas que deben desprenderse durante el crecimiento y ser sustituidas por otras más grandes, un proceso denominado <em>ecdisis</em>. La muda periódica se produce en organismos alargados de <span style="font-style: normal">Ecdysozoa</span>, donde se incluyen insectos, arácnidos, quilópodos, miriápodos, ositos de agua o tardígrados y, obviamente, nematodos, entre otros.<a><sup>(43)</sup></a>
+					<em>Los <b>ecdisozoos</b> segregan cutículas anexoesqueléticas que deben desprenderse durante el crecimiento y ser sustituidas por otras más grandes, un proceso denominado <b>ecdisis</b>. La muda periódica se produce en organismos alargados de <span style="font-style: normal">Ecdysozoa</span>, donde se incluyen insectos, arácnidos, quilópodos, miriápodos, ositos de agua o tardígrados y, obviamente, nematodos, entre otros.<a><sup>(43)</sup></a>
+					</em>
 					</p>
 					
 					<!--AQUI VIENE OTRA IMAGEN
@@ -264,7 +409,7 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 					++
 					-->
 					<p>
-					Después de esta capa basal, las larvas se extienden a lo largo del organismo, desde la faringe hasta el ano, una sola capa de células musculares, que conforman músculos involucrados con el proceso de alimentación, digestión y excreción, así como aquellos asociados a la motilidad y reproducción.(8) En la ultraestructura de H. contortus, se ha mostrado este arreglo de la cutícula con las células longitudinales musculares ricas en mitocondrias focalmente distribuidas en el citoplasma (Figuras 6a y 8).(26) Bird y Bird(8) muestran en met fibras de actina y miosina como se observa en la Figura 6b. La distribución coronaria de los músculos con respecto a la cutícula y al pseudocele o pseudoceloma se esquematiza en la Figura 3C y, parcialmente, en las Figuras 6a, 8, 12, 13, 14b, 15b, 17.
+					Después de esta capa basal, las larvas se extienden a lo largo del organismo, desde la faringe hasta el ano, <strong>una sola capa de células musculares</strong>, que conforman músculos involucrados con el proceso de alimentación, digestión y excreción, así como aquellos asociados a la motilidad y reproducción.(8) En la ultraestructura de <i>H. contortus</i>, se ha mostrado este arreglo de la cutícula con las células longitudinales musculares ricas en mitocondrias focalmente distribuidas en el citoplasma <small>(ver Figuras 6a y 8)</small>.(26) Bird y Bird<a><sup>(8)</sup></a> muestran en <abbr title="Microscopia Electrónica de Transmisión">MET</abbr> fibras de actina y miosina como se observa en la Figura 6b. La distribución coronaria de los músculos con respecto a la cutícula y al pseudocele o pseudoceloma se esquematiza en la Figura 3C y, parcialmente, en las Figuras 6a, 8, 12, 13, 14b, 15b, 17.
 					</p>
 					
 				</section><!--SUBTEMA 2 exoesqueleto-->
@@ -316,8 +461,7 @@ a) Porción anterior o cefálica, b) Boca y labios, entrada a la cápsula bucal,
 				
 		</section><!-- seccion Contenido-->
 	</main>
-	
-	
+
 	
 </body>
 </html>

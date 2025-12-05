@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.Citado {
+	display: none;
+}
+
+aside {
+	display: none; 
+	position: fixed; /* Stay in place */
+	z-index: 5; /* el z de header es 4 */
+	padding-top: 200px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100vw; /* 100vw*/
+	overflow: auto;
+	opacity: 0;/* cero */
+  	background-color: rgba(0, 0, 0, .3); 
+	transition: opacity .3s;
+}
+
+
+
+aside > ol {
+	list-style-type: decimal;
+	list-style-position: outside;
+	
+	position: relative;
+	width: 70%;
+	height: auto;/*auto*/
+	background-color: snow;
+	margin: auto;
+	margin-bottom: 2em;
+	margin-top: 4em;
+	padding: 10px;
+	color: darkslategray;
+	border-radius: 30px;
+	
+	scale: .5;
+	transition: scale .3s;
+
+}
+/*cada una de las citaciones*/
+aside > ol li {
+	padding: 20px;
+}
+
+aside cite {
+	display: block;
+	font-weight: 500;
+	text-decoration: underline;
+}
+
+
+@media (max-width: 800px) {
+	aside > ol {
+		width: 90%;
+	}
+}

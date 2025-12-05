@@ -121,12 +121,11 @@
   	font-weight: bold;
   	transition: 0.3s;
 	padding: 10px 30px 10px 30px; /*  ÁREA DE CLICADO */
-	background-color: dodgerblue; /*rgba(47, 79, 79, .5);*/
+	background-image: radial-gradient(rgb(30, 144, 255), rgb(0, 128, 255));
 	border-radius: 10px;
 	cursor: pointer;
-	
 }
-.Galeria-prev {
+figure {
 	display: block;
 	position: relative;
 	width: 520px;
@@ -140,23 +139,35 @@
 	-ms-user-select: none; /* IE 10 and IE 11 */
 	user-select: none;
 }
-.Galeria-prev img {
+figure img {
 	display: block;
 	width: 100%;
 	border-radius: 5px 5px 20px 20px;
 	box-shadow: 1px 3px 8px black;
 }
 
-.Galeria-prev p {
+figcaption {
 	display: block;
 	margin-bottom: 10px;
 	color: white;
 	text-align: center;
+	font-size: 95%;
+}
+figcaption cite {
+	display: inline-block;
+	font-weight: 500;
+	font-size: 90%;
 }
 
+figcaption a {
+	cursor: pointer;
+}
+figcaption sup {
+	font-weight: bold;
+}
 
 @media (max-width: 800px) {
-	.Galeria-prev {
+	figure {
 		display: block;
 		position: relative;
 		width: 70%;
@@ -172,8 +183,8 @@
 	}
 }
 
-@media (max-width: 400px) {
-	.Galeria-prev {
+@media (max-width: 500px) {
+	figure {
 		width: 93%;
 	}
 }

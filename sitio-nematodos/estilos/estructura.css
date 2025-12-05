@@ -73,11 +73,13 @@ div.portadita-estructura {
 	font-size: 3em;
 	color: ghostwhite;
 	transition: color .6s, background 1.5s, opacity .6s;
-
 }
-div.portadita-estructura span {
+.portadita-estructura span {
+	/*border-bottom: 1px solid snow;*/
+}
+#nombreSubtema {
 	/*font-size: .5em;*/
-	font-size: 50%;
+	font-size: 70%;
 }
 
 section {
@@ -101,41 +103,19 @@ section.Contenido > section {
 	position: relative;
 	width: 100%;
 	
-	border: 3px solid red;
-	
 }
 /*SECCION SUB-TEMA*/
 section.subtema {
 	position: relative;
 	width: 100%;
-	
-	border: 2px dashed red;
 }
 
-section button {
-	display: block;
-	width: 150px;
-	min-height: 50px;
-	margin: 10px;
-	color: white;
-	background-color: lightcoral;
-}
 
-section.Textos .segmento {
-	width: 50%;
-	box-sizing: border-box;
-}
+
 .txtDerecha {
 	/*padding-left: 100px;*/
 }
 
-.segmento p {
-	width: 300px;
-	margin-left: auto;
-	margin-bottom: 1em;
-	line-height: 1.7em;
-	border: 1px solid antiquewhite;
-}
 
 
 #indice1 {
@@ -179,26 +159,38 @@ section.Textos .segmento {
 		flex-direction: column;
 		border: 1px solid pink;
 	}
-	section.Textos .segmento {
-		width: 100%;
-	}
-	.segmento p {
-		width: 80%;
-		float: left;
-		margin-left: 50px;
-	}
 	div.portadita, div.portadita-estructura {
 		line-height: 1em;
 	}
-
+	div.portadita-estructura {
+		font-size: 1.7em;
+	}
 	
 }
 
-@media (max-width: 400px) {
-	div.portadita, div.portadita-estructura {
+@media (max-width: 500px) {
+	div.portadita {
 		height: 50px;
-		font-size: 1em;
-		top: 100px; /*bajar el stick por el header*/
+		font-size: 1.2em;
+		top: 70px; /*bajar el stick por el header*/
+		margin-bottom: 2em;/*ya que aquí desaparece el separador azul*/
+	}
+	div.portadita-estructura {
+		height: 50px;
+		font-size: 1.2em;
+		top: 70px; /*bajar el stick por el header*/
+		margin-bottom: 2em;/*ya que aquí desaparece el separador azul*/
+		
+		padding-top: 15px;
+	}
+	#nombreSubtema {
+		font-size: 100%;
+	}
+	#h2falso {
+		display: none;
+	}
+	main {
+		top: 70px;
 	}
 	
 }

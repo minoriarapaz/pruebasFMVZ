@@ -11,17 +11,29 @@ function Equis(x) {
 }
 
 function activarScroll() {
-	document.body.style.overflow = "auto";
+	if (L==1) {
+		document.body.style.overflow = "auto";
+		console.log("scroll ACTIVADO");
+	} else {
+		document.body.style.overflow = "hidden";
+		console.log("scroll Hidden");
+	}
+	
 }
 
-var L = 1;
+var L = 1; /*es redundante porque de NINGUNA funcion reasigna este valor. SIEMPRE PERMANECE EN -1-*/
+
+function DeclaraciondVariableL() {
+	console.log("Variable L /uno al inicio/ es "+L);
+}
+
+var Abierto = 1;
 function verIndice() {
-	if (L==1) {
+	if (Abierto==1) {
 		document.getElementById("Indice").style.left="0px";
+		Abierto=2;
 		document.body.style.overflow = "hidden";
-		L=2;
-		console.log("indice abierto");
-		
+		console.log("indice abierto. Variable Abierto es "+Abierto);
 		document.getElementById("hamburguesa").classList.toggle("equis");
 		
 		/*oculta btn Ojo y/o cierra los controles d lectura
@@ -33,10 +45,10 @@ function verIndice() {
 		/*setTimeout(cerrarIndice2, 300);*/
 		document.getElementById("Indice").style.left="-300px";
 		/*document.body.style.overflow = "auto"; (no necesario ya que la llamas abajo)*/
-		activarScroll();
-		L=1;
+		Abierto=1;
+		document.body.style.overflow = "auto";
 		/*document.getElementById("ojo").style.visibility="visible";*/
-		console.log("nuevo indice cerrado");
+		console.log("indice cerrado. Variable Abierto es "+Abierto);
 		/*quita el evento click del Modal alrededor del indice
 		document.getElementById("Indice").removeEventListener("click", verIndice2);*/
 		
@@ -45,29 +57,44 @@ function verIndice() {
 	}
 }
 
+function forzarIndice() {
+	document.getElementById("Indice").style.left="-300px";
+}
+
+
 
 /*FUNCIONES INDICE Y NAVEGACION*/
 function irIntroduccion() {
 	window.scroll(
 		{top: /*0*/(document.getElementById("Introduccion").offsetTop /*- compensacion*/), left: 0, }
 	);
-	/*verIndice2();*/
-	console.log(document.getElementById("Taxonomia").offsetTop);
+	document.getElementById("Indice").style.left="-300px";
+	Abierto=1;
+	document.body.style.overflow = "auto";
+	console.log("indice cerrado. Variable Abierto es "+Abierto);
+	document.getElementById("hamburguesa").classList.remove("equis");
 }
 
 function irTaxonomia() {
 	window.scroll(
 		{top: /*768*/(document.getElementById("Taxonomia").offsetTop /*- compensacion*/), left: 0, }
 	);
-	/*verIndice2();*/
-	
+	document.getElementById("Indice").style.left="-300px";
+	Abierto=1;
+	document.body.style.overflow = "auto";
+	console.log("indice cerrado. Variable Abierto es "+Abierto);
+	document.getElementById("hamburguesa").classList.remove("equis");
 }
 
 function irEstructura() {
 	window.scroll(
 		{top: (document.getElementById("Estructura").offsetTop)/*3411*/, left: 0, }
 	);
-	/*verIndice2();*/
+	document.getElementById("Indice").style.left="-300px";
+	Abierto=1;
+	document.body.style.overflow = "auto";
+	console.log("indice cerrado. Variable Abierto es "+Abierto);
+	document.getElementById("hamburguesa").classList.remove("equis");
 }
 
 const SecSubtemas = document.getElementsByClassName("subtema");
@@ -78,9 +105,11 @@ function irSubtema(e) {
 	window.scroll(
 		{top: (posicionSub-200), left: 0, }
 	);
-	console.log(posicionSub);
-	
-	/*var posicionSub2 = Tema.offsetTop + SecSubtemas[1].offsetTop;*/
+	document.getElementById("Indice").style.left="-300px";
+	Abierto=1;
+	document.body.style.overflow = "auto";
+	console.log("indice cerrado. Variable Abierto es "+Abierto);
+	document.getElementById("hamburguesa").classList.remove("equis");
 }
 /*FUNCIONES INDICE Y NAVEGACION ---- f i n ---*/
 
@@ -109,7 +138,7 @@ function scrollEstructura() {
 	var titulo = document.getElementById("Estructura");
 	var progreso = titulo.offsetTop - 700;
 	if (window.scrollY > progreso) {
-		document.getElementById("panel2").style.color="blue";
+		document.getElementById("panel2").style.color="transparent";
 		document.getElementById("panel2").style.backgroundColor="#3A3A3A";
 	} else {
 		document.getElementById("panel2").style.color=null;
@@ -119,13 +148,13 @@ function scrollEstructura() {
 
 function scrollSubtemas() {
 	var YTema = document.getElementById("Estructura").offsetTop;
-	var YSub1 = document.getElementById("Subtema1").offsetTop;
-	var YSub2 = document.getElementById("Subtema2").offsetTop;
+	var YSub1 = SecSubtemas[0].offsetTop;
+	var YSub2 = SecSubtemas[1].offsetTop;
 	var Ysub3 = SecSubtemas[2].offsetTop;
 	
 	var Ysuma1 = YTema + YSub1;
 	var Ysuma2 = YTema + YSub2 - 250;
-	var Ysuma3 = YTema + Ysub3 -250;
+	var Ysuma3 = YTema + Ysub3 - 250;
 	
 	
 	if (window.scrollY > Ysuma1) {
@@ -140,7 +169,7 @@ function scrollSubtemas() {
 	
 	
 	else if (window.scrollY < YTema) {
-		document.getElementById("nombreSubtema").innerHTML=null;
+		document.getElementById("nombreSubtema").innerHTML= LosSubtemas[0].innerHTML;
 	}
 	
 

@@ -4,27 +4,27 @@ var L=1;
 
 /*se necesita una de estas variables para cada galeria*/
 let slideIndex = 1; /*la de prueba*/
+let slideIndex2 = 1; /*la de prueba*/
 
 
-function verModal() {
+function verGaleria() {
 			if (L==1) {
 				document.getElementById("MG1").style.display="block";
 				document.getElementById("MG1").style.opacity="1";
 				document.body.style.overflow = "hidden";
 				L=2;
-				console.log("biblio abierta");
+				console.log("galeria abierta");
 			} else {
-				cerrarModal();
-				/*setTimeout(cerrarModal, 100);*/
+				cerrarGaleria();
+				/*setTimeout(cerrarGaleria, 100);*/
 				document.getElementById("MG1").style.opacity="0";
 				document.body.style.overflow = "auto";
-				activarScroll();
 				L=1;
-				console.log("biblio cerrada");
+				console.log("galeria cerrada");
 			}
 }
 
-function cerrarModal() {
+function cerrarGaleria() {
 	document.getElementById("MG1").style.display=null;
 }
 
@@ -46,7 +46,8 @@ function mostrarSlides(N) {
 	document.getElementById("falsa").style.display="none";
 	document.getElementById("contador1").innerHTML = slideIndex;
 }
-function openGaleria(I) {
+
+function cambiarImg(I) {
 	let G = document.getElementById("esquemas1");
 	let Ima = G.getElementsByTagName("img");
 	let direccion = Ima[I].src;
