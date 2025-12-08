@@ -32,7 +32,6 @@
 }
 .diapositiva, .diapoFalsa {
 	overflow: auto;
-	border: 5px dashed black;
 }
 .diapoFalsa {/*border: 3px solid pink;*/}
 .diapositiva {/*border: 3px solid gold;*/ display: none;}
