@@ -63,7 +63,12 @@ function salirBiblio() {
 	document.getElementById("Bibliografia").style.opacity="0";
 	document.getElementById("Bibliografia").style.paddingTop="200px";
 	document.body.style.overflow = "auto";
-	Fuentes[0].style.display="none";
+	
+	const fuentes = document.getElementsByClassName("Citado");
+	for (let i = 0; i < fuentes.length; i++) {
+		fuentes[i].style.display="none";
+	}
+	/*Fuentes[0].style.display="none";
 	Fuentes[1].style.display="none";
 	Fuentes[2].style.display="none";
 	Fuentes[3].style.display="none";
@@ -153,6 +158,6 @@ function salirBiblio() {
 	Fuentes[84].style.display="none";
 	Fuentes[85].style.display="none";
 	Fuentes[86].style.display="none";
-	Fuentes[87].style.display="none";
+	Fuentes[87].style.display="none";*/
 
 }

@@ -25,32 +25,59 @@
 	margin-top: 4em;
 	
 	display: none;
+	
+	border-radius: 20px;
+	background-image: linear-gradient(slateblue, dodgerblue);
+	/*border: 2px solid gold;*/
 }
 .diapositiva, .diapoFalsa {
-	overflow: hidden;
+	overflow: auto;
+	border: 5px dashed black;
 }
 .diapoFalsa {/*border: 3px solid pink;*/}
 .diapositiva {/*border: 3px solid gold;*/ display: none;}
-.diapositiva img, .diapoFalsa img,  .galeria div:first-child img /*la primera imagen -falsa- de galería*/ {
+.diapositiva img, .diapoFalsa img {
 	display:block;
 	/*max-width: 100%;*/
-	max-height: 500px;
-	max-width: 900px;
+	max-height: 400px;
+	max-width: 700px;
 	margin: auto;
-	border-radius: 0 0 10px 10px;
+	border-radius: 10px;
+	/*border: 4px dotted gold;*/
 }
+/*contenedor bajo la IMG donde va el pie de imagen*/
 .descripcion {
 	display: block;
 	min-height: 100px;
-	background-color: indianred;
-	/*border: 1px dashed pink;*/
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 15px 5px 15px;
+	width: 50%;
+	border-radius: 10px;
+	
+	background-color: rgba(255, 250, 250, .8);
+	color: black;
 }
-.diapoFalsa p, .diapositiva p /*pie de foto individual*/ {
-	display: inline-block;
-	background-color: ghostwhite;
-	padding: 10px;
+.descripcion p /*pie de foto individual*/ {
 
 }
+.descripcion ol {
+	border-left: 3px dotted dodgerblue;
+	list-style-position: outside;
+	list-style-type: lower-alpha;
+	padding-left: 60px;
+	margin-top: .5em;
+}
+.descripcion ul {
+	list-style-type: none;
+	
+	border-left: 2px dotted dodgerblue;
+	list-style-position: outside;
+	padding-left: 60px;
+	margin-top: .5em;
+}
+
 .cursorgaleria {
   cursor: pointer;
 }
@@ -101,14 +128,11 @@
 	display: block;
 	width: auto;
 	text-align: center;
-	background-color: dodgerblue;
-	/*background-image: linear-gradient(slateblue, lightblue);*/
-	padding: 5px 16px;
+	padding: 15px 16px;
 	
-	border-radius: 10px 10px 0 0;
 	font-family: Open Sans, "Trebuchet MS", Arial, serif;
 	font-size: .9em;
-	font-weight: bold;
+	font-weight: 300;
 	color: ghostwhite;
 	
 }
@@ -167,7 +191,11 @@ figcaption a {
 figcaption sup {
 	font-weight: bold;
 }
-
+@media (max-width: 1200px) {
+	.descripcion {
+		width: 70%;
+	}
+}
 @media (max-width: 800px) {
 	figure {
 		display: block;
@@ -182,6 +210,12 @@ figcaption sup {
 		-webkit-user-select: none; /* Safari */
 		-ms-user-select: none; /* IE 10 and IE 11 */
 		user-select: none;
+	}
+	.diapositiva img, .diapoFalsa img {
+		display:block;
+		max-height: 400px;
+		max-width: 700px;
+		margin: auto;
 	}
 }
 
