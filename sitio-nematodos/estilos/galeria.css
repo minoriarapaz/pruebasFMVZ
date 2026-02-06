@@ -1,8 +1,24 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/*caracteristicas de class galeria*/
+iframe {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 1000px;
+	margin: auto;
+	margin-bottom: 2em;	
+	scale: .1;
+	opacity: .1;
+	transition: all .5s;
+	
+	/*background-image: linear-gradient(slateblue, dodgerblue);*/
+	
+}
+
 .modalGaleria {
-	display: none; 
+	display: none; /*NONE*/
 	position: fixed; /* Stay in place */
 	z-index: 5; /* Sit on top */
 	padding-top: 30px; /* Location of the box */
@@ -11,132 +27,18 @@
 	width: 100%; /* Full width */
 	height: 100%; /* Full height ANTES ERA 100%*/
 	overflow: hidden; /* ANTES ERA SCROLL (mayo 2024)*/
+	opacity: 0;
 	
-  	background-color: rgba(0, 0, 0, .9); 
-	transition: opacity 1s;
+  	background-color: rgba(0, 0, 0, .8); 
+	transition: opacity .5s;
 }
 
-.galeria {
-	box-sizing: border-box;
-	position: relative;
-	width: 80%;
-	margin: auto;
-	margin-bottom: 2em;
-	margin-top: 4em;
-	
-	display: none;
-	
-	border-radius: 20px;
-	background-image: linear-gradient(slateblue, dodgerblue);
-	/*border: 2px solid gold;*/
-}
-.diapositiva, .diapoFalsa {
-	overflow: auto;
-}
-.diapoFalsa {/*border: 3px solid pink;*/}
-.diapositiva {/*border: 3px solid gold;*/ display: none;}
-.diapositiva img, .diapoFalsa img {
-	display:block;
-	/*max-width: 100%;*/
-	max-height: 400px;
-	max-width: 700px;
-	margin: auto;
-	border-radius: 10px;
-	/*border: 4px dotted gold;*/
-}
-/*contenedor bajo la IMG donde va el pie de imagen*/
-.descripcion {
-	display: block;
-	min-height: 100px;
-	margin-top: 5px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 10px 15px 5px 15px;
-	width: 50%;
-	border-radius: 10px;
-	
-	background-color: rgba(255, 250, 250, .8);
-	color: black;
-}
-.descripcion p /*pie de foto individual*/ {
 
-}
-.descripcion ol {
-	border-left: 3px dotted dodgerblue;
-	list-style-position: outside;
-	list-style-type: lower-alpha;
-	padding-left: 60px;
-	margin-top: .5em;
-}
-.descripcion ul {
-	list-style-type: none;
-	
-	border-left: 2px dotted dodgerblue;
-	list-style-position: outside;
-	padding-left: 60px;
-	margin-top: .5em;
-}
 
-.cursorgaleria {
-  cursor: pointer;
-}
-.prev, .next /*botones laterales de galeria*/{
-	display: block;
-  	cursor: pointer;
-  	position: absolute;
-  	top: 30px;
-  	width: auto;
-	height: auto;
-  	padding: 120px 15px 120px 15px;
-  	margin-top: 0px;/*-50px*/
-  	color: white;
-  	font-weight: bold;
-  	font-size: 20px;
-  	user-select: none;
-	background-color: rgba(30, 144, 255, .5) /*dodgerblue*/;
-  	-webkit-user-select: none;
-}
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 8px 0 0 8px;
-}
-.prev {
-	border-radius: 0 8px 8px 0;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  	background-color: rgba(255, 255, 255, .8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-	color: ghostwhite;
-  	font-size: .8em;
-  	padding: 8px 12px;
-	position: absolute;
-	top: 0;
-	font-family: Open Sans, "Trebuchet MS", Arial, serif;
-}
-
-/* Container for image text */
-.captiongaleria {
-	position: relative;
-	display: block;
-	width: auto;
-	text-align: center;
-	padding: 15px 16px;
-	
-	font-family: Open Sans, "Trebuchet MS", Arial, serif;
-	font-size: .9em;
-	font-weight: 300;
-	color: ghostwhite;
-	
-}
 
 .cruz {
+	display: none;
 	z-index: 3;
 	position: absolute; /*absolute*/
   	top: 30px;
@@ -154,8 +56,7 @@ figure {
 	display: block;
 	position: relative;
 	width: 520px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
 	margin-bottom: 2em;
 	border-radius: 30px;
 	padding: 10px;
@@ -164,11 +65,26 @@ figure {
 	-ms-user-select: none; /* IE 10 and IE 11 */
 	user-select: none;
 }
+figure.juntas {
+	display: block;
+	width: 450px;
+	max-height: 400px;
+	overflow: hidden;
+}
 figure img {
 	display: block;
 	width: 100%;
 	border-radius: 5px 5px 20px 20px;
 	box-shadow: 1px 3px 8px black;
+}
+figure img.imgAlta {
+	width: auto;
+	max-height: 400px;
+	margin: auto;
+}
+
+figcaption + a {
+	cursor: pointer;
 }
 
 figcaption {
@@ -180,16 +96,32 @@ figcaption {
 }
 figcaption cite {
 	display: inline-block;
+	text-align: right;
 	font-weight: 500;
 	font-size: 90%;
+	opacity: .8;
+	margin-top: 0.5em;
 }
 
-figcaption a {
-	cursor: pointer;
-}
+
 figcaption sup {
 	font-weight: bold;
 }
+
+/*la nomenclatura "FIGURA X", que es un bold */
+figcaption b:first-child {
+	display: block;
+}
+
+
+.figurasGrupo {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: relative;
+	width: 100%;
+}
+
 @media (max-width: 1200px) {
 	.descripcion {
 		width: 70%;
@@ -209,12 +141,6 @@ figcaption sup {
 		-webkit-user-select: none; /* Safari */
 		-ms-user-select: none; /* IE 10 and IE 11 */
 		user-select: none;
-	}
-	.diapositiva img, .diapoFalsa img {
-		display:block;
-		max-height: 400px;
-		max-width: 700px;
-		margin: auto;
 	}
 }
 

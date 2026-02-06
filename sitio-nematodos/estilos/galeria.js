@@ -11,7 +11,38 @@ function revisar() {let cantidad = LasGalerias.length; console.log("la cantidad 
 
 function verCajita(a) {
 	abrirCaja();
-	LasGalerias[a].style.display="block";
+	/*LasGalerias[a].style.display="block";*/
+}
+function loadCajita(C) {
+	abrirCaja();
+	setTimeout(animarIframe, 100);
+	
+	if (C==1) {
+		document.getElementById("Cargador").src="interactivos/galeria1.html";
+	}
+	if (C==2) {
+		document.getElementById("Cargador").src="interactivos/galeria2.html";
+	}
+	if (C==3) {
+		document.getElementById("Cargador").src="interactivos/galeria3.html";
+	}
+	if (C==4) {
+		document.getElementById("Cargador").src="interactivos/galeria4.html";
+	}
+	if (C==5) {
+		document.getElementById("Cargador").src="interactivos/galeria5.html";
+	}
+	if (C==6) {
+		document.getElementById("Cargador").src="interactivos/galeria6.html";
+	}
+	if (C==7) {
+		document.getElementById("Cargador").src="interactivos/galeria7.html";
+	}
+	
+}
+function animarIframe() {
+	document.getElementById("Cargador").style.scale="1";
+	document.getElementById("Cargador").style.opacity="1";
 }
 
 function cerrarGaleria() {
@@ -21,48 +52,36 @@ function cerrarGaleria() {
 function abrirCaja() {
 	if (L==1) {
 				document.getElementById("Caja").style.display="block";
-				document.getElementById("Caja").style.opacity="1";
+				setTimeout(animarCaja, 100);
 				document.body.style.overflow = "hidden";
+				document.getElementById("botonX").style.display="block";
 				L=2;
 				console.log("caja abierta");
 			} else {
 				cerrarCaja();
-				document.getElementById("Caja").style.opacity="0";
+				document.getElementById("Caja").style.opacity=null;
 				document.body.style.overflow = "auto";
 				L=1;
-				
-				LasGalerias[0].style.display=null;
-				LasGalerias[1].style.display=null;
 			}
+}
+function animarCaja() {
+	document.getElementById("Caja").style.opacity="1";
 }
 function cerrarCaja() {
 	console.log("caja cerrada");
+	setTimeout(ocultarCaja, 500);
+	
+	document.getElementById("Cargador").style.scale=null;
+	document.getElementById("Cargador").style.opacity=null;
+	document.getElementById("botonX").style.display=null;
+}
+
+function ocultarCaja() {
 	document.getElementById("Caja").style.display=null;
 }
 //funciones para galeria 
 
 
-
-function moverSlides(N) {
-  mostrarSlides(slideIndex += N);
-	
-}
-function mostrarSlides(Q) {
-	let w;
-	let laGaleria = document.getElementById("cajita1");
-	const slides = laGaleria.getElementsByClassName("diapositiva");
-	
-	
-	if (Q > slides.length) {slideIndex = 1}
-	if (Q < 1) {slideIndex = slides.length}
-	for (w = 0; w < slides.length; w++) {
-		slides[w].style.display = "none";
-	}
-	slides[slideIndex-1].style.display = "block";
-	
-	document.getElementById("falsa1").style.display="none";
-	document.getElementById("contador1").innerHTML = slideIndex;
-}
 
 function agrandarImg(I,i) {
 	const cajitas = document.getElementsByClassName("galeria");
@@ -92,5 +111,5 @@ function mostrarTODAS(Q,g) {
 	slides[slideIndex-1].style.display = "block";
 	
 	misGalerias[g].querySelector(".diapoFalsa").style.display="none";
-	misGalerias[g].querySelector(".numbertext").innerHTML = slideIndex;
+	/*misGalerias[g].querySelector(".numbertext").innerHTML = slideIndex;*/
 }

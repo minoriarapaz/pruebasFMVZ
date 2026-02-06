@@ -88,7 +88,29 @@ function irTaxonomia() {
 
 function irEstructura() {
 	window.scroll(
-		{top: (document.getElementById("Estructura").offsetTop)/*3411*/, left: 0, }
+		{top: (document.getElementById("Estructura").offsetTop)/**/, left: 0, }
+	);
+	document.getElementById("Indice").style.left="-300px";
+	Abierto=1;
+	document.body.style.overflow = "auto";
+	console.log("indice cerrado. Variable Abierto es "+Abierto);
+	document.getElementById("hamburguesa").classList.remove("equis");
+}
+
+function irHistoria() {
+	window.scroll(
+		{top: (document.getElementById("Historia").offsetTop)/*3411*/, left: 0, }
+	);
+	document.getElementById("Indice").style.left="-300px";
+	Abierto=1;
+	document.body.style.overflow = "auto";
+	console.log("indice cerrado. Variable Abierto es "+Abierto);
+	document.getElementById("hamburguesa").classList.remove("equis");
+}
+
+function irImpacto() {
+	window.scroll(
+		{top: (document.getElementById("Impacto").offsetTop)/*3411*/, left: 0, }
 	);
 	document.getElementById("Indice").style.left="-300px";
 	Abierto=1;
@@ -118,7 +140,7 @@ function irSubtema(e) {
 
 
 /*FUNCIONES DE CONTROL DE COMPORTAMIENTO DE LAS BARRAS DE TEMA*/
-window.onscroll = function() {scrollTaxonomia(); scrollEstructura(); scrollSubtemas();};
+window.onscroll = function() {scrollTaxonomia(); scrollEstructura(); scrollSubtemas(); scrollHistoria(); scrollImpacto();};
 
 const LosSubtemas = document.getElementsByTagName("h3");
 
@@ -151,10 +173,16 @@ function scrollSubtemas() {
 	var YSub1 = SecSubtemas[0].offsetTop;
 	var YSub2 = SecSubtemas[1].offsetTop;
 	var Ysub3 = SecSubtemas[2].offsetTop;
+	var Ysub4 = SecSubtemas[3].offsetTop;
+	var Ysub5 = SecSubtemas[4].offsetTop;
+	var Ysub6 = SecSubtemas[5].offsetTop;
 	
 	var Ysuma1 = YTema + YSub1;
 	var Ysuma2 = YTema + YSub2 - 250;
 	var Ysuma3 = YTema + Ysub3 - 250;
+	var Ysuma4 = YTema + Ysub4 - 250;
+	var Ysuma5 = YTema + Ysub5 - 250;
+	var Ysuma6 = YTema + Ysub6 - 250;
 	
 	
 	if (window.scrollY > Ysuma1) {
@@ -166,6 +194,15 @@ function scrollSubtemas() {
 	if (window.scrollY > Ysuma3) {
 		document.getElementById("nombreSubtema").innerHTML = LosSubtemas[2].innerHTML;
 	}
+	if (window.scrollY > Ysuma4) {
+		document.getElementById("nombreSubtema").innerHTML = LosSubtemas[3].innerHTML;
+	}
+	if (window.scrollY > Ysuma5) {
+		document.getElementById("nombreSubtema").innerHTML = LosSubtemas[4].innerHTML;
+	}
+	if (window.scrollY > Ysuma6) {
+		document.getElementById("nombreSubtema").innerHTML = LosSubtemas[5].innerHTML;
+	}
 	
 	
 	else if (window.scrollY < YTema) {
@@ -175,7 +212,30 @@ function scrollSubtemas() {
 
 }
 
+function scrollHistoria() {
+			var titulo = document.getElementById("Historia");
+			var progreso = titulo.offsetTop - 500;
+	if (window.scrollY > progreso) {
+		document.getElementById("panel3").style.color="transparent";
+		document.getElementById("panel3").style.backgroundColor="#3A3A3A";
+	} else {
+		document.getElementById("panel3").style.color=null;
+		document.getElementById("panel3").style.backgroundColor=null;
+	}
+}
+function scrollImpacto() {
+			var titulo = document.getElementById("Impacto");
+			var progreso = titulo.offsetTop - 500;
+	if (window.scrollY > progreso) {
+		document.getElementById("panel3").style.color="transparent";
+		document.getElementById("panel3").style.backgroundColor="#3A3A3A";
+	} else {
+		document.getElementById("panel3").style.color=null;
+		document.getElementById("panel3").style.backgroundColor=null;
+	}
+}
 
+/*funcion de prueba*/
 function YdeSubtema1() {
 	var Y1 = document.getElementById("Subtema1").offsetTop;
 	var YE = document.getElementById("Estructura").offsetTop;

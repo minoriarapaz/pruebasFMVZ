@@ -51,6 +51,11 @@ div.portadita {
 	transition: color .6s, background 1.5s, opacity .6s;
 
 }
+
+div.portadita span {
+	display: block;
+}
+
 div.portadita-estructura {
 	box-sizing: border-box; /*exclusiva de este div*/
 	overflow: hidden; /*exclusiva de este div*/
@@ -77,9 +82,16 @@ div.portadita-estructura {
 .portadita-estructura span {
 	/*border-bottom: 1px solid snow;*/
 }
+
+.temaLargo {
+	display: block;
+}
 #nombreSubtema {
 	/*font-size: .5em;*/
 	font-size: 70%;
+}
+.Subtitulo {
+	font-size: 60%;
 }
 
 section {
@@ -97,17 +109,20 @@ section.Contenido {
 /*SECCIONES TEMAS*/
 section.Contenido > section {
 	display: flex;
-	flex-wrap: wrap;
+	justify-content: center;
+	flex-wrap: nowrap;/*wrap*/
 	flex-direction: column;
 	
 	position: relative;
 	width: 100%;
-	
+	border: 3px dashed red;
 }
 /*SECCION SUB-TEMA*/
 section.subtema {
 	position: relative;
 	width: 100%;
+	border: 3px dashed blue;
+	/*8diciembre*/	
 }
 .Contenido #Estructura #Subtema3 {
 }
@@ -147,6 +162,9 @@ section.subtema {
 		font-size: 2em;
 		top: 100px; /*bajar el stick por el header*/
 	}
+	section.Contenido > section {
+		flex-direction: column;
+	}
 
 }
 
@@ -155,12 +173,9 @@ section.subtema {
 
 
 
+
 @media (max-width: 800px) {
-	section.Textos {
-		flex-wrap: wrap;
-		flex-direction: column;
-		border: 1px solid pink;
-	}
+	
 	div.portadita, div.portadita-estructura {
 		line-height: 1em;
 	}

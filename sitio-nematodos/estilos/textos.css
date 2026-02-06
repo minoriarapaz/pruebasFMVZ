@@ -25,28 +25,76 @@ h3 {
 }
 
 /*solo los P que son hijos directos del section.Contenido > section*/
-section.Contenido > section > p, section.subtema > p {
+.Contenido > section > p, section.subtema > p {
 	color: darkslategray;
 	margin-bottom: .8em;
 	margin-left: auto;
 	margin-right: auto;
 	text-indent: 1em;
 	text-align: justify;
-	width: 650px;
+	width: 600px;/*650*/
+	border: 1px dotted gray;
+}
+.Contenido > section > p.inLine {
+	display: inline-block;
+	width: 400px;
+	border: 2px solid red;
+	margin-left: none;
+	margin-right: none;
+}
+.Contenido > section > ul.listaEspecial {
+	
+	
+	background-image: linear-gradient(dodgerblue 60%, slateblue);
+	padding-top: 1em;
+	border-radius: 20px;
+	
+	margin-bottom: .8em;
+	text-indent: 0;
+	
+	color: ghostwhite;
+	font-style: oblique;
+	text-align: left;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 }
 
-section.Contenido > section > p.primerParrafo, section.subtema > p.primerParrafo {
+.Contenido > section > ul, .Contenido > section > ol, section.subtema > ul, section.subtema > ol {
+	color: darkslategray;
+	margin-bottom: .8em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;/*650*/
+	border: 2px dotted red;
+	
+	text-align: left;
+}
+.Contenido > section > ul li, .Contenido > section > ol li, section.subtema > ul li, section.subtema > ol li {
+	margin-bottom: .5em;
+	margin-left: 2.5em;
+	margin-right: 1em;
+}
+section.subtema > ol li::marker {
+	color: dodgerblue;
+}
+.Contenido > section > ul.listaEspecial li::marker {
+	color: ghostwhite;
+}
+
+ul.listaEspecial {
+	font-size: 100%;
+}
+
+.Contenido > section > p.primerParrafo, section.subtema > p.primerParrafo {
 	text-indent: 0;
 }
-section.Contenido > section > p.ultimoParrafo, section.subtema > p.ultimoParrafo {
+.Contenido > section > p.ultimoParrafo, section.subtema > p.ultimoParrafo {
 	margin-bottom: 5em;
 }
 
 
-section.Contenido > section > p.parrafoResaltado, section.subtema > p.parrafoResaltado {
+.Contenido > section > p.parrafoResaltado, section.subtema > p.parrafoResaltado {
 	background-image: linear-gradient(dodgerblue 60%, slateblue);
 	padding: 1em;
-	margin: auto;
 	border-radius: 20px;
 	color: ghostwhite;
 	margin-bottom: .8em;
@@ -55,25 +103,27 @@ section.Contenido > section > p.parrafoResaltado, section.subtema > p.parrafoRes
 	font-style: oblique;
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 }
+.parrafoResaltado > em {color: inherit;} /*el EM que esta dentro de las cajas azules. el INHERIT da el color del P donde se anida*/
+
+p > em {color: dodgerblue; font-weight: 500;} /*el EM suelto en cualquier parrafo excepto las cajas azules*/
+
+a {text-decoration: none;}
 
 
-a {
-	text-decoration: none;
-}
 /*Hipervinculos (citas y bibliografia) dentro de los p comúnes*/
-section.Contenido > section > p > a, section.subtema > p > a {
+.Contenido > section > p > a, section.subtema > p > a, .Contenido > section > ol a, section.subtema > ol a {
 	color: slateblue;
 	cursor: pointer;
 }
-
+ol small, ul small {color: inherit;}
 /*los hipervinculos dentro de los parrafos resaltados*/
-section.Contenido > section > .parrafoResaltado > a, section.subtema > .parrafoResaltado > a{
+.Contenido > section > .parrafoResaltado > a, section.subtema > .parrafoResaltado > a{
 	color: snow;
 }
 
 
 @media (max-width: 1200px) {
-	section.Contenido > section > p, section.Contenido > section > p.parrafoResaltado, section.subtema > p  {
+	.Contenido > section > p, .Contenido > section > p.parrafoResaltado, section.subtema > p, .Contenido > section > ul, .Contenido > section > ol, section.subtema > ul, section.subtema > ol  {
 		width: 650px;
 	}
 	.separaTemas {
@@ -82,7 +132,7 @@ section.Contenido > section > .parrafoResaltado > a, section.subtema > .parrafoR
 }
 
 @media (max-width: 800px) {
-	section.Contenido > section > p, section.Contenido > section > p.parrafoResaltado, section.subtema > p  {
+	.Contenido > section > p, .Contenido > section > p.parrafoResaltado, section.subtema > p, .Contenido > section > ul, .Contenido > section > ol, section.subtema > ul, section.subtema > ol  {
 		width: 70%;
 	}
 	.separaTemas {
@@ -91,8 +141,15 @@ section.Contenido > section > .parrafoResaltado > a, section.subtema > .parrafoR
 }
 
 @media (max-width: 500px) {
-	section.Contenido > section > p, section.Contenido > section > p.parrafoResaltado, section.subtema > p  {
+	.Contenido > section > p, .Contenido > section > p.parrafoResaltado, .Contenido > section > ul, .Contenido > section > ol, section.subtema > p, section.subtema > ul, section.subtema > ol  {
 		width: 90%;
 	}
 	.separaTemas {display: none;}
+	
+	.Contenido > section > ul, .Contenido > section > ol, section.subtema > ul, section.subtema > ol {text-align: left;}
+	
+	.Contenido > section > ul li, .Contenido > section > ol li, section.subtema > ul li, section.subtema > ol li {
+		margin-left: 2.5em;
+		margin-right: 0em;
+	}
 }
