@@ -22,7 +22,13 @@ body {
 	overflow: auto;
 }
 .diapoFalsa {/*border: 3px solid pink;*/}
+
 .diapositiva {display: none;}
+
+.captiongaleria + .diapositiva {
+	display: block;
+}
+
 .diapositiva img, .diapoFalsa img {
 	display:block;
 	/*max-width: 100%;*/
@@ -30,6 +36,14 @@ body {
 	max-width: 800px;
 	margin: auto;
 	border-radius: 10px;
+}
+
+.diapoFalsa iframe, .diapositiva iframe {
+	height: 600px;
+	width: 600px;
+	margin: auto;
+	position: relative;
+	display: block;
 }
 
 /*contenedor bajo la IMG donde va el pie de imagen*/
@@ -57,17 +71,22 @@ ol span, ul span, span.inciso {
 	font-weight: bold;
 	color: cyan;
 }
+li span.inciso {
+	font-weight: 100;
+}
+
 .descripcion ol {
-	border-left: 3px dotted dodgerblue;
+	border-left: 1px dotted red;
 	list-style-position: inside;
 	list-style-type: lower-alpha;
 	padding-left: 20px;
 	margin-top: .5em;
 }
+
 .descripcion ul {
 	list-style-type: none;
 	
-	border-left: 2px dotted dodgerblue;
+	border-left: 1px dotted dodgerblue;
 	list-style-position: outside;
 	padding-left: 20px;
 	margin-top: .5em;
@@ -77,7 +96,7 @@ ol span, ul span, span.inciso {
 	list-style-type:lower-alpha;
 }
 .descripcion ol li::marker {
-	color: dodgerblue;
+	color: cyan;
 	font-weight: bold;
 	font-size: 1.1em;
 }

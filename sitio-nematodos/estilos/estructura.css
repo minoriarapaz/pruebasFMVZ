@@ -115,13 +115,11 @@ section.Contenido > section {
 	
 	position: relative;
 	width: 100%;
-	border: 3px dashed red;
 }
 /*SECCION SUB-TEMA*/
 section.subtema {
 	position: relative;
 	width: 100%;
-	border: 3px dashed blue;
 	/*8diciembre*/	
 }
 .Contenido #Estructura #Subtema3 {

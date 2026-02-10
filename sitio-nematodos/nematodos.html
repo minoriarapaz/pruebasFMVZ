@@ -25,8 +25,6 @@
 	
 <!--<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">-->
 	
-
-<link rel="icon" type="image/x-icon" href="casos-graficos/interfaz/favicon.ico">
 <link href="estilos/textos.css" rel="stylesheet" type="text/css">
 <link href="estilos/modal.css" rel="stylesheet" type="text/css">
 </head>
@@ -40,7 +38,9 @@
 			<div class="hamb3"></div>
 		</button>
 		<div class="titulo">
+			<a href="index.html">
 			<img id="titulo-compacto" src="interfaz/logo-small-autora.png" alt="titulo del libro"> <img id="titulo-horizontal" src="interfaz/logo-small-horizontal-autora.png" alt="titulo horizontal">
+				</a>
 		</div>
 		
 		
@@ -60,15 +60,38 @@
 				</li>
 				<li><a onClick="irHistoria()">Historia de vida</a></li>
 				<li><a onClick="irImpacto()">Impacto ecológico de los nematodos</a></li>
-				<li><a href="bibliografia.html" target="_blank">Bibliografía</a></li>
+				<li><a onClick="irBiblio()" href="bibliografia.html" target="_blank">Bibliografía</a></li>
 				
 			</ul>
 		
 		</nav>
+		<!--
+		<div id="ojo" class="btnOjo btnFondoGris" onclick="showControl()">
+			<img id="botonOjo" class="imgBtn" src="minipig_imagenes/interfaz/icon_ojoazul.png" alt="ojo">
+		</div>
+		
+		<div id="Control" class="controles">
+		
+			<div id="control_vacio" class="control_sec"></div>
+			<div class="control_sec izquierdo">
+				<button id="bLM" class="boton_en_linea bletraM defaul" onclick="achicar()">Aa</button>
+				<button id="bLG" class="boton_en_linea bletraG" onclick="agrandar(0)">Aa</button>
+				<button id="bLEG" class="boton_en_linea bletraEG" onclick="agrandar(1)">Aa</button>
+			</div>
+			<div class="control_sec derecho">
+				<div id="bClaro" class="botonbola claro defaul" onclick="colorClaro()"></div>
+				<div id="bOscuro" class="botonbola oscuro" onclick="colorOscuro()"></div>
+				<div id="bMedio" class="botonbola medio" onClick="colorMedio()"></div>
+			</div>
+			
+			<div id="control_vacio2" class="control_sec"></div>
+			
+		</div>-->
+		
 	</header>
 	
 	<main>
-		<aside id="Bibliografia" onClick="salirBiblio()"><!--<button type="button" class="cruz"  onClick="salirBiblio()">&times;</button>-->
+		<aside id="Bibliografia" onClick="salirBiblio()">
 			<ol id="Citas">
 				<li class="Citado">Falso</li>
 				<li class="Citado">1- Académie française. <cite><a href="https://www.dictionnaire-academie.fr/article/A9N0254" target="_blank">Nématodes.</a> Dictionnaire de l’Académie française, 9e ed.</cite>
@@ -295,12 +318,19 @@
 				<p>
 				Algunas especies de nematodos son de vida libre, mientras que otras están bien adaptadas a la vida parasitaria en plantas y animales, incluyendo al hombre <small>(Figura 2)</small>. Los nematodos que ejercen parasitismo pueden encontrarse en los clados 1, 2, 5 y 8–12<a onClick="citar(5,6,12,13)"><sup>(5, 6, 12, 13)</sup></a> <small>(Figura 1)</small>.
 				</p>
-				<p class="parrafoResaltado">
+				
+				<button class="gusano" onClick="verComent(0)"></button>
+				
+				<p class="parrafoResaltado" id="comentario1">
 				<em>Los <b>metazoarios</b>, a diferencia de los organismos unicelulares <strong>protozoarios</strong>, son entidades pluricelulares e invertebrados. Son los animales más pequeños que habitan en la Tierra e incluyen las grandes familias de helmintos y artrópodos.</em>
 				</p>
+				
 				<p>
 				De los nematodos que habitan en el mar, se ha clasificado un 42%<a onClick="citar(5)"><sup>(5)</sup></a> y representan más del 90% de la <strong>meiofauna</strong> marina,<a onClick="citar(15)"><sup>(15)</sup></a> por otro lado, los nematodos que se desarrollan en el agua dulce y en los ecosistemas terrestres representan el 58% del total conocido<a onClick="citar(5,12)"><sup>(5, 12)</sup></a> <small>(Figura 2)</small>. La biodiversidad de estos organismos es tan basta que se han identificado en altitudes de hasta los 5 000 msnm<a onClick="citar(5,16)"><sup>(5, 16)</sup></a> y, en la profundidad del mar, desde los 4 000 m<a onClick="citar(15)"><sup>(15)</sup></a> y hasta los 8 380 metros.<a onClick="citar(17)"><sup>(17)</sup></a> 
 				</p>
+				
+				<button class="gusano" onClick="verComent(1)"></button>
+				
 				<p class="parrafoResaltado">
 				<em>La <b>meiofauna</b> o meiobentos son los metazoarios más pequeños que habitan en el sustrato de los arroyos y otras superficies, como los fardos de las raíces de los árboles y otros residuos de gran tamaño.<a onClick="citar(18)"><sup>(18)</sup></a></em>
 				</p>
@@ -401,14 +431,17 @@
 					<p>
 					Esta muda implica: <b>1)</b> la separación de la cutícula de la epidermis, <b>2)</b> la formación de una nueva cutícula que surge de la superficie más externa de la hipodermis y <b>3)</b> el desprendimiento de la cutícula vieja,<a onClick="citar(8)"><sup>(8)</sup></a> que en algunos casos, como en la L3 infectivas de los tricostrongilidos, está separada, se conserva como una vaina externa, y su desprendimiento se conoce como <i>exsheathment</i><a onClick="citar(44)"><sup>(44)</sup></a> o desenvaine <small>(Figura 7)</small>. Este proceso ha sido estructuralmente <span class="versalita">(MEB)</span> bien expuesto por Brianti <i>et al.</i><a onClick="citar(45)"><sup>(45)</sup></a> en larvas de ciatostominos del estadio tres al cuatro <small>(Figura 3E)</small>.
 					</p>
+					
+					<button class="gusano" onClick="verComent(2)"></button>
+					
 					<p class="parrafoResaltado">
 					<em>Los <b>ecdisozoos</b> segregan cutículas anexoesqueléticas que deben desprenderse durante el crecimiento y ser sustituidas por otras más grandes, un proceso denominado <b>ecdisis</b>. La muda periódica se produce en organismos alargados de <span style="font-style: normal">Ecdysozoa</span>, donde se incluyen insectos, arácnidos, quilópodos, miriápodos, ositos de agua o tardígrados y, obviamente, nematodos, entre otros.<a onClick="citar(43)"><sup>(43)</sup></a>
 					</em>
 					</p>
 					
 					<figure>
-						<a href="figuras/figura7.png" target="_blank">
-						<img src="figuras/figura7.png" alt="Desenvainado"></a>
+						<a href="figuras/figura7.jpg" target="_blank">
+						<img class="superior" src="figuras/figura7.jpg" alt="Desenvainado"></a>
 						<figcaption><b>Figura 7</b>
 						Fotomicrografías del desenvainado de larvas de nematodo 40×.
 							Se observa la vaina refringente por la quitina que la conforma (flecha negra), las estrías refringentes y ondeantes de la vaina al doblarse (ev) y se observa la larva desenvainándose con la cola aún por dentro (*). 
@@ -431,8 +464,8 @@
 					Estas células están situadas en el espacio pseudocelómico entre el músculo de la pared corporal, el intestino y alguna gónada. Muchas sustancias pueden concurrir en la pseudocavidad de cualquier nematodo y llegan a los celomocitos mediante el movimiento del fluido pseudocelómico durante la locomoción serpenteante y ondulante del nematodo, y son endocitadas por estas células.<a onClick="citar(8,23,46)"><sup>(8, 23, 46)</sup></a> El pseudocele es parte del sistema secretor-excretor del nematodo. La función de los celomocitos como estructuras celulares también es un primitivo sistema de inmunidad de este hospedante cilíndrico. Estas células son como los leucocitos o glóbulos blancos de los vertebrados. Varios autores coinciden en que hace falta dilucidar y profundizar el rol de los celomocitos en los nematodos<a onClick="citar(8,20,23,46,47)"><sup>(8, 20, 23, 46, 47)</sup></a> Es plausible, que estas estructuras lleven a acciones endosimbióticas, lo que genera nuevas preguntas de investigación.</p>
 					
 					<figure>
-						<a href="figuras/figura8.png" target="_blank">
-						<img src="figuras/figura8.png" alt="Estructura del pseudocele"></a>
+						<a href="figuras/figura8.jpg" target="_blank">
+						<img class="superior" src="figuras/figura8.jpg" alt="Estructura del pseudocele"></a>
 						<figcaption><b>Figura 8</b>
 						Fotomicrografía de la ultraestructura del pseudocele (Ps) de un nematodo con un celomocito suspendido, con una forma oval y las invaginaciones endocíticas (ie) de la membrana con varios procesos vacuolares (v) electrolúcidos y electrodensos de diferentes tamaños. También se observan varios núcleos en el citoplasma y varios más ramificados en los extremos cercanos a la membrana. Sin embargo, no hay varios cuerpos de Golgi (cG) electrodensos fusionados. El celomocito se aprecia cercano a la musculatura (M) rica en mitocondrias electrodensas distribuidas focalmente por el citoplasma y en el extremo izquierdo superior, la cutícula (C). <cite>Imágenes cortesía de Martínez-Ortiz de Montellano C, Fourquaux I, Hoste H y Torres-Acosta JFJ.</cite>
 						</figcaption>
@@ -514,7 +547,7 @@
 				  <figure>
 						<figcaption><b>Figura 12</b>
 						Fotomicrografía de la ultraestructura de un nematodo. <cite>Imágenes cortesía de Martínez-Ortiz de Montellano C, Fourquaux I, Hoste H y Torres-Acosta JFJ.</cite></figcaption>
-						<img src="interfaz/icono-favicon.ico" alt="Figura 12">
+						<img onClick="loadCajita(8)" src="figuras/figura12-junta.png" alt="ultraestructura de un nematodo - thumb">
 				  </figure>
 				  
 				  <p>
@@ -541,7 +574,29 @@
 					<p>La ovogénesis ocurre en el oviducto de la hembra. Durante el apareamiento, el receptáculo seminal almacena el esperma recibido, así, los óvulos pueden ser fecundados según se produzcan durante mucho tiempo sin que la hembra tenga que aparearse frecuentemente.<a onClick="citar(23)"><sup>(23)</sup></a> Esta espermateca<a onClick="citar(8)"><sup>(8)</sup></a> está recubierta por tejido epitelial <small>(Figuras 14 y 15)</small> que, a su vez, segrega líquido uterino. En la Figura 14b, puede observase la válvula espermateco-uterina. Los ovarios son sacos ciegos<a onClick="citar(8)"><sup>(8)</sup></a> y se conectan al útero que desemboca en una abertura vaginal con músculos eyectores que dan paso al exterior a través del órgano expuesto: la vulva.
 					</p>
 					
-					Aquí van las figuras 13, 14 y 15
+					<div class="figurasGrupo">
+				  	<figure class="juntas">
+						<figcaption><b>Figura 13</b>
+							Fotomicrografía de microscopia de transmisión de un nematodo
+						</figcaption>
+					 
+						<img onClick="loadCajita(9)" src="figuras/figura13-a.jpg" alt="Transmisión de un nematodo">
+					 
+				  	</figure>
+				  
+				  	<figure class="juntas">
+						<figcaption><b>Figura 14</b>
+						 <cite>Imágenes cortesía de Martínez-Ortiz de Montellano C, Fourquaux I, Hoste H y Torres-Acosta JFJ.</cite></figcaption>
+						<img onClick="loadCajita(10)" src="figuras/figura14-a.jpg" alt="Transmisión de espermateca">
+				  	</figure>
+						
+						<figure class="juntas">
+						<figcaption><b>Figura 15</b>
+						 <cite>Imágenes cortesía de Martínez-Ortiz de Montellano C, Fourquaux I, Hoste H y Torres-Acosta JFJ.</cite></figcaption>
+						<img onClick="loadCajita(11)" src="figuras/figura15-a.jpg" alt="Transmisión - corte sagital">
+				  	</figure>
+				  
+				  </div>
 					
 					<p>En la mayoría de los nematodos, la vulva está situada en la porción media o en el centro del cuerpo, <strong>anfidélfica</strong>, tal como <i>Parabronema</i> spp.,<a onClick="citar(48)"><sup>(48)</sup></a> o hacia el extremo caudal, <strong>prodélfica</strong> <small>(Figura 3 B-C)</small>, como <i>H. contortus</i>,<a onClick="citar(25)"><sup>(25)</sup></a> pero en otros están dispuestas hacia la porción cefálica u <strong>opistodélfica</strong>, por ejemplo, en <i>Dirofilaria immitis</i>,<a onClick="citar(70)"><sup>(70)</sup></a> <i>Trichinella</i> spp.<a onClick="citar(44)"><sup>(44)</sup></a> y <i>Abbreviata leptosoma</i>.<a onClick="citar(33)"><sup>(33)</sup></a> Algunas hembras anfidélficas y opistodélficas son vivíparas, por lo que no ponen huevos como las prodélficas. Para homologar términos, las vulvas se caracterizan en tres tipos. <a onClick="citar(71)"><sup>(71)</sup></a> <strong>Tipo 1: vulva con lengüeta, tipo 2: <i>epiptygma</i> o vulva lisa y tipo 3: vulva membranosa</strong>; pero, estas formas no siempre son exclusivas de género o especie. Un extraordinario ejemplo son las variaciones en las hembras de <i>H. contortus</i>. Aunque la hembra pertenezca al mismo aislado o línea genética, puede presentar los tres tipos de vulva<a onClick="citar(25)"><sup>(25)</sup></a> o de otras especies como <i>H. longistipes</i>, <i>H. placei</i> <a onClick="citar(28)"><sup>(28)</sup></a> o <i>H. similis</i> cuya ubicación y forma también son variables.<a onClick="citar(72)"><sup>(72)</sup></a>
 				  </p>
@@ -549,7 +604,23 @@
 				  <p>Las vulvas más comunes son las tipo 2, simples entradas recubiertas por cutícula, como las de <i>Trichuris landak</i><a onClick="citar(42)"><sup>(42)</sup></a> o <i>Tylocephalus auriculatus</i>, <i>Acrolobus longigubernaculum</i>, <i>Cervidellus vexilliger</i>,<a onClick="citar(66)"><sup>(66)</sup></a> <i>Parabronema</i> spp.,<a onClick="citar(48)"><sup>(48)</sup></a> <i>Abbreviata leptosoma</i>,<a onClick="citar(33)"><sup>(33)</sup></a> o las muy discretas aberturas en <i>Acrobeles</i> spp.,<a onClick="citar(35)"><sup>(35)</sup></a> <i>Meloidogyne</i> spp.,<a onClick="citar(63)"><sup>(63)</sup></a> <i>Oesophagostomum columbianum</i>,<a onClick="citar(30)"><sup>(30)</sup></a> <i>Toxocara</i> spp.,<a onClick="citar(31)"><sup>(31)</sup></a> <i>Soboliphyme baturini</i>,<a onClick="citar(52)"><sup>(52)</sup></a> <i>Heterorhabditis mexicana</i><a onClick="citar(58)"><sup>(58)</sup></a> y <i>Physaloptera mirandai</i>.<a onClick="citar(62)"><sup>(62)</sup></a> Con algunas ornamentaciones como las espinas posvulvares de <i>Pterygodermatites bovieri</i>,<a onClick="citar(39)"><sup>(39)</sup></a> o la tipo hoja de <i>H. contortus</i>.<a onClick="citar(26)"><sup>(26)</sup></a> Los huevos salen al ambiente en formas blastomeradas o larvadas <small>(Figura 16; Video 1)</small>. Sin embargo, también están los vivíparos, como el parásito obligado <i>Dirofilaria immitis</i>,<a onClick="citar(70, 73)"><sup>(70, 73)</sup></a> que invade la arteria pulmonar de los perros, y otras hembras de nematodos entomopatógenos o de vida libre.<a onClick="citar(74, 75)"><sup>(74, 75)</sup></a>
 				  </p>
 				  
-				  Aquí pondrás la figura numero 16.
+				  <figure>
+					  <figcaption><b>Figura 16</b>
+						  <cite>Imágenes cortesía de Laura González Reyes,<br>Departamento de Parasitología <span class="versalita">FMVZ-UNAM.</span></cite>
+					  </figcaption>
+					  <img onClick="loadCajita(12)" src="figuras/figura16-a.jpg" alt="huevo larvado compatible con Strongyloides westeri ">
+				  
+				  </figure>
+				  
+				  <figure>
+					  <figcaption><b>Video 1</b>
+					  </figcaption>
+				  <video controls>
+					  <source src="figuras/video1-baja.mp4" type="video/mp4">
+				  </video>
+				  </figure>
+				  
+				 
 				  
 				  <p>Las gónadas del nematodo macho se caracterizan por contener espermatozoos, que en los machos suelen ser de forma ameboide<a onClick="citar(8, 23)"><sup>(8, 23)</sup></a> <small>(Figuras 14a y 15)</small>. La espermatogénesis tiene lugar en el testículo del macho, que, por lo regular, es único y de estructura tubular en la mayoría de los nematodos.<a onClick="citar(23)"><sup>(23)</sup></a> Entonces, el sistema reproductivo del macho está conformado por el testículo, una vesícula seminal y un conducto deferente provisto o no de músculos. Si tiene músculos, se convierte en un sistema eyaculador, también dotado de glándulas. En la mayoría de las especies, el conducto deferente desemboca en el recto, muy cerca de la válvula intestino-recto, esto convierte el espacio en una cloaca.
 				  </p>
@@ -572,7 +643,13 @@
 					<p>Se ha mencionado cómo estos animales sienten a través de quimiorreceptores, ventosas, espículas, entre otros. Pero ¿cómo estos metazoarios procesan su entrono o nicho ecológico? Aunque no perciben el color ni las formas, sí detectan el calor y los olores que emanan del ambiente o de un congénere. Esto es, el entorno o el mundo perceptivo de organismos <i>Umwelt</i> (en alemán).<a onClick="citar(76)"><sup>(76)</sup></a> Aunque, de los helmintos, los nematodos son los más evolucionados, no poseen órganos sensoriales tan desarrollados como los de un artrópodo, ave, mamífero o ser humano. Entonces, ¿cómo es que estos animales ven, oyen, buscan alimento o una pareja? La respuesta no es tan simple, pero es importante saber que se valen de un sistema nervioso, conformado generalmente por anillos nerviosos que inician en el esófago, lo inervan longitudinalmente. Seis son los nervios que se extienden de la región anterior a la posterior <small>(Figura 3D)</small>. Estos nervios conducen hacia órganos sensoriales distribuidos a lo largo del pseudocele <small>(Figura 17)</small>.
 					</p>
 					
-					Aquí irá insertada la imagen 17.
+					<figure>
+					  <figcaption><b>Figura 17</b>
+						  Ultraestructura de un nematodo.
+					  </figcaption>
+					  <img onClick="loadCajita(13)" src="figuras/figura17.jpg" alt="Ultraestructura de nematodo">
+				  
+				  </figure>
 					
 					<p>Las <b>papilas cefálicas</b> son estructuras abotonadas distribuidas en la región anterior, principalmente en la boca y los labios, como en <i>H. contortus</i><a onClick="citar(25)"><sup>(25)</sup></a> <small>(Figuras 3A, y 4 a-b)</small>, <i>Toxocara</i> spp.,<a onClick="citar(31, 32)"><sup>(31, 32)</sup></a> <i>Ascaridia galli</i>,<a onClick="citar(54)"><sup>(54)</sup></a> <i>P. bovieri</i>,<a onClick="citar(39)"><sup>(39)</sup></a> <i>P. pacificus</i> y <i>C. elegans</i>,<a onClick="citar(57)"><sup>(57)</sup></a> <i>A. lumbricoides</i>,<a onClick="citar(55)"><sup>(55)</sup></a> <i>Setaria</i> spp.,<a onClick="citar(41)"><sup>(41)</sup></a> <i>Mammo&shy;monogamus laryngeus</i>,<a onClick="citar(49)"><sup>(49)</sup></a> ciatostominos,<a onClick="citar(45)"><sup>(45)</sup></a> <i>Parabronema</i> spp.,<a onClick="citar(48)"><sup>(48)</sup></a> <i>Desportesius invaginatus</i>,<a onClick="citar(22)"><sup>(22)</sup></a> <i>Paratractis hystrix</i>,<a onClick="citar(37)"><sup>(37)</sup></a> <i>Buckleyatractis marinkelli</i>,<a onClick="citar(37)"><sup>(37)</sup></a> <i>Echinocephalus inserratus</i><a onClick="citar(29)"><sup>(29)</sup></a> y <i>Travassosinema claudiae</i>.<a onClick="citar(56)"><sup>(56)</sup></a> Una curiosidad fascinante son los botones aplanados papilares en toda la superficie de la gran ventosa de <i>Soboliphyme baturini</i>.<a onClick="citar(52)"><sup>(52)</sup></a> Estos botones se extienden por todo el cuerpo hasta la cauda. Sin duda uno de los nematodos más estrambóticos que tiene la naturaleza.
 					</p>
@@ -605,6 +682,15 @@
 				
 				<p class="primerParrafo">Para continuar profun&shy;dizando, como todo organismo vivo, ellos tienen una digna y profunda “historia de vida”, intitulada en ciencia como ciclo biológico. Lee,<a onClick="citar(23)"><sup>(23)</sup></a> describe que el ciclo básico de la mayoría de los nematodos consiste en el desarrollo de un huevo <small>(Figura 16)</small>, cuatro estadios larvarios L1, L2, L3 <small>(Figura 3, video 2)</small>, L4, algunos un quinto estadio; luego se convierten en adultos, es cuando se vuelven morfo&shy;lógica&shy;mente funcio&shy;nales para perpetuar su especie. Sufren cuatro mudas para llegar a este estadio <small>(Figura 3E)</small>. Este ciclo de vida varía si los nematodos son de vida libre, entomo&shy;patógenos o aquellos que parasitan plantas o animales.</p>
 				
+				<figure>
+					  <figcaption><b>Video 2</b>
+					  </figcaption>
+				  <video controls>
+					  <source src="figuras/video2.mp4" type="video/mp4">
+				  </video>
+				  </figure>
+				
+				
 				<p>El ciclo de vida de los nematodos se rige por periodos bien delimi&shy;tados mediante hipobiosis<a onClick="citar(6, 23)"><sup>(6, 23)</sup></a> o por criptobiosis <small>(Figura 18)</small>. Un ejemplo fasci&shy;nante es el de especies como <i>Panagrolaimus</i>, halladas reciente&shy;mente y “despertadas” de una siesta que duró más de 46 000 años.<a onClick="citar(77)"><sup>(77)</sup></a> Esto significa que eclosio&shy;naron en el Pleistoceno tardío, cuando mamuts y felinos dientes de sable caminaban sobre la Tierra en la dura era del hielo. La hipobiosis macros&shy;cópica y micros&shy;cópica se presentan de forma nodular en la mucosa del tracto gastro&shy;intestinal, en la íntima de arterias y venas, en células muscu&shy;lares, en raíces, hojas o corteza de plantas, por nombrar algunos sitios blanco dentro del hospedante.
 				</p>
 				
@@ -621,7 +707,7 @@
 						Tipos de hipobiosis del nematodo.<cite>Modificado de Vlaar et al.<a onclick="citar(6)"><sup>(6)</sup></a> Creado con BioRender.com</cite>
 					</figcaption>
 					<a href="figuras/figura18.png" target="_blank">
-						<img src="figuras/figura18.png" alt="Imagen representativa">
+						<img src="figuras/figura18.png" alt="hipobiosis del nematodo">
 					</a>
 				</figure>
 				

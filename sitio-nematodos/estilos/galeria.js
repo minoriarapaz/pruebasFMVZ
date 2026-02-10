@@ -38,7 +38,24 @@ function loadCajita(C) {
 	if (C==7) {
 		document.getElementById("Cargador").src="interactivos/galeria7.html";
 	}
-	
+	if (C==8) {
+		document.getElementById("Cargador").src="interactivos/galeria8.html";
+	}
+	if (C==9) {
+		document.getElementById("Cargador").src="interactivos/galeria9.html";
+	}
+	if (C==10) {
+		document.getElementById("Cargador").src="interactivos/galeria10.html";
+	}
+	if (C==11) {
+		document.getElementById("Cargador").src="interactivos/galeria11.html";
+	}
+	if (C==12) {
+		document.getElementById("Cargador").src="interactivos/galeria12.html";
+	}
+	if (C==13) {
+		document.getElementById("Cargador").src="interactivos/galeria13.html";
+	}
 }
 function animarIframe() {
 	document.getElementById("Cargador").style.scale="1";
@@ -110,6 +127,5 @@ function mostrarTODAS(Q,g) {
 	}
 	slides[slideIndex-1].style.display = "block";
 	
-	misGalerias[g].querySelector(".diapoFalsa").style.display="none";
-	/*misGalerias[g].querySelector(".numbertext").innerHTML = slideIndex;*/
+	/*misGalerias[g].querySelector(".diapoFalsa").style.display="none";*/
 }

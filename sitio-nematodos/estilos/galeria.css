@@ -12,7 +12,7 @@ iframe {
 	scale: .1;
 	opacity: .1;
 	transition: all .5s;
-	
+	border: none;
 	/*background-image: linear-gradient(slateblue, dodgerblue);*/
 	
 }
@@ -39,7 +39,7 @@ iframe {
 
 .cruz {
 	display: none;
-	z-index: 3;
+	z-index: 5;
 	position: absolute; /*absolute*/
   	top: 30px;
   	right: 50px; /*35*/
@@ -76,6 +76,15 @@ figure img {
 	width: 100%;
 	border-radius: 5px 5px 20px 20px;
 	box-shadow: 1px 3px 8px black;
+}
+figure video {
+	position: relative;
+	margin: auto;
+	width: 100%;
+}
+figure img.superior {
+	border-radius: 20px 20px 5px 5px;
+	margin-bottom: 10px;
 }
 figure img.imgAlta {
 	width: auto;

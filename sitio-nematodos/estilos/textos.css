@@ -33,12 +33,10 @@ h3 {
 	text-indent: 1em;
 	text-align: justify;
 	width: 600px;/*650*/
-	border: 1px dotted gray;
 }
 .Contenido > section > p.inLine {
 	display: inline-block;
 	width: 400px;
-	border: 2px solid red;
 	margin-left: none;
 	margin-right: none;
 }
@@ -63,9 +61,7 @@ h3 {
 	margin-bottom: .8em;
 	margin-left: auto;
 	margin-right: auto;
-	width: 600px;/*650*/
-	border: 2px dotted red;
-	
+	width: 600px;/*650*/	
 	text-align: left;
 }
 .Contenido > section > ul li, .Contenido > section > ol li, section.subtema > ul li, section.subtema > ol li {
@@ -93,16 +89,38 @@ ul.listaEspecial {
 
 
 .Contenido > section > p.parrafoResaltado, section.subtema > p.parrafoResaltado {
-	background-image: linear-gradient(dodgerblue 60%, slateblue);
-	padding: 1em;
+	position: relative;
+	display: none;
+	
+	background-color: seagreen;
+	background-image: url("../interfaz/foto-portadita.jpg");
+	background-size: auto;
+	background-position: center;
+	background-blend-mode:multiply;
+	/*background-image: linear-gradient(dodgerblue 60%, slateblue);*/
+	
+	padding: 1.5em 1em 1.5em 1em;
+	margin-bottom: 1.5em;
+	margin-top: 1em;
 	border-radius: 20px;
 	color: ghostwhite;
-	margin-bottom: .8em;
-	text-indent: 0;
 	
+	text-indent: 0;
 	font-style: oblique;
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+	box-sizing: border-box;
+	
+	z-index: 2;
+	animation: entrada 1s;
+	animation-play-state: paused;
+	
 }
+@keyframes entrada {
+	from {right: -400px; opacity: .1;}
+	to {right: 0px; opacity: 1;}
+}
+
+
 .parrafoResaltado > em {color: inherit;} /*el EM que esta dentro de las cajas azules. el INHERIT da el color del P donde se anida*/
 
 p > em {color: dodgerblue; font-weight: 500;} /*el EM suelto en cualquier parrafo excepto las cajas azules*/
@@ -119,6 +137,29 @@ ol small, ul small {color: inherit;}
 /*los hipervinculos dentro de los parrafos resaltados*/
 .Contenido > section > .parrafoResaltado > a, section.subtema > .parrafoResaltado > a{
 	color: snow;
+}
+
+button.gusano {
+	display: block;
+	position: relative;
+	
+	width: 50px;
+	height: 50px;
+	margin: auto;
+	
+	margin-top: 30px;
+	margin-bottom: 30px;
+	
+	background-color: transparent;
+	background-image: url("../interfaz/gusano-grueso.gif");
+	background-size: cover;
+	background-position: center;
+	
+	border-radius: 25px;
+	border: 1px solid cyan;
+}
+.gusano img {
+	width: 100%;
 }
 
 

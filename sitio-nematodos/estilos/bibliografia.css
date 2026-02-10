@@ -19,7 +19,6 @@
 
 #Fichas li {
 	padding: 10px;
-	border: 1px dotted dodgerblue;
 }
 
 #Fichas li::marker {

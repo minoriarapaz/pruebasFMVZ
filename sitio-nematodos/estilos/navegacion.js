@@ -118,6 +118,15 @@ function irImpacto() {
 	console.log("indice cerrado. Variable Abierto es "+Abierto);
 	document.getElementById("hamburguesa").classList.remove("equis");
 }
+function irBiblio() {
+	
+	document.getElementById("Indice").style.left="-300px";
+	Abierto=1;
+	document.body.style.overflow = "auto";
+	console.log("indice cerrado. Variable Abierto es "+Abierto);
+	document.getElementById("hamburguesa").classList.remove("equis");
+}
+
 
 const SecSubtemas = document.getElementsByClassName("subtema");
 
@@ -234,6 +243,22 @@ function scrollImpacto() {
 		document.getElementById("panel3").style.backgroundColor=null;
 	}
 }
+
+/*     ABRIR   C O M E N T A R I O S */
+
+const Comentarios = document.getElementsByClassName("parrafoResaltado");
+const Gusanos = document.getElementsByClassName("gusano");
+
+function verComent(c) {
+	
+	Comentarios[c].style.animationPlayState = "running";
+	Comentarios[c].style.display="block";
+	Gusanos[c].style.display="none";
+	/*document.getElementById("myDIV").style.animationPlayState = "running";*/
+}
+
+
+
 
 /*funcion de prueba*/
 function YdeSubtema1() {
