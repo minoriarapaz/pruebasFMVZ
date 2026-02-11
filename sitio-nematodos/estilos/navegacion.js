@@ -118,14 +118,8 @@ function irImpacto() {
 	console.log("indice cerrado. Variable Abierto es "+Abierto);
 	document.getElementById("hamburguesa").classList.remove("equis");
 }
-function irBiblio() {
-	
-	document.getElementById("Indice").style.left="-300px";
-	Abierto=1;
-	document.body.style.overflow = "auto";
-	console.log("indice cerrado. Variable Abierto es "+Abierto);
-	document.getElementById("hamburguesa").classList.remove("equis");
-}
+
+
 
 
 const SecSubtemas = document.getElementsByClassName("subtema");

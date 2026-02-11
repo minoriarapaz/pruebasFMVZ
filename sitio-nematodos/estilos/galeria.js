@@ -56,6 +56,12 @@ function loadCajita(C) {
 	if (C==13) {
 		document.getElementById("Cargador").src="interactivos/galeria13.html";
 	}
+	if (C==14) {
+		document.getElementById("Cargador").src="biblio-redux.html";
+		document.getElementById("Indice").style.left="-300px";
+		document.body.style.overflow = "auto";
+		document.getElementById("hamburguesa").classList.remove("equis");
+	}
 }
 function animarIframe() {
 	document.getElementById("Cargador").style.scale="1";

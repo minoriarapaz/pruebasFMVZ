@@ -10,7 +10,7 @@ header {
 	width: 250px; /*250px*/
 	height: 100vw;
 	box-sizing: border-box;
-
+	
 }
 
 header > .titulo {

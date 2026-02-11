@@ -17,16 +17,40 @@
 	border-radius: 30px;
 }
 
-#Fichas li {
+#Fichas-redux {
+	list-style-type: decimal;
+	list-style-position: outside;
+	position: relative;
+	width: 80%;
+	height: auto;/*auto*/
+	background-color: snow;
+	margin: auto;
+	margin-bottom: 2em;
+	margin-top: 4em;
+	padding: 10px 10px 10px 40px;
+	color: darkslategray;
+	border-radius: 30px;
+	border: 2px solid black;
+	box-sizing: border-box;
+}
+
+#Fichas li, #Fichas-redux li {
 	padding: 10px;
 }
 
-#Fichas li::marker {
+#Fichas-redux li {
+	border-bottom: 1px dotted dodgerblue;
+}
+
+#Fichas li::marker, #Fichas-redux li::marker {
 	color: dodgerblue;
 }
 
-#Fichas cite {
+#Fichas cite, #Fichas-redux cite {
 	display: block;
 	font-weight: 500;
 	text-decoration: underline;
+}
+.transparente {
+	background-color: transparent;
 }

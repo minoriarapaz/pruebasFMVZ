@@ -32,7 +32,21 @@ iframe {
   	background-color: rgba(0, 0, 0, .8); 
 	transition: opacity .5s;
 }
-
+.modalGaleriaB {
+	display: block; /*NONE*/
+	position: fixed; /* Stay in place */
+	z-index: 5; /* Sit on top */
+	padding-top: 30px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height ANTES ERA 100%*/
+	overflow: hidden; /* ANTES ERA SCROLL (mayo 2024)*/
+	opacity: 0;
+	
+  	background-color: rgba(0, 0, 0, .8); 
+	transition: opacity .5s;
+}
 
 
 
