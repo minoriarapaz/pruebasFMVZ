@@ -33,6 +33,7 @@ h3 {
 	text-indent: 1em;
 	text-align: justify;
 	width: 600px;/*650*/
+	line-height: 1.7;
 }
 .Contenido > section > p.inLine {
 	display: inline-block;
@@ -162,7 +163,9 @@ button.gusano {
 	width: 100%;
 }
 
-
+sup {
+	line-height: 0;
+}
 @media (max-width: 1200px) {
 	.Contenido > section > p, .Contenido > section > p.parrafoResaltado, section.subtema > p, .Contenido > section > ul, .Contenido > section > ol, section.subtema > ul, section.subtema > ol  {
 		width: 650px;
