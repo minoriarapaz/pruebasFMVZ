@@ -18,10 +18,15 @@ function animar() {
 		document.getElementById("Citas").style.scale="1";
 		console.log("animó");
 	}
-function develar() {
+function citasAll() {
+	setTimeout(animar, 100);
 	mostrarBiblio();
-	document.getElementsByClassName("Citado").style.display="block";
 	
+	const citas = document.getElementsByClassName("Citado");
+	for (let c = 0; c < citas.length; c++) {
+		citas[c].style.display="block";
+	}
+
 }
 
 function citar(A, B, C, D, E, F) {

@@ -102,6 +102,7 @@ figure img.superior {
 }
 figure img.imgAlta {
 	width: auto;
+	max-width: 450px;
 	max-height: 400px;
 	margin: auto;
 }

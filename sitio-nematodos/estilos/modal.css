@@ -4,7 +4,9 @@
 .Citado {
 	display: none;/*none*/
 }
-
+.invisible {
+	visibility: hidden;
+}
 aside {
 	display: none; /*none*/
 	position: fixed; /* Stay in place */
@@ -45,6 +47,7 @@ aside > ol {
 aside > ol li {
 	padding: 20px;
 	border-bottom: 1px dotted dodgerblue;
+	font-size: .85em;
 }
 
 aside cite {
