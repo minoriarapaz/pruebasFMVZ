@@ -111,14 +111,13 @@ ul.listaEspecial {
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 	box-sizing: border-box;
 	
-	z-index: 2;
 	animation: entrada 1s;
 	animation-play-state: paused;
 	
 }
 @keyframes entrada {
-	from {right: -400px; opacity: .1;}
-	to {right: 0px; opacity: 1;}
+	from {scale: .1; opacity: .1;}
+	to {scale: 1; opacity: 1;}
 }
 
 
