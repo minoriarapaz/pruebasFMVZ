@@ -3,6 +3,7 @@
 
 
 header {
+	z-index: 4;
 	position: fixed;
 	color: ghostwhite;
 	overflow: hidden;
@@ -125,7 +126,6 @@ nav a span, ol small {color: dodgerblue;}
 /*RESPOSIVO 3 TAMAÑOS*/
 @media (max-width: 1200px) {
 	header {
-		z-index: 4;
 		display: flex;
 		flex-wrap: nowrap;
 		flex-direction: row;
@@ -133,7 +133,7 @@ nav a span, ol small {color: dodgerblue;}
 		height: 100px;
 		box-sizing: border-box;
 		overflow: hidden;
-		border-right: 2px solid red;
+		border-right: 5px solid red;
 	}
 	
 	header > .titulo {

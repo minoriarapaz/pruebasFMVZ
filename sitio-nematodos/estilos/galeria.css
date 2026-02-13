@@ -29,8 +29,10 @@
 	overflow: hidden; /* ANTES ERA SCROLL (mayo 2024)*/
 	opacity: 0;
 	
-  	background-color: rgba(0, 0, 0, .8); 
+  	background-color: rgba(100, 40, 10, .8); 
 	transition: opacity .5s;
+	box-sizing: border-box;
+	border: 5px solid gold;
 }
 .modalGaleriaB {
 	display: block; /*NONE*/
