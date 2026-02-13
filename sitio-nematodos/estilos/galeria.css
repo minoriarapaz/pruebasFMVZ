@@ -29,10 +29,9 @@
 	overflow: hidden; /* ANTES ERA SCROLL (mayo 2024)*/
 	opacity: 0;
 	
-  	background-color: rgba(100, 40, 10, .8); 
+  	background-color: rgba(0, 0, 0, .8); 
 	transition: opacity .5s;
 	box-sizing: border-box;
-	border: 5px solid gold;
 }
 .modalGaleriaB {
 	display: block; /*NONE*/
@@ -107,7 +106,7 @@ figure img.superior {
 figure img.imgAlta {
 	position: relative;
 	width: auto;
-	max-width: 450px;
+	max-width: 350px;
 	max-height: 400px;
 	margin: auto;
 }
@@ -176,6 +175,9 @@ figcaption b:first-child {
 @media (max-width: 500px) {
 	figure {
 		width: 93%;
+	}
+	figure img.imgAlta {
+		max-width: 300px;
 	}
 }
 

@@ -133,7 +133,6 @@ nav a span, ol small {color: dodgerblue;}
 		height: 100px;
 		box-sizing: border-box;
 		overflow: hidden;
-		border-right: 5px solid red;
 	}
 	
 	header > .titulo {

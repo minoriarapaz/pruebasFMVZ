@@ -9,7 +9,7 @@
 
 /*overflow debe ser HIDDEN */
 body {
-	overflow-x: hidden;
+	overflow-x:hidden;
 	display: flex;
 	flex-wrap: nowrap;
 	flex-direction: row;
