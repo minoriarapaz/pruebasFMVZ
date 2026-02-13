@@ -3,10 +3,10 @@
 
 
 header {
+	position: fixed;
 	color: ghostwhite;
 	overflow: hidden;
 	background-color: #252525;
-	position: fixed;
 	width: 250px; /*250px*/
 	height: 100vw;
 	box-sizing: border-box;
@@ -133,6 +133,7 @@ nav a span, ol small {color: dodgerblue;}
 		height: 100px;
 		box-sizing: border-box;
 		overflow: hidden;
+		border-right: 2px solid red;
 	}
 	
 	header > .titulo {
