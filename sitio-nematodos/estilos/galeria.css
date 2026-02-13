@@ -2,7 +2,7 @@
 /* CSS Document */
 
 /*caracteristicas de class galeria*/
-iframe {
+.modalGaleria iframe {
 	display: block;
 	position: relative;
 	width: 100%;
@@ -20,7 +20,7 @@ iframe {
 .modalGaleria {
 	display: none; /*NONE*/
 	position: fixed; /* Stay in place */
-	z-index: 5; /* Sit on top */
+	z-index: 6; /* el modal de CITAS esta en 5*/
 	padding-top: 30px; /* Location of the box */
 	left: 0;
 	top: 0;
@@ -80,6 +80,7 @@ figure {
 	user-select: none;
 }
 figure.juntas {
+	position: relative;
 	display: block;
 	width: 450px;
 	max-height: 400px;
@@ -87,6 +88,7 @@ figure.juntas {
 }
 figure img {
 	display: block;
+	position: relative;
 	width: 100%;
 	border-radius: 5px 5px 20px 20px;
 	box-shadow: 1px 3px 8px black;
@@ -101,6 +103,7 @@ figure img.superior {
 	margin-bottom: 10px;
 }
 figure img.imgAlta {
+	position: relative;
 	width: auto;
 	max-width: 450px;
 	max-height: 400px;
