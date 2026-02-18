@@ -115,6 +115,14 @@ function agrandarImg(I,i) {
 	window.open(direccion);
 }
 
+function agrandarNueva(A) {
+	const cajita = document.getElementById("cajita1");
+	
+	let figura = cajita.getElementsByTagName("img");
+	let ruta = figura[A].src;
+	window.open(ruta);
+}
+
 function moverTODAS(N,g) {
 	mostrarTODAS(slideIndex += N, g);
 }

@@ -1,5 +1,8 @@
 // JavaScript Document
 
+function version() {
+	alert("versión 2.2026");
+}
 
 function Despliegue() {
 	document.getElementById("subIndice").classList.toggle("indiceVisible");
@@ -119,7 +122,34 @@ function irImpacto() {
 	document.getElementById("hamburguesa").classList.remove("equis");
 }
 
+/*FUNCIONES PARA ABRIR LA BIBLIO Y CERRAR EL INDICE*/
+function showBiblio() {
+	document.getElementById("Bibliografia").style.display="block";
+	/*document.body.style.overflow = "hidden";*/
+}
 
+function animarB() {
+		document.getElementById("Bibliografia").style.opacity="1";
+		document.getElementById("Citas").style.scale="1";
+		console.log("animó");
+	}
+function irBiblio() {
+	setTimeout(animarB, 100);
+	showBiblio();
+	
+	const citas = document.getElementsByClassName("Citado");
+	for (let c = 0; c < citas.length; c++) {
+		citas[c].style.display="block";
+	}
+	
+	Abierto=1;
+	document.getElementById("Indice").style.left="-300px";
+	document.body.style.overflow = "auto";
+	console.log("indice cerrado. Variable Abierto es "+Abierto);
+	document.getElementById("hamburguesa").classList.remove("equis");
+
+}
+/*FUNCIONES PARA ABRIR LA BIBLIO Y CERRAR EL INDICE FIN*/
 
 
 const SecSubtemas = document.getElementsByClassName("subtema");

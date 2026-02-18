@@ -84,8 +84,9 @@ figure.juntas {
 	position: relative;
 	display: block;
 	width: 450px;
-	max-height: 400px;
+	height: 400px;
 	overflow: hidden;
+	align-self: flex-start;
 }
 figure img {
 	display: block;

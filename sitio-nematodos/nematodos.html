@@ -3,7 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <title>Nemátodos</title>
-		
+	
+	<!--DUBLIN CORE-->
+	<meta name="DC.title" lang="es" content="Nematodos" />
+	<meta name="DC.creator" content="Martínez Ortiz de Montellano, Cintli" />
+	<meta name="DC.publisher" content="Universidad Nacional Autónoma de México, FMVZ" />
+	<meta name="DC.language" content="es">
+	<meta name="DC.description" lang="es" content="----------">
+	<meta name="DC.date" content="2026-02-16" />
+	
+	<meta name="DCTERMS.issued" scheme="DCTERMS.W3CDTF" content="2026-02-16" />
+	<meta name="DCTERMS.audience"  lang="es" content="medicos veterinarios zootecnistas" />
+	<meta name="DCTERMS.audience"  lang="es" content="biólogos" />
+	<meta name="DCTERMS.audience"  lang="es" content="investigadores" />
+	<meta name="DCTERMS.audience"  lang="es" content="estudiantes de medicina veterinaria" />
+	
+	<meta name="DCTERMS.abstract" lang="es" content="------------" />
+	
+	
+	<!--<meta name="DC.identifier" scheme="DCTERMS.URI" content="http://dublincore.org/specifications/dublin-core/dcq-html/" />-->
+	
+	
+	<meta name="DC.format" scheme="DCTERMS.IMT" content="text/html" />
+	<meta name="DC.type" scheme="DCTERMS.DCMIType" content="Text" />
+	
+	
+	
+	
+	<!--DUBLIN CORE-->
+	
+	
 <link rel="icon" type="image/x-icon" href="interfaz/icono-favicon.ico">	
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,7 +58,7 @@
 <link href="estilos/modal.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
+<body onLoad="version()">
 	<header id="cabecera">
 		<h1>Nematodos</h1>
 	  <button type="button" id="hamburguesa" onclick="verIndice()">
@@ -60,7 +89,7 @@
 				</li>
 				<li><a onClick="irHistoria()">Historia de vida</a></li>
 				<li><a onClick="irImpacto()">Impacto ecológico de los nematodos</a></li>
-				<li><a onClick="citasAll()">Bibliografía</a></li>
+				<li><a onClick="irBiblio()">Bibliografía</a></li>
 				
 			</ul>
 		
@@ -291,10 +320,10 @@
 				<div class="separaTemas"></div>
 				<h2>Más que la taxonomía</h2>
 				<p class="primerParrafo">
-				Con el destronamiento del reino como bien lo narra <a onClick="citar(2)">López de Olmos Reyes<sup>(2)</sup></a> y los descubrimientos de <a onClick="citar(3)">Woese <i>et al.</i>,<sup>(3)</sup></a> se eliminaron los cinco reinos de clasificación de los seres vivos y, mediante la filogenética, se establecieron relaciones entre diversos organismos, por lo que hoy se reúnen en árboles de carácter universal. Pareciera que Charles Darwin ya lo había anticipado. Poco más de cien años después, “El Sistema de los Tres Dominios” revolucionó las teorías, remplazó a “la corte real de los reinos” a partir de la genética. Esta teoría de los dominios es un modelo de clasificación basado en las diferencias entre las secuencias de nucleótidos en los ribosomas y de <span class="versalita">ARN</span> de transferencia de la célula, la estructura de los lípidos de la membrana y la sensibilidad a los <a onClick="citar(4)">antibióticos.<sup>(4)</sup></a>
+				Con el destronamiento del reino como bien lo narra López de Olmos Reyes<a onClick="citar(2)"><sup>(2)</sup></a> y los descubrimientos de Woese <i>et al.</i>,<a onClick="citar(3)"><sup>(3)</sup></a> se eliminaron los cinco reinos de clasificación de los seres vivos y, mediante la filogenética, se establecieron relaciones entre diversos organismos, por lo que hoy se reúnen en árboles de carácter universal. Pareciera que Charles Darwin ya lo había anticipado. Poco más de cien años después, “El Sistema de los Tres Dominios” revolucionó las teorías, remplazó a “la corte real de los reinos” a partir de la genética. Esta teoría de los dominios es un modelo de clasificación basado en las diferencias entre las secuencias de nucleótidos en los ribosomas y de <span class="versalita">ARN</span> de transferencia de la célula, la estructura de los lípidos de la membrana y la sensibilidad a los antibióticos.<a onClick="citar(4)"><sup>(4)</sup></a>
 				</p>
 				<p role="presentation">
-				Este sistema propone que una célula antepasada común “Cenancestor” o <i>“Last Universal Common Ancestor”</i><span class="versalita">(LUCA)</span>, dio lugar a tres células diferentes, donde cada una representa un dominio: Archea, Bacteria y Eukarya. Algo así como un nuevo orden mundial. De esta forma, en esta nueva taxonomía, los nematodos pertenecen al dominio <strong>Eukarya</strong>, <a onClick="citar(2)"><i>verbatim</i>,<sup>(2)</sup></a> también llamados eucariotas o eucariontes: organismos con células que poseen un núcleo definido en el que se resguarda el <span class="versalita">ADN</span>; incluyendo a los animales, las plantas, los hongos y los protistas; los primeros tres típicamente pluricelulares.
+				Este sistema propone que una célula antepasada común “Cenancestor” o <i>“Last Universal Common Ancestor”</i><span class="versalita">(LUCA)</span>, dio lugar a tres células diferentes, donde cada una representa un dominio: Archea, Bacteria y Eukarya. Algo así como un nuevo orden mundial. De esta forma, en esta nueva taxonomía, los nematodos pertenecen al dominio <strong>Eukarya</strong>, <i>verbatim</i>,<a onClick="citar(2)"><sup>(2)</sup></a> también llamados eucariotas o eucariontes: organismos con células que poseen un núcleo definido en el que se resguarda el <span class="versalita">ADN</span>; incluyendo a los animales, las plantas, los hongos y los protistas; los primeros tres típicamente pluricelulares.
 				</p>
 				<p>
 				Así se garantiza que los nematodos sean animales, al igual que un gato o un humano. Entonces, en este dominio, estos animales están dentro del filo <strong>Nematoda o Nemathelmintes</strong>. Utilizando la bioinformática, recientemente se han descrito doce clados principales,<a onClick="citar(5, 6)"><sup>(5, 6)</sup></a> donde el ancestro común no es un parásito. Este detalle será retomado más adelante cuando se cuestione el rol de estos organismos en el planeta. Los clados 1–6 corresponden a la clase Adenophorea. Esta nomenclatura se refiere a todos los animales que tienen glándulas caudales, y los clados 8–12 pertenecen a la clase Secernentea, que concierne a los secretores, aquellos con un sistema secretor-excretor con canales laterales. Dejando el clado 7 a una única familia monogénica de nematodos terrestres con una única línea evolutiva, la clase <strong>Teratocephalidae</strong>, relativa a las adaptaciones evolutivas hacia la vida terrestre<a onClick="citar(7)"><sup>(7)</sup></a>; sus miembros son diferentes, tanto  en morfología como en fisiología <small>(Figura 1)</small>.
@@ -311,7 +340,7 @@
 				</figure>
 				
 				<p>
-				<a onClick="citar(5,8,9,10,11,12)">Muchos autores coinciden<sup>(5,8-12)</sup></a> en que la clasificación de los nematodos va más allá de la morfología, las claves dicotómicas o taxonómicas, e incluso, las herramientas genómicas también dejan dudas de sus resultados, lo cierto es que al hablar de nematodos, el mundo es muy diverso y abundante en organismos fascinantes.
+				Muchos autores coinciden<a onClick="citar(5,8,9,10,11,12)"><sup>(5,8-12)</sup></a> en que la clasificación de los nematodos va más allá de la morfología, las claves dicotómicas o taxonómicas, e incluso, las herramientas genómicas también dejan dudas de sus resultados, lo cierto es que al hablar de nematodos, el mundo es muy diverso y abundante en organismos fascinantes.
 				</p>
 				
 				<p>Bongers y Ferris<a onClick="citar(9)"><sup>(9)</sup></a> señalan que cuatro de cada cinco animales multicelulares del planeta son nematodos. Las recientes estimaciones indican que son los más numerosos de los <strong>metazoarios</strong>, con un total de 27 000 especies identificadas,<a onClick="citar(5,12,13)"><sup>(5, 12, 13)</sup></a> pero existen más de 10 millones sin identificar.<a onClick="citar(14)"><sup>(14)</sup></a> Sin embargo, se calcula que solo se ha descrito entre el 6 y 56% de la diversidad de nematodos del planeta y que falta una proporción de alrededor del 86% por descubrir.<a onClick="citar(11)"><sup>(11) </sup></a>
@@ -569,7 +598,7 @@
 				
 			  <section class="subtema" id="Subtema5"><!--SUBTEMA 5 tracto reproductor INICIO-->
 					<h3>Tracto reproductor</h3>
-					<p>Las hembras del nematodo casi siempre son más grandes que los machos, porque necesitan su cuerpo alargado o globoso para producir los huevos o las larvas. Un ejemplo de una megahembra es la de <i>Meloidogyne</i> spp. que mide 300 &mu; de diámetro, 100 veces más que las 30 &mu; del macho.<a onClick="citar(63)"><sup>(63)</sup></a> Las hembras tienen uno o dos órganos tubulares denominados ovarios, y aunque es raro, pero pueden ser tres o más ovarios como lo describe Gibbons.<a onClick="citar(20)"><sup>(20)</sup></a> Por ejemplo, los cuatro ovarios en <i>Polydelphis</i>, o los seis, de <i>Haxametra</i> —parásitos de reptiles y anfibios—, incluso los 32 ovarios en <i>Placentonema gigantissima</i>, un nematodo que parasita ballenas. Los ovarios de estos animales se clasifican en distales y proximales <small>(Figura 13a)</small>, y contienen a los ovocitos, cuya forma es ovoide elongada<a onClick="citar(8)"><sup>(8)</sup></a> <small>(Figura 13b)</small>.
+					<p class="primerParrafo">Las hembras del nematodo casi siempre son más grandes que los machos, porque necesitan su cuerpo alargado o globoso para producir los huevos o las larvas. Un ejemplo de una megahembra es la de <i>Meloidogyne</i> spp. que mide 300 &mu; de diámetro, 100 veces más que las 30 &mu; del macho.<a onClick="citar(63)"><sup>(63)</sup></a> Las hembras tienen uno o dos órganos tubulares denominados ovarios, y aunque es raro, pero pueden ser tres o más ovarios como lo describe Gibbons.<a onClick="citar(20)"><sup>(20)</sup></a> Por ejemplo, los cuatro ovarios en <i>Polydelphis</i>, o los seis, de <i>Haxametra</i> —parásitos de reptiles y anfibios—, incluso los 32 ovarios en <i>Placentonema gigantissima</i>, un nematodo que parasita ballenas. Los ovarios de estos animales se clasifican en distales y proximales <small>(Figura 13a)</small>, y contienen a los ovocitos, cuya forma es ovoide elongada<a onClick="citar(8)"><sup>(8)</sup></a> <small>(Figura 13b)</small>.
 					</p>
 					
 					<p>La ovogénesis ocurre en el oviducto de la hembra. Durante el apareamiento, el receptáculo seminal almacena el esperma recibido, así, los óvulos pueden ser fecundados según se produzcan durante mucho tiempo sin que la hembra tenga que aparearse frecuentemente.<a onClick="citar(23)"><sup>(23)</sup></a> Esta espermateca<a onClick="citar(8)"><sup>(8)</sup></a> está recubierta por tejido epitelial <small>(Figuras 14 y 15)</small> que, a su vez, segrega líquido uterino. En la Figura 14b, puede observase la válvula espermateco-uterina. Los ovarios son sacos ciegos<a onClick="citar(8)"><sup>(8)</sup></a> y se conectan al útero que desemboca en una abertura vaginal con músculos eyectores que dan paso al exterior a través del órgano expuesto: la vulva.
@@ -641,7 +670,7 @@
 				<section class="subtema"><!--SUBTEMA 6 m. sensoriales inicio-->
 					<h3>Mecanismos sensoriales</h3>
 					
-					<p>Se ha mencionado cómo estos animales sienten a través de quimiorreceptores, ventosas, espículas, entre otros. Pero ¿cómo estos metazoarios procesan su entrono o nicho ecológico? Aunque no perciben el color ni las formas, sí detectan el calor y los olores que emanan del ambiente o de un congénere. Esto es, el entorno o el mundo perceptivo de organismos <i>Umwelt</i> (en alemán).<a onClick="citar(76)"><sup>(76)</sup></a> Aunque, de los helmintos, los nematodos son los más evolucionados, no poseen órganos sensoriales tan desarrollados como los de un artrópodo, ave, mamífero o ser humano. Entonces, ¿cómo es que estos animales ven, oyen, buscan alimento o una pareja? La respuesta no es tan simple, pero es importante saber que se valen de un sistema nervioso, conformado generalmente por anillos nerviosos que inician en el esófago, lo inervan longitudinalmente. Seis son los nervios que se extienden de la región anterior a la posterior <small>(Figura 3D)</small>. Estos nervios conducen hacia órganos sensoriales distribuidos a lo largo del pseudocele <small>(Figura 17)</small>.
+					<p class="primerParrafo">Se ha mencionado cómo estos animales sienten a través de quimiorreceptores, ventosas, espículas, entre otros. Pero ¿cómo estos metazoarios procesan su entrono o nicho ecológico? Aunque no perciben el color ni las formas, sí detectan el calor y los olores que emanan del ambiente o de un congénere. Esto es, el entorno o el mundo perceptivo de organismos <i>Umwelt</i> (en alemán).<a onClick="citar(76)"><sup>(76)</sup></a> Aunque, de los helmintos, los nematodos son los más evolucionados, no poseen órganos sensoriales tan desarrollados como los de un artrópodo, ave, mamífero o ser humano. Entonces, ¿cómo es que estos animales ven, oyen, buscan alimento o una pareja? La respuesta no es tan simple, pero es importante saber que se valen de un sistema nervioso, conformado generalmente por anillos nerviosos que inician en el esófago, lo inervan longitudinalmente. Seis son los nervios que se extienden de la región anterior a la posterior <small>(Figura 3D)</small>. Estos nervios conducen hacia órganos sensoriales distribuidos a lo largo del pseudocele <small>(Figura 17)</small>.
 					</p>
 					
 					<figure>

@@ -19,7 +19,9 @@ body {
 	background-image: linear-gradient(slateblue, dodgerblue);
 }
 .diapositiva, .diapoFalsa {
-	overflow: auto;
+	overflow: hidden;
+	width: 100%;
+	position: relative;
 }
 .diapoFalsa {/*border: 3px solid pink;*/}
 
@@ -169,6 +171,12 @@ li span.inciso {
 @media (max-width: 1200px) {
 	.descripcion {
 		width: 70%;
+	}
+}
+/*la imagen medirá máximo de largo 775 aproximado*/
+@media (max-width: 1000px) {
+	img.imgLarga {
+		width: 620px;
 	}
 }
 @media (max-width: 800px) {

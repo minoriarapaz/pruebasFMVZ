@@ -8,6 +8,8 @@ function contarFuentes() {
 	let Zaiss = Fuentes[87].innerHTML;
 	alert(Fuentes.length+" ----la fuente num. 87 (ultima) es "+Zaiss);
 }
+
+/*NO SON NECESARIAS YA*/
 function mostrarBiblio() {
 	document.getElementById("Bibliografia").style.display="block";
 	document.body.style.overflow = "hidden";
@@ -26,8 +28,8 @@ function citasAll() {
 	for (let c = 0; c < citas.length; c++) {
 		citas[c].style.display="block";
 	}
-
 }
+/*NO SON NECESARIAS YA  FIN*/
 
 function citar(A, B, C, D, E, F) {
 	setTimeout(animar, 100);

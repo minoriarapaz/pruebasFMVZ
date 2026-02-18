@@ -19,7 +19,7 @@ aside {
 	height: 100%;
 	overflow: auto;
 	opacity: 0;/* cero */
-  	background-color: rgba(0, 0, 0, .4); /*rgba(0, 0, 0, .4); */
+  	background-color: rgba(0, 0, 0, .8); /*rgba(0, 0, 0, .4); */
 	transition: opacity .3s;
 	box-sizing: border-box;
 }
