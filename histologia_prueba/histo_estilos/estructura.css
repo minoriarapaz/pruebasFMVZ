@@ -11,8 +11,35 @@
 overflow debe ser HIDDEN */
 body {
 	overflow: hidden; /*siempre HIDEN*/
-	background-color: ghostwhite;
 }
+
+/*CARGADOR*/
+#cerdito {
+	z-index: 10;
+	position: relative;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+
+	background-image: linear-gradient(lightseagreen 70%, rgb(27, 152, 145) 99%);
+}
+#cerdito iframe {
+	border-style: none;
+	width: 150px;
+	background-color: lightseagreen;
+}
+#cerdito div {
+	display: block;
+	position: relative;
+	color: ghostwhite;
+	font-size: .7em;
+	font-family:  Open Sans, Lucida Grande,  Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
+}
+
+/*FIN CARGADOR*/
+
 /*AGREGADO ABRIL 2025*/
 html {
   scroll-behavior: auto;/*smooth*/

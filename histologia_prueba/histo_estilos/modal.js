@@ -28,7 +28,6 @@ function modalObj() {
 		}
 
 
-
 var L=1
 
 function cerrarBiblio() {
@@ -116,9 +115,10 @@ function irDirectorios() {
 
 
 		
-
-
-
+/*CARGADOR S I M P L E*/
+/*window.onload = function() {
+	$('#cerdito').fadeOut();
+}*/
 
 
 
