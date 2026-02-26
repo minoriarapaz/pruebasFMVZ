@@ -334,7 +334,7 @@ $(document).ready(function(){
 	});*/
 });
 
-window.onscroll = function() {escrol_prologo(); escrol_introduccion(); escrol_material();  escrol_anatomia(); escrol_sistema1(); escrol_sistema2(); escrol_sistema3(); escrol_sistema4(); escrol_sistema5(); escrol_sistema6(); escrol_sistema7(); escrol_sistema8(); escrol_sistema9(); escrol_sistema10(); escrol_sistema11(); escrol_sistema12(); escrol_indexTablas()};
+window.onscroll = function() {escrol_prologo(); escrol_introduccion(); escrol_material();  escrol_anatomia(); escrol_sistema1(); escrol_sistema2(); escrol_sistema3(); escrol_sistema4(); escrol_sistema5(); escrol_sistema6(); escrol_sistema7(); escrol_sistema8(); escrol_sistema9(); escrol_sistema10(); escrol_sistema11(); escrol_indexTablas()};
 	
 function escrol_prologo() {
 	var tituloI = document.getElementById("aPrologo");
@@ -574,7 +574,7 @@ function escrol_sistema10() {
 function escrol_sistema11() {
 			var titulo = document.getElementById("sistema11");
 			var progreso = titulo.offsetTop;
-			var otroTitulo = document.getElementById("sistema12");
+			var otroTitulo = document.getElementById("finSistemas");
 			var Desprogreso = otroTitulo.offsetTop;
 			if (window.scrollY > progreso && window.scrollY < Desprogreso) {
 				document.getElementById("btnSub11").classList.add("activoSub");

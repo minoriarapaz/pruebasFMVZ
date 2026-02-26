@@ -46,14 +46,31 @@ function verBiblio() {
 				document.getElementById("modalBiblio").style.opacity="1";
 				document.body.style.overflow = "hidden";
 				L=2;
-				console.log("biblio abierta");
+				console.log("Bibliografia abierta. L es " +L+ " (debe ser 2)");
 			} else {
 				setTimeout(cerrarBiblio, 400);
 				document.getElementById("modalBiblio").style.opacity="0";
 				document.body.style.overflow = "auto";
 				activarScroll();
 				L=1;
-				console.log("biblio cerrada");
+				console.log("biblio cerrada. L es "+L+" (debe ser 1)");
+			}
+}
+
+function verCita() {	
+	if (L==1) {
+				document.getElementById("modalCita").style.display="block";
+				document.getElementById("modalCita").style.opacity="1";
+				document.body.style.overflow = "hidden";
+				L=2;
+				console.log("cita abierta. Var L es "+L);
+			} else {
+				document.getElementById("modalCita").style.display=null;
+				document.getElementById("modalCita").style.opacity="0";
+				document.body.style.overflow = "auto";
+				activarScroll();
+				L=1;
+				console.log("cita cerrada. Var L es "+L);
 			}
 }
 
