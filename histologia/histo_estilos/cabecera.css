@@ -236,8 +236,7 @@ span.equis:after {
 
 @media (max-width: 800px) {
 	header {
-		background-image: url("../histologia_img/interfaz/pleca.png"), 
-		linear-gradient(lightseagreen, rgb(0, 102, 102));
+		background-image: url("../histologia_img/interfaz/pleca.png"), linear-gradient(lightseagreen, rgb(0, 102, 102));
 	}
 	
 	header > section {
