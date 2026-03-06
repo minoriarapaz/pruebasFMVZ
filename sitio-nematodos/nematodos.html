@@ -40,9 +40,11 @@
 <link href="estilos/estructura.css" rel="stylesheet" type="text/css">
 <link href="estilos/galeria.css" rel="stylesheet" type="text/css">
 <link href="estilos/header-nav.css" rel="stylesheet" type="text/css">
+<link href="estilos/lectura.css" rel="stylesheet" type="text/css">
 <script src="estilos/navegacion.js"></script>
 <script src="estilos/galeria.js"></script>
 <script src="estilos/modal.js"></script>
+<script src="estilos/lectura.js"></script>
 	
 	
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -58,7 +60,7 @@
 <link href="estilos/modal.css" rel="stylesheet" type="text/css">
 </head>
 
-<body onLoad="version()">
+<body>
 	<header id="cabecera">
 		<h1>Nematodos</h1>
 	  <button type="button" id="hamburguesa" onclick="verIndice()">
@@ -94,33 +96,40 @@
 			</ul>
 		
 		</nav>
-		<!--
-		<div id="ojo" class="btnOjo btnFondoGris" onclick="showControl()">
-			<img id="botonOjo" class="imgBtn" src="minipig_imagenes/interfaz/icon_ojoazul.png" alt="ojo">
-		</div>
 		
-		<div id="Control" class="controles">
 		
-			<div id="control_vacio" class="control_sec"></div>
-			<div class="control_sec izquierdo">
-				<button id="bLM" class="boton_en_linea bletraM defaul" onclick="achicar()">Aa</button>
-				<button id="bLG" class="boton_en_linea bletraG" onclick="agrandar(0)">Aa</button>
-				<button id="bLEG" class="boton_en_linea bletraEG" onclick="agrandar(1)">Aa</button>
-			</div>
-			<div class="control_sec derecho">
-				<div id="bClaro" class="botonbola claro defaul" onclick="colorClaro()"></div>
-				<div id="bOscuro" class="botonbola oscuro" onclick="colorOscuro()"></div>
-				<div id="bMedio" class="botonbola medio" onClick="colorMedio()"></div>
-			</div>
+		<section class="lectura">
 			
-			<div id="control_vacio2" class="control_sec"></div>
+			<!--<div id="ojo" class="btnOjo btnFondoGris" onclick="showControl()">
+				<img id="botonOjo" class="imgBtn" src="interfaz/icon_ojoazul.png" alt="ojo">
+			</div>-->
+		
+			<div id="Control" class="controle">
+		
+				
+				<div class="control_sec izquierdo">
+					<button id="bLM" class="boton_en_linea bletraM defaul" onclick="normal()">Aa</button>
+					<button id="bLG" class="boton_en_linea bletraG" onclick="large()">Aa</button>
+					<button id="bLEG" class="boton_en_linea bletraEG" onclick="exLarge()">Aa</button>
+				</div>
+				<div class="control_sec derecho">
+					<div id="bClaro" class="botonbola claro defaul" onclick="colorClaro()"></div>
+					<div id="bOscuro" class="botonbola oscuro" onclick="colorOscuro()"></div>
+					<!--<div id="bMedio" class="botonbola medio" onClick="colorMedio()"></div>-->
+				</div>
 			
-		</div>-->
+				<!--<div id="control_vacio2" class="control_sec"></div>-->
+			
+			</div>
+		</section>
 		
 	</header>
 	
-	<main>
+	<main id="Main">
 		<aside id="Bibliografia" onClick="salirBiblio()">
+			
+			<!--<button id="botonX" class="cruz2"  onClick="abrirCaja()">&times;</button>-->
+			
 			<ol id="Citas">
 				<li class="Citado invisible">Falso</li>
 				<li class="Citado">1- Académie française. <cite><a href="https://www.dictionnaire-academie.fr/article/A9N0254" target="_blank">Nématodes.</a> Dictionnaire de l’Académie française, 9e ed.</cite>
@@ -284,12 +293,12 @@
 
 		
 		</aside>
-		<section class="Contenido">
+		<section class="Contenido" id="CONTENIDO">
 			
 			
 			<div class="modalGaleria" id="Caja">
 				<button id="botonX" class="cruz"  onClick="abrirCaja()">&times;</button>
-				<iframe id="Cargador" title="Aquí se cargarán todas las iinteractivas" >
+				<iframe id="Cargador" title="Aquí se cargarán todas las interactivas" >
 				
 				</iframe>
 				

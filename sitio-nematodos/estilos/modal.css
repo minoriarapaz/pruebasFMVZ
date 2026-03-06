@@ -58,7 +58,9 @@ aside cite {
 	font-weight: 500;
 	text-decoration: underline;
 }
-
+aside cite > a {
+	color: dodgerblue;
+}
 
 @media (max-width: 800px) {
 	aside > ol {

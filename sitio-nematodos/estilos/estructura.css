@@ -28,9 +28,14 @@ main {
 	box-sizing: border-box;
 	margin-left: 250px;
 	width: 100%; /*85*/
-	background-color: snow;
+	transition: background .5s;
 }
-
+.fondoSnow {
+	background-color: beige;
+}
+.fondoNegro {
+	background-image: linear-gradient(to right, #1c1c1c, #252525, #1c1c1c);
+}
 div.portadita {
 	background-color:grey;
 	background-image: url("../interfaz/foto-portadita.jpg");

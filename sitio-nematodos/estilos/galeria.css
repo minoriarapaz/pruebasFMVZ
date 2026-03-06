@@ -52,8 +52,7 @@
 
 
 
-.cruz {
-	display: none;
+.cruz, .cruz2 {
 	z-index: 5;
 	position: absolute; /*absolute*/
   	top: 30px;
@@ -66,6 +65,9 @@
 	background-image: radial-gradient(rgb(30, 144, 255), rgb(0, 128, 255));
 	border-radius: 10px;
 	cursor: pointer;
+}
+.cruz {
+	display: none;
 }
 figure {
 	display: block;
