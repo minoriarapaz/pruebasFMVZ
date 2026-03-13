@@ -7,8 +7,7 @@
 let B = 1;
 
 
-function normal() {
-	
+function normal() {	
 	B = 1;
 	const Textos = document.getElementsByTagName("p");
 	
@@ -64,15 +63,16 @@ function exLarge() {
 function colorOscuro() {
 	const Textos = document.getElementsByTagName("p");
 	for (let i = 0; i < Textos.length; i++) {
-		Textos[i].style.color = "snow";
+		Textos[i].style.color = "ghostwhite";
 	}
 	const H3 = document.getElementsByTagName("h3");
 	for (let i = 0; i < H3.length; i++) {
 		H3[i].style.color = "lightgray";
 	}
-	const OL = document.getElementsByTagName("ol");
+	const Principal = document.getElementById("Main");
+	const OL = Principal.getElementsByTagName("ol");
 	for (let i = 0; i < OL.length; i++) {
-		OL[i].style.color = "snow";
+		OL[i].style.color = "ghostwhite";
 	}
 	const UL = document.getElementsByTagName("ul");
 	for (let i = 0; i < UL.length; i++) {
@@ -88,13 +88,15 @@ function colorOscuro() {
 	
 	const Separadores = document.getElementsByClassName("separaTemas");
 	for (let i = 0; i < Separadores.length; i++) {
-		Separadores[i].style.backgroundColor = "#004080";
+		Separadores[i].style.backgroundColor = "#003366";/*#004080*/
 	}
 	
 	document.getElementById("bOscuro").classList.add("defaul");
 	document.getElementById("bClaro").classList.remove("defaul");
 	
 	document.getElementById("Citas").style.backgroundColor="#1C1C1C";
+	
+	document.getElementById("botonOjo").src="interfaz/icon_ojo-blanco.png";
 }
 
 function colorClaro() {
@@ -131,29 +133,23 @@ function colorClaro() {
 	document.getElementById("bOscuro").classList.remove("defaul");
 	
 	document.getElementById("Citas").style.backgroundColor=null;
+	document.getElementById("botonOjo").src="interfaz/icon_ojo.png";
 }
 
 
 
-
-
-
-
-
-/*$(document).ready(function(){
-  $("#btn_cerrar").click(function(){
-    $("#Control").css("opacity", ".5");
-	  console.log("hey");
-  });
-	
-});*/
-
 function showControl() {
-	document.getElementById("Control").style.height="60px";
+	document.getElementById("Control").style.top="0px";
 	document.getElementById("ojo").style.display="none";
-	console.log("abriste control de lectura");
-	
-	document.getElementById("Contenido").addEventListener("click", cerrarControl);
+	setTimeout(ocultarControl, 10000);
+	//document.getElementById("Contenido").addEventListener("click", cerrarControl);
+}
+function ocultarControl() {
+	document.getElementById("Control").style.top=null;
+	setTimeout(showOjo, 400);
+}
+function showOjo() {
+	document.getElementById("ojo").style.display=null;
 }
 function cerrarControl() {
 	document.getElementById("Control").style.height="0px";

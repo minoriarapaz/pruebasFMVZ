@@ -7,14 +7,19 @@ header {
 	position: fixed;
 	color: ghostwhite;
 	overflow: hidden;
-	background-color: #252525;
+	background-image: linear-gradient(to bottom, #252525 5%, #1C1C1C);
 	width: 250px; /*250px*/
 	height: 100vw;
 	box-sizing: border-box;
 }
-
+#version {
+	color: gold;
+	display: block;
+	margin: auto;
+	text-align: right;
+}
 header > .titulo {
-	/*border: 2px solid gold;*/
+
 }
 header > .titulo img {
 	display: block;
@@ -121,12 +126,10 @@ nav a span, ol small {color: dodgerblue;}
 }
 
 section.lectura {
-
 	display: block;
 	position: relative;
 	width: 100%;
 	z-index: 5;
-	
 	margin-top: 100px;
 }
 
@@ -182,8 +185,16 @@ section.lectura {
 	}
 	#titulo-horizontal {display: block;}
 	#titulo-compacto {display: none;}
+	
 	section.lectura {
-		display: none;
+		display: block;
+		position: fixed;
+		top: 200px;
+		right: 0;
+		width: 250px;
+		margin-top: 0px;
+		padding-top: 0px;
+		overflow: hidden;
 	}
 }
 
@@ -219,5 +230,13 @@ section.lectura {
 	}
 	nav {
 		top: 70px;
+	}
+	section.lectura {
+		top: 120px;
+		right: 0;
+		width: 220px;
+		margin-top: 0px;
+		padding-top: 0px;
+		overflow: hidden;
 	}
 }

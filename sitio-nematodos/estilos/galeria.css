@@ -127,9 +127,9 @@ figcaption {
 }
 figcaption cite {
 	display: inline-block;
-	text-align: right;
+	text-align: center;
 	font-weight: 500;
-	font-size: 90%;
+	font-size: 70%;
 	opacity: .8;
 	margin-top: 0.5em;
 }

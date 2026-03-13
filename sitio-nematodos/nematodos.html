@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Nemátodos</title>
+<title>Nematodos</title>
 	
 	<!--DUBLIN CORE-->
 	<meta name="DC.title" lang="es" content="Nematodos" />
@@ -68,12 +68,12 @@
 			<div class="hamb2"></div>
 			<div class="hamb3"></div>
 		</button>
-		<div class="titulo">
+		<div class="titulo" id="logoTitulo">
 			<a href="index.html">
 			<img id="titulo-compacto" src="interfaz/logo-small-autora.png" alt="titulo del libro"> <img id="titulo-horizontal" src="interfaz/logo-small-horizontal-autora.png" alt="titulo horizontal">
 				</a>
 		</div>
-		
+		<span id="version">ver. 13 marzo</span>
 		
 		<nav id="Indice">
 			<ul>
@@ -100,13 +100,12 @@
 		
 		<section class="lectura">
 			
-			<!--<div id="ojo" class="btnOjo btnFondoGris" onclick="showControl()">
-				<img id="botonOjo" class="imgBtn" src="interfaz/icon_ojoazul.png" alt="ojo">
-			</div>-->
+			
+			<div id="ojo" class="btnOjo" onclick="showControl()">
+				<img id="botonOjo" class="imgBtn" src="interfaz/icon_ojo.png" alt="ojo">
+			</div>
 		
-			<div id="Control" class="controle">
-		
-				
+			<div id="Control" class="controles">
 				<div class="control_sec izquierdo">
 					<button id="bLM" class="boton_en_linea bletraM defaul" onclick="normal()">Aa</button>
 					<button id="bLG" class="boton_en_linea bletraG" onclick="large()">Aa</button>
@@ -339,7 +338,7 @@
 				</p>
 				
 				<figure>
-					<figcaption><b>Figura 1</b>Relación filogenética entre los principales taxones de nematodos basada en secuencias completas de <span class="versalita">ADN</span> ribosómico de subunidad pequeña. Los clados 1, 2, 5 y 8–12 se han relacionado con <a onClick="citar(6)">parasitismo.<sup>(6)</sup></a><cite>Imagen creada con BioRender.com</cite>
+					<figcaption><b>Figura 1</b>Relación filogenética entre los principales taxones de nematodos basada en secuencias completas de <span class="versalita">ADN</span> ribosómico de subunidad pequeña. Los clados 1, 2, 5 y 8–12 se han relacionado con <a onClick="citar(6)">parasitismo.<sup>(6)</sup></a>
 
 					
 					</figcaption>
@@ -376,7 +375,7 @@
 				
 				<figure>
 					<figcaption><b>Figura 2</b>
-					Estimación de los nematodos marinos y terrestres.<cite>Imagen creada con información de <a onClick="citar(5,12)"><small>(5, 12)</small></a> utilizando BioRender.com</cite>
+					Estimación de los nematodos marinos y terrestres.<cite>Imagen creada con información de <a onClick="citar(5,12)">(5, 12)</a></cite>
 					</figcaption>
 					<a href="figuras/figura2.png" target="_blank">
 				<img src="figuras/figura2.png" alt="Estimación de los nematodos marinos y terrestres">
@@ -406,7 +405,7 @@
 					</p>
 					
 					<figure>
-					<figcaption><b>Figura 3</b><cite>Creadas con BioRender.com</cite> - <cite>Modificado de Lee DL<a onClick="citar(23)"><sup>(23)</sup></a></cite>
+					<figcaption><b>Figura 3</b>Detalles morfológicos y del desarrollo de los nematodos<br><cite>Modificado de Lee<a onClick="citar(23)"><sup>(23)</sup></a></cite>
 						
 						</figcaption>
 					<a onClick="loadCajita(1)">
@@ -484,7 +483,7 @@
 						<figcaption><b>Figura 7</b>
 						Fotomicrografías del desenvainado de larvas de nematodo 40×.
 							Se observa la vaina refringente por la quitina que la conforma (flecha negra), las estrías refringentes y ondeantes de la vaina al doblarse (ev) y se observa la larva desenvainándose con la cola aún por dentro (*). 
-							<cite>Imagen cortesía de Laura González Reyes, Parasitología FMVZ-UNAM.</cite>
+							<cite>Unidad de Desarrollo de Organismos Parasitarios, Departamento de Parasitología FMVZ-UNAM.</cite>
 						</figcaption>
 						
 					</figure>
@@ -528,6 +527,7 @@
 				  <figure>
 						<figcaption><b>Figura 9</b>
 							Fotomicrografías de <i>Cylicocyclus insigne</i>, ciatostomino de équidos.
+							<cite>Unidad de Desarrollo de Organismos Parasitarios, Departamento de Parasitología FMVZ-UNAM.</cite>
 						</figcaption>
 					  <a onClick="loadCajita(6)">
 						<img class="imgAlta" src="figuras/figura9-a.jpg" alt="Cylicocyclus insigne"></a>
@@ -554,7 +554,7 @@
 				  <div class="figurasGrupo">
 				  <figure class="juntas">
 						<figcaption><b>Figura 10</b>
-						Fuentes de alimentación de algunos nematodos. <cite>Inspirado en Munn y Munn.<a onclick="citar(69)"><sup>(69)</sup></a><br>Creada con BioRender.com</cite> </figcaption>
+						Fuentes de alimentación de algunos nematodos. <cite>Inspirado en Munn y Munn.<a onclick="citar(69)"><sup>(69)</sup></a></cite> </figcaption>
 					  <a href="figuras/figura10.png" target="_blank">
 						<img src="figuras/figura10.png" alt="Fuentes de alimentación">
 					  </a>
@@ -574,7 +574,7 @@
 				  Los nematodos son animales evolucionados que cuentan con un esófago <small>(Figura 11)</small>, también llamado faringe, es un órgano de bombeo con músculos radiales, glándulas y válvulas que evitan la regurgitación. También tienen un lumen trirradiado, con una proyección hacia ventral y dos dorsolaterales. Las formas del lumen son muy diversas,<i> grosso modo</i> se agrupan en tres tipos<a onclick="citar(8)"><sup>(8)</sup></a>:
 				  </p>
 				  
-				  <ul>
+				  <ul class="listaUL">
 					  <li><strong>De una parte:</strong> el lumen es cilíndrico o conoide simple, propio de los nematodos del orden Enoplida y Mononchida.</li>
 					  <li><strong>De dos partes:</strong> el lumen consiste en dos cuerpos inflamados; musculares y glandulares que pueden o no estar separados por un istmo, es propio de los nematodos del orden Doraylaimida, Mermitida y Trichurida.</li>
 					  <li><strong>De tres partes:</strong> este lumen está constituido por tres regiones bien definidas: el cuerpo dividido en dos, el istmo y un bulbo posterior, está presente en los nematodos del orden Rhabditida, Chromadorida, Diplogasterida, Tylenchida y Aphelenchida <small>(Figura 9).</small></li>
@@ -645,7 +645,7 @@
 				  
 				  <figure>
 					  <figcaption><b>Figura 16</b>
-						  <cite>Imágenes cortesía de Laura González Reyes,<br>Departamento de Parasitología <span class="versalita">FMVZ-UNAM.</span></cite>
+						  <cite>Unidad de Desarrollo de Organismos Parasitarios, Departamento de Parasitología FMVZ-UNAM.</cite>
 					  </figcaption>
 					  <img onClick="loadCajita(12)" src="figuras/figura16-a.jpg" alt="huevo larvado compatible con Strongyloides westeri ">
 				  
@@ -653,6 +653,7 @@
 				  
 				  <figure>
 					  <figcaption><b>Video 1</b>
+						   <cite>Unidad de Desarrollo de Organismos Parasitarios, Departamento de Parasitología FMVZ-UNAM.</cite>
 					  </figcaption>
 				  <video controls>
 					  <source src="figuras/video1-baja.mp4" type="video/mp4">
@@ -723,6 +724,7 @@
 				
 				<figure>
 					  <figcaption><b>Video 2</b>
+						   <cite>Unidad de Desarrollo de Organismos Parasitarios, Departamento de Parasitología FMVZ-UNAM.</cite>
 					  </figcaption>
 				  <video controls>
 					  <source src="figuras/video2.mp4" type="video/mp4">
@@ -735,7 +737,7 @@
 				
 				<p>Los nematodos también se han hallado en los islotes ecológicos formando asocia&shy;ciones aún desco&shy;nocidas con artrópodos (insectos, arácnidos, crustáceos, miriápodos, etc.) o con anélidos, como con las tranquilas lombrices de tierra. Es casi seguro que las larvas de nematodo estén ondulando en la tierra, en lixi&shy;viados, en gotas de rocío, subiendo y bajando de hojas, tallos, raíces y hasta en la piel de la lombriz, o de otro ser más grande que ellas. Esto resalta la necesidad de profun&shy;dizar más en sus interac&shy;ciones y ecología. Un paradigma de estas maravi&shy;llosas asocia&shy;ciones son la relación del hongo <i>Pilobolus longipes</i> y el verme pulmonar de <i>Dyctiocaulus</i> spp. en las vacas, ondulan sobre el tallo del hogo hasta llegar a la vesícula, esperan pacien&shy;temente a que explote y viajan más de tres metros junto con el esporangio lanzado, así, tendrán la opor&shy;tunidad de que el bovino consuma pasto lejos de las excretas y, al mismo tiempo, el parásito completa su ciclo.<a onClick="citar(79)"><sup>(79)</sup></a> Los ciclos biológicos del nematodo se clasifican,<a onClick="citar(8, 14, 23, 44)"><sup>(8, 14, 23, 44)</sup></a> en términos generales, según el rol de los actores involu&shy;crados en su historia de vida:
 				</p>
-				<ul>
+				<ul class="listaUL">
 				  <li><strong>Directos</strong>, no involu&shy;cran hospe&shy;dantes inter&shy;mediarios o ninguna otra forma biológica que continúe el ciclo.</li>
 				  <li><strong>Indirectos</strong>, involu&shy;cran a hospe&shy;dantes inter&shy;mediarios o alguna forma biológica.</li>
 				  <li><strong>Erráticos</strong>, el nematodo se aloja acciden&shy;talmente en un hospe&shy;dante que normal&shy;mente no le permite continuar con el ciclo, queda arrestado en ese cuerpo o planta que haya parasitado.</li>
@@ -798,7 +800,7 @@
 			
 				
 			<footer>
-				<p>&copy; 2026, Cintli Martínez Ortíz de Montellano, UNAM.<br>Todos los derechos reservados.</p>
+				<p>&copy; 2026, Cintli Martínez Ortiz de Montellano, UNAM.<br>Todos los derechos reservados.</p>
 				<img src="interfaz/escudos-cian-web.png" alt="escudos institucionales">
 			
 			</footer>

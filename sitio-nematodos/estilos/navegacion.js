@@ -274,11 +274,43 @@ const Comentarios = document.getElementsByClassName("parrafoResaltado");
 const Gusanos = document.getElementsByClassName("gusano");
 
 function verComent(c) {
+	if (c==0) {
+		Comentarios[c].style.animationPlayState = "running";
+		Comentarios[c].style.display="block";
+		Gusanos[c].style.display="none";
+		
+		Comentarios[1].style.display="none";
+		Gusanos[1].style.display="block";
+		
+		Comentarios[2].style.display="none";
+		Gusanos[2].style.display="block";
+	}
+	if (c==1) {
+		Comentarios[c].style.animationPlayState = "running";
+		Comentarios[c].style.display="block";
+		Gusanos[c].style.display="none";
+		
+		Comentarios[0].style.display="none";
+		Gusanos[0].style.display="block";
+		
+		Comentarios[2].style.display="none";
+		Gusanos[2].style.display="block";
+	}
+	if (c==2) {
+		Comentarios[c].style.animationPlayState = "running";
+		Comentarios[c].style.display="block";
+		Gusanos[c].style.display="none";
+		
+		Comentarios[0].style.display="none";
+		Gusanos[0].style.display="block";
+		
+		Comentarios[1].style.display="none";
+		Gusanos[1].style.display="block";
+	}
 	
-	Comentarios[c].style.animationPlayState = "running";
+	/*Comentarios[c].style.animationPlayState = "running";
 	Comentarios[c].style.display="block";
-	Gusanos[c].style.display="none";
-	/*document.getElementById("myDIV").style.animationPlayState = "running";*/
+	Gusanos[c].style.display="none";*/
 }
 
 

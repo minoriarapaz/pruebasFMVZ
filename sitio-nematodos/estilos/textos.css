@@ -69,6 +69,7 @@ h3 {
 	margin-bottom: .5em;
 	margin-left: 2.5em;
 	margin-right: 1em;
+	line-height: 1.7;
 }
 section.subtema > ol li::marker {
 	color: dodgerblue;
@@ -150,7 +151,7 @@ button.gusano {
 	margin-top: 30px;
 	margin-bottom: 30px;
 	
-	background-color: transparent;
+	background-color: ghostwhite;
 	background-image: url("../interfaz/gusano-grueso.gif");
 	background-size: cover;
 	background-position: center;
