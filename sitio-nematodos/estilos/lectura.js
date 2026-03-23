@@ -79,9 +79,15 @@ function colorOscuro() {
 		UL[i].style.color = "ghostwhite";
 	}
 	
-	const supers = document.getElementsByTagName("sup");
+	/*const supers = document.getElementsByTagName("sup");
 	for (let i = 0; i < supers.length; i++) {
 		supers[i].style.color = "cyan";
+	}*/
+	
+	const Cont = document.getElementById("CONTENIDO");
+	const links = Cont.getElementsByTagName("a");
+	for (let i = 0; i < links.length; i++) {
+		links[i].style.color = "cyan";
 	}
 	
 	document.getElementById("Main").style.backgroundColor="#1C1C1C";
@@ -119,9 +125,14 @@ function colorClaro() {
 	for (let i = 0; i < UL.length; i++) {
 		UL[i].style.color = null;
 	}
-	const supers = document.getElementsByTagName("sup");
+	/*const supers = document.getElementsByTagName("sup");
 	for (let i = 0; i < supers.length; i++) {
 		supers[i].style.color = null;
+	}*/
+	const Cont = document.getElementById("CONTENIDO");
+	const links = Cont.getElementsByTagName("a");
+	for (let i = 0; i < links.length; i++) {
+		links[i].style.color = null;
 	}
 	
 	const Separadores = document.getElementsByClassName("separaTemas");

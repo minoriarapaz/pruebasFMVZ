@@ -130,10 +130,13 @@ a {text-decoration: none;}
 
 
 /*Hipervinculos (citas y bibliografia) dentro de los p comúnes*/
-.Contenido > section > p > a, section.subtema > p > a, .Contenido > section > ol a, section.subtema > ol a {
-	color: slateblue;
+
+.Contenido > section > p > a, section.subtema > p > a, .Contenido > section > ol a, section.subtema > ol a, .Contenido > section > p > small a, section.subtema > p > small a  {
+	color: dodgerblue;
 	cursor: pointer;
 }
+
+
 ol small, ul small {color: inherit;}
 /*los hipervinculos dentro de los parrafos resaltados*/
 .Contenido > section > .parrafoResaltado > a, section.subtema > .parrafoResaltado > a{

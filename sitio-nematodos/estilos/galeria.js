@@ -13,6 +13,11 @@ function verCajita(a) {
 	abrirCaja();
 	/*LasGalerias[a].style.display="block";*/
 }
+function animarIframe() {
+	document.getElementById("Cargador").style.scale="1";
+	document.getElementById("Cargador").style.opacity="1";
+}
+
 function loadCajita(C) {
 	abrirCaja();
 	setTimeout(animarIframe, 100);
@@ -56,20 +61,18 @@ function loadCajita(C) {
 	if (C==13) {
 		document.getElementById("Cargador").src="interactivos/galeria13.html";
 	}
-	if (C==14) {
-		document.getElementById("Cargador").src="biblio-redux.html";
-		document.getElementById("Indice").style.left="-300px";
-		document.body.style.overflow = "auto";
-		document.getElementById("hamburguesa").classList.remove("equis");
+	if (C==15) {
+		document.getElementById("Cargador").src="interactivos/legales.html";
 	}
 }
-function animarIframe() {
-	document.getElementById("Cargador").style.scale="1";
-	document.getElementById("Cargador").style.opacity="1";
-}
+
 
 function cerrarGaleria() {
 	document.getElementById("Caja").style.display=null;
+}
+
+function animarCaja() {
+	document.getElementById("Caja").style.opacity="1";
 }
 
 function abrirCaja() {
@@ -87,9 +90,7 @@ function abrirCaja() {
 				L=1;
 			}
 }
-function animarCaja() {
-	document.getElementById("Caja").style.opacity="1";
-}
+
 function cerrarCaja() {
 	console.log("caja cerrada");
 	setTimeout(ocultarCaja, 500);

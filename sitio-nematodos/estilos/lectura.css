@@ -123,14 +123,14 @@ button.boton_en_linea {
 }
 .medio {background-color: bisque; border:4px solid transparent;}
 .claro {background-color: ghostwhite; border:4px solid transparent;}
-.oscuro {background-color: black; border:4px solid transparent;}
+.oscuro {background-color: black; border:1px solid #396060;}
 button.defaul {background-color: dodgerblue; color: ghostwhite;}
 #bClaro.defaul {
 	background-color: dodgerblue; border:7px solid ghostwhite;
 }
 #bOscuro.defaul {
 	background-color: dodgerblue; border:7px solid black;
-	box-shadow: 1px -1px 5px rgba(225, 225, 225, 0.5);
+	box-shadow: 1px -1px 5px rgba(225, 225, 225, 0.9);
 }
 
 

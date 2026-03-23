@@ -10,8 +10,8 @@
 	margin: auto;
 	margin-bottom: 2em;	
 	scale: .1;
-	opacity: .1;
-	transition: all .5s;
+	opacity: 0; /*.1*/
+	transition: all .3s;
 	border: none;
 	/*background-image: linear-gradient(slateblue, dodgerblue);*/
 	
@@ -29,27 +29,10 @@
 	overflow: scroll; /* ANTES ERA hidden*/
 	opacity: 0;
 	
-  	background-color: rgba(0, 0, 0, .8); 
+  	background-color: black; 
 	transition: opacity .5s;
 	box-sizing: border-box;
 }
-.modalGaleriaB {
-	display: block; /*NONE*/
-	position: fixed; /* Stay in place */
-	z-index: 5; /* Sit on top */
-	padding-top: 30px; /* Location of the box */
-	left: 0;
-	top: 0;
-	width: 100%; /* Full width */
-	height: 100%; /* Full height ANTES ERA 100%*/
-	overflow: hidden; /* ANTES ERA SCROLL (mayo 2024)*/
-	opacity: 0;
-	
-  	background-color: rgba(0, 0, 0, .8); 
-	transition: opacity .5s;
-}
-
-
 
 
 .cruz, .cruz2 {
@@ -114,7 +97,7 @@ figure img.imgAlta {
 	margin: auto;
 }
 
-figcaption + a {
+figcaption a {
 	cursor: pointer;
 }
 
@@ -142,8 +125,11 @@ figcaption sup {
 /*la nomenclatura "FIGURA X", que es un bold */
 figcaption b:first-child {
 	display: block;
+	margin-bottom: .5em;
 }
-
+figcaption b:first-child span {
+	font-size: 80%; letter-spacing: 1px;
+}
 
 .figurasGrupo {
 	display: flex;
