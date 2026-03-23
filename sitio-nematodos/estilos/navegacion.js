@@ -30,7 +30,7 @@ function DeclaraciondVariableL() {
 	console.log("Variable L /uno al inicio/ es "+L);
 }
 
-var Abierto = 1;
+let Abierto = 1;
 function verIndice() {
 	if (Abierto==1) {
 		document.getElementById("Indice").style.left="0px";
@@ -52,13 +52,127 @@ function verIndice() {
 		document.body.style.overflow = "auto";
 		/*document.getElementById("ojo").style.visibility="visible";*/
 		console.log("indice cerrado. Variable Abierto es "+Abierto);
-		/*quita el evento click del Modal alrededor del indice
-		document.getElementById("Indice").removeEventListener("click", verIndice2);*/
 		
 		document.getElementById("hamburguesa").classList.toggle("equis");
 		
 	}
 }
+/*las siguientes 2 funciones estaban en modal.js. Las colocaste aqui para usar la variable Abierto (o la funcion misma verIndice*/
+function NoDisplay() {
+	document.getElementById("Bibliografia").style.display="none";
+}
+function salirBiblio() {
+	setTimeout(NoDisplay, 300);
+	document.getElementById("Citas").style.scale=null;
+	document.getElementById("Bibliografia").style.opacity="0";
+	document.getElementById("Bibliografia").style.paddingTop="200px";
+	
+	Abierto=1;
+	document.body.style.overflow = "auto";
+	/*OCULTARÁ EL INDICE SI ESTÁ ABIERTOP*/
+	document.getElementById("Indice").style.left="-300px";
+	document.getElementById("hamburguesa").classList.toggle("equis");
+	
+	const fuentes = document.getElementsByClassName("Citado");
+	for (let i = 0; i < fuentes.length; i++) {
+		fuentes[i].style.display="none";
+	}
+}
+/*FIN FUNCIONES PRESTADAS*/
+/*las siguientes F estaban en galeria.js*/
+function animarIframe() {
+	document.getElementById("Cargador").style.scale="1";
+	document.getElementById("Cargador").style.opacity="1";
+}
+
+function loadCajita(C) {
+	abrirCaja();
+	setTimeout(animarIframe, 100);
+	
+	if (C==1) {
+		document.getElementById("Cargador").src="interactivos/galeria1.html";
+	}
+	if (C==2) {
+		document.getElementById("Cargador").src="interactivos/galeria2.html";
+	}
+	if (C==3) {
+		document.getElementById("Cargador").src="interactivos/galeria3.html";
+	}
+	if (C==4) {
+		document.getElementById("Cargador").src="interactivos/galeria4.html";
+	}
+	if (C==5) {
+		document.getElementById("Cargador").src="interactivos/galeria5.html";
+	}
+	if (C==6) {
+		document.getElementById("Cargador").src="interactivos/galeria6.html";
+	}
+	if (C==7) {
+		document.getElementById("Cargador").src="interactivos/galeria7.html";
+	}
+	if (C==8) {
+		document.getElementById("Cargador").src="interactivos/galeria8.html";
+	}
+	if (C==9) {
+		document.getElementById("Cargador").src="interactivos/galeria9.html";
+	}
+	if (C==10) {
+		document.getElementById("Cargador").src="interactivos/galeria10.html";
+	}
+	if (C==11) {
+		document.getElementById("Cargador").src="interactivos/galeria11.html";
+	}
+	if (C==12) {
+		document.getElementById("Cargador").src="interactivos/galeria12.html";
+	}
+	if (C==13) {
+		document.getElementById("Cargador").src="interactivos/galeria13.html";
+	}
+	if (C==15) {
+		document.getElementById("Cargador").src="interactivos/legales.html";
+	}
+}
+function animarCaja() {
+	document.getElementById("Caja").style.opacity="1";
+}
+
+function abrirCaja() {
+	if (L==1) {
+				document.getElementById("Caja").style.display="block";
+				setTimeout(animarCaja, 100);
+				document.body.style.overflow = "hidden";
+				document.getElementById("botonX").style.display="block";
+				L=2;
+				console.log("caja abierta y let L es dos? "+L);
+			} else {
+				cerrarCaja();
+				document.getElementById("Caja").style.opacity=null;
+				document.body.style.overflow = "auto";
+				L=1;
+				console.log("La let L debería ser uno "+L);
+			}
+	if (Abierto==2) {
+		document.getElementById("Indice").style.left="-300px";
+		Abierto=1;
+		console.log("indice cerrado. Abierto debiera ser uno "+Abierto);
+		document.getElementById("hamburguesa").classList.toggle("equis");
+	}
+}
+function cerrarCaja() {
+	console.log("caja cerrada");
+	setTimeout(ocultarCaja, 500);
+	
+	document.getElementById("Cargador").style.scale=null;
+	document.getElementById("Cargador").style.opacity=null;
+	document.getElementById("botonX").style.display=null;
+}
+
+function ocultarCaja() {
+	document.getElementById("Caja").style.display=null;
+}
+/*FIN FUNCIONES IMPORTADAS DE GALERIA.JS*/
+
+
 
 function forzarIndice() {
 	document.getElementById("Indice").style.left="-300px";
@@ -239,7 +353,7 @@ function scrollSubtemas() {
 	
 	
 	else if (window.scrollY < YTema) {
-		document.getElementById("nombreSubtema").innerHTML= LosSubtemas[0].innerHTML;
+		document.getElementById("nombreSubtema").innerHTML = LosSubtemas[0].innerHTML;
 	}
 	
 

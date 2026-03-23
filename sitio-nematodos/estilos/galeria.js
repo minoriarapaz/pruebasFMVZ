@@ -1,6 +1,6 @@
 // JavaScript Document
 
-var L=1;
+
 
 /*ANTES NECESITABAS una de estas variables para cada galeria*/
 let slideIndex = 1; /*la de prueba*/
@@ -9,100 +9,15 @@ let slideIndex = 1; /*la de prueba*/
 const LasGalerias = document.getElementsByClassName("galeria");
 function revisar() {let cantidad = LasGalerias.length; console.log("la cantidad de Galerias es "+ cantidad);}
 
-function verCajita(a) {
-	abrirCaja();
-	/*LasGalerias[a].style.display="block";*/
-}
-function animarIframe() {
-	document.getElementById("Cargador").style.scale="1";
-	document.getElementById("Cargador").style.opacity="1";
-}
 
-function loadCajita(C) {
-	abrirCaja();
-	setTimeout(animarIframe, 100);
-	
-	if (C==1) {
-		document.getElementById("Cargador").src="interactivos/galeria1.html";
-	}
-	if (C==2) {
-		document.getElementById("Cargador").src="interactivos/galeria2.html";
-	}
-	if (C==3) {
-		document.getElementById("Cargador").src="interactivos/galeria3.html";
-	}
-	if (C==4) {
-		document.getElementById("Cargador").src="interactivos/galeria4.html";
-	}
-	if (C==5) {
-		document.getElementById("Cargador").src="interactivos/galeria5.html";
-	}
-	if (C==6) {
-		document.getElementById("Cargador").src="interactivos/galeria6.html";
-	}
-	if (C==7) {
-		document.getElementById("Cargador").src="interactivos/galeria7.html";
-	}
-	if (C==8) {
-		document.getElementById("Cargador").src="interactivos/galeria8.html";
-	}
-	if (C==9) {
-		document.getElementById("Cargador").src="interactivos/galeria9.html";
-	}
-	if (C==10) {
-		document.getElementById("Cargador").src="interactivos/galeria10.html";
-	}
-	if (C==11) {
-		document.getElementById("Cargador").src="interactivos/galeria11.html";
-	}
-	if (C==12) {
-		document.getElementById("Cargador").src="interactivos/galeria12.html";
-	}
-	if (C==13) {
-		document.getElementById("Cargador").src="interactivos/galeria13.html";
-	}
-	if (C==15) {
-		document.getElementById("Cargador").src="interactivos/legales.html";
-	}
-}
 
 
 function cerrarGaleria() {
 	document.getElementById("Caja").style.display=null;
 }
 
-function animarCaja() {
-	document.getElementById("Caja").style.opacity="1";
-}
 
-function abrirCaja() {
-	if (L==1) {
-				document.getElementById("Caja").style.display="block";
-				setTimeout(animarCaja, 100);
-				document.body.style.overflow = "hidden";
-				document.getElementById("botonX").style.display="block";
-				L=2;
-				console.log("caja abierta");
-			} else {
-				cerrarCaja();
-				document.getElementById("Caja").style.opacity=null;
-				document.body.style.overflow = "auto";
-				L=1;
-			}
-}
 
-function cerrarCaja() {
-	console.log("caja cerrada");
-	setTimeout(ocultarCaja, 500);
-	
-	document.getElementById("Cargador").style.scale=null;
-	document.getElementById("Cargador").style.opacity=null;
-	document.getElementById("botonX").style.display=null;
-}
-
-function ocultarCaja() {
-	document.getElementById("Caja").style.display=null;
-}
 //funciones para galeria 
 
 

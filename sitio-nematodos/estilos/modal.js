@@ -54,21 +54,5 @@ function citar(A, B, C, D, E, F) {
 }
 
 
+/* FUNCIONES NoDisplay() y salirBiblio() las mudaste a NAVEGACION.JS*/
 
-function NoDisplay() {
-	document.getElementById("Bibliografia").style.display="none";
-}
-function salirBiblio() {
-	setTimeout(NoDisplay, 300);
-	document.getElementById("Citas").style.scale=null;
-	document.getElementById("Bibliografia").style.opacity="0";
-	document.getElementById("Bibliografia").style.paddingTop="200px";
-	document.body.style.overflow = "auto";
-	
-	const fuentes = document.getElementsByClassName("Citado");
-	for (let i = 0; i < fuentes.length; i++) {
-		fuentes[i].style.display="none";
-	}
-	
-
-}
