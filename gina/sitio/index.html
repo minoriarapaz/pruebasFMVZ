@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Portada-PAPIME</title>
+		
+	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--ESTILO Y JAVASCRIP-->
+<link href="casos-estilos/estructura.css" rel="stylesheet" type="text/css">
+<script src="casos-estilos/navegacion.js"></script>
+	
+	
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+	
+
+<link rel="icon" type="image/x-icon" href="casos-graficos/interfaz/favicon.ico">
+</head>
+
+<body>
+	<header id="cabecera">
+		
+		<h1>Casos clínicos reales en bovinos, ovinos, caprinos y&nbsp;búfalos&nbsp;de&nbsp;agua</h1>
+	 	<div id="hamburguesa" onclick="verIndice()">
+			<div class="hamb1"></div>
+			<div class="hamb2"></div>
+			<div class="hamb3"></div>
+		</div>
+		<div class="titulo">
+			<img id="titulo-compacto" src="casos-graficos/interfaz/logo-provisional.png" alt="loguito">
+			
+		</div>
+		
+		
+		<nav id="Indice">
+			<ol>
+				<li><a>Introducción</a></li>
+				<li><a onClick="Despliegue()">Casos clínicos</a>
+					<ul class="index-especies" id="indice1">
+						<li>Bovinos
+						<ul class="index-casos">
+							<li>Caso 1</li>
+							<li>Caso 2</li>
+						</ul>
+						</li>
+						<li>Ovinos
+						<ul>
+							<li>Caso 1</li>
+							<li>Caso 2</li>
+						</ul>
+						</li>
+						<li>Caprinos
+						<ul>
+							<li>Caso 1</li>
+							<li>Caso 2</li>
+						</ul>
+						</li>
+						<li>Búfalos
+						<ul>
+							<li>Caso 1</li>
+							<li>Caso 2</li>
+						</ul>
+						</li>
+					</ul>
+				</li>
+				
+			</ol>
+		</nav>
+	</header>
+	
+	<main>
+		<section class="portadita">
+		Introducción
+		</section>
+		
+		<section class="Contenido">
+			<div class="separador"></div>
+			<div class="Textos">
+				<div class="segmento txtDerecha">
+					<p><b>Sobre este repositorio</b></p>
+					<p><i>Casos clínicos reales en bovinos, ovinos, caprinos y búfalos de agua, desde una perspectiva multidisciplinaria exhaustiva basada en evidencias para la impartición de asignaturas en la licenciatura en medicina veterinaria y zootecnia</i> es un repositorio donde los autores abordarán casos clínicos reales vistos en campo y práctica.</p></div>
+				<div class="segmento">
+					<img src="casos-graficos/interfaz/ausculta-cabra.png" alt="ilustración de técnico veterinario" width="400">
+				</div>
+			
+			</div>
+			<!--<button class="botonIR" onMouseUp="verIndice2()">Ir a casos clínicos</button>-->
+				
+				
+				
+		</section>
+	</main>
+	
+	
+	
+</body>
+</html>
