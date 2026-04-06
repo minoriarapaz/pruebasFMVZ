@@ -144,14 +144,41 @@ section.subtema {
 
 }
 
-.modulo {
+.modulo, .moduloCaso {
 	box-sizing: border-box;
 	
 	position: relative;
-	display: block;
+
 	width: 50%;
 	height: 400px;
-
+	background-size: cover;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+.moduloCaso {
+	background-color: lightcoral;
+	color: ghostwhite;
+	border: 1px solid #282828;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	cursor: pointer;
+}
+.moduloCaso > p, .moduloCaso > a {
+	display: block;
+	position: relative;
+	padding: 10px;
+	background-color: rgba(0,0,0,0.5);
+	width: 96%;
+	text-align: center;
+}
+.moduloCaso > a {
+	font-size: 1.8em;
+	font-variant-caps: small-caps;
+	text-decoration: none;
+	color: inherit;
 }
 .modulo img {
 	display: block;

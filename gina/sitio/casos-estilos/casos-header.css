@@ -146,10 +146,10 @@ nav a span, ol small {color: indianred;}
 	
 	nav {
 		display: block;
-		background-color: #252525;
 		width: 300px;
 		min-height: 500px;
 		position: fixed;
+		background-color: snow;
 		z-index: 4;
 		left: -300px;
 		top: 100px;

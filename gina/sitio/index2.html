@@ -6,8 +6,10 @@
 <link href="casos-estilos/casos-estructura.css" rel="stylesheet" type="text/css">
 <link href="casos-estilos/casos-texto.css" rel="stylesheet" type="text/css">
 <link href="casos-estilos/casos-header.css" rel="stylesheet" type="text/css">
+	<link href="casos-estilos/casos-modulos.css" rel="stylesheet" type="text/css">
 <script src="casos-estilos/casos-estructura.js"></script>
 	<script src="casos-estilos/casos-nav.js"></script>
+	<script src="casos-estilos/archivos.js"></script>
 	
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,12 +38,11 @@
 				<li><a onClick="irIntroduccion()">Sobre este proyecto</a></li><!--<span>&bull;</span>-->
 				<li id="Indice3"><a onClick="Despliegue()">Casos clínicos</a>
 					<ul class="index-especies" id="subIndice">
-						<li><a onClick="irEstructura()">Caso 1</a></li>
-						<li><a onClick="irSubtema(1)">Caso 2</a></li>
-						<li><a onClick="irSubtema(2)">Caso 3</a></li>
-						<li><a onclick="irSubtema(3)">Caso 4</a></li>
-						<li><a onclick="irSubtema(4)">Caso 5</a></li>
-						<li><a onclick="irSubtema(5)">Caso 6</a></li>
+						<li><a href="casos/caso1.pptx">Caso 1</a></li>
+						<li><a href="casos/caso2.pptx">Caso 2</a></li>
+						<li><a href="casos/caso3.pptx">Caso 3</a></li>
+						<li><a href="casos/caso5.pptx">Caso 5</a></li>
+						
 					</ul>
 				</li>
 				<!--<li><a onClick="anuncio()">Extra</a></li>-->
@@ -75,7 +76,7 @@
 						<h2>Sobre este proyecto</h2>
 						<p class="txt-grande"><strong>"Casos clínicos reales en bovinos, ovinos, caprinos y búfalos de agua, desde una perspectiva multidisciplinaria exhaustiva basada en evidencias para la impartición de asignaturas en la licenciatura en medicina veterinaria y zootecnia"</strong> es un repositorio donde los autores abordarán casos clínicos reales vistos en campo y práctica.</p>
 						
-						<input type="text">
+						
 					</section>
 					<section class="modulo">
 						<img src="casos-graficos/interfaz/ausculta-cabra.png" alt="ilustración de técnico veterinario">
@@ -95,20 +96,20 @@
 				<div class="separaTemas"></div>
 				
 				<section class="modulo-principal">
-					<section class="modulo">
+					<section class="moduloCaso" id="caso1">
+						<a href="casos/caso1.pptx">Caso #1</a><p>Bovino</p>
 					</section>
-					<section class="modulo">
+					<section class="moduloCaso" id="caso2">
+						<a href="casos/caso2.pptx">Caso #2</a><p>Bovino</p>
 					</section>
-					<section class="modulo">
+					<section class="moduloCaso" id="caso3">
+						<a href="casos/caso3.pptx">Caso #3</a><p>Cordero</p>
 					</section>
-					<section class="modulo">
+					
+					<section class="moduloCaso" id="caso5">
+						<a href="casos/caso5.pptx">Caso #5</a><p>Búfalo</p>
 					</section>
-					<section class="modulo">
-					</section>
-					<section class="modulo">
-					</section>
-					<section class="modulo">
-					</section>
+					
 
 				</section>
 				
