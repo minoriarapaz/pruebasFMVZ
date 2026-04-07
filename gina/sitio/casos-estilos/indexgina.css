@@ -30,7 +30,7 @@ section.tercio1 {
 	padding-right: 50px;
 	text-align: center;
 	font-size: 2em;
-	border-bottom: 1px solid snow;
+	border-bottom: 1px solid white;
 }
 section.tercio3 {
 	display: block;
@@ -39,7 +39,7 @@ section.tercio3 {
 	height: auto;
 	margin: auto;
 	background-color: black;
-	color: snow;
+	color: lightcoral;
 	box-sizing: border-box;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -50,23 +50,19 @@ section.tercio3 {
 }
 section.tercio2 {
 	display: block;
-	width: 700px;
+	width: 1000px;
 	height: auto;
 	margin: auto;
 }
-section.tercio4 {
-	margin-bottom: 50px;
-}
 section.tercio4 p {
-	color: lightcoral;
+	color: aqua;
 	text-align: center;
-	line-height: 1.7;
 }
 iframe {
 	border-style: none;
 	display: block;
-	width: 700px;
-	height: 500px;/*800px*/
+	width: 1000px;
+	height: 800px;/*800px*/
 	margin: auto;
 }
 
@@ -76,22 +72,19 @@ iframe {
 	
 	display: block;
 	margin: auto;
-	padding: .5em;
+	padding: 1em;
   position: relative; /*absolute*/
 	width: 100px;
   color: ghostwhite;
-  font-size: .8em; /*40px*/
-  font-weight:100;
+  font-size: 1em; /*40px*/
+  font-weight: bold;
 	background-image: linear-gradient(lightcoral 50%, rgb(236, 95, 95));
 	border-radius: 10px;
 	text-align: center;
 	transition: 0.3s;
 	cursor: pointer;
-	margin-top: 1em;
 }
-.colorCoral {
-	color: lightcoral;
-}
+
 @media (max-width: 800px) {
 	iframe, section.tercio2, section.tercio1, section.tercio3 {
 		width: 100%;
