@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/* CSS Document */
+
+h1, h2 {display: none;}
+h3 {
+	text-align: center;
+	margin-bottom: 1em;
+	margin-top: 2em;
+}
+.versalita, abbr {
+	font-variant: small-caps;
+	font-weight: 500;
+	font-size: 90%;
+}
+
+.separaTemas {
+	display: block;
+	background-color: dodgerblue;
+	width: 100%;
+	height: 50px;
+	margin-bottom: 2em;
+	
+	color: ghostwhite;
+	font-size: 1.5em;
+}
+
+/*solo los P que son hijos directos del section.Contenido > section*/
+.Contenido > section > p, section.subtema > p {
+	color: darkslategray;
+	margin-bottom: .8em;
+	margin-left: auto;
+	margin-right: auto;
+	text-indent: 1em;
+	text-align: justify;
+	width: 600px;/*650*/
+	line-height: 1.7;
+}
+.Contenido > section > p.inLine {
+	display: inline-block;
+	width: 400px;
+	margin-left: none;
+	margin-right: none;
+}
+.Contenido > section > ul.listaEspecial {
+	
+	
+	background-image: linear-gradient(dodgerblue 60%, slateblue);
+	padding-top: 1em;
+	border-radius: 20px;
+	
+	margin-bottom: .8em;
+	text-indent: 0;
+	
+	color: ghostwhite;
+	font-style: oblique;
+	text-align: left;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+}
+
+.Contenido > section > ul, .Contenido > section > ol, section.subtema > ul, section.subtema > ol {
+	color: darkslategray;
+	margin-bottom: .8em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;/*650*/	
+	text-align: left;
+}
+.Contenido > section > ul li, .Contenido > section > ol li, section.subtema > ul li, section.subtema > ol li {
+	margin-bottom: .5em;
+	margin-left: 2.5em;
+	margin-right: 1em;
+}
+section.subtema > ol li::marker {
+	color: dodgerblue;
+}
+.Contenido > section > ul.listaEspecial li::marker {
+	color: ghostwhite;
+}
+
+ul.listaEspecial {
+	font-size: 100%;
+}
+
+.Contenido > section > p.primerParrafo, section.subtema > p.primerParrafo {
+	text-indent: 0;
+}
+.Contenido > section > p.ultimoParrafo, section.subtema > p.ultimoParrafo {
+	margin-bottom: 5em;
+}
+
+
+.Contenido > section > p.parrafoResaltado, section.subtema > p.parrafoResaltado {
+	position: relative;
+	display: none;
+	
+	background-color: seagreen;
+	background-image: url("../interfaz/foto-portadita.jpg");
+	background-size: auto;
+	background-position: center;
+	background-blend-mode:multiply;
+	/*background-image: linear-gradient(dodgerblue 60%, slateblue);*/
+	
+	padding: 1.5em 1em 1.5em 1em;
+	margin-bottom: 1.5em;
+	margin-top: 1em;
+	border-radius: 20px;
+	color: ghostwhite;
+	
+	text-indent: 0;
+	font-style: oblique;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+	box-sizing: border-box;
+	
+	animation: entrada 1s;
+	animation-play-state: paused;
+	
+}
+@keyframes entrada {
+	from {scale: .1; opacity: .1;}
+	to {scale: 1; opacity: 1;}
+}
+
+
+.parrafoResaltado > em {color: inherit;} /*el EM que esta dentro de las cajas azules. el INHERIT da el color del P donde se anida*/
+
+p > em {color: dodgerblue; font-weight: 500;} /*el EM suelto en cualquier parrafo excepto las cajas azules*/
+
+a {text-decoration: none;}
+
+
+/*Hipervinculos (citas y bibliografia) dentro de los p comúnes*/
+.Contenido > section > p > a, section.subtema > p > a, .Contenido > section > ol a, section.subtema > ol a {
+	color: slateblue;
+	cursor: pointer;
+}
+ol small, ul small {color: inherit;}
+/*los hipervinculos dentro de los parrafos resaltados*/
+.Contenido > section > .parrafoResaltado > a, section.subtema > .parrafoResaltado > a{
+	color: snow;
+}
+
+button.gusano {
+	display: block;
+	position: relative;
+	
+	width: 50px;
+	height: 50px;
+	margin: auto;
+	
+	margin-top: 30px;
+	margin-bottom: 30px;
+	
+	background-color: transparent;
+	background-image: url("../interfaz/gusano-grueso.gif");
+	background-size: cover;
+	background-position: center;
+	
+	border-radius: 25px;
+	border: 1px solid cyan;
+}
+.gusano img {
+	width: 100%;
+}
+
+sup {
+	line-height: 0;
+}
+@media (max-width: 1200px) {
+	.Contenido > section > p, .Contenido > section > p.parrafoResaltado, section.subtema > p, .Contenido > section > ul, .Contenido > section > ol, section.subtema > ul, section.subtema > ol  {
+		width: 650px;
+	}
+	.separaTemas {
+		height: 20px;
+	}
+}
+
+@media (max-width: 800px) {
+	.Contenido > section > p, .Contenido > section > p.parrafoResaltado, section.subtema > p, .Contenido > section > ul, .Contenido > section > ol, section.subtema > ul, section.subtema > ol  {
+		width: 70%;
+	}
+	.separaTemas {
+		height: 5px;
+	}
+}
+
+@media (max-width: 500px) {
+	.Contenido > section > p, .Contenido > section > p.parrafoResaltado, .Contenido > section > ul, .Contenido > section > ol, section.subtema > p, section.subtema > ul, section.subtema > ol  {
+		width: 90%;
+	}
+	.separaTemas {display: none;}
+	
+	.Contenido > section > ul, .Contenido > section > ol, section.subtema > ul, section.subtema > ol {text-align: left;}
+	
+	.Contenido > section > ul li, .Contenido > section > ol li, section.subtema > ul li, section.subtema > ol li {
+		margin-left: 2.5em;
+		margin-right: 0em;
+	}
+}
