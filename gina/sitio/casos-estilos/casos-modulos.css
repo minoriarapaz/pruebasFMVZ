@@ -4,11 +4,15 @@
 #caso1, #caso2 {
 	background-image: url("../casos-graficos/interfaz/ficha-bovino.png");
 }
-#caso3 {
+#caso3, #caso4 {
 	background-image: url("../casos-graficos/interfaz/ficha-ovino.png");
 }
 #caso5 {
 	background-image: url("../casos-graficos/interfaz/ficha-bufalo.png");
+}
+
+#caso7, #caso8 {
+	background-image: url("../casos-graficos/interfaz/ficha-caprino.png");
 }
 
 @media (max-width: 1200px) {
