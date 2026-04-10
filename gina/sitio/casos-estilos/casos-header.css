@@ -73,27 +73,28 @@ nav {
 }
 
 nav ul /*el sub indice de Estructura*/{
-	list-style-position: outside;
-	list-style-type: none;
+	list-style-position: inside;
+	list-style-type: decimal;
 }
 nav li::marker {
-	color: lightcoral;
+	color: indianred;
 }
 /*indice general*/
 nav ul > li {
 	color: darkslategray;
 	margin-bottom: .7em;
-	letter-spacing: .5px;
+	letter-spacing: .0px;
 	line-height: 1.2;
 	font-weight: bold;
-	font-size: 1em;
+	font-size: .9em;
+	list-style-position: inside;
 }
 /*aspecto del indice*/
 nav ul > li > ul {
 	display: none;/*NONE*/
-	font-size: .9em;
+	font-size: 1em;
 	color: inherit;
-	list-style-type: square;
+	list-style-type: disc;
 	list-style-position: inside;
 	margin-left: 0px;
 	margin-top: 15px;

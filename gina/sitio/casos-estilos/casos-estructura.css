@@ -32,18 +32,18 @@ main {
 }
 
 div.portadita {
-	background-color: gray;
+	background-color: grey;
 	background-size: cover;
 	background-position: center;
 	background-blend-mode:multiply;
-	background-image: url("../casos-graficos/interfaz/borregos-campo.jpg");
+	background-image: url("../casos-graficos/interfaz/.jpg");
 	display: flex;
 	justify-content: space-around; /*para centrar texto*/
 	align-items: center;/*para centrar texto*/
 	
 	position: sticky; top: 0; z-index: 2;
 	width: 100%;
-	height: 300px;
+	height: 200px;
 	
 	font-size: 3em;
 	color: ghostwhite;
@@ -123,7 +123,7 @@ section.Contenido > section {
 }
 
 /* tiene clase modulo-principal*/
-section.Contenido > section > section {
+/*section.Contenido > section > section*/.modulo-principal {
 	box-sizing: border-box;
 	
 	background-color: transparent;
@@ -131,6 +131,16 @@ section.Contenido > section > section {
 	position: relative;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto;
+}
+.modulo-textos {
+	box-sizing: border-box;
+	background-color: transparent;
+	position: relative;
+	display: flex;
+	flex-direction: column;
 	flex-wrap: wrap;
 	width: 100%;
 	height: auto;
@@ -146,7 +156,7 @@ section.subtema {
 
 .modulo, .moduloCaso {
 	box-sizing: border-box;
-	
+	border: 1px dotted blue;
 	position: relative;
 
 	width: 50%;
