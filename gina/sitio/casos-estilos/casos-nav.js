@@ -58,6 +58,59 @@ function irPlanteamiento() {
 function revisar() {
 	alert(document.getElementById("Planteamiento").offsetTop);
 }
+
+function irAntecedentes() {
+	window.scroll(
+		{top: /*768*/(document.getElementById("Antecedentes").offsetTop /*- compensacion*/), left: 0, }
+	);
+	document.getElementById("Indice").style.left="-300px";
+	Abierto=1;
+	document.body.style.overflow = "auto";
+	console.log("indice cerrado. Variable Abierto es "+Abierto);
+	document.getElementById("hamburguesa").classList.remove("equis");
+}
+
+function irArte() {
+	window.scroll(
+		{top: /*768*/(document.getElementById("Arte").offsetTop /*- compensacion*/), left: 0, }
+	);
+	document.getElementById("Indice").style.left="-300px";
+	Abierto=1;
+	document.body.style.overflow = "auto";
+	console.log("indice cerrado. Variable Abierto es "+Abierto);
+	document.getElementById("hamburguesa").classList.remove("equis");
+}
+function irJustificacion() {
+	window.scroll(
+		{top: /*768*/(document.getElementById("Justificacion").offsetTop /*- compensacion*/), left: 0, }
+	);
+	document.getElementById("Indice").style.left="-300px";
+	Abierto=1;
+	document.body.style.overflow = "auto";
+	console.log("indice cerrado. Variable Abierto es "+Abierto);
+	document.getElementById("hamburguesa").classList.remove("equis");
+}
+function irObjetivo() {
+	window.scroll(
+		{top: /*768*/(document.getElementById("Objetivo").offsetTop /*- compensacion*/), left: 0, }
+	);
+	document.getElementById("Indice").style.left="-300px";
+	Abierto=1;
+	document.body.style.overflow = "auto";
+	console.log("indice cerrado. Variable Abierto es "+Abierto);
+	document.getElementById("hamburguesa").classList.remove("equis");
+}
+function irMetodologia() {
+	window.scroll(
+		{top: /*768*/(document.getElementById("Metodologia").offsetTop /*- compensacion*/), left: 0, }
+	);
+	document.getElementById("Indice").style.left="-300px";
+	Abierto=1;
+	document.body.style.overflow = "auto";
+	console.log("indice cerrado. Variable Abierto es "+Abierto);
+	document.getElementById("hamburguesa").classList.remove("equis");
+}
+
 function irCasos() {
 	window.scroll(
 		{top: /*768*/(document.getElementById("CasosClinicos").offsetTop /*- compensacion*/), left: 0, }

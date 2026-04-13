@@ -32,11 +32,11 @@ main {
 }
 
 div.portadita {
-	background-color: grey;
+	background-color: cornflowerblue;
 	background-size: cover;
 	background-position: center;
 	background-blend-mode:multiply;
-	background-image: url("../casos-graficos/interfaz/.jpg");
+	background-image: url("../casos-graficos/interfaz/panel_ver3.png");
 	display: flex;
 	justify-content: space-around; /*para centrar texto*/
 	align-items: center;/*para centrar texto*/
@@ -60,7 +60,7 @@ div.portadita span {
 div.portadita-estructura {
 	box-sizing: border-box; /*exclusiva de este div*/
 	overflow: hidden; /*exclusiva de este div*/
-	background-color: gray;
+	background-color: cornflowerblue;
 	background-image: url("../interfaz/foto-estructura2.jpg");
 	background-size: cover;
 	background-position: center;
@@ -125,9 +125,7 @@ section.Contenido > section {
 /* tiene clase modulo-principal*/
 /*section.Contenido > section > section*/.modulo-principal {
 	box-sizing: border-box;
-	
 	background-color: transparent;
-
 	position: relative;
 	display: flex;
 	flex-direction: row;
@@ -156,7 +154,6 @@ section.subtema {
 
 .modulo, .moduloCaso {
 	box-sizing: border-box;
-	border: 1px dotted blue;
 	position: relative;
 
 	width: 50%;
@@ -166,7 +163,7 @@ section.subtema {
 	background-repeat: no-repeat;
 }
 .moduloCaso {
-	background-color: lightcoral;
+	background-color: cornflowerblue;
 	color: ghostwhite;
 	border: 1px solid #282828;
 	display: flex;
@@ -269,6 +266,9 @@ footer img {
 	div.portadita-estructura {
 		font-size: 1.7em;
 	}
+	.modulo {
+		height: 500px;
+	}
 	
 }
 
@@ -298,6 +298,13 @@ footer img {
 	}
 	footer img {
 	width: 200px;
+	}
+	.modulo {
+		width: 100%;
+		height: auto;
+	}
+	.modulo img {
+		max-height: 400px;
 	}
 	
 }

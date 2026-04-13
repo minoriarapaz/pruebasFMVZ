@@ -3,6 +3,11 @@
 
 h1, h2 {}
 h1 {font-size: 1em; margin-left: 20px; margin-top: 10px;}
+
+h1 small {
+	display: block; margin-top: .5em; color: cornflowerblue;
+}
+
 h3 {
 	text-align: center;
 	margin-bottom: 1em;
@@ -16,7 +21,7 @@ h3 {
 
 .separaTemas {
 	display: block;
-	background-color: lightcoral;
+	background-image: linear-gradient(to right, rgb(50, 113, 231), cornflowerblue, rgb(50, 113, 231));
 	width: 100%;
 	height: 50px;
 	margin-bottom: 30px;
@@ -33,7 +38,6 @@ h3 {
 }
 .modulo-textos > p {
 	position: relative;
-	border: 1px dashed blue;
 	max-width: 650px;
 	margin: auto;
 	line-height: 1.7;
@@ -47,7 +51,6 @@ h3 {
 .modulo-textos img.ilustracion {
 	position: relative;
 	display: block;
-	border: 1px dashed blue;
 	margin: auto;
 	width: 500px;
 	margin-bottom: 30px;
@@ -77,6 +80,10 @@ sup {
 	.modulo-textos > p {
 		
 		width: 80%;
+	}
+	.modulo-textos img.ilustracion {
+		width: 70%;
+		max-width: 500px;
 	}
 }
 
