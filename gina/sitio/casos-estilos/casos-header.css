@@ -167,6 +167,8 @@ nav a span, ol small {color: indianred;}
 		padding: 30px 0 0 30px;
 	}
 	
+	nav > small {display: block;}
+	
 }
 
 
@@ -174,7 +176,9 @@ nav a span, ol small {color: indianred;}
 
 
 @media (max-width: 800px) {
-	
+	h1 small {
+		display: none;
+	}
 }
 
 @media (max-width: 500px) {
@@ -185,7 +189,7 @@ nav a span, ol small {color: indianred;}
 	}
 	header > .titulo img {
 		height: auto;
-		width: 190px;
+		width: 150px;
 		margin-top: 10px;
 		/*margin-left: auto;*/
 		

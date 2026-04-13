@@ -1,13 +1,22 @@
 @charset "UTF-8";
 /* CSS Document */
 
-h1, h2 {}
+
 h1 {font-size: 1em; margin-left: 20px; margin-top: 10px;}
 
 h1 small {
 	display: block; margin-top: .5em; color: cornflowerblue;
 }
-
+nav > small {
+	color: cornflowerblue;
+	font-weight: bold;
+	display: none;
+	margin-bottom: 10px;
+}
+h2 {
+	margin-left: 20%;
+	margin-bottom: .5em;
+}
 h3 {
 	text-align: center;
 	margin-bottom: 1em;
@@ -64,6 +73,9 @@ sup {
 }
 
 @media (max-width: 1200px) {
+	h1 {
+		font-size: .85em;
+	}
 	
 	.separaTemas {
 		height: 20px;

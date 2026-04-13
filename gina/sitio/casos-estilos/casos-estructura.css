@@ -157,12 +157,16 @@ section.subtema {
 	position: relative;
 
 	width: 50%;
-	height: 400px;
 	background-size: cover;
 	background-position: left;
 	background-repeat: no-repeat;
 }
+.modulo {
+	height: 600px;
+	padding-bottom: 20px;
+}
 .moduloCaso {
+	height: 400px;
 	background-color: cornflowerblue;
 	color: ghostwhite;
 	border: 1px solid #282828;
