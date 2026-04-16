@@ -51,6 +51,10 @@
 	font-weight: 500;
 	text-decoration: underline;
 }
+
+#Fichas cite > a {
+	color: slateblue;
+}
 .transparente {
 	background-color: transparent;
 }
