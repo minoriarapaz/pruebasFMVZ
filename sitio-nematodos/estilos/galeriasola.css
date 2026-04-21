@@ -32,12 +32,17 @@ body {
 	background-size: auto;
 	background-blend-mode:color-burn;*/
 }
-
 img.legal-logo {
 	display: block;
 	margin: auto;
 	position: relative;
 	width: 300px;
+}
+
+img.centrada {
+	display: block;
+	margin: auto;
+	position: relative;
 }
 
 .diapositiva, .diapoFalsa {
