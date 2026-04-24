@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/* CSS Document */
+
+div.btnOjo {
+	display: none;/*era NONE*/
+	position: relative;
+	width: 50px;
+	height: auto;
+	cursor: pointer;
+}
+.btnFondoGris {
+	background-color: rgba(0,0,0,0.0);
+}
+.btnFondoBlanco {
+	background-color: rgba(255,255,255,0.40);
+}
+
+
+
+
+img.imgBtn {
+	position: relative;
+	width: 45px;
+	margin: auto;
+	display: block;
+}
+
+
+.controles {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: 220px;
+	height: auto;
+	margin: auto;
+	padding-top: 10px;
+	box-sizing: border-box;
+	transition: all .3s;
+}
+.control_sec {
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	/*flex-flow: row-reverse;*/
+	width: 49%;
+	height: auto;
+	margin: auto;
+	/*border-bottom: 2px dashed white;*/
+}
+
+.izquierdo {
+	border-right: 1px solid cyan;
+}
+#control_vacio {
+	width: 26%;
+	/*background-color: rgba(64,64,64,0.5);*/
+}
+@media (max-width: 800px) {
+	.control_sec {
+		width: 100px;
+	}
+}
+#control_vacio2 {
+	width: 26%;
+	background-image: linear-gradient(lightseagreen, rgba(32, 178, 170, .8));
+}
+
+@media (max-width: 1200px) {
+	div.btnOjo {
+		display: block;
+		margin: auto;
+	}
+	.controles {
+		top: -80px;
+	}
+	
+}
+
+@media (max-width: 700px) {
+	#control_vacio, #control_vacio2 {
+		width: 10%;
+	}
+}
+
+@media (max-width: 500px) {
+	#control_vacio, #control_vacio2 {
+		display: none;
+	}
+}
+
+
+
+button.boton_en_linea {
+	height: 28px;
+	width: 28px;
+	display: block;
+	position: relative;
+	margin-right: 5px;
+	
+	border-radius: 8px 0px 8px 8px;
+	border: 4px solid transparent;
+	overflow: hidden;
+	box-shadow: 1px 3px 1px rgba(255, 255, 255, 0.2);
+	background-color: cyan;
+}
+.bletraM {font-size: 70%;}
+.bletraG {font-size: 100%;}
+.bletraEG {font-size: 120%;}
+
+
+.botonbola {
+	border-radius: 50%;
+	position: relative;
+	display: block;
+	width: 28px;
+	height: 28px;
+	margin-left: 5px;
+	transition: background .4s;
+	cursor: pointer;
+	box-sizing: border-box;
+	box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.5);
+}
+.medio {background-color: bisque; border:4px solid transparent;}
+.claro {background-color: ghostwhite; border:4px solid transparent;}
+.oscuro {background-color: black; border:1px solid #396060;}
+button.defaul {background-color: dodgerblue; color: ghostwhite;}
+#bClaro.defaul {
+	background-color: dodgerblue; border:7px solid ghostwhite;
+}
+#bOscuro.defaul {
+	background-color: dodgerblue; border:7px solid black;
+	box-shadow: 1px -1px 5px rgba(225, 225, 225, 0.9);
+}
+
+

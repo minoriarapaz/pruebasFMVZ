@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.Citado {
+	position: relative;
+	display: none;/*none*/
+}
+.invisible {
+	visibility: hidden;
+}
+aside {
+	display: none; /*none*/
+	position: fixed; /* Stay in place */
+	z-index: 5; /* el z de header es 4 */
+	padding-top: 200px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%;
+	overflow: auto;
+	opacity: 0;/* cero */
+  	background-color: rgba(0, 0, 0, .8); /*rgba(0, 0, 0, .4); */
+	transition: opacity .3s;
+	box-sizing: border-box;
+}
+
+
+
+aside > ol {
+	list-style-type: decimal;
+	list-style-position: outside;
+	
+	position: relative;
+	box-sizing: border-box;
+	width: 70%;
+	height: auto;/*auto*/
+	background-color: snow;
+	margin: auto;
+	margin-bottom: 2em;
+	margin-top: 4em;
+	padding: 10px;
+	color: darkslategray;
+	border-radius: 30px;
+	
+	scale: .5;
+	transition: scale .3s;
+
+}
+/*cada una de las citaciones*/
+aside > ol li {
+	padding: 10px;
+	border-bottom: 1px dotted dodgerblue;
+	font-size: .85em;
+}
+
+aside cite {
+	display: block;
+	font-weight: 500;
+	text-decoration: underline;
+}
+aside cite > a {
+	color: dodgerblue;
+}
+
+@media (max-width: 800px) {
+	aside > ol {
+		width: 95%;
+		padding: 5px;
+	}
+}

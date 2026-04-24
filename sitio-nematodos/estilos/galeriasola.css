@@ -1,0 +1,268 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-color: transparent;
+	font-family:  "Nunito", Lucida Grande, Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
+}
+
+
+.galeria {
+	display: block;/*NONE*/
+	box-sizing: border-box;
+	position: relative;
+	width: 80%;
+	margin: auto;
+	margin-bottom: 2em;
+	margin-top: 4em;
+	border-radius: 20px;
+	background-image: linear-gradient(slateblue, dodgerblue);
+}
+.galeriaLegal {
+	display: block;/*NONE*/
+	box-sizing: border-box;
+	position: relative;
+	width: 80%;
+	margin: auto;
+	margin-bottom: 2em;
+	border-radius: 20px;
+	background-image: linear-gradient(to right, aliceblue, ghostwhite, aliceblue);
+	/*background-image: url("../interfaz/foto-estructura-cyan.jpg");
+	background-position: center;
+	background-size: auto;
+	background-blend-mode:color-burn;*/
+}
+img.legal-logo {
+	display: block;
+	margin: auto;
+	position: relative;
+	width: 300px;
+}
+
+img.centrada {
+	display: block;
+	margin: auto;
+	position: relative;
+}
+
+.diapositiva, .diapoFalsa {
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+}
+.diapoFalsa {/*border: 3px solid pink;*/}
+
+.diapositiva {display: none;}
+
+.captiongaleria + .diapositiva {
+	display: block;
+}
+
+.diapositiva img, .diapoFalsa img {
+	display:block;
+	/*max-width: 100%;*/
+	max-height: 600px;
+	max-width: 800px;
+	margin: auto;
+	border-radius: 10px;
+}
+
+.diapoFalsa iframe, .diapositiva iframe {
+	height: 600px;
+	width: 600px;
+	margin: auto;
+	position: relative;
+	display: block;
+}
+
+/*contenedor bajo la IMG donde va el pie de imagen*/
+.descripcion {
+	display: block;
+	min-height: 100px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 15px 5px 15px;
+	width: 90%;
+	border-radius: 10px;
+	
+	background-color: rgba(0, 0, 0, .7);
+	color: ghostwhite;
+}
+
+
+ol span, ul span, span.inciso {
+	font-family: monospace;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: cyan;
+}
+li span.inciso {
+	font-weight: 100;
+}
+
+.descripcion ol {
+	border-left: 1px dotted red;
+	list-style-position: inside;
+	list-style-type: lower-alpha;
+	padding-left: 20px;
+	margin-top: .5em;
+}
+
+.descripcion ul {
+	list-style-type: none;
+	
+	border-left: 1px dotted dodgerblue;
+	list-style-position: outside;
+	padding-left: 20px;
+	margin-top: .5em;
+}
+
+.descripcion ol li {
+	list-style-type:lower-alpha;
+}
+.descripcion ol li::marker {
+	color: cyan;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+.descripcion cite {
+	display: block;
+	text-align: right;
+	font-weight: 500;
+	font-size: 75%;
+	opacity: .8;
+	/*margin-top: 0.5em;*/
+}
+
+.cursorgaleria {
+  cursor: pointer;
+}
+.prev, .next /*botones laterales de galeria*/{
+	display: block;
+  	cursor: pointer;
+  	position: absolute;
+  	top: 50px;
+  	width: auto;
+	height: auto;
+  	padding: 120px 15px 120px 15px;
+  	margin-top: 0px;/*-50px*/
+  	color: white;
+  	font-weight: bold;
+  	font-size: 20px;
+  	user-select: none;
+	background-color: rgba(0,0,0,.3) /*dodgerblue rgba(30, 144, 255, .5)*/;
+  	-webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 8px 0 0 8px;
+}
+.prev {
+	border-radius: 0 8px 8px 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  	background-color: rgba(255, 255, 255, .8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: ghostwhite;
+  	font-size: .8em;
+  	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+/* Container for image text */
+.captiongaleria {
+	position: relative;
+	display: block;
+	width: auto;
+	text-align: center;
+	padding: 15px 16px;
+	
+	font-size: .9em;
+	font-weight: 300;
+	color: ghostwhite;
+}
+.legales1 {
+	border-bottom: 2px dotted dodgerblue;
+	position: relative;
+	display: block;
+	width: 70%;
+	margin: auto;
+	padding-bottom: 4em;
+}
+.legalesSup {
+	position: relative;
+	display: block;
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 10px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	background-image: url("../interfaz/foto-portadita.jpg");
+	background-position: center;
+	background-size: cover;
+	background-color: gray;
+	background-blend-mode: multiply;
+}
+.legales1 p {
+	text-align: center;
+}
+.legales1 p .versal {
+	font-variant-caps: small-caps;
+}
+p.adorno {
+	color: dodgerblue;
+}
+
+@media (max-width: 1200px) {
+	.descripcion {
+		width: 70%;
+	}
+}
+/*la imagen medirá máximo de largo 775 aproximado*/
+@media (max-width: 1000px) {
+	img.imgLarga {
+		width: 620px;
+	}
+}
+@media (max-width: 800px) {
+	.diapositiva img, .diapoFalsa img {
+		display:block;
+		max-height: 400px;
+		max-width: 500px;
+		margin: auto;
+	}
+	.galeria, .galeriaLegal {
+		width: 100%;
+	}
+	.legales1 {
+		width: 90%;
+	}
+	
+}
+
+@media (max-width: 500px) {
+	.diapositiva img, .diapoFalsa img {
+		width: 100%;
+	}
+	.prev, .next {
+		padding: 100px 10px 120px 10px;
+	}
+	#agradecimientos p {
+		font-size: 90%;
+	}
+	img.legal-logo {
+		width: 250px;
+	}
+}
+
+
