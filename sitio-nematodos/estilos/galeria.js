@@ -59,3 +59,10 @@ function mostrarTODAS(Q,g) {
 	
 	/*misGalerias[g].querySelector(".diapoFalsa").style.display="none";*/
 }
+
+function abrircita() {
+	document.getElementById("cita6").style.display="block";
+}
+function cerrarcita() {
+	document.getElementById("cita6").style.display="none";
+}

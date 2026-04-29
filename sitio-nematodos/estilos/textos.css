@@ -23,6 +23,10 @@ h3 {
 	color: ghostwhite;
 	font-size: 1.5em;
 }
+#Agradecimientos .separaTemas {
+
+	margin-bottom: 200px;
+}
 
 /*solo los P que son hijos directos del section.Contenido > section*/
 .Contenido > section > p, section.subtema > p {
@@ -36,6 +40,37 @@ h3 {
 	line-height: 1.7;
 }
 
+#Agradecimientos p {
+	text-align: center
+}
+
+
+/*textos del prologo*/
+.Contenido > section > p.citaEspecial {
+	text-indent: 0;
+}
+
+.Contenido > section > p.prologuista {
+	margin-top: 1em;
+	text-align: right;
+	font-weight: bold;
+	width: 800px;
+}
+.Contenido > section > p.prologuista + p {
+	opacity: .8;
+	font-size: .9em;
+	border-top: 1px dotted slategray;
+	width: 800px;
+}
+.Contenido > section > p.prologuista + p span {
+
+	text-indent: 0;
+	text-align: right;
+	padding-left: 20%;
+	display: block;
+}
+
+/*textos del prologo*/
 section.borrar {
 	color: darkslategray;
 	margin-bottom: .8em;
@@ -103,7 +138,7 @@ ul.listaEspecial {
 
 .Contenido > section > p.parrafoResaltado, section.subtema > p.parrafoResaltado {
 	position: relative;
-	display: none;
+	display: block;
 	
 	background-color: seagreen;
 	background-image: url("../interfaz/foto-portadita.jpg");
@@ -123,12 +158,19 @@ ul.listaEspecial {
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
 	box-sizing: border-box;
 	
-	animation: entrada 1s;
-	animation-play-state: paused;
+	/*animation: entrada 1s;
+	animation-play-state: paused;*/
 	
+	/*SOLO COMPATIBLE CON algunos navegadores, los mas nuevos*/
+	view-timeline-name: --notamargen;
+	view-timeline-axis: block;
+	animation-timeline: --notamargen;
+	animation-name: entrada;
+	animation-range: entry 50% cover 50%;
+	animation-fill-mode: both;
 }
 @keyframes entrada {
-	from {scale: .1; opacity: .1;}
+	from {scale: .3; opacity: .1;}
 	to {scale: 1; opacity: 1;}
 }
 
@@ -195,6 +237,9 @@ sup {
 	}
 	.separaTemas {
 		height: 5px;
+	}
+	.Contenido > section > p.prologuista, .Contenido > section > p.prologuista + p {
+		width: 90%;
 	}
 }
 

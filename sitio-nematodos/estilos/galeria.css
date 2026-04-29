@@ -13,6 +13,7 @@
 	opacity: 0; /*.1*/
 	transition: all .3s;
 	border: none;
+
 	/*background-image: linear-gradient(slateblue, dodgerblue);*/
 	
 }
@@ -27,11 +28,11 @@
 	width: 100%; /* Full width */
 	height: 100%; /* Full height ANTES ERA 100%*/
 	overflow: scroll; /* ANTES ERA hidden*/
-	opacity: 0;
+	opacity: .5;
 	
-  	background-color: black; 
-	transition: opacity .5s;
+  	background-color: transparent;
 	box-sizing: border-box;
+	transition: all .3s;
 }
 
 

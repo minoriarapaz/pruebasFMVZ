@@ -128,8 +128,31 @@ function loadCajita(C) {
 	if (C==13) {
 		document.getElementById("Cargador").src="interactivos/galeria13.html";
 	}
+	if (C==14) {
+		document.getElementById("Cargador").src="interactivos/galeria14.html";
+	}
 	if (C==15) {
+		document.getElementById("Cargador").src="interactivos/galeria15.html";
+	}
+	if (C==16) {
+		document.getElementById("Cargador").src="interactivos/galeria16.html";
+	}
+	if (C==17) {
+		document.getElementById("Cargador").src="interactivos/galeria17.html";
+	}
+	if (C==18) {
+		document.getElementById("Cargador").src="interactivos/galeria18.html";
+	}
+	if (C==19) {
+		document.getElementById("Cargador").src="interactivos/galeria19.html";
+	}
+	
+	if (C==20) {
 		document.getElementById("Cargador").src="interactivos/legales.html";
+		document.getElementById("Caja").style.backgroundColor="black";
+	}
+	if (C==21) {
+		document.getElementById("Cargador").src="interactivos/instrucciones.html";
 	}
 }
 function animarCaja() {
@@ -139,6 +162,7 @@ function animarCaja() {
 function abrirCaja() {
 	if (L==1) {
 				document.getElementById("Caja").style.display="block";
+				
 				setTimeout(animarCaja, 100);
 				document.body.style.overflow = "hidden";
 				document.getElementById("botonX").style.display="block";
@@ -146,7 +170,8 @@ function abrirCaja() {
 				console.log("caja abierta y let L es dos? "+L);
 			} else {
 				cerrarCaja();
-				document.getElementById("Caja").style.opacity=null;
+				document.getElementById("Caja").style.backgroundColor=null;
+				document.getElementById("Caja").style.opacity="0";
 				document.body.style.overflow = "auto";
 				L=1;
 				console.log("La let L debería ser uno "+L);
@@ -160,7 +185,8 @@ function abrirCaja() {
 }
 function cerrarCaja() {
 	console.log("caja cerrada");
-	setTimeout(ocultarCaja, 500);
+	
+	setTimeout(ocultarCaja, 300);
 	
 	document.getElementById("Cargador").style.scale=null;
 	document.getElementById("Cargador").style.opacity=null;
@@ -181,6 +207,18 @@ function forzarIndice() {
 
 
 /*FUNCIONES INDICE Y NAVEGACION*/
+function irPrologo() {
+	window.scroll(
+		{top: /*0*/(document.getElementById("Prologo").offsetTop /*- compensacion*/), left: 0, }
+	);
+	document.getElementById("Indice").style.left="-300px";
+	Abierto=1;
+	document.body.style.overflow = "auto";
+	console.log("indice cerrado. Variable Abierto es "+Abierto);
+	document.getElementById("hamburguesa").classList.remove("equis");
+}
+
+
 function irIntroduccion() {
 	window.scroll(
 		{top: /*0*/(document.getElementById("Introduccion").offsetTop /*- compensacion*/), left: 0, }
@@ -228,6 +266,17 @@ function irHistoria() {
 function irImpacto() {
 	window.scroll(
 		{top: (document.getElementById("Impacto").offsetTop)/*3411*/, left: 0, }
+	);
+	document.getElementById("Indice").style.left="-300px";
+	Abierto=1;
+	document.body.style.overflow = "auto";
+	console.log("indice cerrado. Variable Abierto es "+Abierto);
+	document.getElementById("hamburguesa").classList.remove("equis");
+}
+
+function irAgradecimiento() {
+	window.scroll(
+		{top: (document.getElementById("Agradecimientos").offsetTop)/*3411*/, left: 0, }
 	);
 	document.getElementById("Indice").style.left="-300px";
 	Abierto=1;
@@ -287,9 +336,21 @@ function irSubtema(e) {
 
 
 /*FUNCIONES DE CONTROL DE COMPORTAMIENTO DE LAS BARRAS DE TEMA*/
-window.onscroll = function() {scrollTaxonomia(); scrollEstructura(); scrollSubtemas(); scrollHistoria(); scrollImpacto();};
+window.onscroll = function() {scrollTaxonomia(); scrollEstructura(); scrollSubtemas(); scrollHistoria(); scrollImpacto(); scrollIntroduccion()};
 
 const LosSubtemas = document.getElementsByTagName("h3");
+
+function scrollIntroduccion() {
+	var titulo = document.getElementById("Introduccion");
+	var progreso = titulo.offsetTop - 500;
+	if (window.scrollY > progreso) {
+		document.getElementById("panel0").style.color="transparent";
+		document.getElementById("panel0").style.backgroundColor="#3A3A3A";
+	} else {
+		document.getElementById("panel0").style.color=null;
+		document.getElementById("panel0").style.backgroundColor=null;
+	}
+}
 
 function scrollTaxonomia() {
 			var titulo = document.getElementById("Taxonomia");
