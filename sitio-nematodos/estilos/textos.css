@@ -23,6 +23,16 @@ h3 {
 	color: ghostwhite;
 	font-size: 1.5em;
 }
+#Agradecimientos {
+	
+	view-timeline-name: --notamargen;
+	view-timeline-axis: block;
+	animation-timeline: --notamargen;
+	animation-name: entrada;
+	animation-range: entry 50% cover 50%;
+	animation-fill-mode: both;
+}
+
 #Agradecimientos .separaTemas {
 
 	margin-bottom: 200px;

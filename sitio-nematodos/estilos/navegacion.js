@@ -170,6 +170,7 @@ function abrirCaja() {
 				console.log("caja abierta y let L es dos? "+L);
 			} else {
 				cerrarCaja();
+				document.getElementById("Agradecimientos").style.opacity=null;
 				document.getElementById("Caja").style.backgroundColor=null;
 				document.getElementById("Caja").style.opacity="0";
 				document.body.style.overflow = "auto";
@@ -275,6 +276,7 @@ function irImpacto() {
 }
 
 function irAgradecimiento() {
+	document.getElementById("Agradecimientos").style.opacity="1";
 	window.scroll(
 		{top: (document.getElementById("Agradecimientos").offsetTop)/*3411*/, left: 0, }
 	);
@@ -439,11 +441,11 @@ function scrollImpacto() {
 			var titulo = document.getElementById("Impacto");
 			var progreso = titulo.offsetTop - 500;
 	if (window.scrollY > progreso) {
-		document.getElementById("panel3").style.color="transparent";
-		document.getElementById("panel3").style.backgroundColor="#3A3A3A";
+		document.getElementById("panel4").style.color="transparent";
+		document.getElementById("panel4").style.backgroundColor="#3A3A3A";
 	} else {
-		document.getElementById("panel3").style.color=null;
-		document.getElementById("panel3").style.backgroundColor=null;
+		document.getElementById("panel4").style.color=null;
+		document.getElementById("panel4").style.backgroundColor=null;
 	}
 }
 
