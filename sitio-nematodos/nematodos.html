@@ -60,7 +60,15 @@
 <link href="estilos/modal.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
+<body onLoad="bloqueo()">
+	<section class="bienvenida" id="Bienvenida">
+		<div id="Aviso">Recuerda ampliar la información de las imágenes dando click en ellas
+		
+			<button class="continuar" onClick="desbloquear()">Continuar</button>
+		</div>
+		
+	</section>
+	
 	<header id="cabecera">
 		<h1>Nematodos</h1>
 	  <button type="button" id="hamburguesa" onclick="verIndice()">

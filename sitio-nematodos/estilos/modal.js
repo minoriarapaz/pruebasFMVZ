@@ -2,6 +2,20 @@
 
 
 
+
+function bloqueo() {
+	document.body.style.overflow = "hidden";
+}
+
+function desbloquear() {
+	document.body.style.overflow = "auto";
+	document.getElementById("Bienvenida").style.opacity=".1";
+	document.getElementById("Aviso").style.scale=".2";
+	setTimeout(cerrarBienvenida, 300);
+}
+function cerrarBienvenida() {
+	document.getElementById("Bienvenida").style.display="none";
+}
 const Fuentes = document.getElementsByClassName("Citado");
 
 function contarFuentes() {

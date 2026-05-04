@@ -23,8 +23,55 @@ aside {
 	transition: opacity .3s;
 	box-sizing: border-box;
 }
+.bienvenida {
+	display: block;
+	position: fixed; /* Stay in place */
+	z-index: 5; /* el z de header es 4 */
+	padding-top: 15%; /* centra la caja interior*/
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%;
+	overflow: auto;
+	opacity: 1;/* cero */
+  	background-color: rgba(0, 0, 0, .9); /*rgba(0, 0, 0, .4); */
+	transition: opacity .3s;
+	box-sizing: border-box;
+	color: cyan;
+}
+.bienvenida div {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box;
+	
+	padding-top: 100px;
+	position: relative;
+	width: 600px;
+	height: 400px;
+	border-right: 1px dotted darkslategray;
+	border-left: 1px dotted darkslategray;
+	margin: auto;
+	
+	transition: all .3s;
+}
 
-
+button.continuar {
+	position: relative;
+	width: 200px;
+  	color: white;
+  	font-size: 1em; /*40px*/
+  	font-weight: bold;
+  	transition: 0.3s;
+	padding: 10px 30px 10px 30px; /*  ÁREA DE CLICADO */
+	background-color: dodgerblue;
+	border-radius: 10px;
+	cursor: pointer;
+	
+	margin-top: 20px; /*separacion con el elemento superios*/
+	font-family:  "Nunito", Lucida Grande, Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
+}
 
 aside > ol {
 	list-style-type: decimal;
@@ -66,5 +113,11 @@ aside cite > a {
 	aside > ol {
 		width: 95%;
 		padding: 5px;
+	}
+	
+	.bienvenida div {
+		width: 70%;
+		height: 400px;
+		font-size: .8em;
 	}
 }
