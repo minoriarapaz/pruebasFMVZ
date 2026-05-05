@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+header {
+	background-image: url("../columba_imagenes/interfaz/paloma_roja3.png"), linear-gradient(rgba(255,102,102,1)60%, rgba(219,90,90,1)100%);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: contain;
+	border-bottom: 1px solid darkslategray;
+	padding-top: 20px;
+	min-height: 150px;
+	position: fixed;
+	display: block;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	overflow: visible;
+	box-sizing: border-box;
+}
+
+.areabiblio {
+	margin-top: 150px;
+	position: relative;
+	width: 100%;
+	height: 1000px;
+	background-image: linear-gradient(mistyrose, mistyrose, mistyrose, lightpink);
+	background-position: center;
+	background-size:cover;
+	background-repeat: no-repeat;
+	overflow-x:hidden;
+	padding-top: 80px;
+}
+
+.bibliotextos {
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 20px;
+	font-family: Open Sans, "Trebuchet MS", Arial, serif;
+	color: darkslategray;
+}
+
+.bibliotextos p {
+	margin-bottom: 1em;
+	max-width: 700px;
+}
+
+.imagen_biblio {
+	display: block;
+	min-width: 30px;
+	max-width: 400px;
+	float: left;
+	margin-left: 80px;
+}
+
+.btnRegresar {
+	font-family: Open Sans, "Trebuchet MS", Arial, serif;
+	display: block;
+  	position: relative; /*absolute*/
+	margin-left: 10%;
+	margin-bottom: 200px;
+	margin-top: 50px;
+	width: 150px;
+  	color: ghostwhite;
+  	font-size: 1em; /*40px*/
+  	font-weight: bold;
+	padding: 8px 0px 8px 0px; /*  ÁREA DE CLICADO */
+	background-color: #FF6666; /*rgba(47, 79, 79, .5);*/
+	border-radius: 10px;
+	box-shadow: 2px 2px 1px maroon;
+	text-align: center;
+	transition: 0.3s;
+}
+@media (max-width: 500px) {
+	.imagen_biblio {
+		width: 70%;
+		float: left;
+		margin-left: 20px;
+	}
+	header {
+		min-height: 110px;
+	}
+	.areabiblio {
+		margin-top: 100px;
+	}
+	.btnRegresar {
+		width: 100px;
+  	font-size: 1em; /*40px*/
+	padding: 8px 0px 8px 0px; /*  ÁREA DE CLICADO */
+	background-color: #FF6666; /*rgba(47, 79, 79, .5);*/
+}
+}
