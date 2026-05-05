@@ -66,6 +66,7 @@ figure.ancha {
 	width: 700px;
 }
 figure, figure.ancha {
+	box-sizing: border-box;
 	display: block;
 	position: relative;
 	margin: auto;
@@ -93,6 +94,7 @@ figure img {
 	border-radius: 5px 5px 20px 20px;
 	box-shadow: 1px 3px 8px black;
 }
+
 figure video {
 	position: relative;
 	margin: auto;
@@ -158,7 +160,7 @@ figcaption b:first-child span {
 	}
 }
 @media (max-width: 800px) {
-	figure {
+	figure, figure.ancha {
 		display: block;
 		position: relative;
 		width: 70%;
@@ -172,10 +174,16 @@ figcaption b:first-child span {
 		-ms-user-select: none; /* IE 10 and IE 11 */
 		user-select: none;
 	}
+	figure.juntas {
+		width: 70%;
+	}
 }
 
 @media (max-width: 500px) {
-	figure {
+	figure, figure.ancha {
+		width: 93%;
+	}
+	figure.juntas {
 		width: 93%;
 	}
 	figure img.imgAlta {
