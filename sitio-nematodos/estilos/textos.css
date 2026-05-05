@@ -163,6 +163,7 @@ ul.listaEspecial {
 	border-radius: 20px;
 	color: ghostwhite;
 	
+	text-align: left;
 	text-indent: 0;
 	font-style: oblique;
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
