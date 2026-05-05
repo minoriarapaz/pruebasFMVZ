@@ -3,9 +3,9 @@
 
 /*caracteristicas de class galeria*/
 .modalGaleria iframe {
-	scale: 1; /*.1*/
-	opacity: 1; /*0*/
-	border: 2px solid red;
+	scale: .2; /*.2*/
+	opacity: 0; /*0*/
+	border-style: none;
 	
 	display: block;
 	position: relative;
@@ -22,9 +22,9 @@
 }
 
 .modalGaleria {
-	display: block; /*NONE*/
-	opacity: 1; /*.5*/
-	border: 2px solid gold; /*Borrar*/
+	display: none; /*NONE*/
+	opacity: .5; /*.5*/
+	/*border: 2px solid gold; Borrar*/
 	
 	position: fixed; /* Stay in place */
 	z-index: 6; /* el modal de CITAS esta en 5*/

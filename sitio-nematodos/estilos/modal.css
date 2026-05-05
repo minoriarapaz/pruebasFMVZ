@@ -30,8 +30,8 @@ aside {
 	padding-top: 15%; /* centra la caja interior*/
 	left: 0;
 	top: 0;
-	width: 100%; /* Full width */
-	height: 100%;
+	width: 100vw; /* Full width */
+	height: 100vh;
 	overflow: auto;
 	opacity: 1;/* cero */
   	background-color: rgba(0, 0, 0, .9); /*rgba(0, 0, 0, .4); */
