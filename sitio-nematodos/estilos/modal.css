@@ -31,7 +31,7 @@ aside {
 	left: 0;
 	top: 0;
 	width: 100vw; /* Full width */
-	height: 100vh;
+	height: 100%;
 	overflow: auto;
 	opacity: 1;/* cero */
   	background-color: rgba(0, 0, 0, .9); /*rgba(0, 0, 0, .4); */
