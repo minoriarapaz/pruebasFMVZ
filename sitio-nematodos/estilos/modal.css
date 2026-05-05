@@ -41,11 +41,12 @@ aside {
 }
 .bienvenida div {
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	flex-direction: column;
 	align-items: center;
 	box-sizing: border-box;
 	
+	text-align: center;
 	padding-top: 100px;
 	position: relative;
 	width: 600px;
@@ -56,9 +57,17 @@ aside {
 	
 	transition: all .3s;
 }
+.bienvenida iframe {
+	width: 300px;
+	height: 200px;
+	border-style: none;
+	
+	margin-top: 2em;
+}
 
 button.continuar {
 	position: relative;
+	display: block;
 	width: 200px;
   	color: white;
   	font-size: 1em; /*40px*/
@@ -121,3 +130,14 @@ aside cite > a {
 		font-size: .8em;
 	}
 }
+
+@media (max-width: 500px) {
+	.bienvenida div {
+		width: 90%;
+		height: 400px;
+		padding-top: 20px;
+	}
+	
+}
+
+	

@@ -71,7 +71,8 @@ function salirBiblio() {
 	document.body.style.overflow = "auto";
 	/*OCULTARÁ EL INDICE SI ESTÁ ABIERTOP*/
 	document.getElementById("Indice").style.left="-300px";
-	document.getElementById("hamburguesa").classList.toggle("equis");
+	
+	document.getElementById("hamburguesa").classList.remove("equis");
 	
 	const fuentes = document.getElementsByClassName("Citado");
 	for (let i = 0; i < fuentes.length; i++) {

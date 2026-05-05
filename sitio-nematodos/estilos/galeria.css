@@ -76,7 +76,7 @@ figure.juntas {
 	position: relative;
 	display: block;
 	width: 450px;
-	height: 400px;
+	height: auto;
 	overflow: hidden;
 	align-self: flex-start;
 }
