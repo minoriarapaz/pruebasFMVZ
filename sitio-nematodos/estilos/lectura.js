@@ -102,6 +102,13 @@ function colorOscuro() {
 	
 	document.getElementById("Citas").style.backgroundColor="#1C1C1C";
 	
+	/* cambia color de las links de las Citas*/
+	const CitasLinks = document.getElementById("Citas");
+	const Links = CitasLinks.getElementsByTagName("a");
+	for (let i = 0; i < Links.length; i++) {
+		Links[i].style.color = "cyan";
+	}
+	
 	document.getElementById("botonOjo").src="interfaz/icon_ojo-blanco.png";
 }
 
@@ -145,6 +152,13 @@ function colorClaro() {
 	
 	document.getElementById("Citas").style.backgroundColor=null;
 	document.getElementById("botonOjo").src="interfaz/icon_ojo.png";
+	
+	/* regresa color de las links de las Citas*/
+	const CitasLinks = document.getElementById("Citas");
+	const Links = CitasLinks.getElementsByTagName("a");
+	for (let i = 0; i < Links.length; i++) {
+		Links[i].style.color = null;
+	}
 }
 
 

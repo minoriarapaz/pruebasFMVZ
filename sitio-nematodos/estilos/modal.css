@@ -116,6 +116,7 @@ aside cite {
 }
 aside cite > a {
 	color: dodgerblue;
+	font-weight: bold;
 }
 
 @media (max-width: 800px) {
