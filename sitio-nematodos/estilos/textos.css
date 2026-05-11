@@ -50,8 +50,13 @@ h3 {
 	line-height: 1.7;
 }
 
-#Agradecimientos p {
+#Agradecimientos p.centrado {
 	text-align: center
+}
+#Agradecimientos p.autora {
+	text-align: right;
+	font-weight: bold;
+	margin-top: 4em;
 }
 
 
@@ -79,6 +84,7 @@ h3 {
 	padding-left: 20%;
 	display: block;
 }
+
 
 /*textos del prologo*/
 section.borrar {
@@ -128,7 +134,7 @@ section.borrar {
 	line-height: 1.7;
 }
 section.subtema > ol li::marker {
-	color: dodgerblue;
+	font-weight: bold;
 }
 .Contenido > section > ul.listaEspecial li::marker {
 	color: ghostwhite;
@@ -249,6 +255,8 @@ sup {
 	.separaTemas {
 		height: 5px;
 	}
+	#Agradecimientos .separaTemas {height: 30px;}
+	
 	.Contenido > section > p.prologuista, .Contenido > section > p.prologuista + p {
 		width: 90%;
 	}
@@ -258,7 +266,12 @@ sup {
 	.Contenido > section > p, .Contenido > section > p.parrafoResaltado, .Contenido > section > ul, .Contenido > section > ol, section.subtema > p, section.subtema > ul, section.subtema > ol  {
 		width: 90%;
 	}
-	.separaTemas {display: none;}
+	#Prologo .separaTemas, #Introduccion .separaTemas, #Taxonomia .separaTemas, #Estructura .separaTemas, #Historia .separaTemas, #Impacto .separaTemas {
+		display: none;
+	}
+	
+
+	
 	
 	.Contenido > section > ul, .Contenido > section > ol, section.subtema > ul, section.subtema > ol {text-align: left;}
 	
