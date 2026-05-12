@@ -29,7 +29,7 @@ function modalObj() {
 
 
 
-var L=1
+var L=1;
 
 function cerrarBiblio() {
 	document.getElementById("modalBiblio").style.display=null;

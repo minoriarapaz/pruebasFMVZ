@@ -54,7 +54,11 @@ div.portadita {
 	font-size: 3em;
 	color: ghostwhite;
 	transition: color .6s, background 1.5s, opacity .6s;
-
+	
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none;    /* Firefox */
+	-ms-user-select: none;     /* IE 10+ y Edge */
+	user-select: none;
 }
 
 div.portadita span {

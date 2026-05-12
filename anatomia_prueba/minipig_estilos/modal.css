@@ -56,7 +56,9 @@
   	animation-name: zoom;
   	animation-duration: 0.5s;
 }
-
+.separacion small i {
+	font-weight: bold;
+}
 .modal-indice {
 	position: relative;
 	margin-top: 170px;
