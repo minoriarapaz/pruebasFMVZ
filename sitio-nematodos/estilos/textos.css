@@ -48,7 +48,13 @@ h3 {
 	text-align: justify;
 	width: 600px;/*650*/
 	line-height: 1.7;
+	
+	font-weight: 500;
 }
+strong {
+	font-size: 105%;
+}
+
 
 #Agradecimientos p.centrado {
 	text-align: center
@@ -126,6 +132,8 @@ section.borrar {
 	margin-right: auto;
 	width: 600px;/*650*/	
 	text-align: left;
+	
+	font-weight: 500;
 }
 .Contenido > section > ul li, .Contenido > section > ol li, section.subtema > ul li, section.subtema > ol li {
 	margin-bottom: .5em;
