@@ -63,6 +63,8 @@ aside {
 	border-style: none;
 	
 	margin-top: 2em;
+	border-radius: 20px;
+
 }
 
 button.continuar {
