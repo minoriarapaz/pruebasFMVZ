@@ -163,6 +163,7 @@ function animarCaja() {
 function abrirCaja() {
 	if (L==1) {
 				document.getElementById("Caja").style.display="block";
+				document.getElementById("Caja").removeAttribute("inert");
 				
 				setTimeout(animarCaja, 100);
 				document.body.style.overflow = "hidden";
@@ -187,6 +188,7 @@ function abrirCaja() {
 }
 function cerrarCaja() {
 	console.log("caja cerrada");
+	document.getElementById("Caja").setAttribute("inert", "");
 	
 	setTimeout(ocultarCaja, 300);
 	
