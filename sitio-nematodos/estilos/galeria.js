@@ -32,11 +32,12 @@ function agrandarImg(I,i) {
 }
 
 function agrandarNueva(A) {
-	const cajita = document.getElementById("cajita1");
+	console.log('Cancelada. La tenías en onClick en el IMG de las galerias');
+	/*const cajita = document.getElementById("cajita1");
 	
 	let figura = cajita.getElementsByTagName("img");
 	let ruta = figura[A].src;
-	window.open(ruta);
+	window.open(ruta);*/
 }
 
 function moverTODAS(N,g) {

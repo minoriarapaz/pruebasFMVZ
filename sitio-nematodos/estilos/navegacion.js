@@ -24,7 +24,7 @@ function activarScroll() {
 	
 }
 
-var L = 1; /*es redundante porque de NINGUNA funcion reasigna este valor. SIEMPRE PERMANECE EN -1-*/
+let L = 1; /*es redundante porque de NINGUNA funcion reasigna este valor. SIEMPRE PERMANECE EN -1-*/
 
 function DeclaraciondVariableL() {
 	console.log("Variable L /uno al inicio/ es "+L);
@@ -154,6 +154,28 @@ function loadCajita(C) {
 	}
 	if (C==21) {
 		document.getElementById("Cargador").src="interactivos/instrucciones.html";
+	}
+}
+function loadAgra() {
+	let agraY = document.getElementById("Agradecimientos").offsetTop;
+	let limite = agraY - 1000;
+	if (window.scrollY < limite) {
+		abrirCaja();
+		setTimeout(animarIframe, 100);
+		document.getElementById("Cargador").src="interactivos/agradecimientos.html";
+		document.getElementById("Caja").style.backgroundColor="black";
+		
+		
+	} else {
+		window.scroll(
+		{top: ( document.getElementById("Agradecimientos").offsetTop ), left: 0, }
+		);
+		/*lo siguiente cerrará el menu responsive*/
+		document.getElementById("Indice").style.left="-300px";
+		Abierto=1;
+		document.body.style.overflow = "auto";
+		console.log("indice cerrado. var Abierto es "+Abierto);
+		document.getElementById("hamburguesa").classList.remove("equis");
 	}
 }
 function animarCaja() {
@@ -323,8 +345,8 @@ function irBiblio() {
 const SecSubtemas = document.getElementsByClassName("subtema");
 
 function irSubtema(e) {
-	var Tema = document.getElementById("Estructura");
-	var posicionSub = Tema.offsetTop + SecSubtemas[e].offsetTop;
+	let Tema = document.getElementById("Estructura");
+	let posicionSub = Tema.offsetTop + SecSubtemas[e].offsetTop;
 	window.scroll(
 		{top: (posicionSub-200), left: 0, }
 	);
@@ -346,8 +368,8 @@ window.onscroll = function() {scrollTaxonomia(); scrollEstructura(); scrollSubte
 const LosSubtemas = document.getElementsByTagName("h3");
 
 function scrollIntroduccion() {
-	var titulo = document.getElementById("Introduccion");
-	var progreso = titulo.offsetTop - 500;
+	let titulo = document.getElementById("Introduccion");
+	let progreso = titulo.offsetTop - 500;
 	if (window.scrollY > progreso) {
 		document.getElementById("panel0").style.color="transparent";
 		document.getElementById("panel0").style.backgroundColor="#3A3A3A";
@@ -358,8 +380,8 @@ function scrollIntroduccion() {
 }
 
 function scrollTaxonomia() {
-			var titulo = document.getElementById("Taxonomia");
-			var progreso = titulo.offsetTop - 500;
+			let titulo = document.getElementById("Taxonomia");
+			let progreso = titulo.offsetTop - 500;
 	if (window.scrollY > progreso) {
 		document.getElementById("panel1").style.color="transparent";
 		document.getElementById("panel1").style.backgroundColor="#3A3A3A";
@@ -370,8 +392,8 @@ function scrollTaxonomia() {
 }
 
 function scrollEstructura() {
-	var titulo = document.getElementById("Estructura");
-	var progreso = titulo.offsetTop - 700;
+	let titulo = document.getElementById("Estructura");
+	let progreso = titulo.offsetTop - 700;
 	if (window.scrollY > progreso) {
 		document.getElementById("panel2").style.color="transparent";
 		document.getElementById("panel2").style.backgroundColor="#3A3A3A";
@@ -382,20 +404,20 @@ function scrollEstructura() {
 }
 
 function scrollSubtemas() {
-	var YTema = document.getElementById("Estructura").offsetTop;
-	var YSub1 = SecSubtemas[0].offsetTop;
-	var YSub2 = SecSubtemas[1].offsetTop;
-	var Ysub3 = SecSubtemas[2].offsetTop;
-	var Ysub4 = SecSubtemas[3].offsetTop;
-	var Ysub5 = SecSubtemas[4].offsetTop;
-	var Ysub6 = SecSubtemas[5].offsetTop;
+	let YTema = document.getElementById("Estructura").offsetTop;
+	let YSub1 = SecSubtemas[0].offsetTop;
+	let YSub2 = SecSubtemas[1].offsetTop;
+	let Ysub3 = SecSubtemas[2].offsetTop;
+	let Ysub4 = SecSubtemas[3].offsetTop;
+	let Ysub5 = SecSubtemas[4].offsetTop;
+	let Ysub6 = SecSubtemas[5].offsetTop;
 	
-	var Ysuma1 = YTema + YSub1;
-	var Ysuma2 = YTema + YSub2 - 100;
-	var Ysuma3 = YTema + Ysub3 - 100;
-	var Ysuma4 = YTema + Ysub4 - 100;
-	var Ysuma5 = YTema + Ysub5 - 100;
-	var Ysuma6 = YTema + Ysub6 - 100;
+	let Ysuma1 = YTema + YSub1;
+	let Ysuma2 = YTema + YSub2 - 100;
+	let Ysuma3 = YTema + Ysub3 - 100;
+	let Ysuma4 = YTema + Ysub4 - 100;
+	let Ysuma5 = YTema + Ysub5 - 100;
+	let Ysuma6 = YTema + Ysub6 - 100;
 	
 	
 	if (window.scrollY > Ysuma1) {
@@ -430,8 +452,8 @@ function revision() {
 }
 
 function scrollHistoria() {
-			var titulo = document.getElementById("Historia");
-			var progreso = titulo.offsetTop - 500;
+			let titulo = document.getElementById("Historia");
+			let progreso = titulo.offsetTop - 500;
 	if (window.scrollY > progreso) {
 		document.getElementById("panel3").style.color="transparent";
 		document.getElementById("panel3").style.backgroundColor="#3A3A3A";
@@ -441,8 +463,8 @@ function scrollHistoria() {
 	}
 }
 function scrollImpacto() {
-			var titulo = document.getElementById("Impacto");
-			var progreso = titulo.offsetTop - 500;
+			let titulo = document.getElementById("Impacto");
+			let progreso = titulo.offsetTop - 500;
 	if (window.scrollY > progreso) {
 		document.getElementById("panel4").style.color="transparent";
 		document.getElementById("panel4").style.backgroundColor="#3A3A3A";
@@ -502,8 +524,8 @@ function verComent(c) {
 
 /*funcion de prueba*/
 function YdeSubtema1() {
-	var Y1 = document.getElementById("Subtema1").offsetTop;
-	var YE = document.getElementById("Estructura").offsetTop;
-	var YEresta = YE-700;
+	let Y1 = document.getElementById("Subtema1").offsetTop;
+	let YE = document.getElementById("Estructura").offsetTop;
+	let YEresta = YE-700;
 	alert("Y de Generalidades es = a "+Y1 +" Y de TEMA Estructura es = " + YE + " SCROLL = "+window.scrollY);
 }

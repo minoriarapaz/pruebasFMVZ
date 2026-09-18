@@ -94,7 +94,7 @@ function colorOscuro() {
 	
 	const Separadores = document.getElementsByClassName("separaTemas");
 	for (let i = 0; i < Separadores.length; i++) {
-		Separadores[i].style.backgroundColor = "#003366";/*#004080*/
+		Separadores[i].style.backgroundColor = "rgba(30, 144, 255, .8)";/*#004080*/
 	}
 	
 	document.getElementById("bOscuro").classList.add("defaul");

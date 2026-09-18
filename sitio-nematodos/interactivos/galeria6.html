@@ -40,7 +40,7 @@
 					
 				  	<div class="diapositiva">
 						
-					<img onClick="agrandarNueva(0)" src="../figuras/figura9-a.jpg" alt="Cylicocyclus insigne, parte anterior" >
+					<img src="../figuras/figura9-a.jpg" alt="Cylicocyclus insigne, parte anterior" >
 						<div class="descripcion">
 							<p><span class="inciso">a&#41; </span>
 							Parte anterior (40×) donde se observa la cápsula bucal en forma de copa con sus papilas (*) y folias (flechas) de la corona bucal.
@@ -51,7 +51,7 @@
 				  	</div>
 
 				  	<div class="diapositiva">
-					  <img onClick="agrandarNueva(1)" src="../figuras/figura9-b.jpg" alt="Cylicocyclus insigne, parte anterior">
+					  <img src="../figuras/figura9-b.jpg" alt="Cylicocyclus insigne, parte anterior">
 						<div class="descripcion">
 							<p><span class="inciso">b&#41; </span>
 							Porción posterior del macho bursado (10×) donde se observan los rayos o costillas (flechas) y las espículas expuestas (*).
@@ -68,6 +68,14 @@
 				  	<a class="next" onclick="moverTODAS(1, 0)">&#10095;</a>
 				</div> <!--GALERIA-->
 				
+	<script>
+		document.querySelectorAll('img').forEach(img => {
+    	img.addEventListener('contextmenu', e => {
+      	e.preventDefault();
+      	alert('DR © 2026 Cintli Martínez Ortiz de Montellano'); // Mensaje opcional
+    	});
+  		});
+	</script>
 				
 					
 

@@ -37,7 +37,7 @@
 				 	</div>-->
 					
 				  	<div class="diapositiva">
-					<img class="imgLarga" onClick="agrandarNueva(0)" src="../figuras/figura6-a.jpg" alt="Corte sagital" >
+					<img class="imgLarga" src="../figuras/figura6-a.jpg" alt="Corte sagital" >
 						<div class="descripcion">
 							<p><span class="inciso">a&#41; </span>
 							Fotomicrografía de un corte sagital de la ultraestructura de un nematodo, donde se observa el complejo de la cutícula <b>(C)</b> con dos crestas <b>(Cr)</b> visibles de la misma, del mismo modo, se percibe un fragmento de la hipodermis <b>(H)</b>, un fragmento de musculatura <b>(M, línea azul)</b> y de una célula intestinal <b>(In)</b> con su núcleo <b>(n)</b>, separados por el pseudecele <b>(Ps)</b> que contiene un celomocito elongado <b>(Ce, línea naranja)</b> cuyo interior tiene visibles vacuolas electrodensas compatibles con proteínas, entre otras vacuolas isoelectrodensas en el citoplasma.
@@ -47,7 +47,7 @@
 				  	</div>
 
 				  	<div class="diapositiva">
-					  <img class="imgLarga" onClick="agrandarNueva(1)" src="../figuras/figura6-b.jpg" alt="Musculatura" >
+					  <img class="imgLarga" src="../figuras/figura6-b.jpg" alt="Musculatura" >
 						<div class="descripcion">
 							<p><span class="inciso">b&#41; </span>
 							Fotomicrografía de un acercamiento a la musculatura de un nematodo, donde es posible observar una sarcómera con abundantes núcleos <b>(n)</b> y filamentos electrodensos de actina embebidos en miosina electrolúcida, asimismo, se expone la lámina basal <b>(LB)</b> con filamentos de unión hacia la cutícula <b>(C)</b>.
@@ -62,6 +62,14 @@
 				  	<a class="prev" onclick="moverTODAS(-1, 0)">&#10094;</a>
 				  	<a class="next" onclick="moverTODAS(1, 0)">&#10095;</a>
 				</div> <!--GALERIA-->
+	<script>
+		document.querySelectorAll('img').forEach(img => {
+    	img.addEventListener('contextmenu', e => {
+      	e.preventDefault();
+      	alert('DR © 2026 Cintli Martínez Ortiz de Montellano'); // Mensaje opcional
+    	});
+  		});
+	</script>
 				
 				
 					

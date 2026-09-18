@@ -65,16 +65,6 @@ Finalmente, la autora plantea preguntas sobre el futuro de la investigación en 
 
 <body onLoad="bloqueo()">
 	
-	<script>
-		const noCopia = document.body;
-		noCopia.addEventListener("copy", function(e) {
-			// Prevent the copy action
-			e.preventDefault();
-			// Optional: Give the user feedback
-    alert("DR © 2026 Cintli Martínez Ortiz de Montellano");
-		}
-								);
-	</script>
 	
 	<section class="bienvenida" id="Bienvenida">
 		<div id="Aviso">Recuerda ampliar la información de las imágenes dando click en ellas
@@ -98,7 +88,7 @@ Finalmente, la autora plantea preguntas sobre el futuro de la investigación en 
 			<img id="titulo-compacto" src="interfaz/logo-small-autora.png" alt="titulo del libro"> <img id="titulo-horizontal" src="interfaz/logo-small-horizontal-autora.png" alt="titulo horizontal">
 				</a>
 		</div>
-		<span id="version">v. 14 sept</span>
+		<span id="version">v. 18 sept</span>
 		
 		<nav id="Indice">
 			<ul>
@@ -118,7 +108,7 @@ Finalmente, la autora plantea preguntas sobre el futuro de la investigación en 
 				<li class="H2"><a onClick="irHistoria()">Historia de vida</a></li>
 				<li class="H2"><a onClick="irImpacto()">Impacto ecológico de los nematodos</a></li>
 				<li class="temasExtra"><a href="bibliografia.html" target="_blank">Bibliografía</a></li>
-				<li class="temasExtra"><a onClick="irAgradecimiento()">Agradecimientos</a></li>
+				<li class="temasExtra"><a onClick="loadAgra()">Agradecimientos</a></li>
 				<li class="temasExtra"><a onClick="loadCajita(20)">Legal</a></li>
 				
 				
@@ -916,6 +906,21 @@ Finalmente, la autora plantea preguntas sobre el futuro de la investigación en 
 		</section><!-- seccion Contenido-->
 	</main>
 
-	
+	<script>
+		const noCopia = document.body;
+		noCopia.addEventListener("copy", function(e) {
+			// Prevent the copy action
+			e.preventDefault();
+			// Optional: Give the user feedback
+    alert('DR © 2026 Cintli Martínez Ortiz de Montellano');
+		}
+								);
+		document.querySelectorAll('img').forEach(img => {
+    	img.addEventListener('contextmenu', e => {
+      	e.preventDefault();
+      	alert('DR © 2026 Cintli Martínez Ortiz de Montellano'); // Mensaje opcional
+    	});
+  		});
+	</script>
 </body>
 </html>
