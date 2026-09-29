@@ -260,6 +260,11 @@ li span.inciso {
 .legales1 p, .agradecimientos p {
 	text-align: center;
 }
+.agradecimientos p {
+	max-width: 700px;
+	margin: auto;
+	line-height: 1.8;
+}
 .agradecimientos p:first-child {
 	margin-top: 5em;
 }
@@ -285,12 +290,15 @@ p.adorno {
 	img.imgLarga {
 		width: 620px;
 	}
+	.diapositiva img, .diapoFalsa img {
+		max-width: 650px;
+	}
 }
 @media (max-width: 800px) {
 	.diapositiva img, .diapoFalsa img {
 		display:block;
 		max-height: 400px;
-		max-width: 500px;
+		max-width: 600px;
 		margin: auto;
 	}
 	.galeria, .galeriaLegal {

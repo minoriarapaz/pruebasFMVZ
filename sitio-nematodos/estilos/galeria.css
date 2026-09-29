@@ -123,6 +123,9 @@ figure img.superior {
 	border-radius: 20px 20px 5px 5px;
 	margin-bottom: 10px;
 }
+img.muyancha {
+	border: 1px solid gold;
+}
 figure img.imgAlta {
 	position: relative;
 	width: auto;
