@@ -121,6 +121,7 @@ img.centrada {
 	background-color: rgba(0, 0, 0, .7);
 	color: ghostwhite;
 }
+
 .descripcion a {
 	font-weight: bold;
 	cursor: pointer;
@@ -297,8 +298,9 @@ p.adorno {
 @media (max-width: 800px) {
 	.diapositiva img, .diapoFalsa img {
 		display:block;
-		max-height: 400px;
-		max-width: 600px;
+		max-height: 500px;
+		max-width: 100%;
+		
 		margin: auto;
 	}
 	.galeria, .galeriaLegal {
@@ -316,7 +318,8 @@ p.adorno {
 
 @media (max-width: 500px) {
 	.diapositiva img, .diapoFalsa img {
-		width: 100%;
+		max-width: 100%;
+		max-height: 500px;
 	}
 	.prev, .next {
 		padding: 100px 10px 120px 10px;
