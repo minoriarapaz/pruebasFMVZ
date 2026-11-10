@@ -5,7 +5,9 @@ body {
 	background-color: transparent;
 	font-family:  "Nunito", Lucida Grande, Arial, "Gill Sans", "Gill Sans MT", "Myriad Pro", "sans-serif";
 }
-
+.titulillo {
+	margin-top: 2rem;
+}
 .cita-aislada {
 	position: absolute;
 	display: none;
@@ -236,7 +238,7 @@ li span.inciso {
 	color: ghostwhite;
 }
 .legales1, .agradecimientos {
-	border-bottom: 2px dotted dodgerblue; /*border Bottom*/
+	border-top: 2px dotted dodgerblue; /*border Bottom*/
 	position: relative;
 	display: block;
 	width: 70%;
